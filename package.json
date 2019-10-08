@@ -1,0 +1,23 @@
+{
+  "name": "medijobs",
+  "version": "1.0.0",
+  "description": "A wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhalanxDevelopment/medijobs.git"
+  },
+  "author": "Neciu Dan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhalanxDevelopment/medijobs/issues"
+  },
+  "homepage": "https://github.com/PhalanxDevelopment/medijobs#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
