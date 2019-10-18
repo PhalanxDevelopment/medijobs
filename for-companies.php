@@ -14,7 +14,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-4/24">
                     <a href="/" class="mj-logo">
-                        <img src="/medijobs/images/Logo.png" alt="MediJobs Logo">
+                        <img src="images/logo.png" alt="MediJobs Logo">
                     </a>
                 </div>
                 <div class="grid__item width-9/24">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="grid__item width-1/24">
                     <a href="#" class="pull-right">
-                        <img src="/medijobs/images/Login.png" alt="Link Logo">
+                        <img src="images/Login.png" alt="Link Logo">
                     </a>
                 </div>
             </div>
@@ -66,26 +66,6 @@
             <div class="grid__item width-1/24"></div>
             <div class="grid__item width-10/24">
                 <h1 class="headline">Large title style.</h1>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="http://lorempixel.com/75/50/abstract/">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                    </button>
-                    
-                    <ul class="dropdown-menu">
-                    <li class="dropdown-header">Member name (you)</li>
-                    <li>
-                        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/">0123 4567 8912 3456</a>
-                    </li>
-                    <li>
-                        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/">0123 4567 8912 3456</a>
-                    </li>
-                    <li class="dropdown-header">Member name</li>
-                    <li>
-                        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/">0123 4567 8912 3456</a>
-                    </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <div class="mj-grid">
@@ -193,7 +173,7 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="/medijobs/images/logo-footer.png" alt="Medijobs Logo">
+                            <img src="images/logo-footer.png" alt="Medijobs Logo">
                         </a>
                     </div>
                     <p>
