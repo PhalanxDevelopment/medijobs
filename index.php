@@ -8,84 +8,94 @@
     <link rel="stylesheet" type="text/css" media="screen" href="fonts/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
-<body>
-    <header class="mj-header">
+<body id="body">
+<header class="mj-header">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-4/24">
-                    <a href="/" class="mj-logo">
-                        <img src="/medijobs/images/Logo.png" alt="MediJobs Logo">
-                    </a>
+                    <a href="/" class="mj-logo"></a>
+                    <div class="hide-on-desktop">
+                        <div class="mj-search"></div>
+                        <div class="mj-lang-switcher btn-group" id="langSwitcher">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/RO-Flag.png">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="grid__item width-9/24">
-                    <ul class="mj-meniu">
-                        <li class="meniu__item meniu__item__has_submeniu">
-                            <a href="#">For Canditates</a>
-                            <ul class="meniu__submeniu">
-                                <li class="submeniu__item">
-                                    <a href="#">First link</a>
-                                </li>
-                                <li class="submeniu__item">
-                                    <a href="#">Second longer sublink</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="meniu__item meniu__item__has_submeniu">
-                            <a href="#">For Companies</a>
-                            <ul class="meniu__submeniu ">
-                                <li class="submeniu__item">
-                                    <a href="#">First link</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="meniu__item">
-                            <a href="#">Resources</a>
-                        </li>
-                    </ul>
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu" class="mj-meniu">
+                            <li class="meniu__item meniu__item__has_submeniu">
+                                <a href="#">For Canditates</a>
+                                <ul class="meniu__submeniu">
+                                    <li class="submeniu__item">
+                                        <a href="#">First link</a>
+                                    </li>
+                                    <li class="submeniu__item">
+                                        <a href="#">Second longer sublink</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="meniu__item meniu__item__has_submeniu">
+                                <a href="#">For Companies</a>
+                                <ul class="meniu__submeniu ">
+                                    <li class="submeniu__item">
+                                        <a href="#">First link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="meniu__item">
+                                <a href="#">Resources</a>
+                            </li>
+                            <div class="mj-call_to_action">
+                                <p class="call_to_action__text">Get in touch with us</p>
+                                <a class="call_to_action__link" href="tel:">+4 0749 099291</a>
+                            </div>
+                            <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Get a free account</button>
+                            <a href="#" class="mobile_login">
+                                Log into your account
+                            </a>
+                        </ul>
+                    </div>
                 </div>
-                <div class="grid__item width-3/24"></div>
-                <div class="grid__item width-3/24">
+                <div class="grid__item width-3/24 hide-on-mobile"></div>
+                <div class="grid__item width-3/24 hide-on-mobile">
                     <div class="mj-call_to_action">
                         <p class="call_to_action__text">Get in touch with us</p>
                         <a class="call_to_action__link" href="tel:">+4 0749 099291</a>
                     </div>
                 </div>
-                <div class="grid__item width-4/24">
+                <div class="grid__item width-4/24 hide-on-mobile">
                     <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Get a free account</button>
                 </div>
-                <div class="grid__item width-1/24">
+                <div class="grid__item width-1/24 hide-on-mobile">
                     <a href="#" class="pull-right">
-                        <img src="/medijobs/images/Login.png" alt="Link Logo">
+                        <img src="images/Login.png" alt="Link Logo">
                     </a>
                 </div>
             </div>
         </div>
     </header>
     <div class="mj-container">
+        
         <div class="mj-grid">
             <div class="grid__item width-1/24"></div>
             <div class="grid__item width-10/24">
                 <h1 class="headline">Large title style.</h1>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="http://lorempixel.com/75/50/abstract/">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                    </button>
-                    
-                    <ul class="dropdown-menu">
-                    <li class="dropdown-header">Member name (you)</li>
-                    <li>
-                        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/">0123 4567 8912 3456</a>
-                    </li>
-                    <li>
-                        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/">0123 4567 8912 3456</a>
-                    </li>
-                    <li class="dropdown-header">Member name</li>
-                    <li>
-                        <a href="#" title="Select this card"><img src="http://lorempixel.com/75/50/abstract/">0123 4567 8912 3456</a>
-                    </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <div class="mj-grid">
@@ -193,7 +203,7 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="/medijobs/images/logo-footer.png" alt="Medijobs Logo">
+                            <img src="/images/logo-footer.png" alt="Medijobs Logo">
                         </a>
                     </div>
                     <p>
@@ -260,7 +270,23 @@
             <div class="mj-grid">
             <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-4/24">
-                    <p>© 2019 Medijobs Inc.</p>
+                    <p>
+                        © 2019 Medijobs Inc.
+                    </p>
+                    <div class="mj-lang-switcher btn-group" id="langSwitcher" style="float: right;margin-top: -33px;">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/RO-Flag.png">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="grid__item width-2/24"></div>
                 <div class="grid__item width-3/24">

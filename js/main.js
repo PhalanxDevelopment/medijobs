@@ -70,3 +70,22 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+document.getElementById('langSwitcher').onclick = function(ev) {
+
+    var className = ' ' + langSwitcher.className + ' ';
+
+    if ( ~className.indexOf(' open ') ) {
+        this.className = className.replace(' open ', ' ');
+    } else {
+        this.className += ' open';
+    }
+    ev.stopPropagation();         
+}
+
+document.getElementById('body').onclick = function() {
+    var el = document.getElementById('langSwitcher');
+    if (el.className.indexOf(' open ')) {
+        el.className = 'mj-lang-switcher btn-group';
+    }
+}
