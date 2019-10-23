@@ -288,7 +288,9 @@
                     <h1 class="headline">WHERE WE’RE ACTIVE</h1>
                     <div class="mj-testimonials">
                         <div class="mj-testimonial">
-                            <div class="mj-testimonial__rating"></div>
+                            <div class="mj-testimonial__rating">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
                             <div class="mj-testimonial__content">
                                 <p>Cu ajutorul site-ului Medijobs m-am angajat la actualul loc de muncă. Nu mă așteptam să se întâmple așa repede, dar a ajutat foarte mult că m-am înscris pe acest site, nu cred că aș fi găsit de muncă așa repede dacă nu foloseam MEDIjobs. </p>
                                 <p>Aș recomanda acest site oricui își caută de muncă în sistemul de sănătate. </p>
@@ -306,7 +308,9 @@
                             </div>
                         </div>
                         <div class="mj-testimonial">
-                            <div class="mj-testimonial__rating"></div>
+                            <div class="mj-testimonial__rating">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
                             <div class="mj-testimonial__content">
                                 <p>Ca tanar medic specialist, gasirea unui loc de munca poate fi la fel de dificila precum cautarea de comori. MEDIjobs m-a ajutat sa imi gasesc in 7 zile jobul in care imi practic cu drag meseria si ma pot dezvolta profesional, pe termen lung.</p>
                             </div>
@@ -327,6 +331,43 @@
             </div>
         </div>
     </div>
+    <div class="section section_6">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-10/24">
+                    <ul class="mj-list">
+                        <li class="mj-list__item">
+                            Life choices you want.
+                        </li>
+                        <li class="mj-list__item">
+                            Control where & when you work.
+                        </li>
+                        <li class="mj-list__item">
+                            And how much money you earn.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section_3">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-10/24">
+                    <div class="above_headline">PRESS QUOTES</div>
+                    <h1 class="headline">What the press says about us.</h1>
+                    <div class="quote">
+                        <img src="/images/startup.png" alt="">
+                        <p>
+                            Platforma romanilor care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mj-footer">
         <div class="mj-container">
             <div class="mj-grid">
@@ -340,10 +381,19 @@
                     <p>
                         La MEDIjobs credem că puține lucruri sunt mai interesante decât construirea propriei cariere.
                     </p>
-                    <p>Pentru că nu e vorba despre a aplica la un job, ci despre oamenii pe care îi întâlnești și lucrurile noi pe care la afli.</p>
+                    <div class="social__links">
+                        <a href="#" class="social__link facebook__link"></a>
+                        <a href="#" class="social__link instagram__link"></a>
+                        <a href="#" class="social__link linkedin__link"></a>
+                        <a href="#" class="social__link youtube__link"></a>
+                    </div>
+                    <div class="footer__call-to-action">
+                        <a href="#">Get in touch with us</a>
+                    </div>
+                    <p class="hide-on-mobile">Pentru că nu e vorba despre a aplica la un job, ci despre oamenii pe care îi întâlnești și lucrurile noi pe care la afli.</p>
                 </div>
                 <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-3/24">
+                <div class="grid__item width-3/24 width-mobile-12/24">
                     <div class="footer__links">
                         <h5 class="footer__links_header">About Us</h5>
                         <ul class="footer__menu">
@@ -360,19 +410,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-4/24">
+                <div class="grid__item width-2/24 hide-on-mobile"></div>
+                <div class="grid__item width-4/24 width-mobile-12/24">
                     <div class="footer__links">
                         <h5 class="footer__links_header">Community</h5>
                         <ul class="footer__menu">
                             <li><a href="/">Blog</a></li>
-                            <li><a href="/">Leaders in Healthcare Romania</a></li>
-                            <li><a href="/"> Conference</a></li>
-                            <li><a href="/">Explore Jobs</a></li>
-                            <li><a href="/">Explore Companies</a></li>
+                            <li class="mobile_smaller_distance"><a href="/" >Leaders in Healthcare Romania Conference</a></li>
+                            <li class="mobile_smaller_distance"><a href="/">Explore Jobs</a></li>
+                            <li class="mobile_smaller_distance"><a href="/">Explore Companies</a></li>
                         </ul>
                     </div>
-                    <div class="social__links">
+                    <div class="social__links hide-on-mobile">
                         <a href="#" class="social__link facebook__link"></a>
                         <a href="#" class="social__link instagram__link"></a>
                         <a href="#" class="social__link linkedin__link"></a>
@@ -380,7 +429,7 @@
                     </div>
                 </div>
                 <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-4/24">
+                <div class="grid__item width-4/24 absolute_footer">
                     <div class="footer__links">
                         <h5 class="footer__links_header">Our Product</h5>
                         <ul class="footer__menu">
@@ -389,7 +438,7 @@
                             <li><a href="/">Pricing</a></li>
                         </ul>
                     </div>
-                    <div class="footer__call-to-action">
+                    <div class="footer__call-to-action hide-on-mobile">
                         <a href="#">Get in touch with us</a>
                     </div>
                 </div>
@@ -404,7 +453,7 @@
                     <p>
                         © 2019 Medijobs Inc.
                     </p>
-                    <div class="mj-lang-switcher btn-group" id="langSwitcher" style="float: right;margin-top: -33px;">
+                    <div class="mj-lang-switcher hide-on-mobile btn-group" id="langSwitcher" style="float: right;margin-top: -33px;">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="images/RO-Flag.png">
                             <span class="glyphicon glyphicon-chevron-down"></span>
