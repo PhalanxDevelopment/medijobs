@@ -18,15 +18,15 @@
                         <div class="mj-search"></div>
                         <div class="mj-lang-switcher btn-group" id="langSwitcher">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="images/RO-Flag.png">
+                                <img src="http://cst-soft.com/medijobs/images/RO-Flag.png">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                                    <a href="#" title="Select this language"><img src="http://cst-soft.com/medijobs/images/RO-Flag.png" style="margin-left:11px;"></a>
                                 </li>
                                 <li>
-                                    <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                                    <a href="#" title="Select this language"><img src="http://cst-soft.com/medijobs/images/RO-Flag.png" style="margin-left:11px;"></a>
                                 </li>
                             </ul>
                         </div>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="grid__item width-1/24 hide-on-mobile">
                     <a href="#" class="pull-right">
-                        <img src="images/Login.png" alt="Link Logo">
+                        <img src="http://cst-soft.com/medijobs/images/Login.png" alt="Link Logo">
                     </a>
                 </div>
             </div>
@@ -97,8 +97,8 @@
             <div class="mj-grid">
                 <div class="grid__item width-24/24">
                     <div class="above_headline">BINE AI VENIT PE MEDIJOBS!</div>
-                    <h1 class="headline">LOCURI DE MUNCĂ PT. <span>SPECIALIȘTI MEDICALI.</span></h1>
-                    <p>Primesti oferte de joburi personalizate in functie de aptitudinile si experienta ta sau salariul pe care ti-l doresti.</p>
+                    <h1 class="headline uppercase">Noi îți aducem <span>ofertele de muncă</span></h1>
+                    <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs</p>
 
                     <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
                     <button class="mj-btn mj-btn--primary">
@@ -114,17 +114,20 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
-                    <div class="above_headline">YOU WILL GET</div>
-                    <h1 class="headline">Personalized offers, emailed, based on your preference:</h1>
+                    <div class="above_headline">Beneficii</div>
+                    <h1 class="headline">3 motive pentru care o să iubești MEDIjobs </h1>
                     <ul class="mj-list">
                         <li class="mj-list__item">
-                            Acquired SKILLS.    
+                            Companiile aplică pentru tine, nu invers 
                         </li>
                         <li class="mj-list__item">
-                            Personal EXPERIENCE.
+                            Contul este gratuit, iar informațiile tale sunt confidențiale
                         </li>
                         <li class="mj-list__item">
-                            Desired SALARY.
+                            Primești oferte personalizate în funcție de nevoile tale 
+                        </li>
+                        <li class="mj-list__item">
+                            <a href="">Creează-ți contul</a> pe MEDIjobs și fii pregătit să primești oferte de muncă!
                         </li>
                     </ul>
                 </div>
@@ -137,7 +140,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">CHECKOUT</div>
-                    <h1 class="headline">Key positions we are actively recruiting for:</h1>
+                    <h1 class="headline">Cele mai populare oferte de muncă acum în Medijobs.ro :</h1>
                     <ul class="mj-simple-list">
                         <li class="mj-simple-list">
                             Contract - Physical Therapist
@@ -188,7 +191,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
-                    <div class="above_headline">WHERE WE’RE ACTIVE</div>
+                    <div class="above_headline">UNDE SUNTEM ACTIVI</div>
                     <h1 class="headline">And we are covering more & more ground.</h1>
                     <div class="mj-cols">
                         <div class="mj-col">
@@ -206,7 +209,7 @@
                         </div>
                     </div>
                     <div class="mj-image">
-                        <img src="images/harta_mobile.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/harta_mobile.png" alt="">
                     </div>
                 </div>
             </div>
@@ -217,11 +220,11 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
-                    <div class="above_headline">THERE ARE OVER</div>
-                    <h1 class="headline"><span>1100 companies</span></h1>
-                    <p style="margin-top:-20px;">working with us and growing</p>
+                    <div class="above_headline">Peste</div>
+                    <h1 class="headline"><span>1200 de companii</span></h1>
+                    <p style="margin-top:-20px;">Au apelat la MEDIjobs pentru a angaja cu succes specialisti medical.</p>
                     <div class="mj-image">
-                        <img src="images/companies_mockup.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/companies_mockup.png" alt="">
                     </div>
                 </div>
             </div>
@@ -232,9 +235,9 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
-                    <div class="above_headline">FOR EMPLOYERS</div>
-                    <h1 class="headline">HIRE NURSES WITHIN 30 DAYS.</h1>
-                    <p>We bring you the talent, so you can focus on running the show.</p>
+                    <div class="above_headline">Pentru angajatori</div>
+                    <h1 class="headline">Angajează personal medical în termen de 30 de zile lucrătoare.</h1>
+                    <p>Noi facem treaba in locul tau! Iti potrivim ofertele cu candidati relevanti.</p>
                     <button class="mj-btn mj-btn--primary mj-btn--alt">
                         REQUEST A DEMO
                     </button>
@@ -248,32 +251,32 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
-                    <div class="above_headline">OUR PROCEDURE &</div>
-                    <h1 class="headline">How we like to operate.</h1>
+                    <div class="above_headline">PROCESUL NOSTRU &</div>
+                    <h1 class="headline">Cum functioneaza platforma</h1>
                     <ul class="mj-steps">
                         <li class="mj-step">
                             <div class="step_nr">.01</div>
-                            <div class="step_title">Complete your profile</div>
-                            <div class="step_content">As science and technology developed, medicine became upon medications.</div>
+                            <div class="step_title">Creează un cont gratuit:</div>
+                            <div class="step_content">Este șansa ta sa ne spui ce îți dorești în continuare. Creează-ți un cont în mai puțin de 2 minute!</div>
                         </li>
                         <li class="mj-step">
                             <div class="step_nr">.02</div>
-                            <div class="step_title">WE MATCH A COMPANY TO YOU</div>
-                            <div class="step_content">The first antibiotic was arsphenamine discovered by Paul Ehrlich.</div>
+                            <div class="step_title">Primește oferte de muncă</div>
+                            <div class="step_content">Îți conectăm profilul cu oferte bazate pe experiența ta de muncă, salariul dorit și locația de interes.</div>
                         </li>
                         <li class="mj-step">
                             <div class="step_nr">.03</div>
-                            <div class="step_title">You get relevant offers In your email</div>
-                            <div class="step_content">Pharmacology has become increasingly sophisticated.</div>
+                            <div class="step_title">Alege oferta care ți se potrivește</div>
+                            <div class="step_content">Și programează interviuri cu angajatorii preferați.</div>
                         </li>
                         <li class="mj-step">
                             <div class="step_nr">.04</div>
-                            <div class="step_title">Get hired!</div>
-                            <div class="step_content">Genomics and knowledge of human genetics and human evolution.</div>
+                            <div class="step_title">Angajează-te!</div>
+                            <div class="step_content">Bucură-te de un nou loc de muncă!</div>
                         </li>
                     </ul>
                     <div class="sub_section">
-                        Get rewards when you recommend Medijobs to your current employer.
+                        Recomandă colegilor MEDIjobs și primește un bonus!
                     </div>
                 </div>
             </div>
@@ -285,22 +288,23 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">WHERE WE’RE ACTIVE</div>
-                    <h1 class="headline">WHERE WE’RE ACTIVE</h1>
+                    <h1 class="headline">Ce spun candidatii despre noi.</h1>
                     <div class="mj-testimonials">
                         <div class="mj-testimonial">
                             <div class="mj-testimonial__rating">
                                 <span></span><span></span><span></span><span></span><span></span>
                             </div>
                             <div class="mj-testimonial__content">
-                                <p>Cu ajutorul site-ului Medijobs m-am angajat la actualul loc de muncă. Nu mă așteptam să se întâmple așa repede, dar a ajutat foarte mult că m-am înscris pe acest site, nu cred că aș fi găsit de muncă așa repede dacă nu foloseam MEDIjobs. </p>
-                                <p>Aș recomanda acest site oricui își caută de muncă în sistemul de sănătate. </p>
+                                <p>
+                                Bună, sunt Laura, și m-am angajat prin intermediul MediJobs la o clinică de cardiologie în cadrul căreia mă simt foarte bine! Medijobs și-a făcut datoria într-un mod foarte frumos, ba chiar după angajare o consultantă m-a sunat să se intereseze cum mă simt la noul loc de muncă, dacă sunt mulțumită și dacă am semnat contractul. Într-adevăr sunt mulțumită și de locul de muncă și de Medijobs.
+                                </p>
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="/images/testimonial_1.png" alt="">
+                                    <img src="http://cst-soft.com/medijobs/images/testimonial_1.png" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
-                                    Mihaela Parnia
+                                    Laura Kovacs
                                 </div>
                                 <div class="mj-testimonial__author__position">
                                     Asistent medical generalist
@@ -312,17 +316,46 @@
                                 <span></span><span></span><span></span><span></span><span></span>
                             </div>
                             <div class="mj-testimonial__content">
-                                <p>Ca tanar medic specialist, gasirea unui loc de munca poate fi la fel de dificila precum cautarea de comori. MEDIjobs m-a ajutat sa imi gasesc in 7 zile jobul in care imi practic cu drag meseria si ma pot dezvolta profesional, pe termen lung.</p>
+                                <p>
+                                    Mulțumesc echipei Medijobs pentru promptitudine :)
+                                </p>
+                                <p> 
+                                    Cu ajutorul lor am găsit foarte repede un job part time ce mă avantajează la momentul de față și pe această cale vreau să le mulțumesc încă o dată pentru profesionalismul de care au dat dovadă! Mult succes în continuare și cu siguranță ținem legătura.
+                                </p>
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="/images/testimonial_2.png" alt="">
+                                    <img src="http://cst-soft.com/medijobs/images/testimonial_2.png" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
-                                    Laura Matei
+                                    Aly Alina
                                 </div>
                                 <div class="mj-testimonial__author__position">
-                                    Lab medicine specialist
+                                    ASISTENT MEDICAL GENERALIST
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mj-testimonial">
+                            <div class="mj-testimonial__rating">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="mj-testimonial__content">
+                                <p>
+                                Cu ajutorul site-ului Medijobs m-am angajat la actualul loc de muncă. Nu mă așteptam să se întâmple așa repede, dar a ajutat foarte mult că m-am înscris pe acest site, nu cred că aș fi găsit de muncă așa repede dacă nu foloseam Medijobs.
+                                </p>
+                                <p> 
+                                Sunt foarte mulțumită de acest site și aș vrea să le mulțumesc pentru ajutorul depus. Ceea ce mă încântă la acest site este faptul că, așa cum probabil s-a mai spus, față de alte site-uri persoanele din spatele Medijobs chiar se implică în a te ajuta să-ți găsești un loc de muncă sau cu orice alte probleme sau nelămuriri ai avea. Aș recomanda acest site oricui își caută de muncă în sistemul de sănătate.
+                                </p>
+                            </div>
+                            <div class="mj-testimonial__author">
+                                <div class="mj-testimonial__author__image">
+                                    <img src="http://cst-soft.com/medijobs/images/testimonial_2.png" alt="">
+                                </div>
+                                <div class="mj-testimonial__author__name">
+                                    Gabriela Podolan
+                                </div>
+                                <div class="mj-testimonial__author__position">
+                                    ASISTENT MEDICAL GENERALIST
                                 </div>
                             </div>
                         </div>
@@ -338,13 +371,13 @@
                 <div class="grid__item width-10/24">
                     <ul class="mj-list">
                         <li class="mj-list__item">
-                            Life choices you want.
+                            Alegerea unei cariere in domeniul medical tocmai a devenit mai usoara.
                         </li>
                         <li class="mj-list__item">
-                            Control where & when you work.
+                            Descopera noi oportunitati chiar langa tine.
                         </li>
                         <li class="mj-list__item">
-                            And how much money you earn.
+                            Decizia este a ta!
                         </li>
                     </ul>
                 </div>
@@ -357,11 +390,35 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">PRESS QUOTES</div>
-                    <h1 class="headline">What the press says about us.</h1>
+                    <h1 class="headline">Ce se scrie in presa despre noi.</h1>
                     <div class="quote">
-                        <img src="/images/startup.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
                         <p>
-                            Platforma romanilor care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore.
+                            Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <p>
+                            Companiile reușesc să ocupe posturile vacante de cinci ori mai rapid decât dacă ar utiliza alte platforme de recrutare”, a declarat George Hagivreta, co-fondator si COO al MEDIjobs.
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <p>
+                            MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <p>
+                            Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <p>
+                            Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
                         </p>
                     </div>
                 </div>
@@ -375,19 +432,19 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="images/logo-footer.png" alt="Medijobs Logo">
+                            <img src="http://cst-soft.com/medijobs/images/logo-footer.png" alt="Medijobs Logo">
                         </a>
                     </div>
                     <p>
                         La MEDIjobs credem că puține lucruri sunt mai interesante decât construirea propriei cariere.
                     </p>
-                    <div class="social__links">
+                    <div class="social__links hide-on-desktop">
                         <a href="#" class="social__link facebook__link"></a>
                         <a href="#" class="social__link instagram__link"></a>
                         <a href="#" class="social__link linkedin__link"></a>
                         <a href="#" class="social__link youtube__link"></a>
                     </div>
-                    <div class="footer__call-to-action">
+                    <div class="footer__call-to-action hide-on-desktop">
                         <a href="#">Get in touch with us</a>
                     </div>
                     <p class="hide-on-mobile">Pentru că nu e vorba despre a aplica la un job, ci despre oamenii pe care îi întâlnești și lucrurile noi pe care la afli.</p>
@@ -455,15 +512,15 @@
                     </p>
                     <div class="mj-lang-switcher hide-on-mobile btn-group" id="langSwitcher" style="float: right;margin-top: -33px;">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="images/RO-Flag.png">
+                            <img src="http://cst-soft.com/medijobs/images/RO-Flag.png">
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                                <a href="#" title="Select this language"><img src="http://cst-soft.com/medijobs/images/RO-Flag.png" style="margin-left:11px;"></a>
                             </li>
                             <li>
-                                <a href="#" title="Select this language"><img src="images/RO-Flag.png" style="margin-left:11px;"></a>
+                                <a href="#" title="Select this language"><img src="http://cst-soft.com/medijobs/images/RO-Flag.png" style="margin-left:11px;"></a>
                             </li>
                         </ul>
                     </div>

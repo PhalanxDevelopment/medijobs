@@ -73,6 +73,11 @@ body {
         &:last-child {
             border-bottom: none;
         }
+        a{
+            font-family: 'ClearSans-Light';
+            font-size: 30px;
+            line-height: 35px;
+        }
     }
 }
 /*
@@ -227,6 +232,10 @@ body {
             font-size: 8.0rem;
             line-height: 8.4rem;
             color: #002025;
+
+        }
+        &.uppercase {
+            text-transform: uppercase;
         }
     }
     h2 {
@@ -1234,7 +1243,7 @@ body {
         }
         h1.headline {
             font-size: 30px;
-            line-height: 35px;
+            line-height: 41px;
             letter-spacing: -1px;
             margin-top: 5px;
             span {

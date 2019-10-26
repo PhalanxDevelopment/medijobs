@@ -68,6 +68,10 @@ body {
     color: #000000; }
     .mj-list .mj-list__item:last-child {
       border-bottom: none; }
+    .mj-list .mj-list__item a {
+      font-family: 'ClearSans-Light';
+      font-size: 30px;
+      line-height: 35px; }
 
 /*
  * Make this absolute positioned
@@ -217,6 +221,8 @@ body {
       font-size: 8.0rem;
       line-height: 8.4rem;
       color: #002025; }
+    .mj-container h1.uppercase {
+      text-transform: uppercase; }
   .mj-container h2 {
     font-size: 4.2rem;
     font-family: 'ClearSans-Light';
@@ -1057,7 +1063,7 @@ body {
       opacity: 1; }
     .mj-container h1.headline {
       font-size: 30px;
-      line-height: 35px;
+      line-height: 41px;
       letter-spacing: -1px;
       margin-top: 5px; }
       .mj-container h1.headline span {
