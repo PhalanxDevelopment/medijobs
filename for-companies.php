@@ -50,8 +50,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="meniu__item meniu__item__has_submeniu">
-                                <a href="#">For Companies</a>
+                            <li class="meniu__item meniu__item__has_submeniu active">
+                                <a class="" href="#">For Companies</a>
                                 <ul class="meniu__submeniu ">
                                     <li class="submeniu__item">
                                         <a href="#">First link</a>
@@ -127,8 +127,8 @@
         <div id="form" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
             <a href="#" class="login">REGISTERED ALREADY? LOGIN</a>
-            <h3>We Bring Job Offers to You</h3>
-            <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
+            <h3>HIRE NURSES WITHIN 30 DAYS.</h3>
+            <p>Get matched with pre-qualified nurses who are interested in working with you.</p>
             <input class="mj-input" type="text" placeholder="Default State" >
             <input class="mj-input" type="text" placeholder="Default State" >
             <p class="extra-small policy">
@@ -145,24 +145,24 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-9/24">
-                    <div class="above_headline">BINE AI VENIT PE MEDIJOBS!</div>
-                    <h1 class="headline uppercase">Noi îți aducem <span>ofertele de muncă</span></h1>
+                    <div class="above_headline"> BINE AI VENIT PE MEDIJOBS!</div>
+                    <h1 class="headline uppercase">Angajezi specialiști medicali? </h1>
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
-                    <div class="secton_bg_image">
-                        <img src="http://cst-soft.com/medijobs/images/section_1_bg.png" alt="">
+                    <div class="secton_bg_image company">
+                        <img src="http://cst-soft.com/medijobs/images/company_section_1.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-7/24">
-                    <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs</p>
+                    <p>Completează-ți nevoia de recrutare, iar noi te conectăm cu candidați calificați.</p>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
-                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
+                    <div class="sub_section">Peste <span>33 000</span> de specialiști medicali așteaptă ofertele tale! </div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
@@ -190,19 +190,19 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">Beneficii</div>
-                    <h1 class="headline light">3 motive pentru care o să iubești MEDIjobs </h1>
+                    <h1 class="headline light">Prima platformă de recrutare medicală care ajută companiile să ajungă la specialiștii medicali din România. </h1>
                     <ul class="mj-list">
                         <li class="mj-list__item">
-                            Companiile aplică pentru tine, nu invers 
+                            Aici ce text punem?
                         </li>
                         <li class="mj-list__item">
-                            Contul este gratuit, iar informațiile tale sunt confidențiale
+                            Aici ce text punem?
                         </li>
                         <li class="mj-list__item">
-                            Primești oferte personalizate în funcție de nevoile tale 
+                            Aici ce text punem?
                         </li>
                         <li class="mj-list__item">
-                            <a href="">Creează-ți contul</a> pe MEDIjobs și fii pregătit să primești oferte de muncă!
+                            Aici ce text punem?
                         </li>
                     </ul>
                 </div>
@@ -215,49 +215,37 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
                     <div class="above_headline">CHECKOUT</div>
-                    <h1 class="headline light">Cele mai populare oferte de muncă acum în Medijobs.ro:</h1>
+                    <h1 class="headline light">Cele mai populare posturi pentru care poți face angajări prin platforma MEDIjobs:</h1>
                     <ul class="mj-simple-list">
                         <li class="mj-simple-list">
-                            Contract - Physical Therapist
+                            Medici
                         </li>
                         <li class="mj-simple-list">
-                            Desktop Technician
+                            Farmaciști
                         </li>
                         <li class="mj-simple-list">
-                            Addiction Medicine Physician DEA-X
+                            Asistenți Medicali Generaliști
                         </li>
                         <li class="mj-simple-list">
-                            Behavioral Health Therapist
+                            Asistenți de Farmacie
                         </li>
                         <li class="mj-simple-list">
-                            Bilingual LPN
+                            Asistenți dentari
                         </li>
                         <li class="mj-simple-list">
-                            Clinical Director
+                            Infirmieri
                         </li>
                         <li class="mj-simple-list">
-                            Clinical Supervisor - Home Health
+                            Reprezentanți Medicali
                         </li>
                         <li class="mj-simple-list">
                             Complex Case Manager RN
                         </li>
                         <li class="mj-simple-list">
-                            Executive Director - Home Health
-                        </li>
-                        <li class="mj-simple-list">
-                            Family Medicine Physican
-                        </li>
-                        <li class="mj-simple-list">
-                            Field Nurse - Behavioral Health
-                        </li>
-                        <li class="mj-simple-list">
-                            General Surgery Physican
+                            Coordonatori Medicali
                         </li>
                         <div class="clearfix"></div>
                     </ul>
-                    <a class="mj-icon-link" href="#">
-                        SEE MORE ACTIVE JOBS THAT WE ARE LOOKING FOR.
-                    </a>
                 </div>
             </div>
         </div>
@@ -268,7 +256,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">UNDE SUNTEM ACTIVI</div>
-                    <h1 class="headline light">And we are covering more & more ground.</h1>
+                    <h1 class="headline light">Avem peste 33000 de specialiști medicali în cele mai mari orașe din România, iar comunitatea MEDIjobs este în creștere. </h1>
                     <div class="mj-cols">
                         <div class="mj-col">
                             <p>Târgul Mureș</p>
@@ -284,8 +272,11 @@
                             <p>Cluj-Napoca</p>
                         </div>
                     </div>
-                    <div class="mj-image">
+                    <div class="mj-image hide-on-desktop">
                         <img src="http://cst-soft.com/medijobs/images/harta_mobile.png" alt="">
+                    </div>
+                    <div class="mj-image hide-on-mobile">
+                        <img src="http://cst-soft.com/medijobs/images/map.png" alt="">
                     </div>
                 </div>
             </div>
@@ -338,7 +329,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
                     <div class="above_headline">PROCESUL NOSTRU &</div>
-                    <h1 class="headline light">Cum functioneaza platforma</h1>
+                    <h1 class="headline light">Completează-ți nevoia de recrutare medicală, noi te conectăm cu candidați calificați cărora le poți trimite invitații de interviuri și oferte de angajare. </h1>
                     <div class="section_icon hide-on-mobile">
                         <img src="http://cst-soft.com/medijobs/images/icon_section_7.png" alt="">
                     </div>
@@ -348,23 +339,23 @@
                     <ul class="mj-steps">
                         <li id="step_1" class="mj-step active">
                             <div class="step_nr">.01</div>
-                            <div class="step_title">Creează un cont gratuit:</div>
-                            <div class="step_content">Este șansa ta sa ne spui ce îți dorești în continuare. Creează-ți un cont în mai puțin de 2 minute!</div>
+                            <div class="step_title"> Crează un cont:</div>
+                            <div class="step_content"> Durează mai puțin de 2 minute să îți creezi un cont și să fii la curent cu cei mai relevanți candidați pentru nevoile tale.</div>
                         </li>
                         <li id="step_2" class="mj-step">
                             <div class="step_nr">.02</div>
-                            <div class="step_title">Primește oferte de muncă</div>
-                            <div class="step_content">Îți conectăm profilul cu oferte bazate pe experiența ta de muncă, salariul dorit și locația de interes.</div>
+                            <div class="step_title">Completează nevoia de recrutare</div>
+                            <div class="step_content"> Spune-ne ce cauți și inițiază un proces de recrutare medicală, iar noi te conectăm cu candidați calificați</div>
                         </li>
                         <li id="step_3" class="mj-step">
                             <div class="step_nr">.03</div>
-                            <div class="step_title">Alege oferta care ți se potrivește</div>
-                            <div class="step_content">Și programează interviuri cu angajatorii preferați.</div>
+                            <div class="step_title">Primești candidați relevanți</div>
+                            <div class="step_content">Îți trimitem doar candidații care se potrivesc cerințelor tale/ ofertei tale.</div>
                         </li>
                         <li id="step_4" class="mj-step">
                             <div class="step_nr">.04</div>
-                            <div class="step_title">Angajează-te!</div>
-                            <div class="step_content">Bucură-te de un nou loc de muncă, recomandă colegilor MEDIjobs și primește un bonus!</div>
+                            <div class="step_title">Angajează!</div>
+                            <div class="step_content"></div>
                         </li>
                     </ul>
                 </div>

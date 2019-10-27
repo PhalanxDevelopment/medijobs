@@ -652,6 +652,7 @@ body.noScroll { /* ...or body.dialogShowing */
                 letter-spacing: 0;
                 color: #00C1DE;
                 text-transform: uppercase;
+                
             }
             .meniu__submeniu {
                 position: absolute;
@@ -659,6 +660,20 @@ body.noScroll { /* ...or body.dialogShowing */
                 height: 0px;
                 min-height: 0px;
                 overflow: hidden;
+            }
+            &.active {
+                a{
+                    color: #000
+                }
+                &.meniu__item__has_submeniu:after {
+                    border-color: #000 transparent transparent transparent;
+                }
+                .meniu__submeniu {
+                    a {
+                        color: #00C1DE;
+                    }
+                }
+                
             }
         }
     }
@@ -1208,6 +1223,12 @@ body.noScroll { /* ...or body.dialogShowing */
                 position: absolute;
                 top: -70px;
                 max-height: 695px;
+            }
+            &.company {
+                img {
+                    top: -55px;
+                    left: -90px;
+                }
             }
         }
         .sub_section {

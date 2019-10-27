@@ -561,6 +561,12 @@ body.noScroll {
         height: 0px;
         min-height: 0px;
         overflow: hidden; }
+      .mj-header .mj-meniu .meniu__item.active a {
+        color: #000; }
+      .mj-header .mj-meniu .meniu__item.active.meniu__item__has_submeniu:after {
+        border-color: #000 transparent transparent transparent; }
+      .mj-header .mj-meniu .meniu__item.active .meniu__submeniu a {
+        color: #00C1DE; }
   .mj-header .mj-call_to_action {
     position: relative;
     display: block;
@@ -1045,6 +1051,9 @@ body.noScroll {
         position: absolute;
         top: -70px;
         max-height: 695px; }
+      .section.section_1 .secton_bg_image.company img {
+        top: -55px;
+        left: -90px; }
     .section.section_1 .sub_section {
       font-size: 18px;
       line-height: 22px;
