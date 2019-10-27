@@ -94,31 +94,31 @@
     </header>
     <div class="mj-quick_links hide-on-mobile">
         <ul>
-            <li class="quick_link" data-section="1">
+            <li id="ql_section_1" class="quick_link" data-section="1">
                 BINE AI VENIT PE MEDIJOBS
             </li>
-            <li class="quick_link" data-section="2">
+            <li id="ql_section_2" class="quick_link" data-section="2">
                 Beneficii
             </li>
-            <li class="quick_link" data-section="3">
+            <li id="ql_section_3" class="quick_link" data-section="3">
                 CHECKOUT
             </li>
-            <li class="quick_link" data-section="4">
+            <li id="ql_section_4" class="quick_link" data-section="4">
                 UNDE SUNTEM ACTIVI
             </li>
-            <li class="quick_link" data-section="5">
+            <li id="ql_section_5" class="quick_link" data-section="5">
                 Peste 1200 companii
             </li>
-            <li class="quick_link" data-section="6">
+            <li id="ql_section_6" class="quick_link" data-section="6">
                 Pentru angajator
             </li>
-            <li class="quick_link" data-section="7">
+            <li id="ql_section_7" class="quick_link" data-section="7">
                 PROCESUL NOSTRU
             </li>
-            <li class="quick_link" data-section="8">
+            <li id="ql_section_8" class="quick_link" data-section="8">
                 WHERE WE’RE ACTIVE
             </li>
-            <li class="quick_link" data-section="9">
+            <li class="quick_link" id="ql_section_10" data-section="9">
                 PRESS QUOTES
             </li>
         </ul>
@@ -140,7 +140,7 @@
             <p class="mj-align--center mj-font--small">Are you a company? <a href="#">Create a profile here.</a></p>
         </div>
     </div>
-    <div class="section section_1">
+    <div id="section_1" class="section section_1">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
@@ -184,7 +184,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_2">
+    <div id="section_2" class="section section_2">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -209,7 +209,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_3">
+    <div id="section_3" class="section section_3">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -262,7 +262,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_4">
+    <div id="section_4" class="section section_4">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -291,7 +291,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_5">
+    <div id="section_5" class="section section_5">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -306,7 +306,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_6">
+    <div id="section_6" class="section section_6">
         <div class="mj-container">
             <div class="mj-box">
                 <div class="mj-grid">
@@ -332,7 +332,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_7">
+    <div id="section_7" class="section section_7">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -371,7 +371,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_8">
+    <div id="section_8" class="section section_8">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -464,7 +464,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_9">
+    <div id="section_9" class="section section_9">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -484,7 +484,7 @@
             </div>
         </div>
     </div>
-    <div class="section section_10">
+    <div id="section_10" class="section section_10">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
