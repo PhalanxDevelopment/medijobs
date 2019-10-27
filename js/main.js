@@ -146,92 +146,97 @@ document.getElementById('ql_section_10').onclick = function() {
     });
 }
 
-window.addEventListener("scroll", function() {
-    var section_1 = document.getElementById("section_1");
-    var el_section_1 = document.getElementById('ql_section_1');
-    var section_2 = document.getElementById("section_2");
-    var el_section_2 = document.getElementById('ql_section_2');
-
-    var section_3 = document.getElementById("section_3");
-    var el_section_3 = document.getElementById('ql_section_3');
-
-    var section_4 = document.getElementById("section_4");
-    var el_section_4 = document.getElementById('ql_section_4');
-
-    var section_5 = document.getElementById("section_5");
-    var el_section_5 = document.getElementById('ql_section_5');
-
-    var section_6 = document.getElementById("section_6");
-    var el_section_6 = document.getElementById('ql_section_6');
-
-    var section_7 = document.getElementById("section_7");
-    var el_section_7 = document.getElementById('ql_section_7');
-
-    var section_8 = document.getElementById("section_8");
-    var el_section_8 = document.getElementById('ql_section_8');
-
-    var section_10 = document.getElementById("section_10");
-    var el_section_10 = document.getElementById('ql_section_10');
-
-    if (window.scrollY > (section_1.offsetTop - 250) && window.scrollY + 96  <= (section_2.offsetTop )) {
-        el_section_1.className = el_section_1.className + ' active';
-    } else {
-        el_section_1.className = 'quick_link';
-    }
-
+if(getWidth() > 1000) {
+    window.addEventListener("scroll", function() {
+        var section_1 = document.getElementById("section_1");
+        var el_section_1 = document.getElementById('ql_section_1');
+        var section_2 = document.getElementById("section_2");
+        var el_section_2 = document.getElementById('ql_section_2');
     
-    if (window.scrollY + 96 > (section_2.offsetTop - 30) && window.scrollY + 96  <= (section_3.offsetTop )) {
-        el_section_2.className = el_section_2.className + ' active';
-    } else {
-        el_section_2.className = 'quick_link';
-    }
-   
-    if (window.scrollY + 96 > (section_3.offsetTop - 30) && window.scrollY + 96  <= (section_4.offsetTop )) {
-        el_section_3.className = el_section_3.className + ' active';
-    } else {
-        el_section_3.className = 'quick_link';
-    }
-
+        var section_3 = document.getElementById("section_3");
+        var el_section_3 = document.getElementById('ql_section_3');
     
-    if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_5.offsetTop )) {
-        el_section_4.className = el_section_4.className + ' active';
-    } else {
-        el_section_4.className = 'quick_link';
-    }
-
+        var section_4 = document.getElementById("section_4");
+        var el_section_4 = document.getElementById('ql_section_4');
     
-    if (window.scrollY + 96 > (section_5.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
-        el_section_5.className = el_section_5.className + ' active';
-    } else {
-        el_section_5.className = 'quick_link';
-    }
-
+        var section_5 = document.getElementById("section_5");
+        var el_section_5 = document.getElementById('ql_section_5');
     
-    if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
-        el_section_6.className = el_section_6.className + ' active';
-    } else {
-        el_section_6.className = 'quick_link';
-    }
-
+        var section_6 = document.getElementById("section_6");
+        var el_section_6 = document.getElementById('ql_section_6');
     
-    if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
-        el_section_7.className = el_section_7.className + ' active';
-    } else {
-        el_section_7.className = 'quick_link';
-    }
-
+        var section_7 = document.getElementById("section_7");
+        var el_section_7 = document.getElementById('ql_section_7');
     
-    if (window.scrollY + 96 > (section_8.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
-        el_section_8.className = el_section_8.className + ' active';
-    } else {
-        el_section_8.className = 'quick_link';
-    }
-
+        var section_8 = document.getElementById("section_8");
+        var el_section_8 = document.getElementById('ql_section_8');
     
-    if (window.scrollY + 96 > (section_10.offsetTop - 30) && window.scrollY + 96 < (section_10.offsetTop + section_10.offsetHeight )) {
-        el_section_10.className = el_section_10.className + ' active';
-    } else {
-        el_section_10.className = 'quick_link';
-    }
+        var section_10 = document.getElementById("section_10");
+        var el_section_10 = document.getElementById('ql_section_10');
+    
+        if (window.scrollY > (section_1.offsetTop - 250) && window.scrollY + 96  <= (section_2.offsetTop )) {
+            el_section_1.className = el_section_1.className + ' active';
+        } else {
+            el_section_1.className = 'quick_link';
+        }
+    
+        
+        if (window.scrollY + 96 > (section_2.offsetTop - 30) && window.scrollY + 96  <= (section_3.offsetTop )) {
+            el_section_2.className = el_section_2.className + ' active';
+        } else {
+            el_section_2.className = 'quick_link';
+        }
 
-});
+        if (window.scrollY + 96 > (section_3.offsetTop - 30) && window.scrollY + 96  <= (section_4.offsetTop )) {
+            el_section_3.className = el_section_3.className + ' active';
+        } else {
+            el_section_3.className = 'quick_link';
+        }
+    
+        if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_5.offsetTop )) {
+            el_section_4.className = el_section_4.className + ' active';
+        } else {
+            el_section_4.className = 'quick_link';
+        }
+    
+        if (window.scrollY + 96 > (section_5.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
+            el_section_5.className = el_section_5.className + ' active';
+        } else {
+            el_section_5.className = 'quick_link';
+        }
+    
+        if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
+            el_section_6.className = el_section_6.className + ' active';
+        } else {
+            el_section_6.className = 'quick_link';
+        }
+    
+        if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
+            el_section_7.className = el_section_7.className + ' active';
+        } else {
+            el_section_7.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_8.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
+            el_section_8.className = el_section_8.className + ' active';
+        } else {
+            el_section_8.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_10.offsetTop - 30) && window.scrollY + 96 < (section_10.offsetTop + section_10.offsetHeight )) {
+            el_section_10.className = el_section_10.className + ' active';
+        } else {
+            el_section_10.className = 'quick_link';
+        }
+    
+    });
+}
+function getWidth() {
+    return Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+    );
+}
