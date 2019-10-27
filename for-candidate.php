@@ -150,7 +150,7 @@
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
                     <div class="secton_bg_image">
-                        <img src="/images/section_1_bg.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/section_1_bg.png" alt="">
                     </div>
                 </div>
             </div>
@@ -174,9 +174,9 @@
                 <div class="grid__item width-10/24">
                     <div class="hide-on-mobile">
                         <div class="mj-images">
-                            <img src="/images/LU8HRJ.png" alt="">
-                            <img src="/images/ABq5rg.png" alt="">
-                            <img src="/images/O8OVQR.png" alt="">
+                            <img src="http://cst-soft.com/medijobs/images/LU8HRJ.png" alt="">
+                            <img src="http://cst-soft.com/medijobs/images/ABq5rg.png" alt="">
+                            <img src="http://cst-soft.com/medijobs/images/O8OVQR.png" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -340,7 +340,7 @@
                     <div class="above_headline">PROCESUL NOSTRU &</div>
                     <h1 class="headline light">Cum functioneaza platforma</h1>
                     <div class="section_icon hide-on-mobile">
-                        <img src="/images/icon_section_7.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/icon_section_7.png" alt="">
                     </div>
                 </div>
                 <div class="grid__item width-1/24"></div>
@@ -497,37 +497,37 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
                     <div class="quote">
-                        <img src="/images/cnbc.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/cnbc.png" alt="">
                         <p>
                             Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="/images/wallstreet.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/wallstreet.png" alt="">
                         <p>
                             Companiile reușesc să ocupe posturile vacante de cinci ori mai rapid decât dacă ar utiliza alte platforme de recrutare”, a declarat George Hagivreta, co-fondator si COO al MEDIjobs.
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="/images/biz.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/biz.png" alt="">
                         <p>
                             MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="/images/money.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/money.png" alt="">
                         <p>
                             Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="/images/br.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/br.png" alt="">
                         <p>
                             Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="/images/galenus.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/galenus.png" alt="">
                         <p>
                             Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
                         </p>
