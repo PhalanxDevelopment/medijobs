@@ -93,7 +93,6 @@
         </div>
     </header>
     <div class="mj-container">
-        
         <div class="mj-grid">
             <div class="grid__item width-1/24"></div>
             <div class="grid__item width-10/24">

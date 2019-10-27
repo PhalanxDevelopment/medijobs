@@ -38,6 +38,61 @@ body {
         }
     }
 }
+.mj-quick_links {
+    position: fixed;
+    display: block;
+    width: 250px;
+    max-width: 50px;
+    left: 16px;
+    top: 50%;
+    z-index:999;
+    margin-top: -100px;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        .quick_link {
+            width: max-content;
+            max-width: 2px;
+            -webkit-transition: all 0.5 ease;
+            -moz-transition: all 0.5 ease;
+            -o-transition: all 0.5 ease;
+            -ms-transition: all 0.5 ease;
+            transition: all 0.5 ease;
+            height: 24px;
+            margin-top: 8px;
+            background: #00C1DE;
+            padding-left: 2px;
+            font-size: 14px;
+            line-height: 17px;
+            font-family: 'ClearSans-Bold';
+            text-transform: uppercase;
+            color: #fff;
+            overflow: hidden;
+            &.active {
+                background: #000;
+            }
+        }
+    }
+    &:hover {
+        width: 250px;
+        max-width: 250px;
+        height: 100%;
+        .quick_link {
+            max-width: max-content;
+            padding-right: 20px;
+            cursor: pointer;
+            padding-left: 10px;
+            &:hover {
+                background: #000;
+            }
+        }
+    }
+}
 .mj-simple-list {
     position: relative;
     display: block;
@@ -1341,6 +1396,48 @@ body {
     }
     .hide-on-desktop {
         display: block !important;
+    }
+    .mj-register_form {
+        padding: 20px;
+        z-index: 999;
+        padding-top: 50px;
+        .close {
+            position: absolute;
+            right: 32px;
+            top: 32px;
+            width: 32px;
+            height: 32px;
+            opacity: 1;
+        }
+        .close:hover {
+            opacity: 1;
+        }
+        .close:before, .close:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 33px;
+            width: 2px;
+            background-color: red;
+        }
+        .close:before {
+            transform: rotate(45deg);
+        }
+        .close:after {
+            transform: rotate(-45deg);
+        }
+        p {
+            margin-bottom: 0px;
+            &.extra-small {
+                margin-top: 10px;
+            }
+        }
+        &.open {
+            top: 0px;
+            left: 0px;
+            margin-left: 0px;
+            width: 100%;
+        }
     }
     .quote {
         position: relative;

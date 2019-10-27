@@ -92,8 +92,40 @@
             </div>
         </div>
     </header>
+    <div class="mj-quick_links hide-on-mobile">
+        <ul>
+            <li class="quick_link" data-section="1">
+                BINE AI VENIT PE MEDIJOBS
+            </li>
+            <li class="quick_link" data-section="2">
+                Beneficii
+            </li>
+            <li class="quick_link" data-section="3">
+                CHECKOUT
+            </li>
+            <li class="quick_link" data-section="4">
+                UNDE SUNTEM ACTIVI
+            </li>
+            <li class="quick_link" data-section="5">
+                Peste 1200 companii
+            </li>
+            <li class="quick_link" data-section="6">
+                Pentru angajator
+            </li>
+            <li class="quick_link" data-section="7">
+                PROCESUL NOSTRU
+            </li>
+            <li class="quick_link" data-section="8">
+                WHERE WE’RE ACTIVE
+            </li>
+            <li class="quick_link" data-section="9">
+                PRESS QUOTES
+            </li>
+        </ul>
+    </div>
     <div class="mj-container">
-        <div class="mj-register_form mj-form">
+        <div id="form" class="mj-register_form mj-form">
+            <div id="close-form" class="close hide-on-desktop"></div>
             <a href="#" class="login">REGISTERED ALREADY? LOGIN</a>
             <h3>We Bring Job Offers to You</h3>
             <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
@@ -131,7 +163,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
                     <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
-                    <button class="mj-btn mj-btn--primary hide-on-desktop">
+                    <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
                     <p class="mj-align--center mj-font--small hide-on-desktop">Are you a company? <a href="#">Create a profile here.</a></p>

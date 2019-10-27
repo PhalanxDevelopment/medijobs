@@ -89,3 +89,13 @@ document.getElementById('body').onclick = function() {
         el.className = 'mj-lang-switcher btn-group';
     }
 }
+document.getElementById('close-form').onclick = function() {
+    var el = document.getElementById('form');
+    if (el.className.indexOf('open')) {
+        el.className = el.className.replace('open','');
+    } 
+}
+document.getElementById('open-form').onclick = function() {
+    var el = document.getElementById('form');
+    el.className = el.className + ' open'
+}
