@@ -4,6 +4,10 @@ html {
 body {
   margin: 0; }
 
+body.noScroll {
+  /* ...or body.dialogShowing */
+  overflow: hidden; }
+
 .clearfix {
   clear: both; }
 
@@ -880,14 +884,20 @@ body {
     padding-bottom: 40px;
     padding-left: 26px;
     border-left: 2px solid #00C1DE;
-    opacity: 0.3; }
+    opacity: 0.3;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease; }
     .mj-steps .mj-step.active {
       opacity: 1; }
+      .mj-steps .mj-step.active .step_nr:before {
+        background: #00C1DE; }
     .mj-steps .mj-step:first-child {
       padding-top: 0px; }
       .mj-steps .mj-step:first-child .step_nr:before {
-        top: 0px;
-        background: #00C1DE; }
+        top: 0px; }
     .mj-steps .mj-step:last-child {
       border-left: none; }
       .mj-steps .mj-step:last-child .step_nr:after {

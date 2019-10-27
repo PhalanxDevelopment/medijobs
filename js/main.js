@@ -147,7 +147,9 @@ document.getElementById('ql_section_10').onclick = function() {
 }
 
 if(getWidth() > 1000) {
-    window.addEventListener("scroll", function() {
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function(e) {
+        
         var section_1 = document.getElementById("section_1");
         var el_section_1 = document.getElementById('ql_section_1');
         var section_2 = document.getElementById("section_2");
@@ -213,6 +215,63 @@ if(getWidth() > 1000) {
     
         if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
             el_section_7.className = el_section_7.className + ' active';
+            if( window.scrollY + 96 > (section_7.offsetTop  + 200 )) {
+                var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+                var step = 1;
+                var step1 = document.getElementById('step_1');
+                var step2 = document.getElementById('step_2');
+                var step3 = document.getElementById('step_3');
+                var step4 = document.getElementById('step_4');
+                if (st > lastScrollTop){
+                    var el = document.getElementById('body');
+                    el.className = el.className + ' noScroll';
+                    var isMoving=false;
+                    function handleWheelEvent() {
+                        if (isMoving) return;
+                        moveSteps();
+                    }
+                    document.addEventListener("wheel", handleWheelEvent, true);
+                    function moveSteps() {
+                        console.log(step);
+                        isMoving = true;
+                        if (step === 1) {
+                            step1.className = 'mj-step';
+                            step2.className = 'mj-step active';    
+                        }
+                        if (step === 2) {
+                            step2.className = 'mj-step';
+                            step3.className = 'mj-step active';    
+                        }
+
+                        if (step === 3) {
+                            step3.className = 'mj-step';
+                            step4.className = 'mj-step active';    
+                        }
+                        if (step === 4) {
+                            step4.className = 'mj-step';
+                            step1.className = 'mj-step active';  
+                            document.getElementById("section_8").scrollIntoView({ 
+                                behavior: 'smooth' 
+                            });
+                            document.removeEventListener("wheel", handleWheelEvent, true);
+                        }
+                        setTimeout(function() {
+                            isMoving=false;
+                            step++;
+                            if (step > 4) {
+                                el.className = ' '; 
+                                document.removeEventListener("wheel", handleWheelEvent, true);
+                            }
+                        }, 2000);
+                    }
+                } else {
+                    step = 1;
+                    step4.className = 'mj-step';
+                    step1.className = 'mj-step active';  
+                    document.removeEventListener("wheel", handleWheelEvent, true);
+                }
+            }
+
         } else {
             el_section_7.className = 'quick_link';
         }
@@ -228,7 +287,7 @@ if(getWidth() > 1000) {
         } else {
             el_section_10.className = 'quick_link';
         }
-    
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     });
 }
 function getWidth() {
@@ -240,3 +299,6 @@ function getWidth() {
         document.documentElement.clientWidth
     );
 }
+
+
+

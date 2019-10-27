@@ -346,22 +346,22 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
                     <ul class="mj-steps">
-                        <li class="mj-step active">
+                        <li id="step_1" class="mj-step active">
                             <div class="step_nr">.01</div>
                             <div class="step_title">Creează un cont gratuit:</div>
                             <div class="step_content">Este șansa ta sa ne spui ce îți dorești în continuare. Creează-ți un cont în mai puțin de 2 minute!</div>
                         </li>
-                        <li class="mj-step">
+                        <li id="step_2" class="mj-step">
                             <div class="step_nr">.02</div>
                             <div class="step_title">Primește oferte de muncă</div>
                             <div class="step_content">Îți conectăm profilul cu oferte bazate pe experiența ta de muncă, salariul dorit și locația de interes.</div>
                         </li>
-                        <li class="mj-step">
+                        <li id="step_3" class="mj-step">
                             <div class="step_nr">.03</div>
                             <div class="step_title">Alege oferta care ți se potrivește</div>
                             <div class="step_content">Și programează interviuri cu angajatorii preferați.</div>
                         </li>
-                        <li class="mj-step">
+                        <li id="step_4" class="mj-step">
                             <div class="step_nr">.04</div>
                             <div class="step_title">Angajează-te!</div>
                             <div class="step_content">Bucură-te de un nou loc de muncă, recomandă colegilor MEDIjobs și primește un bonus!</div>

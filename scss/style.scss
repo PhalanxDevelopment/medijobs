@@ -4,6 +4,9 @@ html {
 body {
     margin: 0;
 }
+body.noScroll { /* ...or body.dialogShowing */
+    overflow: hidden;
+}
 .clearfix {
     clear: both;
 }
@@ -1015,15 +1018,24 @@ body {
         padding-left: 26px;
         border-left: 2px solid #00C1DE;
         opacity: 0.3;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
         &.active {
             opacity: 1;
+            .step_nr { 
+                &:before {
+                    background: #00C1DE;
+                }
+            }
         }
         &:first-child {
             padding-top: 0px;
             .step_nr { 
                 &:before {
                     top: 0px;
-                    background: #00C1DE;
                 }
             }
         }
