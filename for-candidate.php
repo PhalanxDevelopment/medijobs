@@ -92,19 +92,62 @@
             </div>
         </div>
     </header>
+    <div class="mj-container">
+        <div class="mj-register_form mj-form">
+            <a href="#" class="login">REGISTERED ALREADY? LOGIN</a>
+            <h3>We Bring Job Offers to You</h3>
+            <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
+            <input class="mj-input" type="text" placeholder="Default State" >
+            <input class="mj-input" type="text" placeholder="Default State" >
+            <p class="extra-small policy">
+            By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
+            </p>
+            <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+                create an account
+            </button>
+            <p class="mj-align--center mj-font--small">Are you a company? <a href="#">Create a profile here.</a></p>
+        </div>
+    </div>
     <div class="section section_1">
         <div class="mj-container">
             <div class="mj-grid">
-                <div class="grid__item width-24/24">
+                <div class="grid__item width-1/24 hide-on-mobile"></div>
+                <div class="grid__item width-9/24">
                     <div class="above_headline">BINE AI VENIT PE MEDIJOBS!</div>
                     <h1 class="headline uppercase">Noi îți aducem <span>ofertele de muncă</span></h1>
+                </div>
+                <div class="grid__item width-6/24 hide-on-mobile">
+                    <div class="secton_bg_image">
+                        <img src="/images/section_1_bg.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24 hide-on-mobile"></div>
+                <div class="grid__item width-7/24">
                     <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs</p>
-
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-10/24">
                     <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
-                    <button class="mj-btn mj-btn--primary">
+                    <button class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
-                    <p class="mj-align--center mj-font--small ">Are you a company? <a href="#">Create a profile here.</a></p>
+                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a company? <a href="#">Create a profile here.</a></p>
+                </div>
+            </div>
+            <div class="mj-grid hide-on-mobile">
+                <div class="grid__item width-1/24 hide-on-mobile"></div>
+                <div class="grid__item width-10/24">
+                    <div class="hide-on-mobile">
+                        <div class="mj-images">
+                            <img src="/images/LU8HRJ.png" alt="">
+                            <img src="/images/ABq5rg.png" alt="">
+                            <img src="/images/O8OVQR.png" alt="">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,7 +158,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">Beneficii</div>
-                    <h1 class="headline">3 motive pentru care o să iubești MEDIjobs </h1>
+                    <h1 class="headline light">3 motive pentru care o să iubești MEDIjobs </h1>
                     <ul class="mj-list">
                         <li class="mj-list__item">
                             Companiile aplică pentru tine, nu invers 
@@ -138,9 +181,9 @@
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-13/24">
                     <div class="above_headline">CHECKOUT</div>
-                    <h1 class="headline">Cele mai populare oferte de muncă acum în Medijobs.ro :</h1>
+                    <h1 class="headline light">Cele mai populare oferte de muncă acum în Medijobs.ro:</h1>
                     <ul class="mj-simple-list">
                         <li class="mj-simple-list">
                             Contract - Physical Therapist
@@ -178,6 +221,7 @@
                         <li class="mj-simple-list">
                             General Surgery Physican
                         </li>
+                        <div class="clearfix"></div>
                     </ul>
                     <a class="mj-icon-link" href="#">
                         SEE MORE ACTIVE JOBS THAT WE ARE LOOKING FOR.
@@ -192,7 +236,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">UNDE SUNTEM ACTIVI</div>
-                    <h1 class="headline">And we are covering more & more ground.</h1>
+                    <h1 class="headline light">And we are covering more & more ground.</h1>
                     <div class="mj-cols">
                         <div class="mj-col">
                             <p>Târgul Mureș</p>
@@ -215,14 +259,14 @@
             </div>
         </div>
     </div>
-    <div class="section section_4">
+    <div class="section section_5">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-13/24">
                     <div class="above_headline">Peste</div>
-                    <h1 class="headline"><span>1200 de companii</span></h1>
-                    <p style="margin-top:-20px;">Au apelat la MEDIjobs pentru a angaja cu succes specialisti medical.</p>
+                    <h1 class="headline uppercase"><span>1200 de companii</span></h1>
+                    <h1 class="headline light" style="margin-top:-10px;">Au apelat la MEDIjobs pentru a angaja cu succes specialisti medical.</h1>
                     <div class="mj-image">
                         <img src="http://cst-soft.com/medijobs/images/companies_mockup.png" alt="">
                     </div>
@@ -230,31 +274,47 @@
             </div>
         </div>
     </div>
-    <div class="section section_3">
+    <div class="section section_6">
         <div class="mj-container">
-            <div class="mj-grid">
-                <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
-                    <div class="above_headline">Pentru angajatori</div>
-                    <h1 class="headline">Angajează personal medical în termen de 30 de zile lucrătoare.</h1>
-                    <p>Noi facem treaba in locul tau! Iti potrivim ofertele cu candidati relevanti.</p>
-                    <button class="mj-btn mj-btn--primary mj-btn--alt">
-                        REQUEST A DEMO
-                    </button>
-                    <p class="mj-align--center mj-font--small " style="margin-top: 20px;"><a href="#">Find out more about our process.</a></p>
+            <div class="mj-box">
+                <div class="mj-grid">
+                    <div class="grid__item width-2/24"></div>
+                    <div class="grid__item width-22/24">
+                        <div class="above_headline">Pentru angajatori</div>
+                        <h1 class="headline light uppercase">Angajează personal medical în termen de 30 de zile lucrătoare.</h1>
+                        <p>Noi facem treaba in locul tau! Iti potrivim ofertele cu candidati relevanti.</p>
+                    </div>
+                </div>
+                <div class="mj-grid">
+                    <div class="grid__item width-2/24"></div>
+                    <div class="grid__item width-10/24">
+                        <button class="mj-btn mj-btn--primary mj-btn--alt">
+                            REQUEST A DEMO
+                        </button>
+                    </div>
+                    <div class="grid__item width-2/24"></div>
+                    <div class="grid__item width-10/24">
+                        <p class="mj-align--center mj-font--small "><a href="#">Find out more about our process.</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section section_5">
+    <div class="section section_7">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-6/24">
                     <div class="above_headline">PROCESUL NOSTRU &</div>
-                    <h1 class="headline">Cum functioneaza platforma</h1>
+                    <h1 class="headline light">Cum functioneaza platforma</h1>
+                    <div class="section_icon hide-on-mobile">
+                        <img src="/images/icon_section_7.png" alt="">
+                    </div>
+                </div>
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-7/24">
                     <ul class="mj-steps">
-                        <li class="mj-step">
+                        <li class="mj-step active">
                             <div class="step_nr">.01</div>
                             <div class="step_title">Creează un cont gratuit:</div>
                             <div class="step_content">Este șansa ta sa ne spui ce îți dorești în continuare. Creează-ți un cont în mai puțin de 2 minute!</div>
@@ -272,23 +332,25 @@
                         <li class="mj-step">
                             <div class="step_nr">.04</div>
                             <div class="step_title">Angajează-te!</div>
-                            <div class="step_content">Bucură-te de un nou loc de muncă!</div>
+                            <div class="step_content">Bucură-te de un nou loc de muncă, recomandă colegilor MEDIjobs și primește un bonus!</div>
                         </li>
                     </ul>
-                    <div class="sub_section">
-                        Recomandă colegilor MEDIjobs și primește un bonus!
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section section_3">
+    <div class="section section_8">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-6/24">
                     <div class="above_headline">WHERE WE’RE ACTIVE</div>
-                    <h1 class="headline">Ce spun candidatii despre noi.</h1>
+                    <h1 class="headline light">Ce spun candidatii despre noi.</h1>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-6/24">
                     <div class="mj-testimonials">
                         <div class="mj-testimonial">
                             <div class="mj-testimonial__rating">
@@ -335,6 +397,12 @@
                                 </div>
                             </div>
                         </div>
+                        
+                    </div>
+                </div>
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-6/24">
+                    <div class="mj-testimonials">
                         <div class="mj-testimonial">
                             <div class="mj-testimonial__rating">
                                 <span></span><span></span><span></span><span></span><span></span>
@@ -364,11 +432,11 @@
             </div>
         </div>
     </div>
-    <div class="section section_6">
+    <div class="section section_9">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-6/24">
                     <ul class="mj-list">
                         <li class="mj-list__item">
                             Alegerea unei cariere in domeniul medical tocmai a devenit mai usoara.
@@ -384,39 +452,50 @@
             </div>
         </div>
     </div>
-    <div class="section section_3">
+    <div class="section section_10">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-7/24">
                     <div class="above_headline">PRESS QUOTES</div>
-                    <h1 class="headline">Ce se scrie in presa despre noi.</h1>
+                    <h1 class="headline light">Ce se scrie in presa despre noi.</h1>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-14/24">
                     <div class="quote">
-                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <img src="/images/cnbc.png" alt="">
                         <p>
                             Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <img src="/images/wallstreet.png" alt="">
                         <p>
                             Companiile reușesc să ocupe posturile vacante de cinci ori mai rapid decât dacă ar utiliza alte platforme de recrutare”, a declarat George Hagivreta, co-fondator si COO al MEDIjobs.
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <img src="/images/biz.png" alt="">
                         <p>
                             MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <img src="/images/money.png" alt="">
                         <p>
                             Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="http://cst-soft.com/medijobs/images/startup.png" alt="">
+                        <img src="/images/br.png" alt="">
+                        <p>
+                            Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="/images/galenus.png" alt="">
                         <p>
                             Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
                         </p>
