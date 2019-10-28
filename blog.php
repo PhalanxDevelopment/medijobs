@@ -96,40 +96,334 @@
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
-                <div class="grid__item width-9/24">
-                    <div class="above_headline">BINE AI VENIT PE MEDIJOBS!</div>
-                    <h1 class="headline uppercase">Noi îți aducem <span>ofertele de muncă</span></h1>
+                <div class="grid__item width-12/24">
+                    <div class="above_headline">WELCOME TO</div>
+                    <h1 class="headline uppercase">THE MEDIJOBS RESOURCES BLOG.</h1>
+                    <p>Vrem să te ajutăm să îți construiești cariera medicală la care ai visat! Află cum să realizezi un CV pentru a-ți găsi un loc de muncă, cum să îți negociezi salariul, sfaturi practice pentru îmbunătățirea comunicării cu pacienții și echipa medicală, dar și multe altele.</p>
+
                 </div>
-                <div class="grid__item width-6/24">
-                <div id="blog-form" class="mj-register_form mj-form blog-form">
-                    <div id="close-form" class="close hide-on-desktop"></div>
-                    <a href="#" class="login">REGISTERED ALREADY? LOGIN</a>
-                    <h3>We Bring Job Offers to You</h3>
-                    <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
-                    <input class="mj-input" type="text" placeholder="Default State" >
-                    <input class="mj-input" type="text" placeholder="Default State" >
-                    <p class="extra-small policy">
-                    By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
-                    </p>
-                    <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                        create an account
-                    </button>
-                    <p class="mj-align--center mj-font--small">Are you a company? <a href="#">Create a profile here.</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="mj-grid">
-                <div class="grid__item width-1/24 hide-on-mobile"></div>
-                <div class="grid__item width-7/24">
-                    <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs</p>
-                </div>
-            </div>
-            <div class="mj-grid">
-                <div class="grid__item width-10/24">
-                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
+                <div class="grid__item width-3/24 hide-on-mobile"></div>
+                <div class="grid__item width-8/24">
+                    <div id="blog-form" class="mj-register_form mj-form blog-form">
+                        <div id="close-form" class="close hide-on-desktop"></div>
+                        <h3>WEEKLY BLOG NEWSLETTER</h3>
+                        <p>Never miss an update, we send a weekly recap of all our articles published.</p>
+                        <input class="mj-input" type="text" placeholder="Enter email" >
+                        <p class="extra-small policy">
+                        By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
+                        </p>
+                        <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+                            SUBSCRIBE
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="section section_blog section_blog_recent">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24 hide-on-mobile"></div>
+                <div class="grid__item width-23/24 mj-form">
+                    <h2>Our Latest Articles</h2>
+                    <div class="mj-articles">
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
+                            <a href="#" class="mj-article__link">READ ON</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Otilia Dobos</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_2.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
+                            <a href="#" class="mj-article__link">READ ON</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
+                            <a href="#" class="mj-article__link">READ ON</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Roxana Ruscior</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
+                            <a href="#" class="mj-article__link">READ ON</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Otilia Dobos</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_2.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
+                            <a href="#" class="mj-article__link">READ ON</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
+                            <a href="#" class="mj-article__link">READ ON</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Roxana Ruscior</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                    </div>
+                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        View all recent articles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section_blog_company">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"> </div>
+                <div class="grid__item width-23/24">
+                    <div class="company_bg">
+                        <div class="company_box mj-form">
+                            <div class="mj-grid">
+                                <div class="grid__item width-12/24">
+                                    <h3>Are you a company or a canditate?</h3>
+                                    <p>Companiile medicale din toata Romania au apelat la MEDIjobs pentru a angaja cu succes specialisti medicali.</p>
+                                </div>
+                                <div class="grid__item width-2/24 hide-on-mobile">
+                                </div>
+                                <div class="grid__item width-10/24">
+                                    <button class="mj-btn mj-btn--primary">
+                                        GET YOUR FREE ACCOUNT
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section_blog section_dual">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"> </div>
+                <div class="grid__item width-23/24">
+                    <div class="above_headline">BLOG</div>
+                    <h1 class="headline light">Checkout Our Resources.</h1>
+                    <div class="mj-articles">
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
+                            <a href="#" class="mj-article__link mj-article__link--download">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Otilia Dobos</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_2.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
+                            <a href="#" class="mj-article__link mj-article__link--download">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
+                            <a href="#" class="mj-article__link mj-article__link--download">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Roxana Ruscior</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                    </div>
+                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        View all recent Resources
+                    </button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="section section_blog">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"> </div>
+                <div class="grid__item width-23/24">
+                    <div class="above_headline">BLOG</div>
+                    <h1 class="headline light">All Time Favorites.</h1>
+                    <div class="mj-articles">
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Otilia Dobos</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_2.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Roxana Ruscior</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                    </div>
+                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        View all Time Favorites
+                    </button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="section section_blog">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"> </div>
+                <div class="grid__item width-23/24">
+                    <div class="above_headline">BLOG</div>
+                    <h1 class="headline light">Trending Articles.</h1>
+                    <div class="mj-articles">
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Otilia Dobos</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_2.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Roxana Ruscior</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Otilia Dobos</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_2.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <img src="/images/blog_1.png" alt="">
+                            </div>
+                            <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
+                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <div class="mj-article__author">
+                                <span>SCRIS DE</span>
+                                <h5 class="mj-article__author__name">Roxana Ruscior</h5>
+                                <img src="/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
+                            </div>
+                        </div>
+                    </div>
+                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        View trending articles
+                    </button>
+                </div>
+            </div>
+        </div>  
     </div>
     <div class="mj-footer">
         <div class="mj-container">
