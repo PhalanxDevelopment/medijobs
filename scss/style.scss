@@ -679,12 +679,26 @@ body.noScroll { /* ...or body.dialogShowing */
     top: 0; /* required */
     display: block;
     width: 100%;
+    &.blog {
+        height: 128px;
+    }
     .mj-meniu {
         position: relative;
         display: block;
         list-style: none;
         padding-left: 0px;
         margin-top: 22px;
+        &.blog_menu {
+            position: absolute;
+            bottom: -65px;
+            left: 73px;
+            .meniu__item {
+                a{
+                    text-transform: none;
+                    font-family: 'ClearSans-Regular';
+                }
+            }
+        }
         .meniu__item {
             position: relative;
             display: block;
@@ -1234,9 +1248,15 @@ body.noScroll { /* ...or body.dialogShowing */
         left:0px;
         margin-left: 0px;
         top:0px;
+        background-image: url(../images/newsletter.png);
+        background-position: bottom;
         margin-top: -100px;
         h3 {
             margin-top: 10px;
+            color: #000;
+            font-family: 'ClearSans-Medium';
+            font-size: 30px;
+            margin-bottom: 20px;
         }
         p {
             margin-bottom: 0px;
@@ -1387,6 +1407,15 @@ body.noScroll { /* ...or body.dialogShowing */
     &.section_1 {
         background-color: rgba($color: #CFF9FF, $alpha: 0.4);
         margin-top: 120px;
+        &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 400px;
+            background: #fff;
+            top:0;
+            right: 0;
+        }
         &.section_1--blog {
             padding-bottom: 256px;
         }
@@ -1604,10 +1633,55 @@ body.noScroll { /* ...or body.dialogShowing */
     .hide-on-desktop {
         display: block !important;
     }
+    .company_bg {
+        height: auto;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        
+        .company_box {
+            margin-left: 0px;
+            width: 100%;
+            height: auto;;
+            padding: 15px;
+        }
+    }
+    .mj-articles {
+        .mj-article {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .mj-article__title {
+                font-size: 16px;
+            }
+            .mj-article__author {
+                width: 140px;
+                .mj-article__author__image {
+                    bottom: 20px;
+                }
+            }
+            .mj-article__image {
+                height: auto;
+                img {
+                    position: relative;
+
+                }
+            }
+        }
+    }
     .mj-register_form {
         padding: 20px;
         z-index: 999;
         padding-top: 50px;
+        &.blog-form {
+            margin-top:0;
+            max-width: 100%;
+            padding-top:20px;
+            background-image: none;
+            z-index: 1;
+            height: auto;
+            .close {
+                display: none !important;
+            }
+        }
         .close {
             position: absolute;
             right: 32px;
@@ -1740,6 +1814,30 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
     .section {
+        &.section_dual {
+            .mj-articles {
+                .mj-article {
+                    margin-top: 10px;
+                    .mj-article__link {
+                        &.mj-article__link--download {
+                            height: 26px;
+                            background: #00C1DE;
+                            color: #fff;
+                            padding-left: 8px;
+                            padding-right: 8px;
+                            text-transform: uppercase;
+                            padding-top: 2px;
+                            border-radius: 4px;
+                            left: 5px;
+                            bottom: 5px;
+                        }
+                    }
+                    .mj-article__author {
+                        bottom: 45px;
+                    }
+                }
+            }
+        }
         .above_headline {
             margin-top: 24px;
             margin-bottom: 0px;
@@ -1751,6 +1849,9 @@ body.noScroll { /* ...or body.dialogShowing */
         &.section_1 {
             background-image: none;
             margin-top: 0px;
+            &:after {
+                display: none;
+            }
             .sub_section {
                 font-size: 14px;
                 line-height: 14px;

@@ -9,8 +9,76 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body id="body">
-    <header class="mj-header">
+    <header class="mj-header blog">
         <div class="mj-container">
+            <ul id="menu" class="mj-meniu blog_menu hide-on-mobile">
+                <li class="meniu__item meniu__item__has_submeniu">
+                    <a href="#">Sfaturi de Cariera</a>
+                    <ul class="meniu__submeniu">
+                        <li class="submeniu__item">
+                            <a href="#">First link</a>
+                        </li>
+                        <li class="submeniu__item">
+                            <a href="#">Second longer sublink</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meniu__item meniu__item__has_submeniu">
+                    <a href="#">Cautarea unui job</a>
+                    <ul class="meniu__submeniu">
+                        <li class="submeniu__item">
+                            <a href="#">First link</a>
+                        </li>
+                        <li class="submeniu__item">
+                            <a href="#">Second longer sublink</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meniu__item meniu__item__has_submeniu">
+                    <a href="#">Drumul spre Cariera</a>
+                    <ul class="meniu__submeniu">
+                        <li class="submeniu__item">
+                            <a href="#">First link</a>
+                        </li>
+                        <li class="submeniu__item">
+                            <a href="#">Second longer sublink</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meniu__item meniu__item__has_submeniu">
+                    <a href="#">Management</a>
+                    <ul class="meniu__submeniu">
+                        <li class="submeniu__item">
+                            <a href="#">First link</a>
+                        </li>
+                        <li class="submeniu__item">
+                            <a href="#">Second longer sublink</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meniu__item meniu__item__has_submeniu">
+                    <a href="#">Tools & Skills</a>
+                    <ul class="meniu__submeniu">
+                        <li class="submeniu__item">
+                            <a href="#">First link</a>
+                        </li>
+                        <li class="submeniu__item">
+                            <a href="#">Second longer sublink</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meniu__item meniu__item__has_submeniu">
+                    <a href="#">Camera de odihna</a>
+                    <ul class="meniu__submeniu">
+                        <li class="submeniu__item">
+                            <a href="#">First link</a>
+                        </li>
+                        <li class="submeniu__item">
+                            <a href="#">Second longer sublink</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
             <div class="mj-grid">
                 <div class="grid__item width-4/24">
                     <a href="/" class="mj-logo"></a>
@@ -58,7 +126,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="meniu__item">
+                            <li class="meniu__item active">
                                 <a href="#">Resources</a>
                             </li>
                             <div class="hide-on-desktop">
@@ -109,12 +177,19 @@
                         <h3>WEEKLY BLOG NEWSLETTER</h3>
                         <p>Never miss an update, we send a weekly recap of all our articles published.</p>
                         <input class="mj-input" type="text" placeholder="Enter email" >
-                        <p class="extra-small policy">
-                        By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
-                        </p>
-                        <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                            SUBSCRIBE
-                        </button>
+                        <div class="mj-grid">
+                            <div class="grid__item width-12/24">
+                                <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+                                    SUBSCRIBE
+                                </button>
+                                <p class="extra-small policy">
+                                    By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                            <div class="grid__item width-12/24 hide-on-mobile">
+                                <div class="newsletter_logo"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -298,7 +373,7 @@
                                 <img src="/images/blog_1.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Otilia Dobos</h5>
@@ -310,7 +385,7 @@
                                 <img src="/images/blog_2.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
@@ -322,7 +397,7 @@
                                 <img src="/images/blog_1.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Roxana Ruscior</h5>
@@ -350,7 +425,7 @@
                                 <img src="/images/blog_1.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Otilia Dobos</h5>
@@ -362,7 +437,7 @@
                                 <img src="/images/blog_2.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
@@ -374,7 +449,7 @@
                                 <img src="/images/blog_1.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Roxana Ruscior</h5>
@@ -386,7 +461,7 @@
                                 <img src="/images/blog_1.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Otilia Dobos</h5>
@@ -398,7 +473,7 @@
                                 <img src="/images/blog_2.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
@@ -410,7 +485,7 @@
                                 <img src="/images/blog_1.png" alt="">
                             </div>
                             <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
-                            <a href="#" class="mj-article__link">Download Ebook</a>
+                            <a href="#" class="mj-article__link">Read On</a>
                             <div class="mj-article__author">
                                 <span>SCRIS DE</span>
                                 <h5 class="mj-article__author__name">Roxana Ruscior</h5>
