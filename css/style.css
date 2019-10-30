@@ -1673,6 +1673,25 @@ body.noScroll {
     float: none;
     font-size: 16px;
     line-height: 24px; }
+  .section.section_article .author_box {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+    padding: 10px; }
+    .section.section_article .author_box .author_image {
+      position: relative;
+      top: 0px;
+      margin-bottom: 10px; }
+  .section.section_article .article_register_call_to_action {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 30px;
+    background-image: none; }
+  .section.section_article .article_metas {
+    margin-top: 20px; }
+    .section.section_article .article_metas .article_author {
+      max-width: 50%; }
   .section.section_dual .mj-articles .mj-article {
     margin-top: 10px; }
     .section.section_dual .mj-articles .mj-article .mj-article__link.mj-article__link--download {
@@ -1688,6 +1707,13 @@ body.noScroll {
       bottom: 5px; }
     .section.section_dual .mj-articles .mj-article .mj-article__author {
       bottom: 45px; }
+  .section .article_content img {
+    max-width: 100%;
+    float: none !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important; }
+  .section .fb_comments img {
+    max-width: 100%; }
   .section .above_headline {
     margin-top: 24px;
     margin-bottom: 0px;
@@ -1698,6 +1724,10 @@ body.noScroll {
   .section.section_1 {
     background-image: none;
     margin-top: 0px; }
+    .section.section_1.section_1--blog-article {
+      height: auto; }
+    .section.section_1 .article_image {
+      max-width: 100%; }
     .section.section_1:after {
       display: none; }
     .section.section_1 .sub_section {
@@ -1878,6 +1908,8 @@ body.noScroll {
       left: 24px; }
   .mj-header {
     height: 72px; }
+    .mj-header.blog {
+      height: 72px; }
     .mj-header .mj-logo {
       width: 56px;
       height: 25px;

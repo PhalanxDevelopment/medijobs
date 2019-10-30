@@ -1344,6 +1344,7 @@ body.noScroll { /* ...or body.dialogShowing */
 .section {
     position: relative;
     display: block;
+   
     &.section_blog_company {
         margin-top: 64px;
     }
@@ -2007,6 +2008,32 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
     .section {
+        &.section_article {
+            .author_box {
+                max-width: 100%;
+                height: auto;
+                margin-left: 0px;
+                padding: 10px;
+                .author_image {
+                    position: relative;
+                    top: 0px;
+                    margin-bottom: 10px;
+                }
+            }
+            .article_register_call_to_action {
+                max-width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 30px;
+                background-image: none;
+            }
+            .article_metas {
+                margin-top: 20px;
+                .article_author {
+                    max-width: 50%;
+                }
+            }
+        }
         &.section_dual {
             .mj-articles {
                 .mj-article {
@@ -2031,6 +2058,21 @@ body.noScroll { /* ...or body.dialogShowing */
                 }
             }
         }
+        
+        .article_content {
+            img {
+                max-width: 100%;
+                float: none !important;
+                margin-right: 0px !important;
+                margin-left: 0px !important;
+            }
+        }
+       
+        .fb_comments {
+            img {
+                max-width: 100%;
+            }
+        }
         .above_headline {
             margin-top: 24px;
             margin-bottom: 0px;
@@ -2042,6 +2084,12 @@ body.noScroll { /* ...or body.dialogShowing */
         &.section_1 {
             background-image: none;
             margin-top: 0px;
+            &.section_1--blog-article {
+                height: auto;;
+            }
+            .article_image {
+                max-width: 100%;;
+            }
             &:after {
                 display: none;
             }
@@ -2273,6 +2321,9 @@ body.noScroll { /* ...or body.dialogShowing */
     }
     .mj-header {
         height: 72px;
+        &.blog {
+            height: 72px;
+        }
         .mj-logo {
             width: 56px;
             height: 25px;
