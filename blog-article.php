@@ -160,7 +160,7 @@
             </div>
         </div>
     </header>
-    <div id="section_1_blog" class="section section_1 section_1--blog">
+    <div id="section_1_blog" class="section section_1 section_1--blog-article">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-5/24 hide-on-mobile"></div>
@@ -200,16 +200,17 @@
                         </p>
                         <div class="article_register_call_to_action">
                             <div class="mj-grid">
-                                <div class="grid__item width-2/24 hide-on-mobile"></div>
-                                <div class="grid__item width-9/24">
+                                <div class="grid__item width-3/24 hide-on-mobile"></div>
+                                <div class="grid__item width-12/24">
                                     <h3>We match your professional profile with companies looking for people LIKE YOU.</h3>
                                 </div>
-                                <div class="grid__item width-1/24 hide-on-mobile"></div>
-                                <div class="grid__item width-4/24">
-                                    <button class="mj-btn mj-btn--primary mj-btn--alt">
+                                <div class="grid__item width-2/24 hide-on-mobile"></div>
+                                <div class="grid__item width-5/24">
+                                    <button class="mj-btn mj-btn--secondary mj-btn--alt">
                                         Register for free
                                     </button>
                                 </div>
+                                <div class="grid__item width-2/24 hide-on-mobile"></div>
                             </div>
                         </div>
                         <h3>Cum afli dacă angajatorul interacționeză cu angajații săi și le oferă suport?</h3>
@@ -222,21 +223,22 @@
                         <p>Uite 4 întrebări care te-ar putea ajuta să îți dai seama de veridicitatea promisiunilor angajatorului:</p>
                         <p>1. Pe tine ce te face mândru să lucrezi în această compani</p>
                         <p>2. Cum îți susține compania creșterea în carieră și dezvoltarea profesională?</p>
-                        <p>3. Asumarea riscurilor este încurajată? Dacă da, ce se întâmplă când angajații greșesc?Dacă ar fi un lucru pe </p>
-                            care ai putea să îl schimbi la această companie, care ar fi acela?
+                        <p>3. Asumarea riscurilor este încurajată? Dacă da, ce se întâmplă când angajații greșesc?Dacă ar fi un lucru pe 
+                            care ai putea să îl schimbi la această companie, care ar fi acela?</p>
                         </p>
                         <div class="article_register_call_to_action">
                             <div class="mj-grid">
-                                <div class="grid__item width-2/24 hide-on-mobile"></div>
-                                <div class="grid__item width-9/24">
+                                <div class="grid__item width-3/24 hide-on-mobile"></div>
+                                <div class="grid__item width-12/24">
                                     <h3>We match your professional profile with companies looking for people LIKE YOU.</h3>
                                 </div>
-                                <div class="grid__item width-1/24 hide-on-mobile"></div>
-                                <div class="grid__item width-4/24">
-                                    <button class="mj-btn mj-btn--primary mj-btn--alt">
+                                <div class="grid__item width-2/24 hide-on-mobile"></div>
+                                <div class="grid__item width-5/24">
+                                    <button class="mj-btn mj-btn--secondary mj-btn--alt">
                                         Register for free
                                     </button>
                                 </div>
+                                <div class="grid__item width-2/24 hide-on-mobile"></div>
                             </div>
                         </div>
                         <h3>Descoperă cum gestionează compania situațiile de conflict.</h3>
@@ -245,7 +247,7 @@
                         </p>
                         <p>
                             Am identificat 4 întrebări care te pot ajuta să vezi cum este primită ideea de  conflict în companie:
-                            <img src="/images/inline-image.png" alt="">
+                            <img src="/images/inline-image.png" style="float:right; margin:20px; margin-right: -112px;" alt="">
                         </p>
                         <p>1. Ce cauzează conflictul în companie și cum este rezolvat? </p>
                         <p>2. Cum sunt luate deciziile atunci când există diferențe mari de opinie? </p>
