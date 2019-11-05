@@ -195,9 +195,11 @@
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-10/24">
+                <div class="grid__item width-6/24">
                     <div class="above_headline">Beneficii</div>
                     <h1 class="headline light">3 motive pentru care o să iubești MEDIjobs </h1>
+                </div>
+                <div class="grid__item width-7/24">
                     <ul class="mj-list">
                         <li class="mj-list__item">
                             Companiile aplică pentru tine, nu invers 
@@ -218,6 +220,10 @@
     </div>
     <div id="section_3" class="section section_3">
         <div class="mj-container">
+            <div class="background_title hide-on-mobile">
+                OUR Key
+                positions
+            </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
@@ -263,7 +269,7 @@
                         <div class="clearfix"></div>
                     </ul>
                     <a class="mj-icon-link" href="#">
-                        SEE MORE ACTIVE JOBS THAT WE ARE LOOKING FOR.
+                        SEE MORE ACTIVE JOBS <br> THAT WE ARE LOOKING FOR.
                     </a>
                 </div>
             </div>
@@ -276,7 +282,7 @@
                 <div class="grid__item width-10/24">
                     <div class="above_headline">UNDE SUNTEM ACTIVI</div>
                     <h1 class="headline light">And we are covering more & more ground.</h1>
-                    <div class="mj-cols">
+                    <div class="mj-cols hide-on-desktop">
                         <div class="mj-col">
                             <p>Târgul Mureș</p>
                             <p>Galați</p>
@@ -304,10 +310,11 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
                     <div class="above_headline">Peste</div>
-                    <h1 class="headline uppercase"><span>1200 de companii</span></h1>
-                    <h1 class="headline light" style="margin-top:-10px;">Au apelat la MEDIjobs pentru a angaja cu succes specialisti medical.</h1>
+                    <h1 class="headline biggest uppercase"><span>1200 de companii</span></h1>
+                    <h1 class="headline light">Au apelat la MEDIjobs pentru a angaja cu succes specialisti medical.</h1>
                     <div class="mj-image">
-                        <img src="http://cst-soft.com/medijobs/images/companies_mockup.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/companies_mockup.png" class="hide-on-desktop" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/companies_mockup_desktop.png" class="hide-on-mobile" alt="">
                     </div>
                 </div>
             </div>
@@ -320,7 +327,7 @@
                     <div class="grid__item width-2/24"></div>
                     <div class="grid__item width-22/24">
                         <div class="above_headline">Pentru angajatori</div>
-                        <h1 class="headline light uppercase">Angajează personal medical în termen de 30 de zile lucrătoare.</h1>
+                        <h1 class="headline light uppercase">Angajează personal medical <br> în termen de 30 de zile lucrătoare.</h1>
                         <p>Noi facem treaba in locul tau! Iti potrivim ofertele cu candidati relevanti.</p>
                     </div>
                 </div>
@@ -333,7 +340,7 @@
                     </div>
                     <div class="grid__item width-2/24"></div>
                     <div class="grid__item width-10/24">
-                        <p class="mj-align--center mj-font--small "><a href="#">Find out more about our process.</a></p>
+                        <p class="mj-align--center mj-font--small "><a href="#">Find out more <br> about our process.</a></p>
                     </div>
                 </div>
             </div>
@@ -504,7 +511,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
                     <div class="quote">
-                        <img src="http://cst-soft.com/medijobs/images/cnbc.png" alt="">
+                        <img src="http://cst-soft.com/medijobs/images/cnbc.png" style="margin-top:-20px;" alt="">
                         <p>
                             Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
                         </p>
