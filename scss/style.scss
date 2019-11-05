@@ -1,8 +1,83 @@
+/*
+Theme Name: MediJobs Theme
+Theme URI: http://cst-soft.com/
+Author: Neciu Dan
+Author URI: http://cst-soft.com/
+Description: 
+Version: 2
+*/
+
+@font-face {
+    font-family: 'ClearSans-Thin';
+    src: url('fonts/ClearSans-Thin.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Thin.otf')  format('opentype'),
+    url('fonts/ClearSans-Thin.woff') format('woff'), url('fonts/ClearSans-Thin.ttf')  format('truetype'), url('fonts/ClearSans-Thin.svg#ClearSans-Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-Light';
+    src: url('fonts/ClearSans-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Light.otf')  format('opentype'),
+    url('fonts/ClearSans-Light.woff') format('woff'), url('fonts/ClearSans-Light.ttf')  format('truetype'), url('fonts/ClearSans-Light.svg#ClearSans-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-Bold';
+    src: url('fonts/ClearSans-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Bold.otf')  format('opentype'),
+    url('fonts/ClearSans-Bold.woff') format('woff'), url('fonts/ClearSans-Bold.ttf')  format('truetype'), url('fonts/ClearSans-Bold.svg#ClearSans-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-BoldItalic';
+    src: url('fonts/ClearSans-BoldItalic.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-BoldItalic.otf')  format('opentype'),
+    url('fonts/ClearSans-BoldItalic.woff') format('woff'), url('fonts/ClearSans-BoldItalic.ttf')  format('truetype'), url('fonts/ClearSans-BoldItalic.svg#ClearSans-BoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-Italic';
+    src: url('fonts/ClearSans-Italic.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Italic.otf')  format('opentype'),
+    url('fonts/ClearSans-Italic.woff') format('woff'), url('fonts/ClearSans-Italic.ttf')  format('truetype'), url('fonts/ClearSans-Italic.svg#ClearSans-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-Medium';
+    src: url('fonts/ClearSans-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Medium.otf')  format('opentype'),
+    url('fonts/ClearSans-Medium.woff') format('woff'), url('fonts/ClearSans-Medium.ttf')  format('truetype'), url('fonts/ClearSans-Medium.svg#ClearSans-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-MediumItalic';
+    src: url('fonts/ClearSans-MediumItalic.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-MediumItalic.otf')  format('opentype'),
+    url('fonts/ClearSans-MediumItalic.woff') format('woff'), url('fonts/ClearSans-MediumItalic.ttf')  format('truetype'), url('fonts/ClearSans-MediumItalic.svg#ClearSans-MediumItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClearSans-Regular';
+    src: url('fonts/ClearSans-Regular.eot?#iefix') format('embedded-opentype'),  url('fonts/ClearSans-Regular.otf')  format('opentype'),
+    url('fonts/ClearSans-Regular.woff') format('woff'), url('fonts/ClearSans-Regular.ttf')  format('truetype'), url('fonts/ClearSans-Regular.svg#ClearSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html {
-    font-size: 62.5%;
+   font-size: 62.5%;
 }
 body {
     margin: 0;
+    overflow: auto;
 }
 body.noScroll { /* ...or body.dialogShowing */
     overflow: hidden;
@@ -14,7 +89,7 @@ body.noScroll { /* ...or body.dialogShowing */
 
 .mj-align--center {
     text-align: center;
-
+    
 }
 #menuToggle input {
     display: none;
@@ -220,7 +295,7 @@ body.noScroll { /* ...or body.dialogShowing */
         padding-top: 22px;
         padding-bottom: 17px;
         padding-left: 56px;
-        background: url(../images/list_item.png);
+        background: url(images/list_item.png);
         background-position: left;
         background-repeat: no-repeat;
         color: #000000;
@@ -235,9 +310,9 @@ body.noScroll { /* ...or body.dialogShowing */
     }
 }
 /*
- * Make this absolute positioned
- * at the top left of the screen
- */
+* Make this absolute positioned
+* at the top left of the screen
+*/
 .mj-lang-switcher {
     position: relative;
     display: inline-block;
@@ -355,7 +430,7 @@ body.noScroll { /* ...or body.dialogShowing */
             font-family: 'ClearSans-Bold';
             letter-spacing: 0;
             color: #00C1DE;
-            background: url(../images/arrow-right.png);
+            background: url(images/arrow-right.png);
             background-position: right;
             background-repeat: no-repeat;
             margin-top: 120px;;
@@ -397,7 +472,7 @@ body.noScroll { /* ...or body.dialogShowing */
             span {
                 border-bottom: 3px solid #00C1DE;
             }
-
+            
         }
         &.uppercase {
             text-transform: uppercase;
@@ -484,11 +559,11 @@ body.noScroll { /* ...or body.dialogShowing */
     .width-11\/24 {
         grid-column: span 11;
     }
-
+    
     .width-12\/24 {
         grid-column: span 12;
     }
-
+    
     .width-13\/24 {
         grid-column: span 13;
     }
@@ -566,7 +641,7 @@ body.noScroll { /* ...or body.dialogShowing */
         bottom: 10px;
         padding-right: 24px;
         width: 224px;
-        background: url('../images/arrow-right.png');
+        background: url('images/arrow-right.png');
         background-repeat: no-repeat;
         background-position: right;
         a {
@@ -596,37 +671,37 @@ body.noScroll { /* ...or body.dialogShowing */
                 margin-right: 0px;
             }
             &.facebook__link {
-                background: url('../images/facebook.png');
+                background: url('images/facebook.png');
                 background-repeat: no-repeat;
                 width: 12px;
                 &:hover {
-                    background: url('../images/facebook-hover.png');
+                    background: url('images/facebook-hover.png');
                     background-repeat: no-repeat;
                 }
             }
             &.instagram__link {
-                background: url('../images/instagram.png');
+                background: url('images/instagram.png');
                 width: 24px;
                 background-repeat: no-repeat;
                 &:hover {
-                    background: url('../images/instagram-hover.png');
+                    background: url('images/instagram-hover.png');
                     background-repeat: no-repeat;
                 }
             }
             &.linkedin__link {
-                background: url('../images/linkedin.png');
+                background: url('images/linkedin.png');
                 width: 25px;
                 background-repeat: no-repeat;
                 &:hover {
-                    background: url('../images/linkedin-hover.png');
+                    background: url('images/linkedin-hover.png');
                     background-repeat: no-repeat;
                 }
             }
             &.youtube__link {
-                background: url('../images/youtube.png');
+                background: url('images/youtube.png');
                 background-repeat: no-repeat;
                 &:hover {
-                    background: url('../images/youtube-hover.png');
+                    background: url('images/youtube-hover.png');
                     background-repeat: no-repeat;
                 }
             }
@@ -671,12 +746,13 @@ body.noScroll { /* ...or body.dialogShowing */
             }
         }
     }
-
+    
 }
+
 .mj-header {
     height: 96px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 8px 8px #231F200F;
+    
     opacity: 1;
     z-index: 99;
     position: sticky;
@@ -684,6 +760,9 @@ body.noScroll { /* ...or body.dialogShowing */
     top: 0; /* required */
     display: block;
     width: 100%;
+    &.shadow {
+        box-shadow: 0px 8px 8px #231F200F;
+    }
     &.blog {
         height: 128px;
     }
@@ -793,7 +872,7 @@ body.noScroll { /* ...or body.dialogShowing */
         display: block;
         margin-top: 32px;
         padding-left: 22px;
-        background-image: url('../images/Phone.png');
+        background-image: url('images/Phone.png');
         background-repeat: no-repeat;
         background-position: left;
         .call_to_action__text {
@@ -810,6 +889,7 @@ body.noScroll { /* ...or body.dialogShowing */
             font-family: 'ClearSans-Bold';
             font-size: 1.2rem;
             line-height: 1.6rem;
+            margin-top: 0px;
             letter-spacing: 0;
             color: #00616F;
         }
@@ -818,7 +898,7 @@ body.noScroll { /* ...or body.dialogShowing */
         margin-top: 39px;
         position: relative;
         display: block;
-        background: url(../images/Logo.png);
+        background: url(images/Logo.png);
         width: 191px;
         height: 30px;
     }
@@ -930,7 +1010,7 @@ body.noScroll { /* ...or body.dialogShowing */
     input:focus::placeholder {
         opacity:1;
     }
-
+    
     input.has_error::-webkit-input-placeholder { /* Edge */
         opacity:1;
         color: #FC512F;
@@ -943,7 +1023,7 @@ body.noScroll { /* ...or body.dialogShowing */
         opacity:1;
         color: #FC512F;
     }
-
+    
     input.disabled::-webkit-input-placeholder { /* Edge */
         opacity:0.3;
     }
@@ -1207,7 +1287,7 @@ body.noScroll { /* ...or body.dialogShowing */
                 content: "";
                 position: absolute;
                 display: block;
-                background: url(../images/process_mobile_bg.png);
+                background: url(images/process_mobile_bg.png);
                 width: 15px;
                 height: 15px;
                 border: 1px solid #00C1DE;
@@ -1234,6 +1314,54 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
 }
+.cookie_notifier {
+    position: absolute;
+    display: block;
+    max-width: 840px;
+    top:110px;
+    padding-left: 56px;
+    &.dismissed {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .cookie_notifier__content {
+        color: #A7A9AC;
+        font-family: 'ClearSans-Regular';
+        font-size: 12px;
+        line-height: 16px; 
+        a {
+            font-size: 12px;
+            line-height: 16px; 
+        }
+    }
+    .cookie_notifier__dismiss {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 15px;
+        height: 15px;
+        opacity: 1;
+        cursor: pointer;
+
+    }
+    .cookie_notifier__dismiss:hover {
+        opacity: 1;
+    }
+    .cookie_notifier__dismiss:before, .cookie_notifier__dismiss:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 20px;
+        width: 2px;
+        background-color: #A7A9AC;
+    }
+    .cookie_notifier__dismiss:before {
+        transform: rotate(45deg);
+    }
+    .cookie_notifier__dismiss:after {
+        transform: rotate(-45deg);
+    }
+}
 .mj-register_form {
     width: 448px;
     height: 648px;
@@ -1246,6 +1374,10 @@ body.noScroll { /* ...or body.dialogShowing */
     left: 50%;
     margin-left: 224px;
     top: 168px;
+    &.absolute {
+        position: absolute;
+        top: 7300px;
+    }
     &.blog-form {
         width: 448px;
         height: 456px;
@@ -1253,7 +1385,7 @@ body.noScroll { /* ...or body.dialogShowing */
         left:0px;
         margin-left: 0px;
         top:0px;
-        background-image: url(../images/newsletter.png);
+        background-image: url(images/newsletter.png);
         background-position: bottom;
         margin-top: -100px;
         h3 {
@@ -1344,7 +1476,7 @@ body.noScroll { /* ...or body.dialogShowing */
 .section {
     position: relative;
     display: block;
-   
+    
     &.section_blog_company {
         margin-top: 64px;
     }
@@ -1363,7 +1495,7 @@ body.noScroll { /* ...or body.dialogShowing */
             left:0;
             top:0;
             background: #F1F2F2;
-
+            
         }
     }
     &.section_blog_recent {
@@ -1402,7 +1534,7 @@ body.noScroll { /* ...or body.dialogShowing */
         letter-spacing: 0;
         opacity: 1;
         margin-top: 31px;
-        background: url(../images/sub_menu_arrow.png);
+        background: url(images/sub_menu_arrow.png);
         background-position: left;
         background-repeat: no-repeat;
         padding-left: 42px;
@@ -1431,7 +1563,7 @@ body.noScroll { /* ...or body.dialogShowing */
                     text-transform: uppercase;
                     font-family: 'ClearSans-Bold';
                     font-size: 16px;
-
+                    
                 }
             }
             .author_image {
@@ -1544,10 +1676,10 @@ body.noScroll { /* ...or body.dialogShowing */
                 }
             }
             .article_date {
-                    color:#000;
-                    font-family: 'ClearSans-Regular';
-                    font-size: 16px;
-                    line-height: 24px;
+                color:#000;
+                font-family: 'ClearSans-Regular';
+                font-size: 16px;
+                line-height: 24px;
                 span {
                     color:#A7A9AC;
                     font-family: 'ClearSans-Bold';
@@ -1574,7 +1706,7 @@ body.noScroll { /* ...or body.dialogShowing */
             display: block;
             margin-top: 50px;
             background-color:#00C1DE;
-            background-image: url(../images/register_banner_img.png);
+            background-image: url(images/register_banner_img.png);
             background-repeat: no-repeat;
             background-position: left 30px bottom;
             width: 952px;
@@ -1636,11 +1768,11 @@ body.noScroll { /* ...or body.dialogShowing */
             margin-top: 50px;
             padding-left: 55px;
         }
-
+        
     }
     &.section_3 {
         padding-bottom: 145px;
-        background-image: url(../images/section_3_bg.png);
+        background-image: url(images/section_3_bg.png);
         background-repeat: no-repeat;
         background-position: calc(50% - 200px) bottom;
     }
@@ -1659,7 +1791,7 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
     &.section_9 {
-        background-image: url(../images/bg_section_9_big.png);
+        background-image: url(images/bg_section_9_big.png);
         background-repeat: no-repeat;
         background-position: center bottom;
         padding-top: 70px;
@@ -1677,13 +1809,13 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
     &.section_7 {
-        background: url(../images/process_mobile_bg.png);
+        background: url(images/process_mobile_bg.png);
         h1 {
             color: #fff;
             font-family: 'ClearSans-Medium';
             font-size: 30px;
             line-height: 35px; 
-
+            
         }
         .sub_section {
             text-align: left;
@@ -1808,7 +1940,7 @@ body.noScroll { /* ...or body.dialogShowing */
                     color: #00C1DE;
                 }
             }
-
+            
         }
         .mj-testimonial__content {
             p {
@@ -1856,7 +1988,7 @@ body.noScroll { /* ...or body.dialogShowing */
                 height: auto;
                 img {
                     position: relative;
-
+                    
                 }
             }
         }
@@ -1923,7 +2055,7 @@ body.noScroll { /* ...or body.dialogShowing */
         margin-right: 0px;
         margin-top: 30px;
         padding-top: 30px;
-        background-image: url(../images/quotes.png);
+        background-image: url(images/quotes.png);
         background-repeat: no-repeat;
         background-position: left top;
         padding-bottom: 23px;
@@ -1969,7 +2101,7 @@ body.noScroll { /* ...or body.dialogShowing */
                     content: "";
                     position: absolute;
                     display: block;
-                    background: url(../images/process_mobile_bg.png);
+                    background: url(images/process_mobile_bg.png);
                     width: 15px;
                     height: 15px;
                     border: 1px solid #00C1DE;
@@ -2067,7 +2199,7 @@ body.noScroll { /* ...or body.dialogShowing */
                 margin-left: 0px !important;
             }
         }
-       
+        
         .fb_comments {
             img {
                 max-width: 100%;
@@ -2104,7 +2236,7 @@ body.noScroll { /* ...or body.dialogShowing */
         }
         &.section_2 {
             padding-bottom: 262px;
-            background: url(../images/section_2_bg.png);
+            background: url(images/section_2_bg.png);
             background-repeat: no-repeat;
             background-position: left -20px bottom -100px;
         }
@@ -2138,7 +2270,7 @@ body.noScroll { /* ...or body.dialogShowing */
         }
         &.section_9 {
             margin-top: 20px;
-            background-image: url(../images/section_6_bg.png);
+            background-image: url(images/section_6_bg.png);
             background-repeat: no-repeat;
             background-position: right bottom;
             padding-top: 30px;
@@ -2172,7 +2304,7 @@ body.noScroll { /* ...or body.dialogShowing */
         display: block;
         width: 29px;
         height: 29px;
-        background: url(../images/search.png);
+        background: url(images/search.png);
         background-repeat: no-repeat;
         top: 17px;
         right: 70px;
@@ -2216,7 +2348,7 @@ body.noScroll { /* ...or body.dialogShowing */
             letter-spacing: 0;
             opacity: 1;
             margin-top: 31px;
-            background: url(../images/sub_menu_arrow.png);
+            background: url(images/sub_menu_arrow.png);
             background-position: left;
             background-repeat: no-repeat;
             padding-left: 42px;
@@ -2327,7 +2459,7 @@ body.noScroll { /* ...or body.dialogShowing */
         .mj-logo {
             width: 56px;
             height: 25px;
-            background: url(../images/logo-mobile.png);
+            background: url(images/logo-mobile.png);
             margin-top: 24px;
         }
     }
@@ -2340,7 +2472,7 @@ body.noScroll { /* ...or body.dialogShowing */
         -webkit-user-select: none;
         user-select: none;
     }
-
+    
     #menuToggle input {
         display: block;
         width: 40px;
@@ -2356,10 +2488,10 @@ body.noScroll { /* ...or body.dialogShowing */
         
         -webkit-touch-callout: none;
     }
-
-/*
- * Just a quick hamburger
- */
+    
+    /*
+    * Just a quick hamburger
+    */
     #menuToggle span {
         display: block;
         width: 24px;
@@ -2375,25 +2507,25 @@ body.noScroll { /* ...or body.dialogShowing */
         transform-origin: 2px 0px;
         
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
     }
-
+    
     #menuToggle span:first-child
     {
         transform-origin: 0% 0%;
     }
-
+    
     #menuToggle span:nth-child(3) {
         background: #6FECFF;
     }
-
+    
     #menuToggle span:nth-last-child(2)
     {
         transform-origin: 0% 100%;
         
     }
-
+    
     /* 
     * Transform all the slices of hamburger
     * into a crossmark.
@@ -2404,7 +2536,7 @@ body.noScroll { /* ...or body.dialogShowing */
         transform: rotate(45deg) translate(-2px, -1px);
         background: #FC512F;
     }
-
+    
     /*
     * But let's hide the middle one.
     */
@@ -2413,14 +2545,14 @@ body.noScroll { /* ...or body.dialogShowing */
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
-
+    
     /*
     * Ohyeah and the last one should go the other direction
     */
     #menuToggle input:checked ~ span:nth-last-child(2)
     {
         transform: rotate(-45deg) translate(0, -1px);
-
+        
     }
     .mj-header .mj-meniu .meniu__item {
         float: none;
@@ -2436,12 +2568,12 @@ body.noScroll { /* ...or body.dialogShowing */
         display: block;
         height: 22px;
         padding-left: 42px;
-        background: url(../images/Login.png);
+        background: url(images/Login.png);
         background-repeat: no-repeat;
         background-position: left;
         margin-top: 41px;
     }
-
+    
     /*
     * Make this absolute positioned
     * at the top left of the screen
@@ -2540,11 +2672,11 @@ body.noScroll { /* ...or body.dialogShowing */
         .width-11\/24 {
             grid-column: span 24;
         }
-    
+        
         .width-12\/24 {
             grid-column: span 24;
         }
-    
+        
         .width-13\/24 {
             grid-column: span 24;
         }

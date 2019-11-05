@@ -3,13 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MediJobs StyleGuide</title>
+    <title>MediJobs Candidate Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts/styles.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body id="body">
-    <header class="mj-header">
+    <div class="mj-container">
+        <div id="cookie_notifier" class="cookie_notifier">
+            <span id="dismiss" class="cookie_notifier__dismiss"></span>
+            <span class="cookie_notifier__content">
+                We use cookies to improve your browsing experience as they enable us to remember log-in details, improve security, collect statistics, optimize site functionality and deliver content tailored to your interests. By continuing your navigation on this website, you are consenting to our use of such cookies or other plotters per our <a href="#">Privacy Policy.</a>
+            </span>
+        </div>
+    </div>
+    <header id="header" class="mj-header">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-4/24">
@@ -62,10 +69,10 @@
                                 <a href="#">Resources</a>
                             </li>
                             <div class="hide-on-desktop">
-                                <div class="mj-call_to_action">
+                                <a href="tel:+40749099291" class="mj-call_to_action">
                                     <p class="call_to_action__text">Get in touch with us</p>
-                                    <a class="call_to_action__link" href="tel:">+4 0749 099291</a>
-                                </div>
+                                    <p class="call_to_action__link" >+4 0749 099291</p>
+                                </a>
                                 <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Get a free account</button>
                                 <a href="#" class="mobile_login">
                                     Log into your account
@@ -76,10 +83,10 @@
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-3/24 hide-on-mobile">
-                    <div class="mj-call_to_action">
+                    <a href="tel:+40749099291" class="mj-call_to_action">
                         <p class="call_to_action__text">Get in touch with us</p>
-                        <a class="call_to_action__link" href="tel:">+4 0749 099291</a>
-                    </div>
+                        <p class="call_to_action__link">+4 0749 099291</p>
+                    </a>
                 </div>
                 <div class="grid__item width-4/24 hide-on-mobile">
                     <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Get a free account</button>

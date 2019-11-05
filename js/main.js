@@ -83,6 +83,16 @@ document.getElementById('langSwitcher').onclick = function(ev) {
     ev.stopPropagation();         
 }
 
+if(localStorage.getItem('cookie_notifier')) {
+    var el = document.getElementById('cookie_notifier');
+    el.className = 'cookie_notifier dismissed';
+}
+
+document.getElementById('dismiss').onclick = function() {
+    var el = document.getElementById('cookie_notifier');
+    el.className = 'cookie_notifier dismissed';
+    localStorage.setItem('cookie_notifier','dismissed');
+}
 document.getElementById('body').onclick = function() {
     var el = document.getElementById('langSwitcher');
     if (el.className.indexOf(' open ')) {
@@ -149,7 +159,18 @@ document.getElementById('ql_section_10').onclick = function() {
 if(getWidth() > 1000) {
     var lastScrollTop = 0;
     window.addEventListener("scroll", function(e) {
-        
+        var header = document.getElementById("header");
+        var form = document.getElementById("form");
+        if( window.scrollY > 130) {
+            header.className = 'mj-header shadow';
+        } else {
+            header.className = 'mj-header';
+        }
+        if( window.scrollY > 7200) {
+            form.className = 'mj-register_form mj-form absolute';
+        } else {
+            form.className = 'mj-register_form mj-form ';
+        }
         var section_1 = document.getElementById("section_1");
         var el_section_1 = document.getElementById('ql_section_1');
         var section_2 = document.getElementById("section_2");
@@ -232,7 +253,6 @@ if(getWidth() > 1000) {
                     }
                     document.addEventListener("wheel", handleWheelEvent, true);
                     function moveSteps() {
-                        console.log(step);
                         isMoving = true;
                         if (step === 1) {
                             step1.className = 'mj-step';
@@ -299,7 +319,4 @@ function getWidth() {
         document.documentElement.clientWidth
         );
     }
-    
-    
-    
     

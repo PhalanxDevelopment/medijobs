@@ -1,3 +1,59 @@
+/*
+Theme Name: MediJobs Theme
+Theme URI: http://cst-soft.com/
+Author: Neciu Dan
+Author URI: http://cst-soft.com/
+Description: 
+Version: 1
+*/
+@font-face {
+  font-family: 'ClearSans-Thin';
+  src: url("fonts/ClearSans-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-Thin.otf") format("opentype"), url("fonts/ClearSans-Thin.woff") format("woff"), url("fonts/ClearSans-Thin.ttf") format("truetype"), url("fonts/ClearSans-Thin.svg#ClearSans-Thin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-Light';
+  src: url("fonts/ClearSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-Light.otf") format("opentype"), url("fonts/ClearSans-Light.woff") format("woff"), url("fonts/ClearSans-Light.ttf") format("truetype"), url("fonts/ClearSans-Light.svg#ClearSans-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-Bold';
+  src: url("fonts/ClearSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-Bold.otf") format("opentype"), url("fonts/ClearSans-Bold.woff") format("woff"), url("fonts/ClearSans-Bold.ttf") format("truetype"), url("fonts/ClearSans-Bold.svg#ClearSans-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-BoldItalic';
+  src: url("fonts/ClearSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-BoldItalic.otf") format("opentype"), url("fonts/ClearSans-BoldItalic.woff") format("woff"), url("fonts/ClearSans-BoldItalic.ttf") format("truetype"), url("fonts/ClearSans-BoldItalic.svg#ClearSans-BoldItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-Italic';
+  src: url("fonts/ClearSans-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-Italic.otf") format("opentype"), url("fonts/ClearSans-Italic.woff") format("woff"), url("fonts/ClearSans-Italic.ttf") format("truetype"), url("fonts/ClearSans-Italic.svg#ClearSans-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-Medium';
+  src: url("fonts/ClearSans-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-Medium.otf") format("opentype"), url("fonts/ClearSans-Medium.woff") format("woff"), url("fonts/ClearSans-Medium.ttf") format("truetype"), url("fonts/ClearSans-Medium.svg#ClearSans-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-MediumItalic';
+  src: url("fonts/ClearSans-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-MediumItalic.otf") format("opentype"), url("fonts/ClearSans-MediumItalic.woff") format("woff"), url("fonts/ClearSans-MediumItalic.ttf") format("truetype"), url("fonts/ClearSans-MediumItalic.svg#ClearSans-MediumItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ClearSans-Regular';
+  src: url("fonts/ClearSans-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/ClearSans-Regular.otf") format("opentype"), url("fonts/ClearSans-Regular.woff") format("woff"), url("fonts/ClearSans-Regular.ttf") format("truetype"), url("fonts/ClearSans-Regular.svg#ClearSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   font-size: 62.5%; }
 
@@ -199,7 +255,7 @@ body.noScroll {
     padding-top: 22px;
     padding-bottom: 17px;
     padding-left: 56px;
-    background: url(../images/list_item.png);
+    background: url(images/list_item.png);
     background-position: left;
     background-repeat: no-repeat;
     color: #000000; }
@@ -211,9 +267,9 @@ body.noScroll {
       line-height: 35px; }
 
 /*
- * Make this absolute positioned
- * at the top left of the screen
- */
+* Make this absolute positioned
+* at the top left of the screen
+*/
 .mj-lang-switcher {
   position: relative;
   display: inline-block;
@@ -332,7 +388,7 @@ body.noScroll {
       font-family: 'ClearSans-Bold';
       letter-spacing: 0;
       color: #00C1DE;
-      background: url(../images/arrow-right.png);
+      background: url(images/arrow-right.png);
       background-position: right;
       background-repeat: no-repeat;
       margin-top: 120px; }
@@ -491,7 +547,7 @@ body.noScroll {
     bottom: 10px;
     padding-right: 24px;
     width: 224px;
-    background: url("../images/arrow-right.png");
+    background: url("images/arrow-right.png");
     background-repeat: no-repeat;
     background-position: right; }
     .mj-footer .footer__call-to-action a {
@@ -517,31 +573,31 @@ body.noScroll {
       .mj-footer .social__links .social__link:last-child {
         margin-right: 0px; }
       .mj-footer .social__links .social__link.facebook__link {
-        background: url("../images/facebook.png");
+        background: url("images/facebook.png");
         background-repeat: no-repeat;
         width: 12px; }
         .mj-footer .social__links .social__link.facebook__link:hover {
-          background: url("../images/facebook-hover.png");
+          background: url("images/facebook-hover.png");
           background-repeat: no-repeat; }
       .mj-footer .social__links .social__link.instagram__link {
-        background: url("../images/instagram.png");
+        background: url("images/instagram.png");
         width: 24px;
         background-repeat: no-repeat; }
         .mj-footer .social__links .social__link.instagram__link:hover {
-          background: url("../images/instagram-hover.png");
+          background: url("images/instagram-hover.png");
           background-repeat: no-repeat; }
       .mj-footer .social__links .social__link.linkedin__link {
-        background: url("../images/linkedin.png");
+        background: url("images/linkedin.png");
         width: 25px;
         background-repeat: no-repeat; }
         .mj-footer .social__links .social__link.linkedin__link:hover {
-          background: url("../images/linkedin-hover.png");
+          background: url("images/linkedin-hover.png");
           background-repeat: no-repeat; }
       .mj-footer .social__links .social__link.youtube__link {
-        background: url("../images/youtube.png");
+        background: url("images/youtube.png");
         background-repeat: no-repeat; }
         .mj-footer .social__links .social__link.youtube__link:hover {
-          background: url("../images/youtube-hover.png");
+          background: url("images/youtube-hover.png");
           background-repeat: no-repeat; }
   .mj-footer .footer__links:hover .footer__links_header {
     color: #00C1DE; }
@@ -664,7 +720,7 @@ body.noScroll {
     display: block;
     margin-top: 32px;
     padding-left: 22px;
-    background-image: url("../images/Phone.png");
+    background-image: url("images/Phone.png");
     background-repeat: no-repeat;
     background-position: left; }
     .mj-header .mj-call_to_action .call_to_action__text {
@@ -686,7 +742,7 @@ body.noScroll {
     margin-top: 39px;
     position: relative;
     display: block;
-    background: url(../images/Logo.png);
+    background: url(images/Logo.png);
     width: 191px;
     height: 30px; }
   .mj-header .pull-right {
@@ -1031,7 +1087,7 @@ body.noScroll {
         content: "";
         position: absolute;
         display: block;
-        background: url(../images/process_mobile_bg.png);
+        background: url(images/process_mobile_bg.png);
         width: 15px;
         height: 15px;
         border: 1px solid #00C1DE;
@@ -1072,7 +1128,7 @@ body.noScroll {
     left: 0px;
     margin-left: 0px;
     top: 0px;
-    background-image: url(../images/newsletter.png);
+    background-image: url(images/newsletter.png);
     background-position: bottom;
     margin-top: -100px; }
     .mj-register_form.blog-form h3 {
@@ -1193,7 +1249,7 @@ body.noScroll {
     letter-spacing: 0;
     opacity: 1;
     margin-top: 31px;
-    background: url(../images/sub_menu_arrow.png);
+    background: url(images/sub_menu_arrow.png);
     background-position: left;
     background-repeat: no-repeat;
     padding-left: 42px; }
@@ -1333,7 +1389,7 @@ body.noScroll {
     display: block;
     margin-top: 50px;
     background-color: #00C1DE;
-    background-image: url(../images/register_banner_img.png);
+    background-image: url(images/register_banner_img.png);
     background-repeat: no-repeat;
     background-position: left 30px bottom;
     width: 952px;
@@ -1384,7 +1440,7 @@ body.noScroll {
       padding-left: 55px; }
   .section.section_3 {
     padding-bottom: 145px;
-    background-image: url(../images/section_3_bg.png);
+    background-image: url(images/section_3_bg.png);
     background-repeat: no-repeat;
     background-position: calc(50% - 200px) bottom; }
   .section.section_6 .mj-box {
@@ -1398,7 +1454,7 @@ body.noScroll {
     .section.section_6 .mj-box p {
       margin-top: 45px; }
   .section.section_9 {
-    background-image: url(../images/bg_section_9_big.png);
+    background-image: url(images/bg_section_9_big.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     padding-top: 70px;
@@ -1412,7 +1468,7 @@ body.noScroll {
       letter-spacing: 0;
       color: #808285; }
   .section.section_7 {
-    background: url(../images/process_mobile_bg.png); }
+    background: url(images/process_mobile_bg.png); }
     .section.section_7 h1 {
       color: #fff;
       font-family: 'ClearSans-Medium';
@@ -1609,7 +1665,7 @@ body.noScroll {
     margin-right: 0px;
     margin-top: 30px;
     padding-top: 30px;
-    background-image: url(../images/quotes.png);
+    background-image: url(images/quotes.png);
     background-repeat: no-repeat;
     background-position: left top;
     padding-bottom: 23px; }
@@ -1647,7 +1703,7 @@ body.noScroll {
           content: "";
           position: absolute;
           display: block;
-          background: url(../images/process_mobile_bg.png);
+          background: url(images/process_mobile_bg.png);
           width: 15px;
           height: 15px;
           border: 1px solid #00C1DE;
@@ -1739,7 +1795,7 @@ body.noScroll {
       margin-top: 31px; }
   .section.section_2 {
     padding-bottom: 262px;
-    background: url(../images/section_2_bg.png);
+    background: url(images/section_2_bg.png);
     background-repeat: no-repeat;
     background-position: left -20px bottom -100px; }
   .section.section_4 {
@@ -1765,7 +1821,7 @@ body.noScroll {
         margin-top: 15px; }
   .section.section_9 {
     margin-top: 20px;
-    background-image: url(../images/section_6_bg.png);
+    background-image: url(images/section_6_bg.png);
     background-repeat: no-repeat;
     background-position: right bottom;
     padding-top: 30px;
@@ -1791,7 +1847,7 @@ body.noScroll {
     display: block;
     width: 29px;
     height: 29px;
-    background: url(../images/search.png);
+    background: url(images/search.png);
     background-repeat: no-repeat;
     top: 17px;
     right: 70px; }
@@ -1827,7 +1883,7 @@ body.noScroll {
       letter-spacing: 0;
       opacity: 1;
       margin-top: 31px;
-      background: url(../images/sub_menu_arrow.png);
+      background: url(images/sub_menu_arrow.png);
       background-position: left;
       background-repeat: no-repeat;
       padding-left: 42px; }
@@ -1913,7 +1969,7 @@ body.noScroll {
     .mj-header .mj-logo {
       width: 56px;
       height: 25px;
-      background: url(../images/logo-mobile.png);
+      background: url(images/logo-mobile.png);
       margin-top: 24px; }
   #menuToggle {
     position: absolute;
@@ -1937,8 +1993,8 @@ body.noScroll {
     /* and place it over the hamburger */
     -webkit-touch-callout: none; }
   /*
- * Just a quick hamburger
- */
+    * Just a quick hamburger
+    */
   #menuToggle span {
     display: block;
     width: 24px;
@@ -1987,7 +2043,7 @@ body.noScroll {
     display: block;
     height: 22px;
     padding-left: 42px;
-    background: url(../images/Login.png);
+    background: url(images/Login.png);
     background-repeat: no-repeat;
     background-position: left;
     margin-top: 41px; }
