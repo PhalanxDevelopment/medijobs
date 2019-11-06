@@ -1120,14 +1120,16 @@ body.noScroll {
       color: #FFFFFF; }
 
 .cookie_notifier {
-  position: absolute;
+  position: relative;
   display: block;
   max-width: 840px;
-  top: 110px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   padding-left: 56px; }
   .cookie_notifier.dismissed {
     opacity: 0;
-    visibility: hidden; }
+    visibility: hidden;
+    display: none; }
   .cookie_notifier .cookie_notifier__content {
     color: #A7A9AC;
     font-family: 'ClearSans-Regular';
@@ -1461,7 +1463,7 @@ body.noScroll {
       text-transform: uppercase; }
   .section.section_1 {
     background-color: rgba(207, 249, 255, 0.4);
-    margin-top: 120px; }
+    margin-top: 60px; }
     .section.section_1 .article_image {
       z-index: 11;
       position: relative; }
@@ -1495,7 +1497,7 @@ body.noScroll {
       margin-top: 50px;
       padding-left: 55px; }
   .section.section_3 {
-    padding-bottom: 145px; }
+    padding-bottom: 75px; }
     .section.section_3 .mj-icon-link {
       width: 60%;
       margin-top: 60px; }

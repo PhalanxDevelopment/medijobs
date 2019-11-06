@@ -1323,14 +1323,16 @@ body.noScroll { /* ...or body.dialogShowing */
     }
 }
 .cookie_notifier {
-    position: absolute;
+    position: relative;
     display: block;
     max-width: 840px;
-    top:110px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     padding-left: 56px;
     &.dismissed {
         opacity: 0;
         visibility: hidden;
+        display:none;
     }
     .cookie_notifier__content {
         color: #A7A9AC;
@@ -1737,7 +1739,7 @@ body.noScroll { /* ...or body.dialogShowing */
     }
     &.section_1 {
         background-color: rgba($color: #CFF9FF, $alpha: 0.4);
-        margin-top: 120px;
+        margin-top: 60px;
         .article_image {
             z-index:11;
             position: relative;
@@ -1783,7 +1785,7 @@ body.noScroll { /* ...or body.dialogShowing */
         
     }
     &.section_3 {
-        padding-bottom: 145px;
+        padding-bottom: 75px;
         //background-image: url(images/section_3_bg.png);
         //background-repeat: no-repeat;
         //background-position: calc(50% - 200px) bottom;

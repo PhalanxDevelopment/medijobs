@@ -8,14 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body id="body">
-    <div class="mj-container">
-        <div id="cookie_notifier" class="cookie_notifier">
-            <span id="dismiss" class="cookie_notifier__dismiss"></span>
-            <span class="cookie_notifier__content">
-                We use cookies to improve your browsing experience as they enable us to remember log-in details, improve security, collect statistics, optimize site functionality and deliver content tailored to your interests. By continuing your navigation on this website, you are consenting to our use of such cookies or other plotters per our <a href="#">Privacy Policy.</a>
-            </span>
-        </div>
-    </div>
+    
     <header id="header" class="mj-header">
         <div class="mj-container">
             <div class="mj-grid">
@@ -99,6 +92,14 @@
             </div>
         </div>
     </header>
+    <div class="mj-container">
+        <div id="cookie_notifier" class="cookie_notifier">
+            <span id="dismiss" class="cookie_notifier__dismiss"></span>
+            <span class="cookie_notifier__content">
+                We use cookies to improve your browsing experience as they enable us to remember log-in details, improve security, collect statistics, optimize site functionality and deliver content tailored to your interests. By continuing your navigation on this website, you are consenting to our use of such cookies or other plotters per our <a href="#">Privacy Policy.</a>
+            </span>
+        </div>
+    </div>
     <div class="mj-quick_links hide-on-mobile">
         <ul>
             <li id="ql_section_1" class="quick_link" data-section="1">
