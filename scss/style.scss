@@ -105,6 +105,75 @@ body.noScroll { /* ...or body.dialogShowing */
         height: auto;;
     }
 }
+.romania-map {
+    margin-left: -56px;
+}
+#map {
+    
+    g {
+        position: relative;
+        pointer-events: bounding-box;
+        .node {
+            display: none;
+            div {
+                font-family: 'ClearSans-Regular';
+                font-size: 18px;
+                line-height: 30px;
+                background: #00C1DE;
+                color: #fff;
+                border-radius: 4px;
+                position:relative;
+                width: 100px;
+                margin-left: 45px;
+                text-align: center;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background: #00C1DE;
+                    border-radius: 4px;
+                    left: -40px;
+                    top: 8px;
+
+                }
+            }
+        }
+    }
+    g:hover {
+        .node {
+            display: block;
+        }
+    }
+    
+    #Bucuresti, #Constanta, #Cluj{
+        path {
+            fill: #CFF9FF;
+        }
+        .node {
+            display: block;
+        }
+    }
+    #Bucuresti {
+        path {
+            fill: darken(#CFF9FF, 70%);
+        }
+    }
+    #Constanta {
+        path {
+            fill: darken(#CFF9FF, 40%);
+        }
+    }
+    #Cluj {
+        
+    }
+    path {
+        pointer-events:all;
+        &:hover {
+            fill: #CFF9FF;
+        }
+    }
+}
 .mj-cols {
     position: relative;
     display: flex;
