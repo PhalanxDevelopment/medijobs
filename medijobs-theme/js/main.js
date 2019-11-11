@@ -83,6 +83,16 @@ document.getElementById('langSwitcher').onclick = function(ev) {
     ev.stopPropagation();         
 }
 
+if(localStorage.getItem('cookie_notifier')) {
+    var el = document.getElementById('cookie_notifier');
+    el.className = 'cookie_notifier dismissed';
+}
+
+document.getElementById('dismiss').onclick = function() {
+    var el = document.getElementById('cookie_notifier');
+    el.className = 'cookie_notifier dismissed';
+    localStorage.setItem('cookie_notifier','dismissed');
+}
 document.getElementById('body').onclick = function() {
     var el = document.getElementById('langSwitcher');
     if (el.className.indexOf(' open ')) {
@@ -149,7 +159,18 @@ document.getElementById('ql_section_10').onclick = function() {
 if(getWidth() > 1000) {
     var lastScrollTop = 0;
     window.addEventListener("scroll", function(e) {
-        
+        var header = document.getElementById("header");
+        var form = document.getElementById("form");
+        if( window.scrollY > 130) {
+            header.className = 'mj-header shadow';
+        } else {
+            header.className = 'mj-header';
+        }
+        if( window.scrollY > 6400) {
+            form.className = 'mj-register_form mj-form absolute';
+        } else {
+            form.className = 'mj-register_form mj-form ';
+        }
         var section_1 = document.getElementById("section_1");
         var el_section_1 = document.getElementById('ql_section_1');
         var section_2 = document.getElementById("section_2");
@@ -232,7 +253,6 @@ if(getWidth() > 1000) {
                     }
                     document.addEventListener("wheel", handleWheelEvent, true);
                     function moveSteps() {
-                        console.log(step);
                         isMoving = true;
                         if (step === 1) {
                             step1.className = 'mj-step';
@@ -298,109 +318,13 @@ function getWidth() {
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
         );
-    }
-    
-    console.log('aici')
-    
-    document.addEventListener('sticky-change', e => {
-        const header = e.detail.target;  // header became sticky or stopped sticking.
-        const sticking = e.detail.stuck; // true when header is sticky.
-        console.log('aici')
-        header.classList.toggle('shadow', sticking); // add drop shadow when sticking.
-    });
-    
-    /**
-    * Notifies when elements w/ the `sticky` class begin to stick or stop sticking.
-    * Note: the elements should be children of `container`.
-    * @param {!Element} container
-    */
-    function observeStickyHeaderChanges(container) {
-        observeHeaders(container);
-        observeFooters(container);
-    }
-    
-    observeStickyHeaderChanges(document.querySelector('#body'));
-    
-    /**
-    * Sets up an intersection observer to notify when elements with the class
-    * `.sticky_sentinel--top` become visible/invisible at the top of the container.
-    * @param {!Element} container
-    */
-    function observeHeaders(container) {
-        const observer = new IntersectionObserver((records, observer) => {
-            for (const record of records) {
-                const targetInfo = record.boundingClientRect;
-                const stickyTarget = record.target.parentElement.querySelector('.sticky');
-                const rootBoundsInfo = record.rootBounds;
-                
-                // Started sticking.
-                if (targetInfo.bottom < rootBoundsInfo.top) {
-                    fireEvent(true, stickyTarget);
-                }
-                
-                // Stopped sticking.
-                if (targetInfo.bottom >= rootBoundsInfo.top &&
-                    targetInfo.bottom < rootBoundsInfo.bottom) {
-                        fireEvent(false, stickyTarget);
-                    }
-                }
-            }, {threshold: [0], root: container});
-            
-            // Add the top sentinels to each section and attach an observer.
-            const sentinels = addSentinels(container, 'sticky_sentinel--top');
-            sentinels.forEach(el => observer.observe(el));
-        }
-        
-/**
-* Sets up an intersection observer to notify when elements with the class
-* `.sticky_sentinel--bottom` become visible/invisible at the bottom of the
-* container.
-* @param {!Element} container
-*/
-function observeFooters(container) {
-    const observer = new IntersectionObserver((records, observer) => {
-        for (const record of records) {
-            const targetInfo = record.boundingClientRect;
-            const stickyTarget = record.target.parentElement.querySelector('.sticky');
-            const rootBoundsInfo = record.rootBounds;
-            const ratio = record.intersectionRatio;
-            
-            // Started sticking.
-            if (targetInfo.bottom > rootBoundsInfo.top && ratio === 1) {
-                fireEvent(true, stickyTarget);
-            }
-            
-            // Stopped sticking.
-            if (targetInfo.top < rootBoundsInfo.top &&
-                targetInfo.bottom < rootBoundsInfo.bottom) {
-                    fireEvent(false, stickyTarget);
-                }
-            }
-        }, {threshold: [1], root: container});
-        
-    // Add the bottom sentinels to each section and attach an observer.
-    const sentinels = addSentinels(container, 'sticky_sentinel--bottom');
-    sentinels.forEach(el => observer.observe(el));
 }
+    
+const Http = new XMLHttpRequest();
+const url='https://app.medijobs.ro/api/stats';
+Http.open("GET", url);
+Http.send();
 
-/**
- * @param {!Element} container
- * @param {string} className
- */
-function addSentinels(container, className) {
-    return Array.from(container.querySelectorAll('.sticky')).map(el => {
-      const sentinel = document.createElement('div');
-      sentinel.classList.add('sticky_sentinel', className);
-      return el.parentElement.appendChild(sentinel);
-    });
+Http.onreadystatechange = (e) => {
+    console.log(Http.responseText)
 }
-  
-  /**
-   * Dispatches the `sticky-event` custom event on the target element.
-   * @param {boolean} stuck True if `target` is sticky.
-   * @param {!Element} target Element to fire the event on.
-   */
-  function fireEvent(stuck, target) {
-    const e = new CustomEvent('sticky-change', {detail: {stuck, target}});
-    document.dispatchEvent(e);
-  }

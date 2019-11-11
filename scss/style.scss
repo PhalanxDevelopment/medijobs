@@ -94,6 +94,9 @@ body.noScroll { /* ...or body.dialogShowing */
 #menuToggle input {
     display: none;
 }
+#menuToggle {
+    float: right;
+}
 .hide-on-desktop {
     display: none !important;
 }
@@ -115,6 +118,7 @@ body.noScroll { /* ...or body.dialogShowing */
         pointer-events: bounding-box;
         .node {
             display: none;
+            pointer-events: none;
             div {
                 font-family: 'ClearSans-Regular';
                 font-size: 18px;
@@ -122,7 +126,8 @@ body.noScroll { /* ...or body.dialogShowing */
                 background: #00C1DE;
                 color: #fff;
                 border-radius: 4px;
-                position:relative;
+                position: absolute;
+                pointer-events: none;
                 width: 100px;
                 margin-left: 45px;
                 text-align: center;
@@ -152,6 +157,7 @@ body.noScroll { /* ...or body.dialogShowing */
         }
         .node {
             display: block;
+            
         }
     }
     #Bucuresti {
@@ -307,6 +313,7 @@ body.noScroll { /* ...or body.dialogShowing */
             padding-left: 2px;
             font-size: 14px;
             line-height: 17px;
+            padding-top: 3px;
             font-family: 'ClearSans-Bold';
             text-transform: uppercase;
             color: #fff;
@@ -541,7 +548,7 @@ body.noScroll { /* ...or body.dialogShowing */
             }
             &.biggest {
                 font-size: 82px;
-                line-height: 42px;
+                line-height: 60px;
                 font-family: 'ClearSans-Bold';
                 letter-spacing: -7.5px;
             }
@@ -975,20 +982,15 @@ body.noScroll { /* ...or body.dialogShowing */
         margin-top: 39px;
         position: relative;
         display: block;
-        background: url(images/Logo.png);
+        background: url(images/Logo-nou.png);
+        background-repeat: no-repeat;
         width: 191px;
         height: 30px;
     }
     .pull-right {
         margin-top: 37px;
-        -webkit-transition: all 0.5 ease;
-        -moz-transition: all 0.5 ease;
-        -o-transition: all 0.5 ease;
-        -ms-transition: all 0.5 ease;
-        transition: all 0.5 ease;
-        &:hover {
-            margin-right: 2px;;
-        }
+        font-size: 14px;
+        font-family: 'ClearSans-Bold';
     }
 }
 .mj-form {
@@ -1455,7 +1457,7 @@ body.noScroll { /* ...or body.dialogShowing */
     top: 168px;
     &.absolute {
         position: absolute;
-        top: 7300px;
+        top: 6400px;
     }
     &.blog-form {
         width: 448px;
@@ -1555,10 +1557,26 @@ body.noScroll { /* ...or body.dialogShowing */
 .section {
     position: relative;
     display: block;
+    &.section_5 {
+        img {
+            height: 45px;
+            width: auto;
+            float: left;
+            margin-right: 82px;
+            margin-bottom: 40px;
+        }
+    }
     &.section_2 {
         background: url(images/section_2_bg.png);
         background-repeat: no-repeat;
-        background-position: left 100px bottom;
+        background-position: left -80px bottom -120px;
+        &.company {
+            background: url(images/section_2_bg_company.png);
+            background-repeat: no-repeat;
+        }
+        .mj-list {
+            margin-bottom: 80px;
+        }
     }
     &.section_blog_company {
         margin-top: 64px;
@@ -1829,17 +1847,15 @@ body.noScroll { /* ...or body.dialogShowing */
             height: 700px;
         }
         .secton_bg_image {
-            position: relative;
-            display: block;
             img {
                 position: absolute;
-                top: -54px;
-                max-height: 695px;
+                bottom: 0px;
+                left: 0px;
             }
             &.company {
                 img {
-                    top: -55px;
-                    left: -90px;
+                    top: -150px;
+                    left: 500px;
                 }
             }
         }
@@ -1900,10 +1916,14 @@ body.noScroll { /* ...or body.dialogShowing */
                     margin-top: 35px;
                 }
             }
+            a {
+                text-align: center;
+                padding-top: 20px;
+            }
         }
     }
     &.section_9 {
-        background-image: url(images/bg_section_9_big.png);
+        background-image: url(images/section_9_bg.png);
         background-repeat: no-repeat;
         background-position: center bottom;
         padding-top: 70px;
@@ -1931,7 +1951,9 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
     &.section_7 {
-        background: url(images/process_mobile_bg.png);
+        background-image: url(images/section_7_bg.png);
+        background-color: #002025;
+        background-repeat: no-repeat;
         h1 {
             color: #fff;
             font-family: 'ClearSans-Medium';
@@ -1976,6 +1998,7 @@ body.noScroll { /* ...or body.dialogShowing */
     background-repeat: no-repeat;
     background-position: left top;
     padding-bottom: 23px;
+
     &:nth-child(3) {
         margin-right: 0px;
     }
@@ -2003,6 +2026,8 @@ body.noScroll { /* ...or body.dialogShowing */
         position: relative;
         display: block;
         margin-left: 0px;
+        height: 30px;
+        width: auto;
     }
 }
 .mj-testimonials {
@@ -2397,6 +2422,7 @@ body.noScroll { /* ...or body.dialogShowing */
         }
         &.section_7 {
             margin-top: 60px;
+            background: url(images/process_mobile_bg);
         }
         &.section_3 {
             margin-top: 20px;
@@ -2418,11 +2444,15 @@ body.noScroll { /* ...or body.dialogShowing */
                 p {
                     margin-top: 15px;
                 }
+                a {
+                    text-align: center;
+                    padding-top: 20px;
+                }
             }
         }
         &.section_9 {
             margin-top: 20px;
-            background-image: url(images/section_6_bg.png);
+            background-image: url(images/section_9_bg.png);
             background-repeat: no-repeat;
             background-position: right bottom;
             padding-top: 30px;
@@ -2624,6 +2654,7 @@ body.noScroll { /* ...or body.dialogShowing */
         top: 25px;
         right: 24px;
         display: block;
+        float: none;
         z-index: 9999;
         -webkit-user-select: none;
         user-select: none;

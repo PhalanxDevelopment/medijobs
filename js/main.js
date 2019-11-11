@@ -166,7 +166,7 @@ if(getWidth() > 1000) {
         } else {
             header.className = 'mj-header';
         }
-        if( window.scrollY > 7200) {
+        if( window.scrollY > 6400) {
             form.className = 'mj-register_form mj-form absolute';
         } else {
             form.className = 'mj-register_form mj-form ';
@@ -318,5 +318,13 @@ function getWidth() {
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
         );
-    }
+}
     
+const Http = new XMLHttpRequest();
+const url='https://app.medijobs.ro/api/stats';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+    console.log(Http.responseText)
+}
