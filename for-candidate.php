@@ -173,7 +173,7 @@
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
-                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
+                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span id="candidati">26448+</span> CANDIDATI</div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
@@ -563,7 +563,7 @@
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
                     <div class="above_headline">Peste</div>
-                    <h1 class="headline biggest uppercase"><span>1200 de companii</span></h1>
+                    <h1 class="headline biggest uppercase"><span><span id="companii">1200</span> de companii</span></h1>
                     <h1 class="headline light">Au apelat la MEDIjobs pentru a angaja cu succes specialiști medicali.</h1>
                     <div class="mj-image">
                         <img src="images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">
@@ -666,7 +666,7 @@
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="http://cst-soft.com/medijobs/images/testimonial_1.png" alt="">
+                                    <img src="images/testimoniale/laura.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
                                     Laura Kovacs
@@ -690,7 +690,7 @@
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="http://cst-soft.com/medijobs/images/testimonial_2.png" alt="">
+                                    <img src="images/testimoniale/alina.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
                                     Aly Alina
@@ -720,7 +720,7 @@
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="http://cst-soft.com/medijobs/images/testimonial_2.png" alt="">
+                                    <img src="images/testimoniale/gabriela.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
                                     Gabriela Podolan

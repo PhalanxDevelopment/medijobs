@@ -150,11 +150,14 @@ document.getElementById('ql_section_8').onclick = function() {
         behavior: 'smooth' 
     });
 }
-document.getElementById('ql_section_10').onclick = function() {
-    document.getElementById("section_10").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
+if (document.getElementById('ql_section_10')) {
+    document.getElementById('ql_section_10').onclick = function() {
+        document.getElementById("section_10").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
 }
+
 
 if(getWidth() > 1000) {
     var lastScrollTop = 0;
@@ -326,5 +329,20 @@ Http.open("GET", url);
 Http.send();
 
 Http.onreadystatechange = (e) => {
-    console.log(Http.responseText)
+    var response = JSON.parse(Http.responseText);
+    var candidates = response.candidates;
+    var companies = response.companies;
+
+    var el_candidate = document.getElementById('candidati');
+    var el_candidate2 = document.getElementById('candidati2');
+    var el_companii = document.getElementById('companii');
+    if(el_candidate) {
+        el_candidate.innerHTML = candidates;
+    }
+    if(el_candidate2) {
+        el_candidate2.innerHTML = candidates;
+    }
+    if(el_companii) {
+        el_companii.innerHTML = companies;
+    }
 }

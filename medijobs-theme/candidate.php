@@ -42,18 +42,18 @@ get_header();
     <div class="mj-container">
         <form id="form" action="https://app.medijobs.ro/register/candidate" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
-            <a href="https://app.medijobs.ro/login" class="login">REGISTERED ALREADY? LOGIN</a>
-            <h3>We Bring Job Offers to You</h3>
-            <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
-            <input class="mj-input" name="nume" type="text" placeholder="Nume" >
+            <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
+            <h3>Noi îți aducem ofertele de angajare</h3>
+            <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs.</p>
+            <input class="mj-input" name="nume" type="text" placeholder="Nume Prenume" >
             <input class="mj-input" name="email" type="email" placeholder="Email" >
             <p class="extra-small policy">
-            By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
+                By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
             </p>
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                create an account
+                Creează un cont
             </button>
-            <p class="mj-align--center mj-font--small">Are you a company? <a href="#">Create a profile here.</a></p>
+            <p class="mj-align--center mj-font--small"> Ești companie? <a href="https://app.medijobs.ro/register/company">Creează-ți profilul aici </a></p>
         </div>
     </div>
     <div id="section_1" class="section section_1">
@@ -78,11 +78,11 @@ get_header();
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
-                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span>26448+</span> CANDIDATI</div>
+                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span id="candidati">26448+</span> CANDIDATI</div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
-                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a company? <a href="https://app.medijobs.ro/register/company">Create a profile here.</a></p>
+                    <p class="mj-align--center mj-font--small hide-on-desktop">Ești companie? <a href="https://app.medijobs.ro/register/compan">Creează-ți profilul aici </a></p>
                 </div>
             </div>
             <div class="mj-grid hide-on-mobile">
@@ -468,7 +468,7 @@ get_header();
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
                     <div class="above_headline">Peste</div>
-                    <h1 class="headline biggest uppercase"><span>1200 de companii</span></h1>
+                    <h1 class="headline biggest uppercase"><span><span id="companii">1200</span> de companii</span></h1>
                     <h1 class="headline light">Au apelat la MEDIjobs pentru a angaja cu succes specialiști medicali.</h1>
                     <div class="mj-image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">
@@ -571,7 +571,7 @@ get_header();
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimonial_1.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/laura.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
                                     Laura Kovacs
@@ -595,7 +595,7 @@ get_header();
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimonial_2.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/alina.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
                                     Aly Alina
@@ -625,7 +625,7 @@ get_header();
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimonial_2.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/gabriela.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
                                     Gabriela Podolan

@@ -31,9 +31,9 @@ get_header();
         </ul>
     </div>
     <div class="mj-container">
-        <form id="form" action="https://app.medijobs.ro/register/candidate" class="mj-register_form mj-form">
+        <form id="form" action="https://app.medijobs.co/register/candidate" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
-            <a href="https://app.medijobs.ro/login" class="login">REGISTERED ALREADY? LOGIN</a>
+            <a href="https://app.medijobs.co/login" class="login">REGISTERED ALREADY? LOGIN</a>
             <h3>We Bring Job Offers to You</h3>
             <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
             <input class="mj-input" name="nume" type="text" placeholder="Nume" >
@@ -71,7 +71,7 @@ get_header();
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
-                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a company? <a href="https://app.medijobs.ro/register/company">Create a profile here.</a></p>
+                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a company? <a href="https://app.medijobs.co/register/company">Create a profile here.</a></p>
                 </div>
             </div>
             <div class="mj-grid hide-on-mobile">
@@ -114,7 +114,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
-                    <p><a href="https://app.medijobs.ro/register/candidate">Create your MEDIjobs account</a> and be prepared to receive job offers!</p>
+                    <p><a href="https://app.medijobs.co/register/candidate">Create your MEDIjobs account</a> and be prepared to receive job offers!</p>
                 </div>
             </div>
         </div>
@@ -450,7 +450,7 @@ get_header();
                 <div class="mj-grid">
                     <div class="grid__item width-2/24"></div>
                     <div class="grid__item width-10/24">
-                        <a href="https://app.medijobs.ro/register/company" class="mj-btn mj-btn--primary mj-btn--alt">
+                        <a href="https://app.medijobs.co/register/company" class="mj-btn mj-btn--primary mj-btn--alt">
                             Request a demo.
                         </a>
                     </div>

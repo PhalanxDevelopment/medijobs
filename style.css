@@ -1266,7 +1266,7 @@ body.noScroll {
     margin-top: 24px;
     letter-spacing: 0;
     color: #808285;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-top: 0px; }
     .mj-register_form p.mj-align--center {
       text-align: center;
@@ -1310,7 +1310,8 @@ body.noScroll {
 
 .section {
   position: relative;
-  display: block; }
+  display: block;
+  margin: 15vh 0; }
   .section.section_5 img {
     height: 45px;
     width: auto;
@@ -1703,6 +1704,9 @@ body.noScroll {
       display: block;
       float: left;
       margin-right: 16px; }
+      .mj-testimonials .mj-testimonial .mj-testimonial__author__image img {
+        height: 50px;
+        width: auto; }
     .mj-testimonials .mj-testimonial .mj-testimonial__author__name {
       font-family: 'ClearSans-Regular';
       font-size: 18px;

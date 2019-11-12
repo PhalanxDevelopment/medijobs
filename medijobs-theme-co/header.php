@@ -53,7 +53,7 @@
                 <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Sign up</button>
             </div>
             <div class="grid__item width-1/24 hide-on-mobile">
-                <a href="https://app.medijobs.ro/login" class="pull-right">
+                <a href="https://app.medijobs.co/login" class="pull-right">
                     Login
                 </a>
             </div>

@@ -45,12 +45,12 @@
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-3/24 hide-on-mobile">
                 <a href="tel:+40749099291" class="mj-call_to_action">
-                    <p class="call_to_action__text">Get in touch with us</p>
+                    <p class="call_to_action__text">Contactează-ne</p>
                     <p class="call_to_action__link">+4 0749 099291</p>
                 </a>
             </div>
             <div class="grid__item width-4/24 hide-on-mobile">
-                <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Sign up</button>
+                <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Înregistrează-te</button>
             </div>
             <div class="grid__item width-1/24 hide-on-mobile">
                 <a href="https://app.medijobs.ro/login" class="pull-right">
@@ -64,7 +64,7 @@
     <div id="cookie_notifier" class="cookie_notifier">
         <span id="dismiss" class="cookie_notifier__dismiss"></span>
         <span class="cookie_notifier__content">
-            We use cookies to improve your browsing experience as they enable us to remember log-in details, improve security, collect statistics, optimize site functionality and deliver content tailored to your interests. By continuing your navigation on this website, you are consenting to our use of such cookies or other plotters per our <a href="#">Privacy Policy.</a>
+            Utilizăm cookie-uri pentru a îmbunătăți experiența dvs. de navigare. Acestea ne permit să ne amintim detaliile de autentificare, să îmbunătățim securitatea, să colectăm statistici, să optimizăm funcționalitatea site-ului și să livrăm conținut adaptat intereselor dvs. Prin continuarea navigării pe site-ul web sunteți de acord cu utilizarea noastră de astfel de cookie-uri conform <a href="#">Politicii noastre de confidențialitate</a>.
         </span>
     </div>
 </div>

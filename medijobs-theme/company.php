@@ -39,18 +39,18 @@ get_header();
     <div class="mj-container">
         <form id="form" action="https://app.medijobs.ro/register/company" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
-            <a href="https://app.medijobs.ro/login" class="login">REGISTERED ALREADY? LOGIN</a>
+            <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
             <h3>HIRE NURSES WITHIN 30 DAYS.</h3>
             <p>Get matched with pre-qualified nurses who are interested in working with you.</p>
-            <input class="mj-input" name="nume"  type="text" placeholder="Nume" >
+            <input class="mj-input" name="nume"  type="text" placeholder="Nume si Prenume" >
             <input class="mj-input" name="email"  type="email" placeholder="Email" >
             <p class="extra-small policy">
                 By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
             </p>
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                create an account
+                Creează un cont
             </button>
-            <p class="mj-align--center mj-font--small">Are you a candidate? <a href="https://app.medijobs.ro/register/candidate">Create a profile here.</a></p>
+            <p class="mj-align--center mj-font--small">Ești candidat? <a href="https://app.medijobs.ro/register/candidate">Creează-ți profilul aici.</a></p>
         </form>
     </div>
     <div id="section_1" class="section section_1">
@@ -75,11 +75,11 @@ get_header();
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
-                    <div class="sub_section">Peste <span>33 000</span> de specialiști medicali așteaptă ofertele tale! </div>
+                    <div class="sub_section">Peste <span id="candidati">33 000</span> de specialiști medicali așteaptă ofertele tale! </div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
-                        Sign up for free
+                        Creează un cont
                     </button>
-                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a candidate? <a href="https://app.medijobs.ro/register/candidate">Create a profile here.</a></p>
+                    <p class="mj-align--center mj-font--small hide-on-desktop">Ești candidat? <a href="https://app.medijobs.ro/register/candidate">Creează-ți profilul aici.</a></p>
                 </div>
             </div>
             <div class="mj-grid hide-on-mobile">
@@ -161,7 +161,7 @@ get_header();
                 <div class="grid__item width-13/24">
                     <div class="above_headline">UNDE SUNTEM ACTIVI</div>
                     <h1 class="headline light">Medijobs este cea mai mare comunitate digitala de specialisti medicali din Romania. <br> </h1>
-                    <p>Inregistram peste 33000 de specialiști medicali în cele mai mari orașe din România.</p>
+                    <p>Inregistram peste <span id="candidati2">33 000</span> de specialiști medicali în cele mai mari orașe din România.</p>
                     <div class="mj-cols hide-on-desktop">
                         <div class="mj-col">
                             <p>Târgul Mureș</p>
@@ -449,7 +449,7 @@ get_header();
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
                     <div class="above_headline"> Alătură-te </div>
-                    <h1 class="headline biggest uppercase">celor peste <span>1200 de companii</span></h1>
+                    <h1 class="headline biggest uppercase">celor peste <span><span id="companii">1200</span> de companii</span></h1>
                     <h1 class="headline light">care au ales să lucreze cu MEDIjobs</h1>
                     <div class="mj-image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">

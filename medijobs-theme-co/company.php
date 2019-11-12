@@ -31,9 +31,9 @@ get_header();
         </ul>
     </div>
     <div class="mj-container">
-        <form id="form" action="https://app.medijobs.ro/register/company" class="mj-register_form mj-form">
+        <form id="form" action="https://app.medijobs.co/register/company" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
-            <a href="https://app.medijobs.ro/login" class="login">REGISTERED ALREADY? LOGIN</a>
+            <a href="https://app.medijobs.co/login" class="login">REGISTERED ALREADY? LOGIN</a>
             <h3>HIRE NURSES WITHIN 30 DAYS.</h3>
             <p>Get matched with pre-qualified nurses who are interested in working with you.</p>
             <input class="mj-input" name="nume"  type="text" placeholder="Nume" >
@@ -44,7 +44,7 @@ get_header();
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 create an account
             </button>
-            <p class="mj-align--center mj-font--small">Are you a candidate? <a href="https://app.medijobs.ro/register/candidate">Create a profile here.</a></p>
+            <p class="mj-align--center mj-font--small">Are you a candidate? <a href="https://app.medijobs.co/register/candidate">Create a profile here.</a></p>
         </form>
     </div>
     <div id="section_1" class="section section_1">
@@ -72,7 +72,7 @@ get_header();
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         Sign up for free
                     </button>
-                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a candidate? <a href="https://app.medijobs.ro/register/candidate">Create a profile here.</a></p>
+                    <p class="mj-align--center mj-font--small hide-on-desktop">Are you a candidate? <a href="https://app.medijobs.co/register/candidate">Create a profile here.</a></p>
                 </div>
             </div>
             <div class="mj-grid hide-on-mobile">
@@ -438,7 +438,7 @@ get_header();
                         <div class="above_headline">Companies</div>
                         <h1 class="headline light uppercase">Save Money </h1>
                         <p style="margin-top:0px">Fill your vacant positions up to five times faster</p>
-                        <p>No more rescheduling your clients appointments because you are understaffed.</p>
+                        <p style="margin-top:0px">No more rescheduling your clients appointments because you are understaffed.</p>
                     </div>
                 </div>
             </div>

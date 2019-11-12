@@ -1505,7 +1505,7 @@ body.noScroll { /* ...or body.dialogShowing */
         margin-top: 24px;;
         letter-spacing: 0;
         color: #808285;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         margin-top: 0px;
         &.mj-align--center  {
             text-align: center;
@@ -1557,6 +1557,7 @@ body.noScroll { /* ...or body.dialogShowing */
 .section {
     position: relative;
     display: block;
+    margin: 15vh 0;
     &.section_5 {
         img {
             height: 45px;
@@ -2052,6 +2053,11 @@ body.noScroll { /* ...or body.dialogShowing */
             display: block;
             float: left;
             margin-right: 16px;
+            img {
+                height: 50px;
+                width: auto;
+            }
+            
         }
         .mj-testimonial__author__name {
             font-family: 'ClearSans-Regular';
