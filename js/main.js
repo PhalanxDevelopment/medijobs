@@ -296,6 +296,7 @@ if(getWidth() > 1000) {
                     step = 1;
                     step4.className = 'mj-step';
                     step1.className = 'mj-step active';  
+                    icon.className = 'section_icon step_1 hide-on-mobile';
                     document.removeEventListener("wheel", handleWheelEvent, true);
                 }
             }

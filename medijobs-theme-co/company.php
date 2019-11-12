@@ -457,9 +457,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
-                    <div class="section_icon hide-on-mobile">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon_section_7.png" alt="">
-                    </div>
+                    <div id="section_icon" class="section_icon step_1 hide-on-mobile"></div>
                 </div>
                 <div class="grid__item width-7/24">
                     <ul class="mj-steps" style="margin-top: 85px;">
