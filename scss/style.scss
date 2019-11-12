@@ -1612,6 +1612,26 @@ body.noScroll { /* ...or body.dialogShowing */
         margin-top: 85px;
         display: block;
         position: relative;
+        width: 280px;
+        height: 330px;;
+        -webkit-transition:background-position .5s ease-in;  
+        -moz-transition:background-position .5s ease-in;  
+        -o-transition:background-position .5s ease-in;  
+        transition:background-position .5s ease-in; 
+        background-image: url(images/bg_section_7_icon_scroll.png);
+        background-position-y: 0;
+        &.step_1 {
+            background-position-y: 0;
+        }
+        &.step_2 {
+            background-position-y: -370px;
+        }
+        &.step_3 {
+            background-position-y: -740px;
+        }
+        &.step_4 {
+            background-position-y: -1110px;
+        }
     }
     .mj-images {
         position: relative;

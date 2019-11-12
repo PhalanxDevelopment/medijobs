@@ -610,8 +610,8 @@
                 <div class="grid__item width-6/24">
                     <div class="above_headline">PROCESUL NOSTRU &</div>
                     <h1 class="headline light">Cum functioneaza platforma</h1>
-                    <div class="section_icon hide-on-mobile">
-                        <img src="http://cst-soft.com/medijobs/images/icon_section_7.png" alt="">
+                    <div id="section_icon" class="section_icon step_1 hide-on-mobile">
+                        
                     </div>
                 </div>
                 <div class="grid__item width-1/24"></div>
