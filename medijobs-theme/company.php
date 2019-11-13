@@ -42,13 +42,10 @@ get_header();
         <form id="form" action="https://app.medijobs.ro/register/company" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
             <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
-            <h3>HIRE NURSES WITHIN 30 DAYS.</h3>
-            <p>Get matched with pre-qualified nurses who are interested in working with you.</p>
+            <h3>Noi iti aducem specialistii medicali!</h3>
+            <p>Conecteaza-te cu profesionisti pre-calificati care sunt interesati sa lucreze alaturi de tine.</p>
             <input class="mj-input" name="nume"  type="text" placeholder="Nume si Prenume" >
             <input class="mj-input" name="email"  type="email" placeholder="Email" >
-            <p class="extra-small policy">
-                By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
-            </p>
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 Creează un cont
             </button>

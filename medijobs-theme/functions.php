@@ -98,3 +98,51 @@ function blankslate_widgets_init() {
     
         return $classes;
     }
+
+    /**
+ * Builds custom HTML.
+ *
+ * With this function, I can alter WPP's HTML output from my theme's functions.php.
+ * This way, the modification is permanent even if the plugin gets updated.
+ *
+ * @param	array	$mostpopular
+ * @param	array	$instance
+ * @return	string
+ */
+function my_custom_popular_posts_html_list( $popular_posts, $instance ){
+    $output = '<div class="mj-articles">';
+
+    // loop the array of popular posts objects
+    foreach( $popular_posts as $popular_post ) {
+
+        $stats = array(); // placeholder for the stats tag
+        
+        // Author option checked
+        if ( $instance['stats_tag']['author'] ) {
+            $author = get_the_author_meta( 'display_name', $popular_post->uid );
+            $image = get_the_author_meta( 'avatar' , $popular_post->uid );
+            $display_name = '<h5 class="mj-article__author__name">' . $author . '</h5>';
+            $display_image = get_avatar( $popular_post->uid , 50, '', $author, array('class' => 'mj-article__author__image'));
+            $stats[] = '<div class="mj-article__author"> <span>SCRIS DE </span>'  . sprintf( __( '%s', 'wordpress-popular-posts' ), $display_name ). sprintf( __( '%s', 'wordpress-popular-posts' ), $display_image ). '</div>';
+        }
+
+         // Build stats tag
+        if ( !empty( $stats ) ) {
+            $stats = '<div class="wpp-stats">' . join( ' | ', $stats ) . '</div>';
+        } else {
+            $stats = null;
+        }
+
+        $output .= "<div class='mj-article'>";
+        $output .= "<div class=\"mj-article__image\"><a href=\"" . get_permalink( $popular_post->id ) . "\">". get_the_post_thumbnail($popular_post->id, 'full') ."</a></div>";
+        $output .= "<h3 class=\"mj-article__title\"><a href=\"" . get_permalink( $popular_post->id ) . "\" title=\"" . esc_attr( $popular_post->title ) . "\">" . $popular_post->title . "</a></h3>";
+        $output .= "<a href=\"" . get_permalink( $popular_post->id ) . "\" class=\"mj-article__link\">Citeste</a>";
+        $output .= $stats;
+        $output .= "</div>" . "\n";
+    }
+
+    $output .= '</div>';
+
+    return $output;
+}
+add_filter( 'wpp_custom_html', 'my_custom_popular_posts_html_list', 10, 2 );

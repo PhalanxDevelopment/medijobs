@@ -38,9 +38,6 @@ get_header();
             <p>Get matched with pre-qualified nurses who are interested in working with you.</p>
             <input class="mj-input" name="nume"  type="text" placeholder="Nume" >
             <input class="mj-input" name="email"  type="email" placeholder="Email" >
-            <p class="extra-small policy">
-                By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, which outline your rights and obligations with respect to your use of the Service & processing of your data.
-            </p>
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 create an account
             </button>

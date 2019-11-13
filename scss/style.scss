@@ -201,9 +201,12 @@ body.noScroll { /* ...or body.dialogShowing */
     }
     .mj-article {
         width: 416px;
-        border: 2px solid #D1D3D4;
+        //border: 2px solid #D1D3D4;
         position: relative;
         display: block;
+        box-shadow: 0px 8px 32px #00202514;
+        border-radius: 6px;
+        overflow: hidden;
         margin-bottom: 48px;
         padding-bottom: 100px;
         .mj-article__link {
@@ -261,10 +264,21 @@ body.noScroll { /* ...or body.dialogShowing */
             font-size: 22px;
             line-height: 30px;
             font-family: 'ClearSans-Medium';
+            text-align: left;
             color: #000;
             margin-top: 24px;
             padding-left: 32px;
             padding-right: 32px;
+            a {
+                font-size: 22px;
+                line-height: 30px;
+                font-family: 'ClearSans-Medium';
+                color: #000;
+                text-align: left;
+                &:hover {
+                    color: #00C1DE;
+                }
+            }
         }
         .mj-article__image {
             width: 100%;
@@ -1468,7 +1482,7 @@ body.noScroll { /* ...or body.dialogShowing */
         top:0px;
         background-image: url(images/newsletter.png);
         background-position: bottom;
-        margin-top: -100px;
+        margin-top: 48px;
         h3 {
             margin-top: 10px;
             color: #000;
@@ -1601,7 +1615,7 @@ body.noScroll { /* ...or body.dialogShowing */
         }
     }
     &.section_blog_recent {
-        margin-top: -230px;
+        margin-top: -325px;
     }
     &.section_blog {
         .mj-btn {
@@ -1862,7 +1876,7 @@ body.noScroll { /* ...or body.dialogShowing */
             right: 0;
         }
         &.section_1--blog {
-            padding-bottom: 256px;
+            padding-bottom: 150px;
         }
         &.section_1--blog-article {
             height: 700px;
@@ -2592,7 +2606,6 @@ body.noScroll { /* ...or body.dialogShowing */
     }
     .mj-sub-footer {
         margin-top: 30px;
-       
         a {
             margin-top: 15px;
             position: relative;

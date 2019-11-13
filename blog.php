@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MediJobs Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts/styles.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body id="body">
     <header class="mj-header blog">
@@ -166,9 +165,8 @@
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-12/24">
                     <div class="above_headline">WELCOME TO</div>
-                    <h1 class="headline uppercase">THE MEDIJOBS RESOURCES BLOG.</h1>
+                    <h1 class="headline uppercase ">THE MEDIJOBS RESOURCES BLOG.</h1>
                     <p>Vrem să te ajutăm să îți construiești cariera medicală la care ai visat! Află cum să realizezi un CV pentru a-ți găsi un loc de muncă, cum să îți negociezi salariul, sfaturi practice pentru îmbunătățirea comunicării cu pacienții și echipa medicală, dar și multe altele.</p>
-
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-8/24">

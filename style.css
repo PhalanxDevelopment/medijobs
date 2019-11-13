@@ -159,9 +159,11 @@ body.noScroll {
     justify-content: stretch; }
   .mj-articles .mj-article {
     width: 416px;
-    border: 2px solid #D1D3D4;
     position: relative;
     display: block;
+    box-shadow: 0px 8px 32px #00202514;
+    border-radius: 6px;
+    overflow: hidden;
     margin-bottom: 48px;
     padding-bottom: 100px; }
     .mj-articles .mj-article .mj-article__link {
@@ -212,10 +214,19 @@ body.noScroll {
       font-size: 22px;
       line-height: 30px;
       font-family: 'ClearSans-Medium';
+      text-align: left;
       color: #000;
       margin-top: 24px;
       padding-left: 32px;
       padding-right: 32px; }
+      .mj-articles .mj-article .mj-article__title a {
+        font-size: 22px;
+        line-height: 30px;
+        font-family: 'ClearSans-Medium';
+        color: #000;
+        text-align: left; }
+        .mj-articles .mj-article .mj-article__title a:hover {
+          color: #00C1DE; }
     .mj-articles .mj-article .mj-article__image {
       width: 100%;
       position: relative;
@@ -1235,7 +1246,7 @@ body.noScroll {
     top: 0px;
     background-image: url(images/newsletter.png);
     background-position: bottom;
-    margin-top: -100px; }
+    margin-top: 48px; }
     .mj-register_form.blog-form h3 {
       margin-top: 10px;
       color: #000;
@@ -1342,7 +1353,7 @@ body.noScroll {
       top: 0;
       background: #F1F2F2; }
   .section.section_blog_recent {
-    margin-top: -230px; }
+    margin-top: -325px; }
   .section.section_blog .mj-btn {
     max-width: 416px; }
   .section .section_icon {
@@ -1555,7 +1566,7 @@ body.noScroll {
       top: 0;
       right: 0; }
     .section.section_1.section_1--blog {
-      padding-bottom: 256px; }
+      padding-bottom: 150px; }
     .section.section_1.section_1--blog-article {
       height: 700px; }
     .section.section_1 .secton_bg_image img {
