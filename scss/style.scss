@@ -874,40 +874,25 @@ body.noScroll { /* ...or body.dialogShowing */
             position: absolute;
             bottom: -65px;
             left: 73px;
-            .meniu__item {
-                a{
-                    text-transform: none;
-                    font-family: 'ClearSans-Regular';
+            .meniu__item, .cat-item {
+                &:after {
+                    position: absolute;
+                    content: "";
+                    top: 22px;
+                    right: 10px;
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-color: #00C1DE transparent transparent transparent;
                 }
-            }
-        }
-        .meniu__item {
-            position: relative;
-            display: block;
-            float: left;
-            text-align: left;
-            padding: 17px;
-            padding-left: 30px;
-            padding-right: 30px;
-            &.meniu__item__has_submeniu:after {
-                position: absolute;
-                content: "";
-                top: 22px;
-                right: 10px;
-                width: 0;
-                height: 0;
-                border: 6px solid transparent;
-                border-color: #00C1DE transparent transparent transparent;
-            }
-            &:hover {
-                &.meniu__item__has_submeniu:after {
-                    border-color: transparent transparent #00C1DE transparent;
-                    top: 16px;
-                }
-                &.meniu__item__has_submeniu {
+                &:hover {
                     background: #CFF9FF 0% 0% no-repeat padding-box;
                     border-radius: 4px 4px 0px 0px;
-                    .meniu__submeniu {
+                    &:after {
+                        border-color: transparent transparent #00C1DE transparent;
+                        top: 16px;
+                    }
+                    .sub-menu, .children {
                         height: auto;
                         min-height: 1000px;
                         list-style: none;
@@ -919,6 +904,68 @@ body.noScroll { /* ...or body.dialogShowing */
                         li {
                             background: #CFF9FF 0% 0% no-repeat padding-box;
                             padding: 17px;
+                            width: 100%;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            border-top: 1px solid #00C1DE;
+                            &:after {
+                                display: none;
+                            }
+                            &:hover {
+                                background: #00C1DE 0% 0% no-repeat padding-box;
+                                color:#fff;
+                                a {
+                                    color:#fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                a{
+                    text-transform: none;
+                    font-family: 'ClearSans-Regular';
+                }
+            }
+        }
+        .meniu__item, .cat-item {
+            position: relative;
+            display: block;
+            float: left;
+            text-align: left;
+            padding: 17px;
+            padding-left: 30px;
+            padding-right: 30px;
+            &.menu-item-has-children:after {
+                position: absolute;
+                content: "";
+                top: 22px;
+                right: 10px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-color: #00C1DE transparent transparent transparent;
+            }
+            &:hover {
+                &.menu-item-has-children:after {
+                    border-color: transparent transparent #00C1DE transparent;
+                    top: 16px;
+                }
+                &.menu-item-has-children {
+                    background: #CFF9FF 0% 0% no-repeat padding-box;
+                    border-radius: 4px 4px 0px 0px;
+                    .sub-menu{
+                        height: auto;
+                        min-height: 1000px;
+                        list-style: none;
+                        padding-left: 0px;
+                        top: 50px;
+                        width: 100%;
+                        left: 0px;
+                        
+                        li {
+                            background: #CFF9FF 0% 0% no-repeat padding-box;
+                            padding: 17px;
+                            width: 100%;
                             padding-left: 30px;
                             padding-right: 30px;
                             border-top: 1px solid #00C1DE;
@@ -942,7 +989,7 @@ body.noScroll { /* ...or body.dialogShowing */
                 text-transform: uppercase;
                 
             }
-            .meniu__submeniu {
+            .sub-menu, .children {
                 position: absolute;
                 display: block;
                 height: 0px;
@@ -953,10 +1000,10 @@ body.noScroll { /* ...or body.dialogShowing */
                 a{
                     color: #000
                 }
-                &.meniu__item__has_submeniu:after {
+                &.menu-item-has-children:after {
                     border-color: #000 transparent transparent transparent;
                 }
-                .meniu__submeniu {
+                .sub-menu {
                     a {
                         color: #00C1DE;
                     }
@@ -1301,6 +1348,18 @@ body.noScroll { /* ...or body.dialogShowing */
         background: #002025 0% 0% no-repeat padding-box;
         border: 1px solid #002025;
         color: #fff;
+    }
+}
+a.mj-btn {
+    text-align: center;
+    text-decoration: none;
+    padding-top: 12px;
+    &.mj-btn--primary {
+        padding-top: 22px;
+    }
+    &:hover {
+        text-decoration: none;
+        color:#fff;
     }
 }
 .mj-steps {
@@ -2827,12 +2886,12 @@ body.noScroll { /* ...or body.dialogShowing */
             float: left;
         }
     }
-    .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu .meniu__submeniu {
+    .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children .sub-menu {
         min-height: auto;
         top: 15px;
         position: relative;
     }
-    .mj-header .mj-meniu .meniu__item.meniu__item__has_submeniu:after {
+    .mj-header .mj-meniu .meniu__item.menu-item-has-children:after {
         position: relative;
         float: left;
         top: 6px;

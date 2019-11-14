@@ -99,56 +99,61 @@ document.getElementById('body').onclick = function() {
         el.className = 'mj-lang-switcher btn-group';
     }
 }
-document.getElementById('close-form').onclick = function() {
-    var el = document.getElementById('form');
-    if (el.className.indexOf('open')) {
-        el.className = el.className.replace('open','');
-    } 
+if (document.getElementById('close-form')) {
+    document.getElementById('close-form').onclick = function() {
+        var el = document.getElementById('form');
+        if (el.className.indexOf('open')) {
+            el.className = el.className.replace('open','');
+        } 
+    }
 }
-document.getElementById('open-form').onclick = function() {
-    var el = document.getElementById('form');
-    el.className = el.className + ' open'
+if (document.getElementById('open-form')) {
+    document.getElementById('open-form').onclick = function() {
+        var el = document.getElementById('form');
+        el.className = el.className + ' open'
+    }
 }
-
-document.getElementById('ql_section_1').onclick = function() {
-    document.getElementById("section_1").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_2').onclick = function() {
-    document.getElementById("section_2").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_3').onclick = function() {
-    document.getElementById("section_3").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_4').onclick = function() {
-    document.getElementById("section_4").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_5').onclick = function() {
-    document.getElementById("section_5").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_6').onclick = function() {
-    document.getElementById("section_6").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_7').onclick = function() {
-    document.getElementById("section_7").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_8').onclick = function() {
-    document.getElementById("section_8").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
+if (document.getElementById('quick-links')) {
+    document.getElementById('ql_section_1').onclick = function() {
+        document.getElementById("section_1").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_2').onclick = function() {
+        document.getElementById("section_2").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_3').onclick = function() {
+        document.getElementById("section_3").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_4').onclick = function() {
+        document.getElementById("section_4").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_5').onclick = function() {
+        document.getElementById("section_5").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_6').onclick = function() {
+        document.getElementById("section_6").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_7').onclick = function() {
+        document.getElementById("section_7").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_8').onclick = function() {
+        document.getElementById("section_8").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
 }
 if (document.getElementById('ql_section_10')) {
     document.getElementById('ql_section_10').onclick = function() {
@@ -160,14 +165,15 @@ if (document.getElementById('ql_section_10')) {
 
 
 if(getWidth() > 1000) {
+    var header = document.getElementById("header");
+    var headerClass = header.className;
     var lastScrollTop = 0;
     window.addEventListener("scroll", function(e) {
-        var header = document.getElementById("header");
         var form = document.getElementById("form");
         if( window.scrollY > 130) {
-            header.className = 'mj-header shadow';
+            header.className = headerClass + ' shadow';
         } else {
-            header.className = 'mj-header';
+            header.className = headerClass;
         }
         if( window.scrollY > 6400) {
             form.className = 'mj-register_form mj-form absolute';

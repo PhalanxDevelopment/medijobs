@@ -8,7 +8,7 @@
  */
 get_header();
 ?>
-    <div class="mj-quick_links hide-on-mobile">
+    <div id="quick_links" class="mj-quick_links hide-on-mobile">
         <ul>
             <li id="ql_section_1" class="quick_link" data-section="1">
                 BINE AI VENIT PE MEDIJOBS

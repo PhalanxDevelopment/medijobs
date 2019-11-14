@@ -10,8 +10,18 @@
 <body  id="body" <?php body_class(); ?>>
     
 <div id="wrapper" class="hfeed">
-<header id="header" class="mj-header">
+<header id="header" class="mj-header <?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) echo 'blog'; ?>">
     <div class="mj-container">
+        <ul id="menu" class="mj-meniu blog_menu hide-on-mobile">
+        <?php 
+            if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) {
+                wp_list_categories(array(
+                    'hierarchical'        => true,
+                    'title_li' => ''
+                ));
+            }
+        ?>
+        </ul>
         <div class="mj-grid">
             <div class="grid__item width-4/24">
                 <a href="/" class="mj-logo"></a>

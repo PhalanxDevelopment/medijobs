@@ -726,18 +726,7 @@ body.noScroll {
       position: absolute;
       bottom: -65px;
       left: 73px; }
-      .mj-header .mj-meniu.blog_menu .meniu__item a {
-        text-transform: none;
-        font-family: 'ClearSans-Regular'; }
-    .mj-header .mj-meniu .meniu__item {
-      position: relative;
-      display: block;
-      float: left;
-      text-align: left;
-      padding: 17px;
-      padding-left: 30px;
-      padding-right: 30px; }
-      .mj-header .mj-meniu .meniu__item.meniu__item__has_submeniu:after {
+      .mj-header .mj-meniu.blog_menu .meniu__item:after, .mj-header .mj-meniu.blog_menu .cat-item:after {
         position: absolute;
         content: "";
         top: 22px;
@@ -746,13 +735,13 @@ body.noScroll {
         height: 0;
         border: 6px solid transparent;
         border-color: #00C1DE transparent transparent transparent; }
-      .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu:after {
-        border-color: transparent transparent #00C1DE transparent;
-        top: 16px; }
-      .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu {
+      .mj-header .mj-meniu.blog_menu .meniu__item:hover, .mj-header .mj-meniu.blog_menu .cat-item:hover {
         background: #CFF9FF 0% 0% no-repeat padding-box;
         border-radius: 4px 4px 0px 0px; }
-        .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu .meniu__submeniu {
+        .mj-header .mj-meniu.blog_menu .meniu__item:hover:after, .mj-header .mj-meniu.blog_menu .cat-item:hover:after {
+          border-color: transparent transparent #00C1DE transparent;
+          top: 16px; }
+        .mj-header .mj-meniu.blog_menu .meniu__item:hover .sub-menu, .mj-header .mj-meniu.blog_menu .meniu__item:hover .children, .mj-header .mj-meniu.blog_menu .cat-item:hover .sub-menu, .mj-header .mj-meniu.blog_menu .cat-item:hover .children {
           height: auto;
           min-height: 1000px;
           list-style: none;
@@ -760,35 +749,84 @@ body.noScroll {
           top: 50px;
           width: 100%;
           left: 0px; }
-          .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu .meniu__submeniu li {
+          .mj-header .mj-meniu.blog_menu .meniu__item:hover .sub-menu li, .mj-header .mj-meniu.blog_menu .meniu__item:hover .children li, .mj-header .mj-meniu.blog_menu .cat-item:hover .sub-menu li, .mj-header .mj-meniu.blog_menu .cat-item:hover .children li {
             background: #CFF9FF 0% 0% no-repeat padding-box;
             padding: 17px;
+            width: 100%;
             padding-left: 30px;
             padding-right: 30px;
             border-top: 1px solid #00C1DE; }
-            .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu .meniu__submeniu li:hover {
+            .mj-header .mj-meniu.blog_menu .meniu__item:hover .sub-menu li:after, .mj-header .mj-meniu.blog_menu .meniu__item:hover .children li:after, .mj-header .mj-meniu.blog_menu .cat-item:hover .sub-menu li:after, .mj-header .mj-meniu.blog_menu .cat-item:hover .children li:after {
+              display: none; }
+            .mj-header .mj-meniu.blog_menu .meniu__item:hover .sub-menu li:hover, .mj-header .mj-meniu.blog_menu .meniu__item:hover .children li:hover, .mj-header .mj-meniu.blog_menu .cat-item:hover .sub-menu li:hover, .mj-header .mj-meniu.blog_menu .cat-item:hover .children li:hover {
               background: #00C1DE 0% 0% no-repeat padding-box;
               color: #fff; }
-              .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu .meniu__submeniu li:hover a {
+              .mj-header .mj-meniu.blog_menu .meniu__item:hover .sub-menu li:hover a, .mj-header .mj-meniu.blog_menu .meniu__item:hover .children li:hover a, .mj-header .mj-meniu.blog_menu .cat-item:hover .sub-menu li:hover a, .mj-header .mj-meniu.blog_menu .cat-item:hover .children li:hover a {
                 color: #fff; }
-      .mj-header .mj-meniu .meniu__item a {
+      .mj-header .mj-meniu.blog_menu .meniu__item a, .mj-header .mj-meniu.blog_menu .cat-item a {
+        text-transform: none;
+        font-family: 'ClearSans-Regular'; }
+    .mj-header .mj-meniu .meniu__item, .mj-header .mj-meniu .cat-item {
+      position: relative;
+      display: block;
+      float: left;
+      text-align: left;
+      padding: 17px;
+      padding-left: 30px;
+      padding-right: 30px; }
+      .mj-header .mj-meniu .meniu__item.menu-item-has-children:after, .mj-header .mj-meniu .cat-item.menu-item-has-children:after {
+        position: absolute;
+        content: "";
+        top: 22px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #00C1DE transparent transparent transparent; }
+      .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children:after, .mj-header .mj-meniu .cat-item:hover.menu-item-has-children:after {
+        border-color: transparent transparent #00C1DE transparent;
+        top: 16px; }
+      .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children, .mj-header .mj-meniu .cat-item:hover.menu-item-has-children {
+        background: #CFF9FF 0% 0% no-repeat padding-box;
+        border-radius: 4px 4px 0px 0px; }
+        .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children .sub-menu, .mj-header .mj-meniu .cat-item:hover.menu-item-has-children .sub-menu {
+          height: auto;
+          min-height: 1000px;
+          list-style: none;
+          padding-left: 0px;
+          top: 50px;
+          width: 100%;
+          left: 0px; }
+          .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children .sub-menu li, .mj-header .mj-meniu .cat-item:hover.menu-item-has-children .sub-menu li {
+            background: #CFF9FF 0% 0% no-repeat padding-box;
+            padding: 17px;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-top: 1px solid #00C1DE; }
+            .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children .sub-menu li:hover, .mj-header .mj-meniu .cat-item:hover.menu-item-has-children .sub-menu li:hover {
+              background: #00C1DE 0% 0% no-repeat padding-box;
+              color: #fff; }
+              .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children .sub-menu li:hover a, .mj-header .mj-meniu .cat-item:hover.menu-item-has-children .sub-menu li:hover a {
+                color: #fff; }
+      .mj-header .mj-meniu .meniu__item a, .mj-header .mj-meniu .cat-item a {
         font-family: 'ClearSans-Bold';
         font-size: 1.4rem;
         line-height: 1.7rem;
         letter-spacing: 0;
         color: #00C1DE;
         text-transform: uppercase; }
-      .mj-header .mj-meniu .meniu__item .meniu__submeniu {
+      .mj-header .mj-meniu .meniu__item .sub-menu, .mj-header .mj-meniu .meniu__item .children, .mj-header .mj-meniu .cat-item .sub-menu, .mj-header .mj-meniu .cat-item .children {
         position: absolute;
         display: block;
         height: 0px;
         min-height: 0px;
         overflow: hidden; }
-      .mj-header .mj-meniu .meniu__item.active a {
+      .mj-header .mj-meniu .meniu__item.active a, .mj-header .mj-meniu .cat-item.active a {
         color: #000; }
-      .mj-header .mj-meniu .meniu__item.active.meniu__item__has_submeniu:after {
+      .mj-header .mj-meniu .meniu__item.active.menu-item-has-children:after, .mj-header .mj-meniu .cat-item.active.menu-item-has-children:after {
         border-color: #000 transparent transparent transparent; }
-      .mj-header .mj-meniu .meniu__item.active .meniu__submeniu a {
+      .mj-header .mj-meniu .meniu__item.active .sub-menu a, .mj-header .mj-meniu .cat-item.active .sub-menu a {
         color: #00C1DE; }
   .mj-header .mj-call_to_action {
     position: relative;
@@ -1094,6 +1132,16 @@ body.noScroll {
   .mj-btn:hover {
     background: #002025 0% 0% no-repeat padding-box;
     border: 1px solid #002025;
+    color: #fff; }
+
+a.mj-btn {
+  text-align: center;
+  text-decoration: none;
+  padding-top: 12px; }
+  a.mj-btn.mj-btn--primary {
+    padding-top: 22px; }
+  a.mj-btn:hover {
+    text-decoration: none;
     color: #fff; }
 
 .mj-steps {
@@ -2285,11 +2333,11 @@ body.noScroll {
       line-height: 16px;
       position: relative;
       float: left; }
-  .mj-header .mj-meniu .meniu__item:hover.meniu__item__has_submeniu .meniu__submeniu {
+  .mj-header .mj-meniu .meniu__item:hover.menu-item-has-children .sub-menu {
     min-height: auto;
     top: 15px;
     position: relative; }
-  .mj-header .mj-meniu .meniu__item.meniu__item__has_submeniu:after {
+  .mj-header .mj-meniu .meniu__item.menu-item-has-children:after {
     position: relative;
     float: left;
     top: 6px;

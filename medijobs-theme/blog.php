@@ -14,8 +14,8 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-12/24">
-                    <div class="above_headline">WELCOME TO</div>
-                    <h1 class="headline uppercase">THE MEDIJOBS RESOURCES BLOG.</h1>
+                    <div class="above_headline">WELCOME</div>
+                    <h1 class="headline uppercase">Bun venit pe Blogul MEDIjobs.</h1>
                     <p>Vrem să te ajutăm să îți construiești cariera medicală la care ai visat! Află cum să realizezi un CV pentru a-ți găsi un loc de muncă, cum să îți negociezi salariul, sfaturi practice pentru îmbunătățirea comunicării cu pacienții și echipa medicală, dar și multe altele.</p>
 
                 </div>
@@ -23,17 +23,14 @@ get_header();
                 <div class="grid__item width-8/24">
                     <div id="blog-form" class="mj-register_form mj-form blog-form">
                         <div id="close-form" class="close hide-on-desktop"></div>
-                        <h3>WEEKLY BLOG NEWSLETTER</h3>
-                        <p>Never miss an update, we send a weekly recap of all our articles published.</p>
+                        <h3>Newsletter săptămânal</h3>
+                        <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
                         <input class="mj-input" type="text" placeholder="Enter email" >
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
                                 <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                                    SUBSCRIBE
+                                    Abonează-te
                                 </button>
-                                <p class="extra-small policy">
-                                    By signing up you agree to Medijobs’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-                                </p>
                             </div>
                             <div class="grid__item width-12/24 hide-on-mobile">
                                 <div class="newsletter_logo"></div>
@@ -75,9 +72,9 @@ get_header();
                         
                     <?php endforeach; wp_reset_query(); ?>
                     </div>
-                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        Toate articolele recente
-                    </button>
+                    <a href="<?php echo get_home_url(); ?>/blog/recent" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        Vedeti toate articolele
+                    </a>
                 </div>
             </div>
         </div>
@@ -91,15 +88,15 @@ get_header();
                         <div class="company_box mj-form">
                             <div class="mj-grid">
                                 <div class="grid__item width-12/24">
-                                    <h3>Are you a company or a canditate?</h3>
+                                    <h3>Ești companie sau candidat?</h3>
                                     <p>Companiile medicale din toata Romania au apelat la MEDIjobs pentru a angaja cu succes specialisti medicali.</p>
                                 </div>
                                 <div class="grid__item width-2/24 hide-on-mobile">
                                 </div>
                                 <div class="grid__item width-10/24">
-                                    <button class="mj-btn mj-btn--primary">
-                                        GET YOUR FREE ACCOUNT
-                                    </button>
+                                    <a href="https://app.medijobs.ro/register/" target="_blank" class="mj-btn mj-btn--primary">
+                                        Creează-ți un cont gratuit
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +165,7 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Articolele cele mai citite.</h1>
+                    <h1 class="headline light">Cele mai citite articole.</h1>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
                         
@@ -183,9 +180,9 @@ get_header();
                         
                         }
                     ?>
-                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        View all Time Favorites
-                    </button>
+                    <a href="<?php echo get_home_url(); ?>/blog/popular" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        Vedeti toate articolele
+                    </a>
                 </div>
             </div>
         </div>  
@@ -196,7 +193,7 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Trending Articles.</h1>
+                    <h1 class="headline light"> Cele mai populare articole</h1>
                     <?php
                         if (function_exists('wpp_get_mostpopular')) {
                             $args = array(
@@ -210,9 +207,9 @@ get_header();
                             wpp_get_mostpopular($args);
                         }
                     ?>
-                    <button href="#" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        View trending articles
-                    </button>
+                    <a href="<?php echo get_home_url(); ?>/blog/trending" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        Vedeti toate articolele
+                    </a>
                 </div>
             </div>
         </div>  
