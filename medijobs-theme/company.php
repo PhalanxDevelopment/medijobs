@@ -87,7 +87,7 @@ get_header();
                     <div class="hide-on-mobile">
                         <div class="mj-images">
                             <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
+                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
                             <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
                             <div class="clearfix"></div>
                         </div>
@@ -465,44 +465,33 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_6" class="section section_6">
+    <div id="section_6" class="section section_6 section_6_company">
         <div class="mj-container">
-            <div class="mj-box">
-                <div class="mj-grid">
-                    <div class="grid__item width-2/24"></div>
-                    <div class="grid__item width-22/24">
-                        <div class="above_headline">Companiile</div>
-                        <h1 class="headline light uppercase">reușesc să ocupe posturile vacante de cinci ori mai rapid decât dacă ar utiliza alte platforme de recrutare. </h1>
-                        <p style="margin-top:0px">Salvează Timp:</p>
-                        <ul class="mj-simple-list">
-                            <li class="mj-simple-list">
-                                Nu mai parcurgi mii de CV-uri nepotrivite
-                            </li>
-                            <li class="mj-simple-list">
-                                Scurtezi timpul de recrutare de la 90 la sub 30 de zile
-                            </li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <p style="margin-top:0px">Salvează Bani:</p>
-                        <ul class="mj-simple-list">
-                            <li class="mj-simple-list">
-                                Găsești mai rapid candidatul potrivit pentru pozițiile vacante 
-                            </li>
-                            <li class="mj-simple-list">
-                                Fa-ti pacienti fericiti, găsind eficient personalul medical de care ai nevoie. 
-                            </li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <p style="margin-top:0px">Candidați calificați</p>
-                        <ul class="mj-simple-list">
-                            <li class="mj-simple-list">
-                                Noi te conectam cu cei mai relevanți candidați
-                            </li>
-                            <li class="mj-simple-list">
-                                Tu ii inviti la interviu.
-                            </li>
-                            <div class="clearfix"></div>
-                        </ul>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-14/24">
+                    <div class="above_headline">Companiile</div>
+                    <h1 class="headline light">Clientii nostri angajeaza de 5 ori mai rapid cu Medijobs.</h1>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-16/24">
+                    <div class="mj-boxes">
+                        <div class="mj-arrow-box top_box">
+                            <h3>Salvează Timp:</h3>
+                            <p>Nu mai parcurgi mii de CV-uri nepotrivite</p>
+                            <p>Scurtezi timpul de recrutare de la 90 la sub 30 de zile</p>
+                        </div>
+                        <div class="mj-arrow-box right_box">
+                            <h3>Salvează Bani:</h3>
+                            <p>Găsești mai rapid candidatul potrivit pentru pozițiile vacante</p>
+                            <p>Fa-ti pacienti fericiti, găsind eficient personalul medical de care ai nevoie.</p>
+                        </div>
+                        <div class="mj-arrow-box bottom_box">
+                            <h3>Candidați calificați:</h3>
+                            <p>Noi te conectam cu cei mai relevanți candidați</p>
+                            <p>Tu ii inviti la interviu.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -571,7 +560,7 @@ get_header();
                         </p>
                     </div>
                     <div class="quote">
-                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
+                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
                         <p>
                             MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
                         </p>

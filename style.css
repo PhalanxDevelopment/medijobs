@@ -101,6 +101,70 @@ body.noScroll {
 .romania-map {
   margin-left: -56px; }
 
+.mj-boxes {
+  position: relative;
+  display: block;
+  height: 616px;
+  width: 896px;
+  max-width: 100%;
+  margin-top: 65px; }
+  .mj-boxes .mj-arrow-box {
+    position: absolute;
+    padding: 55px;
+    display: block;
+    background-color: rgba(207, 249, 255, 0.4);
+    width: 448px;
+    height: 232px;
+    max-width: 100%;
+    top: 0;
+    left: 0; }
+    .mj-boxes .mj-arrow-box:after {
+      content: "";
+      position: absolute;
+      display: block; }
+    .mj-boxes .mj-arrow-box h3 {
+      color: #00C1DE;
+      font-family: 'ClearSans-Bold';
+      font-size: 22px;
+      text-transform: uppercase;
+      line-height: 30px;
+      margin: 0;
+      margin-bottom: 10px; }
+    .mj-boxes .mj-arrow-box p {
+      color: #000;
+      font-family: 'ClearSans-Regular';
+      font-size: 18px;
+      margin: 0; }
+    .mj-boxes .mj-arrow-box.top_box:after {
+      width: 265px;
+      height: 100px;
+      top: 45px;
+      right: -56px;
+      background-image: url(images/arrow_box_1.png);
+      background-repeat: no-repeat; }
+    .mj-boxes .mj-arrow-box.right_box {
+      height: 248px;
+      right: 28px;
+      left: auto;
+      top: 183px; }
+      .mj-boxes .mj-arrow-box.right_box:after {
+        width: 352px;
+        height: 272px;
+        right: 37px;
+        top: 61px;
+        background-image: url(images/arrow_box_2.png);
+        background-repeat: no-repeat; }
+    .mj-boxes .mj-arrow-box.bottom_box {
+      top: auto;
+      bottom: 0px; }
+      .mj-boxes .mj-arrow-box.bottom_box:after {
+        width: 45px;
+        height: 155px;
+        top: -100px;
+        left: 56px;
+        background-image: url(images/arrow_box_3.png);
+        background-repeat: no-repeat; }
+
 #map g {
   position: relative;
   pointer-events: bounding-box; }
@@ -1241,7 +1305,8 @@ a.mj-btn {
   max-width: 840px;
   margin-top: 30px;
   margin-bottom: 50px;
-  padding-left: 56px; }
+  padding-left: 56px;
+  z-index: 9999; }
   .cookie_notifier.dismissed {
     opacity: 0;
     visibility: hidden;
@@ -1664,10 +1729,6 @@ a.mj-btn {
       line-height: 150px;
       letter-spacing: -10px;
       color: #F9FAFA; }
-  .section.section_6 h1.headline {
-    font-family: 'ClearSans-Medium';
-    font-size: 30px;
-    line-height: 35px; }
   .section.section_6 .mj-box {
     background: #FFFFFFFC 0% 0% no-repeat padding-box;
     border: 1px solid #F1F2F2;
@@ -1676,6 +1737,10 @@ a.mj-btn {
     margin-top: 56px;
     margin-bottom: 56px;
     padding-bottom: 63px; }
+    .section.section_6 .mj-box h1.headline {
+      font-family: 'ClearSans-Medium';
+      font-size: 30px;
+      line-height: 35px; }
     .section.section_6 .mj-box p {
       margin-top: -40px; }
       .section.section_6 .mj-box p.mj-font--small {
@@ -1834,11 +1899,23 @@ a.mj-btn {
       font-family: 'ClearSans-Regular';
       margin-bottom: 20px; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
   html {
     font-size: 55.5%; }
   .hide-on-desktop {
     display: block !important; }
+  .mj-boxes {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto; }
+    .mj-boxes .mj-arrow-box {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto; }
+      .mj-boxes .mj-arrow-box:after {
+        display: none; }
   .mj-list {
     position: relative;
     display: block;

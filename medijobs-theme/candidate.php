@@ -89,7 +89,7 @@ get_header();
                     <div class="hide-on-mobile">
                         <div class="mj-images">
                             <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
+                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
                             <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
                             <div class="clearfix"></div>
                         </div>
@@ -680,7 +680,7 @@ get_header();
                         </p>
                     </div>
                     <div class="quote">
-                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
+                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
                         <p>
                             MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
                         </p>
