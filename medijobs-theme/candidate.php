@@ -176,16 +176,17 @@ get_header();
                     <h1 class="headline light">Angajăm specialiști medicali în 10 orașe din România.</h1>
                     <div class="mj-cols hide-on-desktop">
                         <div class="mj-col">
-                            <p>Târgul Mureș</p>
+                            <p>București</p>
                             <p>Galați</p>
                             <p>Timișoara</p>
-                            <p>București</p>
+                            <p>Ploiesti</p>
                             <p>Craiova</p>
                             <p>Constanța</p>
                         </div>
                         <div class="mj-col">
-                            <p>Suceava</p>
                             <p>Iași</p>
+                            <p>Craiova</p>
+                            <p>Oradea</p>
                             <p>Cluj-Napoca</p>
                         </div>
                     </div>
@@ -666,7 +667,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
-                <div class="quote">
+                    <div class="quote">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
                         <p>
                             Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
