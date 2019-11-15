@@ -1657,6 +1657,13 @@ a.mj-btn {
         &.company {
             background: url(images/section_2_bg_company.png);
             background-repeat: no-repeat;
+            p {
+                font-family: 'ClearSans-Light';
+                font-size: 30px;
+                text-transform: none;
+                margin-top: -30px;
+                line-height: 35px;
+            }
         }
         .mj-list {
             margin-bottom: 80px;

@@ -96,13 +96,14 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_2" class="section section_2 company" style="padding-bottom: 300px">
+    <div id="section_2" class="section section_2 company" style="padding-bottom: 410px">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-14/24">
+                <div class="grid__item width-8/24">
                     <div class="above_headline">Beneficii</div>
                     <h1 class="headline light">Prima platformă de recrutare medicală</h1>
+                    <p>Care ajută companiile să se conecteze cu specialiști medicali relevanti din România.</p>
                 </div>
                 <div class="grid__item width-7/24">
                     <ul class="mj-list">

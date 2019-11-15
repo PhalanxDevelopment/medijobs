@@ -114,6 +114,13 @@
             </div>
         </div>
     </div>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    <?php 
+        if ( is_page( array( 'Candidati', 'Companii') )) {
+        ?>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+        <?php } else { ?>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/main-blog.js"></script>
+        <?php }?>
+    ?>
 </body>
 </html>

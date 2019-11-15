@@ -1393,6 +1393,12 @@ a.mj-btn {
     .section.section_2.company {
       background: url(images/section_2_bg_company.png);
       background-repeat: no-repeat; }
+      .section.section_2.company p {
+        font-family: 'ClearSans-Light';
+        font-size: 30px;
+        text-transform: none;
+        margin-top: -30px;
+        line-height: 35px; }
     .section.section_2 .mj-list {
       margin-bottom: 80px; }
   .section.section_blog_company {
