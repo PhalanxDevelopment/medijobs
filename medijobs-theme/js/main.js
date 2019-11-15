@@ -175,7 +175,7 @@ if(getWidth() > 1000) {
         } else {
             header.className = headerClass;
         }
-        if( window.scrollY > 6400) {
+        if( window.scrollY > 7890) {
             form.className = 'mj-register_form mj-form absolute';
         } else {
             form.className = 'mj-register_form mj-form ';
@@ -248,6 +248,7 @@ if(getWidth() > 1000) {
             if( window.scrollY + 96 > (section_7.offsetTop  + 200 )) {
                 var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
                 var step = 1;
+                var icon = document.getElementById('section_icon');
                 var step1 = document.getElementById('step_1');
                 var step2 = document.getElementById('step_2');
                 var step3 = document.getElementById('step_3');
@@ -265,23 +266,29 @@ if(getWidth() > 1000) {
                         isMoving = true;
                         if (step === 1) {
                             step1.className = 'mj-step';
-                            step2.className = 'mj-step active';    
+                            step2.className = 'mj-step active';   
+                            icon.className = 'section_icon step_2 hide-on-mobile'; 
                         }
                         if (step === 2) {
                             step2.className = 'mj-step';
-                            step3.className = 'mj-step active';    
+                            step3.className = 'mj-step active';  
+                            icon.className = 'section_icon step_3 hide-on-mobile';  
                         }
                         
                         if (step === 3) {
                             step3.className = 'mj-step';
                             step4.className = 'mj-step active';    
+                            icon.className = 'section_icon step_4 hide-on-mobile';
                         }
                         if (step === 4) {
                             step4.className = 'mj-step';
                             step1.className = 'mj-step active';  
-                            document.getElementById("section_8").scrollIntoView({ 
-                                behavior: 'smooth' 
-                            });
+                            icon.className = 'section_icon step_1 hide-on-mobile';
+                            if (isMoving === true) {
+                                document.getElementById("section_8").scrollIntoView({ 
+                                    behavior: 'smooth' 
+                                });
+                            }
                             document.removeEventListener("wheel", handleWheelEvent, true);
                         }
                         setTimeout(function() {
@@ -291,12 +298,13 @@ if(getWidth() > 1000) {
                                 el.className = ' '; 
                                 document.removeEventListener("wheel", handleWheelEvent, true);
                             }
-                        }, 2000);
+                        }, 1000);
                     }
                 } else {
                     step = 1;
                     step4.className = 'mj-step';
-                    step1.className = 'mj-step active';  
+                    step1.className = 'mj-step active'; 
+                    icon.className = 'section_icon step_1 hide-on-mobile'; 
                     document.removeEventListener("wheel", handleWheelEvent, true);
                 }
             }

@@ -35,7 +35,8 @@ get_header();
                 TESTIMONIALE
             </li>
             <li class="quick_link" id="ql_section_10" data-section="9">
-                PRESS QUOTES
+                 În presă
+
             </li>
         </ul>
     </div>
@@ -87,9 +88,9 @@ get_header();
                 <div class="grid__item width-10/24">
                     <div class="hide-on-mobile">
                         <div class="mj-images">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/LU8HRJ.png" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/ABq5rg.png" alt="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/O8OVQR.png" alt="">
+                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
+                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
+                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -117,12 +118,8 @@ get_header();
                             Primești oferte personalizate în funcție de nevoile tale 
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div class="mj-grid">
-                <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-14/24">
-                    <p><a href="https://app.medijobs.ro/register/candidate">Creează-ți contul</a> pe MEDIjobs și fii pregătit să primești oferte de muncă!</p>
+                    <p><a class="mj-icon-link" href="https://app.medijobs.ro/register/candidate">
+                        Creează-ți contul</a> pe MEDIjobs și fii pregătit să <br> primești oferte de muncă!</p>
                 </div>
             </div>
         </div>
@@ -130,8 +127,7 @@ get_header();
     <div id="section_3" class="section section_3">
         <div class="mj-container">
             <div class="background_title hide-on-mobile">
-                OUR Key
-                positions
+                poziții cheie
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -177,7 +173,7 @@ get_header();
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
                     <div class="above_headline">UNDE SUNTEM ACTIVI</div>
-                    <h1 class="headline light">Angajăm specialiști medicali în toată România</h1>
+                    <h1 class="headline light">Angajăm specialiști medicali în 10 orașe din România.</h1>
                     <div class="mj-cols hide-on-desktop">
                         <div class="mj-col">
                             <p>Târgul Mureș</p>
@@ -315,7 +311,7 @@ get_header();
                                 <g id="Prahova">
                                     <path id="Path_232" data-name="Path 232" d="M492.436,386.16s-4.773,2.612-4.924,2.659-.1,5.825-.494,7.939-1.808.5-2.916.1-1.564-.606-2.311-.1a6.422,6.422,0,0,1-2.814.351l-.652,2.717-4.88-2.215-2.659.253-5.533,4.729s-.283-.228-.757-.6v-.011c-1.99-1.562-7.285-5.748-8.337-6.478-1.315-.908-2.972,2.1-3.92,3.363s-3.827-1.355-4.726-2.066-11.158,2.216-11.158,2.216l-2.508,13.363h-3.676l-.6-5.728,5.066-9.8-8.286-9.651-2.113,2.916-4.319-2.311.9-2.019-.852-7.633L415.7,375.9l.4-6.48-4.916-2.916.352-7.389-4.225-7.795v-6.433l-6.431-12.711,3.513-5.425-1.2-4.821-6.733-1.411-.456-5.333-1.628-7,3.4-2.625,8.183,2.378,3.733-3.353,11.233,1.279s3.239,6.449,3.239,6.563,4.749.339,4.86.3.036-5.276.036-5.276l1.735-1.931,1.1-4.292,3.808-.908,3.883,3.845,1.2,4.415,3.543,1.923,2.825-3.544.49-3.362,4.529.3-.427,3.6,5.974,4.368,2.359,9.546-3.912,7.188,5.021,6.187,5.93-2.617,3.315,1.356.5,3.525-1.4,2.006.7,1.81,6.99,4.67,6.83,17.391s-1.554,9.045-1.4,9.15,4.017,1.609,4.017,1.609l3.07-2.217,1,5.275-3.07,1.365,1.659,6.63Z" transform="translate(68.246 51.972)" fill="none" stroke="#cff9ff" stroke-miterlimit="10" stroke-width="2"/>
                                     <foreignobject class="node" x="490" y="390" width="145" height="32" class="name">
-                                            <div>Prahova</div>                
+                                            <div>Ploiesti</div>                
                                     </foreignobject>
                                 </g>
                                 <g id="Dambovita">
@@ -333,7 +329,7 @@ get_header();
                                 <g id="Olt">
                                     <path id="Path_198" data-name="Path 198" d="M351.555,458.278c-.7,2.519,0,6.088.046,7.747s-7.235,5.069-9.395,6.081a23.586,23.586,0,0,0-4.982,3.816l-9.349.653s.711,1.708,1.516,3.564.653,3.219.549,6.535,2.52,4.574,3.722,5.682.806,5.276.853,6.63a6.673,6.673,0,0,0,1.052,3.373c.663,1.1,2.367.2,4.527.048s1,2.718.852,3.721a58.5,58.5,0,0,0,.408,6.083l4.5,5.682a4.092,4.092,0,0,1-1.628.595c-1.2.143-2.264-.32-3.457-.359a3.757,3.757,0,0,1-3-1.611c-.653-.919-.909-1.99-1.979-2.52a17.548,17.548,0,0,1-2.729-1.619,5.91,5.91,0,0,0-3.741-1.372c-1.865.111-4.073.33-5.635-.873s-2.094-2.947-4.387-2.263c-2.082.616-2.992,2.35-4.574,3.685-1.194,1.023-2.529,1.836-3.741,2.832a36.238,36.238,0,0,1-3.316,2.643,6.408,6.408,0,0,1-2.6,1.193,15.547,15.547,0,0,1-2.557-.16,17.066,17.066,0,0,0-2.975-.134,18.8,18.8,0,0,0-3.3,1.118c-2.275.718-4.244.179-6.507-.4-1.659-.427-3.952-.786-5.3-1.868-.645-.511-1.082-1.212-1.79-1.685a19.783,19.783,0,0,0-2.169-.9l12.5-14.1,1.7-5.728a23.35,23.35,0,0,0-3.164-1.66c-.947-.3-2.462-1.505-1.307-3.116s8.743-3.211,8.743-3.211l-6.271-11.157,5.721-5.787-3.22-5.825,2.623-1.763-.558-4.924-6.137-.455-.1-5.827-4.471.306-1.307-4.528-5.73-1.157-3.363-10.355-6.791-1.7,1.107-7.144-4.923-2.252,5.927-11.111s8.25,2.112,9.454,2.311,1.449.047,2.861-1.06,5.378,2.87,5.378,2.87l4.272-4.272,10.352,4.272s3.069-5.428,4.879-8.6-1.155-10.6-2.065-13.714-.153-11.312.2-14.029a3.984,3.984,0,0,0-2.908-4.367c-.958-.1-.806-4.878-.806-4.878l8.383-3.864,9.054.852-3.114,13.715,6.886-.549.9-8.146,3.373-.294.806,7.787,4.517,8.742,4.575-2.6,2.008,4.566a10.61,10.61,0,0,0-1.753,3.571c-.909,2.662,2.008,7.786,2.965,9.149a38.148,38.148,0,0,1,2.509,5.428l4.367-1.516,2.016,3.126-3.825,3.363c.758,2.415-.9,8.088-1.25,10.2s2.756,8.848,3.267,9.652a20.884,20.884,0,0,1,1.2,3.571l5.133.5s-1.467,9.842-1.714,12.01A59.066,59.066,0,0,1,351.555,458.278Z" transform="translate(45.948 63.574)" fill="none" stroke="#cff9ff" stroke-miterlimit="10" stroke-width="2"/>
                                     <foreignobject class="node" x="350" y="470" width="145" height="32" class="name">
-                                            <div>Olt</div>                
+                                            <div>Craiova</div>                
                                     </foreignobject>
                                 </g>
                                 <g id="Dolj">
@@ -413,7 +409,7 @@ get_header();
                                 <g id="Bihor">
                                     <path id="Path_204" data-name="Path 204" d="M216.1,187.634l-3.571,5.872-8.543.351-5.37,9,1.961,4.424-6.488,6.186-10.657,3.116-14.065-10.5a42.224,42.224,0,0,1,0-4.377c.142,0,2.51-1.505,2.51-1.505l-1.459-5.076-11.006,1.411-.256-9.094-3.012-3.477-2.614.91-1.914-5.181-2.709-1.7-13.667,7.691-4.519-4.527,4.868-3.014a11.641,11.641,0,0,0-3.873-9.8c-1.2-1.157-3.211,4.677-3.211,4.677l-5.778.446-6.593.91.057-4.729-1.714-1.154-2.558.759s-.5,4.867-.71,6.732-1.364,1.592-3.4,1.063-2.377.87-4.783,2.3-5.5-.937-5.5-.937l1.809-4.074-1.941-6.62.208.039,2-2.321.778-2.312L97.6,161.264l3.316-10.04L105,149.917l.388-7.34,12.579-11.415.161-2.47h-5.712l.388-4.946,4.082-2.927.777-4.707,3.552-1.089s9.567-12.19,11.338-14.5,1.317-1.383,1.24-4.4c-.075-3,1.47-4.547,3.619-7.095a12.529,12.529,0,0,1,8.261-4.946c4.167-.766,4.167-10.333,5.105-15.041.92-4.707,5.777-8.032,9.33-8.259,2.177-.142,4.12-2.2,5.843-4.641l11.508,5.341,1.45,3.571s-2.8,2.113-2.652,2.113,6.223,9.245,6.223,9.245l10.305-.3,1.107,5.333,8.393,1.761,1.648,3.524c-1.441,2.8-2.046,6.526-2.652,8.79-.758,2.814-2.216,3.315-4.282,4.015s-1.648,6.584-1.648,6.584l-4.878,3.418,1.458,2.216,2.008-.956,1.809.9-.4,5.484,3.968,4.015L195.8,124l.1,3.212,9.5.161,2.86,2.207-.636,3.173-.917,4.622-2.615,4.973,8.041,7.891-.407,5.124-4.67-.048-.15,6.279-6.527,5.125Z" transform="translate(16.854 9.715)" fill="none" stroke="#cff9ff" stroke-miterlimit="10" stroke-width="2"/>
                                     <foreignobject class="node" x="150" y="120" width="145" height="32" class="name">
-                                            <div>Bihor</div>                
+                                            <div>Oradea</div>                
                                     </foreignobject>
                                 </g>
                                 <g id="Arad">
@@ -449,7 +445,7 @@ get_header();
                                 <g id="Timis">
                                     <path id="Path_207" data-name="Path 207" d="M198.547,272.113l-9.727,5.542-.455,5.692L178.8,286.7l-6.3-6.251-9.68,2.785-.759,3.05,4.14,2.454-.672,3.911-7.425-.787-1.961,3.694-6.109-2.14-3.125,4.33,6.441,6.365-5.493,5.058L137.6,305.775l.8-6.487-9.092-1.507-2.747,3.478-7.54-1.479-1.24-4.488-9.245-2.513-3.978.456,2.765,6.933-4.726,2.007-3.259-.548L95.56,305.8l3.468,7.832,3.011.2v3.97L93.7,315.494l-1.507,4.935,9.454,1.249,1.857,4.868-2.208,1.517,2.311,4.062-1.591,3.837c-1.441-.418-7.341-2.141-7.55-2.141a17.156,17.156,0,0,0-1.846,2.539l-7.19-1.849-5.086-5.559-6.176-.615-2.31-8.259s-4.33.236-4.566.236a44.554,44.554,0,0,0-2.852,4.082l-7.709-6.25-2.321-4.784-5.1-1,.465-6.4-4.319-8.949-7.871-2.474,3.24-7.642s-2.937-6.631-3.012-6.868-5.323.693-5.323.693l-.853-2.387,7.342-5.637,3.314-16.585-3.864.075-4.243,3.856-3.628-2.983L29.173,243.9l-9.415-4.849-2.473-9.956-4.555.541-.616-.853c-3.165-3.24-8.5-12.039-8.571-15.515S0,207.553,0,207.553l3.314-4.092,6.176-.541,2.624,2.7,6.1.4,3.778-5.333,4.158,1.08,3.1,6.488,6.4-1.09,4.887,5.655.493,6.147,5.845,1.7,22.457,7.5.341,4.034s6.184-.834,6.3-.834,1.923,3.012,1.923,3.012l.217,4.983,3.591.936s3.429-1.658,3.533-1.619c.123,0,1.023-8.336,1.023-8.336l2.225-.521L90.7,232.38l.645,6.6,2.113,1.2,3.353-2.555-.72-11.083,4.377-.418.682,2.225,2.824.3,5.588-4.034,3.314,1.733v10.211l.825,1.706,6.033,1.051,1.2,8.779,2.492,1.356,4.29-8.022,2.718-.683,3.505,4.821,18.318-5.759,6.753,5.759,10.325,1.96.178,3.287,4.642,1.354,10.021-5.54,5.172,6.214-2.15,2.643.189,2.861,4.225,1.666.482,6.175,6.109,1.546Z" transform="translate(0 34.729)" fill="none" stroke="#cff9ff" stroke-miterlimit="10" stroke-width="2"/>
                                     <foreignobject class="node" x="70" y="290" width="145" height="32" class="name">
-                                            <div>Timis</div>                
+                                            <div>Timisoara</div>                
                                     </foreignobject>
                                 </g>
                             </g>
@@ -468,12 +464,15 @@ get_header();
                     <h1 class="headline biggest uppercase"><span><span id="companii">1200</span> de companii</span></h1>
                     <h1 class="headline light">Au apelat la MEDIjobs pentru a angaja cu succes specialiști medicali.</h1>
                     <div class="mj-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/companii/fresenius-medical-care-logo-vector.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/companii/gral-logo.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/companii/leventer logo.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/companii/logo_sanamed_300_162_r@2x.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/companii/YTS-Detnal View.png" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/gral-logo.png" alt="">
+                        <img style="margin-top: -35px; height: 100px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/leventer logo.png" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/logo_sanamed_300_162_r@2x.png" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/YTS-Detnal View.png" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/catena.gif" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/NephroCare_Logo_CMYK.jpg" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/reginamaria.png" alt="">
+                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/medlife.png" alt="">
                     </div>
                 </div>
             </div>
@@ -487,7 +486,7 @@ get_header();
                     <div class="grid__item width-22/24">
                         <div class="above_headline">Pentru angajatori</div>
                         <h1 class="headline light uppercase">Conecteaza-te cu specialisti medicali mai buni, mai repede.</h1>
-                        <p>Inregistreaza-te Gratuit si convinge-te!</p>
+                        <a href="https://app.medijobs.ro/register/company">Inregistreaza-te Gratuit si convinge-te!</a>
                     </div>
                 </div>
                 <div class="mj-grid">
@@ -593,7 +592,7 @@ get_header();
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/alina.jpg" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
-                                    Aly Alina
+                                    Alina
                                 </div>
                                 <div class="mj-testimonial__author__position">
                                     ASISTENT MEDICAL GENERALIST
@@ -660,8 +659,8 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
-                    <div class="above_headline">PRESS QUOTES</div>
-                    <h1 class="headline light">Ce se scrie in presa despre noi.</h1>
+                    <div class="above_headline"> În presă</div>
+                    <h1 class="headline light">Ce spune presa despre noi.</h1>
                 </div>
             </div>
             <div class="mj-grid">
@@ -680,7 +679,7 @@ get_header();
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
+                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo-romedic logo.png" alt="">
                         <p>
                             MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
                         </p>
