@@ -60,6 +60,11 @@ get_header();
                                     <?php echo get_the_post_thumbnail($post['ID'], 'full'); ?>
                                 </a>
                             </div>
+                            <div class="mj-article__category">
+                                <?php  $categories = get_the_category($post['ID']);
+                                    echo $categories[0]->cat_name;
+                                ?>
+                            </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
                             <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste</a>
                             <div class="mj-article__author">

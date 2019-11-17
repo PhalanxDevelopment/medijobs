@@ -96,7 +96,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_2" class="section section_2 company" style="padding-bottom: 410px">
+    <div id="section_2" class="section section_2 company">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -104,6 +104,7 @@ get_header();
                     <div class="above_headline">Beneficii</div>
                     <h1 class="headline light">Prima platformă de recrutare medicală</h1>
                     <p>Care ajută companiile să se conecteze cu specialiști medicali relevanti din România.</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/section_2_img.png" alt="">
                 </div>
                 <div class="grid__item width-7/24">
                     <ul class="mj-list">
@@ -316,13 +317,13 @@ get_header();
                                 <g id="Olt">
                                     <path id="Path_198" data-name="Path 198" d="M351.555,458.278c-.7,2.519,0,6.088.046,7.747s-7.235,5.069-9.395,6.081a23.586,23.586,0,0,0-4.982,3.816l-9.349.653s.711,1.708,1.516,3.564.653,3.219.549,6.535,2.52,4.574,3.722,5.682.806,5.276.853,6.63a6.673,6.673,0,0,0,1.052,3.373c.663,1.1,2.367.2,4.527.048s1,2.718.852,3.721a58.5,58.5,0,0,0,.408,6.083l4.5,5.682a4.092,4.092,0,0,1-1.628.595c-1.2.143-2.264-.32-3.457-.359a3.757,3.757,0,0,1-3-1.611c-.653-.919-.909-1.99-1.979-2.52a17.548,17.548,0,0,1-2.729-1.619,5.91,5.91,0,0,0-3.741-1.372c-1.865.111-4.073.33-5.635-.873s-2.094-2.947-4.387-2.263c-2.082.616-2.992,2.35-4.574,3.685-1.194,1.023-2.529,1.836-3.741,2.832a36.238,36.238,0,0,1-3.316,2.643,6.408,6.408,0,0,1-2.6,1.193,15.547,15.547,0,0,1-2.557-.16,17.066,17.066,0,0,0-2.975-.134,18.8,18.8,0,0,0-3.3,1.118c-2.275.718-4.244.179-6.507-.4-1.659-.427-3.952-.786-5.3-1.868-.645-.511-1.082-1.212-1.79-1.685a19.783,19.783,0,0,0-2.169-.9l12.5-14.1,1.7-5.728a23.35,23.35,0,0,0-3.164-1.66c-.947-.3-2.462-1.505-1.307-3.116s8.743-3.211,8.743-3.211l-6.271-11.157,5.721-5.787-3.22-5.825,2.623-1.763-.558-4.924-6.137-.455-.1-5.827-4.471.306-1.307-4.528-5.73-1.157-3.363-10.355-6.791-1.7,1.107-7.144-4.923-2.252,5.927-11.111s8.25,2.112,9.454,2.311,1.449.047,2.861-1.06,5.378,2.87,5.378,2.87l4.272-4.272,10.352,4.272s3.069-5.428,4.879-8.6-1.155-10.6-2.065-13.714-.153-11.312.2-14.029a3.984,3.984,0,0,0-2.908-4.367c-.958-.1-.806-4.878-.806-4.878l8.383-3.864,9.054.852-3.114,13.715,6.886-.549.9-8.146,3.373-.294.806,7.787,4.517,8.742,4.575-2.6,2.008,4.566a10.61,10.61,0,0,0-1.753,3.571c-.909,2.662,2.008,7.786,2.965,9.149a38.148,38.148,0,0,1,2.509,5.428l4.367-1.516,2.016,3.126-3.825,3.363c.758,2.415-.9,8.088-1.25,10.2s2.756,8.848,3.267,9.652a20.884,20.884,0,0,1,1.2,3.571l5.133.5s-1.467,9.842-1.714,12.01A59.066,59.066,0,0,1,351.555,458.278Z" transform="translate(45.948 63.574)" fill="none" stroke="#cff9ff" stroke-miterlimit="10" stroke-width="2"/>
                                     <foreignobject class="node" x="350" y="470" width="145" height="32" class="name">
-                                            <div>Craiova</div>                
+                                            <div>Olt</div>                
                                     </foreignobject>
                                 </g>
                                 <g id="Dolj">
                                     <path id="Path_199" data-name="Path 199" d="M306,489.634a23.35,23.35,0,0,1,3.164,1.66l-1.7,5.728-12.5,14.1c-1-.521-1.81-1.371-2.834-1.848a19.687,19.687,0,0,0-4.222-1.24c-2.161-.5-4.007-1.781-6.234-2.14-2.083-.323-4.14-.258-6.175-.882a9.431,9.431,0,0,1-2.587-1.185,8.336,8.336,0,0,1-1.582-2.272c-1.3-1.952-3.049-2.663-5.18-3.418a14.321,14.321,0,0,0-6.177-1.11c-1.723.2-2.538,2.018-4.251,2.417-1.857.434-3.212-1.119-4.737-1.972a28.225,28.225,0,0,1-5.086-3.911c-1.848-1.715-3.666-3.267-6.337-3.116-2.481.142-4.849,1.164-7.368,1.232a25.47,25.47,0,0,1-2.8-.285c-2.645-.218-5.324-.4-7.977-.454q-1.08-.03-2.16,0a38.292,38.292,0,0,0-3.912.274,27.816,27.816,0,0,1-3.3.348,6.245,6.245,0,0,0-.948.163c-.653.084-1.334,0-2,.066a73.555,73.555,0,0,1-7.53.152,14.177,14.177,0,0,0-1.9.073c-.585.079-1.182.2-1.77.323-.3.068-.605.172-.908.21-.266.037-.55-.019-.815,0-.578.028-1.166.161-1.744.141a12.91,12.91,0,0,1-1.7-.244c-2.283-.361-4.139-.987-5.635-2.852a10.049,10.049,0,0,0-1.79-2,10.615,10.615,0,0,1-2.094-1.7c-1.24-1.506-2.018-3.383-1.193-5.256.862-1.933,2.453-3.173,2.264-5.437a15.892,15.892,0,0,1-.181-3.96c.143-.936.474-1.845.655-2.773a9.82,9.82,0,0,1,3.371.188,3.957,3.957,0,0,0,3.2-.18c.948-.606,1.487-1.7,2.435-2.293.87-.557,1.818-.358,2.793-.463,2.113-.246,3.078-2.417,3.78-4.187a8.033,8.033,0,0,0,.332-3.959l4.424-5.275,2.963-7.692,1.2-6.234L216.9,435l-.909-10.5-5.171-2.861L214.533,416l9.253-.34-.956-5.485,1.2-4.876,2.919-.6,3.712,3.866s12.617-3.353,12.617-3.516c-.048-.151-1.4-3.665-1.4-3.665l.1-3.172a39.765,39.765,0,0,1,2.821-3.666,26.077,26.077,0,0,0,2.558-1.659l2.717,2.663,3.544-.853,1.582.853v1.713l6.479.949-.9-5.324,5.048-7.767,8.222.605,1.2,3.015-1.809,4.7-.075,3.219,6.659-1.211,1.856-.9,3.248,3.24L280.75,405.4l5.2,4.225-5.927,11.111,4.923,2.252-1.107,7.144,6.791,1.7,3.363,10.355,5.73,1.157,1.307,4.528,4.471-.306.1,5.827,6.137.455.558,4.924-2.623,1.763,3.22,5.825-5.721,5.787,6.271,11.157s-7.587,1.6-8.743,3.211S305.056,489.331,306,489.634Z" transform="translate(31.439 66.647)" fill="none" stroke="#cff9ff" stroke-miterlimit="10" stroke-width="2"/>
                                     <foreignobject class="node" x="300" y="500" width="145" height="32" class="name">
-                                            <div>Dolj</div>                
+                                            <div>Craiova</div>                
                                     </foreignobject>
                                 </g>
                                 <g id="Mehedinti">
@@ -458,8 +459,6 @@ get_header();
                         <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/YTS-Detnal View.png" alt="">
                         <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/catena.gif" alt="">
                         <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/NephroCare_Logo_CMYK.jpg" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/reginamaria.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/medlife.png" alt="">
                     </div>
                 </div>
             </div>
@@ -475,22 +474,37 @@ get_header();
                 </div>
             </div>
             <div class="mj-grid">
-                <div class="grid__item width-16/24">
+                <div class="grid__item width-15/24">
                     <div class="mj-boxes">
-                        <div class="mj-arrow-box top_box">
+                        <div class="mj-arrow-box">
+                            <h1>01</h1>
                             <h3>Salvează Timp:</h3>
+                            <p>Scurtam timpul de recrutare de la luni la saptamani.</p>
                             <p>Nu mai parcurgi mii de CV-uri nepotrivite</p>
-                            <p>Scurtezi timpul de recrutare de la 90 la sub 30 de zile</p>
                         </div>
-                        <div class="mj-arrow-box right_box">
-                            <h3>Salvează Bani:</h3>
-                            <p>Găsești mai rapid candidatul potrivit pentru pozițiile vacante</p>
-                            <p>Fa-ti pacienti fericiti, găsind eficient personalul medical de care ai nevoie.</p>
+                        <div class="mj-arrow-box right">
+                            <h1>02</h1>
+                            <h3>Fii Productiv:</h3>
+                            <p>Scurtam timpul de recrutare de la luni la saptamani.</p>
+                            <p>Pacientii tai se bucura de o echipa completa si performanta.</p>
                         </div>
-                        <div class="mj-arrow-box bottom_box">
-                            <h3>Candidați calificați:</h3>
-                            <p>Noi te conectam cu cei mai relevanți candidați</p>
-                            <p>Tu ii inviti la interviu.</p>
+                        <div class="mj-arrow-box">
+                            <h1>03</h1>
+                            <h3>Creste Retentia:</h3>
+                            <p>Am dezvoltat un algoritm de profilare a specialistilor medicali.</p>
+                            <p>Ca tu sa poti selecta candidatul potrivit pe termen lung.</p>
+                        </div>
+                        <div class="mj-arrow-box right bottom">
+                            <h1>04</h1>
+                            <h3>Elimina Riscuri:</h3>
+                            <p>Te conectam cu candidati pre-validati.</p>
+                            <p>Ai siguranta ca angajezi nu doar un candidat, ci cel mai bun candidat.</p>
+                        </div>
+                        <div class="mj-arrow-box">
+                            <h1>05</h1>
+                            <h3>Scade Costurile:</h3>
+                            <p>Am automatizat preselectia si validarea candidatilor.</p>
+                            <p>Elimini nevoia de a angaja o echipa proprie de recrutare.</p>
                         </div>
                     </div>
                 </div>
