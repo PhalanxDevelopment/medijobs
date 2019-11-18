@@ -42,23 +42,6 @@
         <div class="mj-grid">
             <div class="grid__item width-4/24">
                 <a href="/" class="mj-logo"></a>
-                <div class="hide-on-desktop">
-                    <div class="mj-search"></div>
-                    <div class="mj-lang-switcher btn-group" id="langSwitcher">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/RO-Flag.png">
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#" title="Select this language"><img src="<?php echo get_template_directory_uri(); ?>/images/RO-Flag.png" style="margin-left:11px;"></a>
-                            </li>
-                            <li>
-                                <a href="#" title="Select this language"><img src="<?php echo get_template_directory_uri(); ?>/images/RO-Flag.png" style="margin-left:11px;"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
             <div class="grid__item width-11/24">
                 <div id="menuToggle">

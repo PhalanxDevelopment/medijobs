@@ -46,7 +46,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-23/24 mj-form">
-                    <h2>Articolele Recente</h2>
+                    <h2>Articole Recente</h2>
                     <div class="mj-articles">
                     <?php
                     $recent_posts = wp_get_recent_posts(array(
@@ -66,7 +66,7 @@ get_header();
                                 ?>
                             </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
-                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste</a>
+                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
                             <div class="mj-article__author">
                                 <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
                                 <span>SCRIS DE </span>
@@ -198,11 +198,11 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light"> Cele mai populare articole</h1>
+                    <h1 class="headline light"> Cele mai populare articole ale lunii</h1>
                     <?php
                         if (function_exists('wpp_get_mostpopular')) {
                             $args = array(
-                                'range' => 'weekly',
+                                'range' => 'last30days',
                                 'order_by'=> 'views',
                                 'limit' => 9,
                                 'freshness' => 1,

@@ -137,7 +137,7 @@ function my_custom_popular_posts_html_list( $popular_posts, $instance ){
         $output .= "<div class=\"mj-article__image\"><a href=\"" . get_permalink( $popular_post->id ) . "\">". get_the_post_thumbnail($popular_post->id, 'full') ."</a></div>";
         $output .= "<div class=\"mj-article__category\">". $categories[0]->cat_name ."</div>";
         $output .= "<h3 class=\"mj-article__title\"><a href=\"" . get_permalink( $popular_post->id ) . "\" title=\"" . esc_attr( $popular_post->title ) . "\">" . $popular_post->title . "</a></h3>";
-        $output .= "<a href=\"" . get_permalink( $popular_post->id ) . "\" class=\"mj-article__link\">Citeste</a>";
+        $output .= "<a href=\"" . get_permalink( $popular_post->id ) . "\" class=\"mj-article__link\">Citeste Articolul</a>";
         $output .= $stats;
         $output .= "</div>" . "\n";
     }
@@ -173,7 +173,7 @@ function get_breadcrumb() {
     }
 }
 
-add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
+// add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
 
 function filter_the_content_in_the_main_loop( $content ) {
     // Check if we're inside the main loop in a single post page.

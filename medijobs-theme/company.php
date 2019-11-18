@@ -38,7 +38,7 @@ get_header();
             </li>
         </ul>
     </div>
-    <div class="mj-container">
+    <div id="isCompany" class="mj-container">
         <form id="form" action="https://app.medijobs.ro/register/company" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
             <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
@@ -528,17 +528,17 @@ get_header();
                             <div class="step_title"> Crează un cont:</div>
                             <div class="step_content">Durează mai puțin de 2 minute să îți creezi un cont și să fii la curent cu cei mai relevanți candidați pentru nevoile tale. </div>
                         </li>
-                        <li id="step_2" class="mj-step">
+                        <li id="step_2" class="mj-step active">
                             <div class="step_nr">.02</div>
                             <div class="step_title">Activeaza o campanie de recrutare</div>
                             <div class="step_content"> Spune-ne ce cauți și inițiază un proces de recrutare medicală, iar noi te conectăm cu candidați calificați</div>
                         </li>
-                        <li id="step_3" class="mj-step">
+                        <li id="step_3" class="mj-step active">
                             <div class="step_nr">.03</div>
                             <div class="step_title">Primești candidați relevanți</div>
                             <div class="step_content">Care se potrivesc cerințelor tale/ ofertei tale.</div>
                         </li>
-                        <li id="step_4" class="mj-step">
+                        <li id="step_4" class="mj-step active">
                             <div class="step_nr">.04</div>
                             <div class="step_title">Angajează!</div>
                             <div class="step_content"></div>
@@ -580,19 +580,19 @@ get_header();
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Start-up.ro logo.png" style="height:100px" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Start-up.ro logo.png" style="height:50px" alt="">
                         <p>
                             Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/AngajatorulMeu.logo-1-logo.jpg" style="height:100px" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/AngajatorulMeu.logo-1-logo.png" style="height:50px" alt="">
                         <p>
                             Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/br-facebook-logo.png" style="height:100px" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/br-logo.png" style="height:50px" alt="">
                         <p>
                             Shortening the time needed for finding a job and avoiding unsuitable applications.
                         </p>
@@ -601,7 +601,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_9" class="section section_9">
+    <div id="section_9" class="section section_9 company">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>

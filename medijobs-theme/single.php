@@ -88,7 +88,7 @@
                                 </p>
                             </div>
                             <div class="link">
-                                <a href="<?php echo get_the_author_meta( 'user_url' , $author_id ); ?>">Alte articole scrise de <?php echo the_author_meta( 'display_name' , $author_id ); ?></a>
+                                <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">Alte articole scrise de <?php echo the_author_meta( 'display_name' , $author_id ); ?></a>
                             </div>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-5/24 hide-on-mobile"></div>
                 <div class="grid__item width-14/24">
-                    <?php echo do_shortcode('[wpdevart_facebook_comment curent_url="https://www.facebook.com/medijobsromania" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="2" ]'); ?> 
+                    <?php echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?> 
                 </div>
             </div>
         </div>

@@ -35,8 +35,7 @@ get_header();
                 TESTIMONIALE
             </li>
             <li class="quick_link" id="ql_section_10" data-section="9">
-                 În presă
-
+                În presă
             </li>
         </ul>
     </div>
@@ -48,11 +47,11 @@ get_header();
             <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs.</p>
             <input class="mj-input" name="nume" type="text" placeholder="Nume Prenume" >
             <input class="mj-input" name="email" type="email" placeholder="Email" >
-            <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+            <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 Creează un cont
             </button>
             <p class="mj-align--center mj-font--small"> Ești companie? <a href="https://app.medijobs.ro/register/company">Creează-ți profilul aici </a></p>
-        </div>
+        </form>
     </div>
     <div id="section_1" class="section section_1">
         <div class="mj-container">
@@ -78,7 +77,7 @@ get_header();
                 <div class="grid__item width-10/24">
                     <div class="sub_section">DE CE SA TE ALATURI CELOR <span id="candidati">26448+</span> CANDIDATI</div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
-                        Sign up for free
+                        Creaaza cont
                     </button>
                     <p class="mj-align--center mj-font--small hide-on-desktop">Ești companie? <a href="https://app.medijobs.ro/register/compan">Creează-ți profilul aici </a></p>
                 </div>
@@ -520,17 +519,17 @@ get_header();
                             <div class="step_title">Creează un cont gratuit:</div>
                             <div class="step_content">Este șansa ta sa ne spui ce îți dorești în continuare. Creează-ți un cont în mai puțin de 2 minute!</div>
                         </li>
-                        <li id="step_2" class="mj-step">
+                        <li id="step_2" class="mj-step active">
                             <div class="step_nr">.02</div>
                             <div class="step_title">Primește oferte de muncă</div>
                             <div class="step_content">Îți conectăm profilul cu oferte bazate pe experiența ta de muncă, salariul dorit și locația de interes.</div>
                         </li>
-                        <li id="step_3" class="mj-step">
+                        <li id="step_3" class="mj-step active">
                             <div class="step_nr">.03</div>
                             <div class="step_title">Alege oferta care ți se potrivește</div>
                             <div class="step_content">Și programează interviuri cu angajatorii preferați.</div>
                         </li>
-                        <li id="step_4" class="mj-step">
+                        <li id="step_4" class="mj-step active">
                             <div class="step_nr">.04</div>
                             <div class="step_title">Angajează-te!</div>
                             <div class="step_content">Bucură-te de un nou loc de muncă, recomandă colegilor MEDIjobs și primește un bonus!</div>
@@ -684,13 +683,13 @@ get_header();
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Start-up.ro logo.png" style="height:100px" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Start-up.ro logo.png" style="height:50px;" alt="">
                         <p>
                             Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
                         </p>
                     </div>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/AngajatorulMeu.logo-1-logo.jpg" style="height:100px" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/AngajatorulMeu.logo-1-logo.png" style="height:50px;" alt="">
                         <p>
                             Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
                         </p>

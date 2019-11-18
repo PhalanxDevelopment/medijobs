@@ -38,12 +38,12 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-23/24 mj-form">
-                <h2>Articolele Recente</h2>
+                <h2>Articole Recente</h2>
                     <div class="mj-articles">
                     <?php
                     $category = get_the_category(); 
                     $recent_posts = wp_get_recent_posts(array(
-                        'numberposts' => -1, // Number of recent posts thumbnails to display
+                        'numberposts' => 6, // Number of recent posts thumbnails to display
                         'post_status' => 'publish', // Show only the published posts
                         'category_name'    => $category[0]->slug,
                     ));
@@ -54,8 +54,13 @@
                                     <?php echo get_the_post_thumbnail($post['ID'], 'full'); ?>
                                 </a>
                             </div>
+                            <div class="mj-article__category">
+                                <?php  $categories = get_the_category($post['ID']);
+                                    echo $categories[0]->cat_name;
+                                ?>
+                            </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
-                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste</a>
+                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
                             <div class="mj-article__author">
                                 <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
                                 <span>SCRIS DE </span>
@@ -105,11 +110,11 @@
                     <h1 class="headline light">Cele mai citite articole.</h1>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
-                        
                             $args = array(
                                 'range' => 'all',
                                 'order_by'=> 'views',
                                 'limit' => 6,
+                                'cat' => $category[0]->term_id,
                                 'stats_author' => 1,
                                 'post_type' => 'post',
                             );
@@ -130,13 +135,14 @@
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light"> Cele mai populare articole</h1>
+                    <h1 class="headline light"> Cele mai populare articole ale lunii</h1>
                     <?php
                         if (function_exists('wpp_get_mostpopular')) {
                             $args = array(
-                                'range' => 'weekly',
+                                'range' => 'all',
                                 'order_by'=> 'views',
                                 'limit' => 9,
+                                'cat' => $category[0]->term_id,
                                 'freshness' => 1,
                                 'stats_author' => 1,
                                 'post_type' => 'post',
@@ -151,13 +157,4 @@
             </div>
         </div>  
     </div>
-<main id="content">
-<header class="header">
-<h1 class="entry-title"></h1>
-<div class="archive-meta"></div>
-</header>
-
-<?php get_template_part( 'nav', 'below' ); ?>
-</main>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
