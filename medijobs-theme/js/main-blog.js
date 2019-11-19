@@ -33,3 +33,46 @@ function getWidth() {
         document.documentElement.clientWidth
         );
 }
+
+
+var quiz_step = 1;
+
+document.getElementById('close_quiz').onclick = function() {
+    var article_quiz =  document.getElementById("article_quiz");
+    article_quiz.className = 'article_quiz dismissed';
+}
+document.getElementById('prev_step').onclick = function() {
+    if (quiz_step > 1) {
+        var step =  document.getElementById("quiz_step_"+ quiz_step);
+        step.className = 'step';
+        quiz_step--;
+        var next_step =  document.getElementById("quiz_step_"+ quiz_step);
+        next_step.className = 'step active';
+    }
+}
+
+document.getElementById('skip').onclick = function() {
+    var step =  document.getElementById("quiz_step_"+ quiz_step);
+    step.className = 'step';
+    quiz_step++;
+    if (quiz_step < 6) {
+        var next_step =  document.getElementById("quiz_step_"+ quiz_step);
+        next_step.className = 'step active';
+    } else {
+        var article_quiz =  document.getElementById("article_quiz");
+        article_quiz.className = 'article_quiz dismissed';
+    }
+}
+
+document.getElementById('next_step').onclick = function() {
+    var step =  document.getElementById("quiz_step_"+ quiz_step);
+    step.className = 'step';
+    quiz_step++;
+    if (quiz_step < 6) {
+        var next_step =  document.getElementById("quiz_step_"+ quiz_step);
+        next_step.className = 'step active';
+    } else {
+        var article_quiz =  document.getElementById("article_quiz");
+        article_quiz.className = 'article_quiz dismissed';
+    }
+}

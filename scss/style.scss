@@ -88,6 +88,67 @@ Version: 2
     margin-top: -270px;
     padding-bottom: 120px;
     z-index: 2;
+    .step_4_box {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 120px;
+        input {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .input {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left:16px;
+            top: 32px;
+            background: #fff;
+            border-radius: 50%;
+            padding-top: 12px;
+            .inner_input {
+                position: absolute;
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: #F1F2F2;
+                border: 2px solid #00C1DE;
+                left: 50%;
+                margin-left: -8px;
+                top: 12px;
+                border-radius: 50%;
+            }
+        }
+        label {
+            width: 120%;
+            height: 100%;
+            position: relative;
+            display: block;
+            font-family: 'ClearSans-Regular';
+            font-size: 18px;
+            padding: 32px;
+            padding-left: 66px;
+            line-height: 22px;
+            color:#000;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+        input[type=radio]:checked + label {
+            background: #00C1DE;
+            color:#fff;
+            .input {
+                background: #00C1DE;
+                .inner_input {
+                    background: #00C1DE;
+                    border: 4px solid #fff;
+                }
+            }
+        } 
+    }
+    &.dismissed {
+        display: none;
+    }
     .step {
         display: none;
         &.active {
@@ -126,7 +187,7 @@ Version: 2
             }
         }
     }
-    #second_step {
+    #quiz_step_2 {
         h1.step__question{
             margin-top: 180px;
         }
@@ -134,7 +195,7 @@ Version: 2
             margin-bottom: 120px;
         }
     }
-    #third_step {
+    #quiz_step_3 {
         h1.step__question{
             margin-top: 180px;
         }
@@ -173,6 +234,12 @@ Version: 2
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 43px;
+        input {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute
+        }
+        
         .radio_box {
             width: 224px;
             height: 312px;
@@ -201,10 +268,32 @@ Version: 2
                 background: #fff;
                 border-radius: 50%;
                 padding-top: 12px;
+                .inner_input {
+                    position: absolute;
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    background: #F1F2F2;
+                    border: 2px solid #00C1DE;
+                    left: 50%;
+                    margin-left: -8px;
+                    top: 15px;
+                    border-radius: 50%;
+                }
             }
         }
         input[type=radio]:checked + label {
             background: #00C1DE;
+            h3 {
+                color:#fff;
+            }
+            .input {
+                background: #00C1DE;
+                .inner_input {
+                    background: #00C1DE;
+                    border: 2px solid #fff;
+                }
+            }
         } 
     }
     span.step_info {

@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-16x16.png">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/images/favicon/manifest.json">
-<?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) { ?>"
+<?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) { ?>
     <link href="https://fonts.googleapis.com/css?family=Noticia+Text|Poppins:500,700&display=swap" rel="stylesheet">
 <?php } ?>
 <meta name="msapplication-TileColor" content="#00C1DE">

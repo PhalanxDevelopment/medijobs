@@ -96,76 +96,149 @@
             </div>
         </div>
     </div>
-    <div class="article_quiz">
+    <div id="article_quiz" class="article_quiz">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-18/24">
                     <div id="close_quiz" class="article_close"></div>
-                    <div id="first_step" class="step active">
-                        <h1 class="step__question">What is your career goal?</h1>
-                        <span class="step_info">3 more questions to go</span>
+                    <div id="quiz_step_1" class="step active">
+                        <h1 class="step__question">Unde te afli in cariera?</h1>
+                        <span class="step_info">mai sunt 3 intrebari</span>
                         <div class="step__radios_boxes">
-                            <label for="step-1" class="radio_box">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-1.png" alt="">
-                                <h3>Not currently looking to change jobs, but I am open to receive job offers</h3>
-                                <div class="input">
-                                    <input id="step-1" class="input__radio" name="step-1" type="radio"> 
-                                </div>
-                            </label>
-                            <label for="step-2" class="radio_box">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-2.png" alt="">
-                                <h3 style="margin-top:70px;">Ready to start interviewing</h3>
-                                <div class="input">
-                                    <input id="step-2" class="input__radio" name="step-1" type="radio"> 
-                                </div>
-                            </label>
-                            <label for="step-3" class="radio_box">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-3.png" alt="">
-                                <h3 style="margin-top:95px;" >Start interviewing</h3>
-                                <div class="input">
-                                    <input id="step-3" class="input__radio" name="step-1" type="radio"> 
-                                </div>
-                            </label>
-                            <label for="step-4" class="radio_box">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-4.png" alt="">
-                                <h3>Just interested to improve results at my current job</h3>
-                                <div class="input">
-                                    <input id="step-4" class="input__radio" name="step-1" type="radio"> 
-                                </div>
-                            </label>
+                            <div>
+                                <input id="step-1" class="input__radio" name="step-1" type="radio">
+                                <label for="step-1" class="radio_box">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-1.png" alt="">
+                                    <h3>Nu vreau sa imi schimb jobul, dar sunt deschis(a) sa primesc oferte relevante</h3>
+                                    <div class="input">
+                                        <div class="inner_input"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <input id="step-2" class="input__radio" name="step-1" type="radio"> 
+                                <label for="step-2" class="radio_box">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-2.png" alt="">
+                                    <h3 style="margin-top:70px;">Sunt pregatit(a) sa incep interviurile</h3>
+                                    <div class="input">
+                                        <div class="inner_input"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <input id="step-3" class="input__radio" name="step-1" type="radio"> 
+                                <label for="step-3" class="radio_box">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-3.png" alt="">
+                                    <h3 style="margin-top:95px;" >Particip la interviuri</h3>
+                                    <div class="input">
+                                        <div class="inner_input"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <input id="step-4" class="input__radio" name="step-1" type="radio"> 
+                                <label for="step-4" class="radio_box">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-4.png" alt="">
+                                    <h3>Caut resurse pentru a ma dezvolta profesional</h3>
+                                    <div class="input">
+                                        <div class="inner_input"></div>
+                                    </div>
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <div id="second_step" class="step">
-                        <h1 class="step__question">Where would you like to work?</h1>
-                        <span class="step_info">2 more questions to go</span>
+                    <div id="quiz_step_2" class="step">
+                        <h1 class="step__question">In ce orase ai vrea sa lucrezi?</h1>
+                        <span class="step_info">mai sunt 2 intrebari</span>
                         <div class="mj-form">
-                            <input class="mj-input" name="nume"  type="text" placeholder="Type in your city" >
+                            <input class="mj-input" name="oras"  type="text" placeholder="Tasteaza orasul" >
                         </div>
                     </div>
-                    <div id="third_step" class="step">
-                        <h1 class="step__question">What are you looking for in your next job?</h1>
-                        <span class="step_info">1 more questions to go</span>
-                        <p class="inline_form">I have <input style="width: 100px;" type="number"/> Years of experience <br>
-                            and would like my next role to be <input placeholder="type your next job here " type="text"/> .
+                    <div id="quiz_step_3" class="step">
+                        <h1 class="step__question">Ce iti doresti de la urmatorul job?</h1>
+                        <span class="step_info">mai este o singura intrebare</span>
+                        <p class="inline_form">Am  <input style="width: 100px;" type="number"/> ani de experienta <br>
+                        si as vrea sa ma dezvolt profesional ca <input placeholder="type your next job here " type="text"/> .
                         </p>
                     </div> 
-                    <div id="forth_step" class="step">
-                        <h1 class="step__question">What other career goals do you have?</h1>
-                        <span class="step_info">this is the last question</span>
+                    <div id="quiz_step_4" class="step">
+                        <h1 class="step__question">Ce alte aspecte ti-ai dori sa imbunatatesti profesional?</h1>
+                        <span class="step_info">este ultima intrebare</span>
                         <div class="mj-grid">
-                            <div class="grid__item width-4/24">
+                            <div class="grid__item width-5/24">
                                 <div class="step_4_box">
-                                    <input type="radio">
+                                    <input type="radio" id="step-4-1" name="step-4" type="radio">
+                                    <label for="step-4-1">
+                                        <div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                    Abilitati de comunicare & Patient Care
+                                </label>
+                                </div>
+                                <div class="step_4_box">
+
+                                    <input type="radio" id="step-4-2" name="step-4" type="radio">
+                                    <label for="step-4-2">
+                                    <div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                        Cum sa fiu mai efficient(a) la job</label>
                                 </div>
                             </div>
+                            <div class="grid__item width-2/24"></div>
                             <div class="grid__item width-7/24">
-                            
+                                <div class="step_4_box">
+                                    <input type="radio" id="step-4-3" name="step-4" type="radio">
+                                    <label for="step-4-3"><div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                        Mai multe activitati de voluntariat</label>
+                                </div>
+                                <div class="step_4_box">
+                                    <input type="radio" id="step-4-4" name="step-4" type="radio">
+                                    <label for="step-4-4">
+                                        <div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                        Sa imbunatatesc relatia cu colegii </label>
+                                </div>
+                                <div class="step_4_box">
+                                    <input type="radio" id="step-4-5" name="step-4" type="radio">
+                                    <label for="step-4-5">
+                                        <div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                        Echilibru viata profesioana/personala</label>
+                                </div>
                             </div>
-                            <div class="grid__item width-4/24">
-                            
+                            <div class="grid__item width-2/24"></div>
+                            <div class="grid__item width-5/24">
+                                <div class="step_4_box">
+                                    <input type="radio" id="step-4-6" name="step-4" type="radio">
+                                    <label for="step-4-6">
+                                    <div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                        Crestere salariala</label>
+                                </div>
+                                <div class="step_4_box">
+                                    <input type="radio" id="step-4-7" name="step-4" type="radio">
+                                    <label for="step-4-7">
+                                    <div class="input">
+                                            <div class="inner_input"></div>
+                                        </div>
+                                        Sa investesc in brandul meu personal</label>
+                                </div>
                             </div>
                         </div>           
+                    </div>
+                    <div id="quiz_step_5" class="step">
+                        <h1 class="step__question">Multumim pentru raspunsuri!</h1>
+                        <span class="step_info">Alatura-te celei mai mari comunitati digitale din Romania dedicata exclusiv specialistilor medicali si acceseaza Gratuit resurse pentru a te implini profesional. <br> Inscrie-te pentru a primi oferte relevante si sfaturi de cariera direct in casuta ta de email!</span>
+                        <div class="mj-form">
+                            <input class="mj-input" name="email"  type="text" placeholder="Emailul tau" >
+                        </div>
                     </div>
                     <div class="article_quiz__footer">
                         <div id="prev_step" class="article_quiz__footer__link">Previous step</div>
