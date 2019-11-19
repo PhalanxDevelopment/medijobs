@@ -159,7 +159,7 @@
                         <h1 class="step__question">Ce iti doresti de la urmatorul job?</h1>
                         <span class="step_info">mai este o singura intrebare</span>
                         <p class="inline_form">Am  <input style="width: 100px;" type="number"/> ani de experienta <br>
-                        si as vrea sa ma dezvolt profesional ca <input placeholder="type your next job here " type="text"/> .
+                        si as vrea sa ma dezvolt profesional ca <input placeholder="Scrie titulatura" type="text"/> .
                         </p>
                     </div> 
                     <div id="quiz_step_4" class="step">
@@ -241,11 +241,11 @@
                         </div>
                     </div>
                     <div class="article_quiz__footer">
-                        <div id="prev_step" class="article_quiz__footer__link">Previous step</div>
+                        <div id="prev_step" class="article_quiz__footer__link">Înapoi</div>
                         <button style="width: 224px;" id="next_step" class="mj-btn mj-btn--primary mj-btn--alt">
-                            Next step
+                            Înainte
                         </button>
-                        <div id="skip" class="article_quiz__footer__link skip">Skip this step</div>
+                        <div id="skip" class="article_quiz__footer__link skip">Sari peste acest pas</div>
                     </div>
                 </div>
             </div>

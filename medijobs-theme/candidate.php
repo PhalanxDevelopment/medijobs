@@ -40,12 +40,12 @@ get_header();
         </ul>
     </div>
     <div class="mj-container">
-        <form id="form" action="https://app.medijobs.ro/register/candidate" class="mj-register_form mj-form">
+        <form id="form" action="https://app.medijobs.ro/register/candidate" method="post" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
             <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
             <h3>Noi îți aducem ofertele de angajare</h3>
             <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs.</p>
-            <input class="mj-input" name="nume" type="text" placeholder="Nume Prenume" >
+            <input class="mj-input" name="name" type="text" placeholder="Nume Prenume" >
             <input class="mj-input" name="email" type="email" placeholder="Email" >
             <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 Creează un cont

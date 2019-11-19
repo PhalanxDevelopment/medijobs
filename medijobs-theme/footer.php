@@ -85,7 +85,7 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-footer.png" alt="Medijobs Logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/Logo-nou.png" alt="Medijobs Logo">
                         </a>
                     </div>
                 </div>

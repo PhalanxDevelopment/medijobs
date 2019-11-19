@@ -31,7 +31,7 @@ function getWidth() {
         document.body.offsetWidth,
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
-        );
+    );
 }
 
 
