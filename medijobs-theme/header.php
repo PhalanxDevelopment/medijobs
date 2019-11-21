@@ -30,14 +30,14 @@
 <header id="header" class="mj-header <?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) echo 'blog'; ?>">
     <div class="mj-container">
         <ul id="menu" class="mj-meniu blog_menu hide-on-mobile">
-        <?php 
-            if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) {
-                wp_list_categories(array(
-                    'hierarchical'        => true,
-                    'title_li' => ''
-                ));
-            }
-        ?>
+            <?php 
+                if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) {
+                    wp_list_categories(array(
+                        'hierarchical'        => true,
+                        'title_li' => ''
+                    ));
+                }
+            ?>
         </ul>
         <div class="mj-grid">
             <div class="grid__item width-4/24">
@@ -60,7 +60,7 @@
                 </a>
             </div>
             <div class="grid__item width-4/24 hide-on-mobile">
-                <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Înregistrează-te</button>
+                <a href="https://app.medijobs.ro/register" class="mj-btn mj-btn--secondary mj-btn--alt--2" style="font-weight: bold;padding-top: 13px;">Înregistrează-te</a>
             </div>
             <div class="grid__item width-1/24 hide-on-mobile">
                 <a href="https://app.medijobs.ro/login" class="pull-right">

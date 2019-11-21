@@ -113,7 +113,7 @@ if (document.getElementById('open-form')) {
         el.className = el.className + ' open'
     }
 }
-if (document.getElementById('quick-links')) {
+if (document.getElementById('quick_links')) {
     document.getElementById('ql_section_1').onclick = function() {
         document.getElementById("section_1").scrollIntoView({ 
             behavior: 'smooth' 

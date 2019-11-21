@@ -107,7 +107,7 @@
                         <span class="step_info">mai sunt 3 intrebari</span>
                         <div class="step__radios_boxes">
                             <div>
-                                <input id="step-1" class="input__radio" name="step-1" type="radio">
+                                <input id="step-1" class="input__radio" name="step-1" type="radio" value="Nu vreau sa imi schimb jobul, dar sunt deschis(a) sa primesc oferte relevante">
                                 <label for="step-1" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-1.png" alt="">
                                     <h3>Nu vreau sa imi schimb jobul, dar sunt deschis(a) sa primesc oferte relevante</h3>
@@ -117,7 +117,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input id="step-2" class="input__radio" name="step-1" type="radio"> 
+                                <input id="step-2" class="input__radio" name="step-1" type="radio" value="Sunt pregatit(a) sa incep interviurile"> 
                                 <label for="step-2" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-2.png" alt="">
                                     <h3 style="margin-top:70px;">Sunt pregatit(a) sa incep interviurile</h3>
@@ -127,7 +127,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input id="step-3" class="input__radio" name="step-1" type="radio"> 
+                                <input id="step-3" class="input__radio" name="step-1" type="radio" value="Particip la interviuri"> 
                                 <label for="step-3" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-3.png" alt="">
                                     <h3 style="margin-top:95px;" >Particip la interviuri</h3>
@@ -137,7 +137,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input id="step-4" class="input__radio" name="step-1" type="radio"> 
+                                <input id="step-4" class="input__radio" name="step-1" type="radio" value="Caut resurse pentru a ma dezvolta profesional"> 
                                 <label for="step-4" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-4.png" alt="">
                                     <h3>Caut resurse pentru a ma dezvolta profesional</h3>
@@ -168,7 +168,7 @@
                         <div class="mj-grid">
                             <div class="grid__item width-5/24">
                                 <div class="step_4_box">
-                                    <input type="radio" id="step-4-1" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-1" name="step-4" value="Abilitati de comunicare & Patient Care">
                                     <label for="step-4-1">
                                         <div class="input">
                                             <div class="inner_input"></div>
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="step_4_box">
 
-                                    <input type="radio" id="step-4-2" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-2" name="step-4" value="Cum sa fiu mai efficient(a) la job">
                                     <label for="step-4-2">
                                     <div class="input">
                                             <div class="inner_input"></div>
@@ -189,14 +189,14 @@
                             <div class="grid__item width-2/24"></div>
                             <div class="grid__item width-7/24">
                                 <div class="step_4_box">
-                                    <input type="radio" id="step-4-3" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-3" name="step-4" value="Mai multe activitati de voluntariat">
                                     <label for="step-4-3"><div class="input">
                                             <div class="inner_input"></div>
                                         </div>
                                         Mai multe activitati de voluntariat</label>
                                 </div>
                                 <div class="step_4_box">
-                                    <input type="radio" id="step-4-4" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-4" name="step-4" value="Sa imbunatatesc relatia cu colegii">
                                     <label for="step-4-4">
                                         <div class="input">
                                             <div class="inner_input"></div>
@@ -204,7 +204,7 @@
                                         Sa imbunatatesc relatia cu colegii </label>
                                 </div>
                                 <div class="step_4_box">
-                                    <input type="radio" id="step-4-5" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-5" name="step-4" value="Echilibru viata profesioana/personala">
                                     <label for="step-4-5">
                                         <div class="input">
                                             <div class="inner_input"></div>
@@ -215,7 +215,7 @@
                             <div class="grid__item width-2/24"></div>
                             <div class="grid__item width-5/24">
                                 <div class="step_4_box">
-                                    <input type="radio" id="step-4-6" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-6" name="step-4" value="Crestere salariala">
                                     <label for="step-4-6">
                                     <div class="input">
                                             <div class="inner_input"></div>
@@ -223,7 +223,7 @@
                                         Crestere salariala</label>
                                 </div>
                                 <div class="step_4_box">
-                                    <input type="radio" id="step-4-7" name="step-4" type="radio">
+                                    <input type="checkbox" id="step-4-7" name="step-4" value="Sa investesc in brandul meu personal">
                                     <label for="step-4-7">
                                     <div class="input">
                                             <div class="inner_input"></div>

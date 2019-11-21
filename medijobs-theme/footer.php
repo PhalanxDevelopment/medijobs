@@ -85,7 +85,7 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/Logo-nou.png" alt="Medijobs Logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/Logo-svg.svg" alt="Medijobs Logo">
                         </a>
                     </div>
                 </div>
@@ -129,14 +129,6 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/images/RO-Flag.png">
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#" title="Select this language"><img src="<?php echo get_template_directory_uri(); ?>/images/RO-Flag.png" style="margin-left:11px;"></a>
-                            </li>
-                            <li>
-                                <a href="#" title="Select this language"><img src="<?php echo get_template_directory_uri(); ?>/images/RO-Flag.png" style="margin-left:11px;"></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="grid__item width-2/24"></div>
@@ -149,7 +141,6 @@
                 </div>
                 <div class="grid__item width-2/24"></div>
                 <div class="grid__item width-4/24">
-                    <a href="">Sitemap</a>
                 </div>
             </div>
         </div>
@@ -157,7 +148,7 @@
     <?php 
         if ( is_page( array( 'Candidati', 'Companii') )) {
         ?>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/main.js?ver=1"></script>
         <?php } else { ?>
             <script src="<?php echo get_template_directory_uri(); ?>/js/main-blog.js"></script>
         <?php }

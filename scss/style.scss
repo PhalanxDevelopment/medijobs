@@ -134,7 +134,7 @@ Version: 2
             margin-top: 20px;
             border-radius: 6px;
         }
-        input[type=radio]:checked + label {
+        input[type=checkbox]:checked + label {
             background: #00C1DE;
             color:#fff;
             .input {
@@ -1459,9 +1459,9 @@ body.noScroll { /* ...or body.dialogShowing */
         margin-top: 39px;
         position: relative;
         display: block;
-        background: url(images/Logo-nou.png);
+        background: url(images/Logo-svg.svg);
         background-repeat: no-repeat;
-        width: 191px;
+        width: 172px;
         height: 30px;
     }
     .pull-right {
@@ -2679,7 +2679,39 @@ a.mj-btn {
 .saboxplugin-wrap {
     display: none !important;
 }
-@media only screen and (max-width: 1400px) {
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 721px) and (max-width: 1400px) {
+    .mj-container {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .section.section_1:after {
+        display: none;
+    }
+    .mj-register_form {
+        margin-left: 90px;
+    }
+    .quote:nth-child(3) {
+        margin-right: 56px;
+    }
+    .mj-footer .social__links .social__link {
+        margin-right: 20px;
+    }
+    .mj-articles .mj-article {
+        width: 32%;
+    }
+    .mj-articles .mj-article .mj-article__link {
+        left: 10px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 720px) {
     html {
         font-size: 55.5%;
     }
@@ -3096,10 +3128,7 @@ a.mj-btn {
             }
         }
         &.section_2 {
-            // padding-bottom: 262px;
-            background: url(images/section_2_bg.png);
-            background-repeat: no-repeat;
-            background-position: left -20px bottom -100px;
+            background: none;
         }
         &.section_4 {
             margin-top: 60px;
@@ -3339,9 +3368,9 @@ a.mj-btn {
             height: 72px;
         }
         .mj-logo {
-            width: 191px;
+            width: 172px;
             height: 30px;   
-            background: url(images/Logo-nou.png);
+            background: url(images/Logo-svg.svg);
             margin-top: 24px;
             background-repeat: no-repeat;
         }

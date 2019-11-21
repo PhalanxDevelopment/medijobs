@@ -23,8 +23,8 @@ get_header();
                 <div class="grid__item width-8/24">
                     <div id="blog-form" class="mj-register_form mj-form blog-form">
                         <div id="close-form" class="close hide-on-desktop"></div>
-                        <h3>Newsletter săptămânal</h3>
-                        <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
+                        <h3>GET WEEKLY UPDATES.</h3>
+                        <p>Never miss an update, we send a weekly recap of all our articles published.</p>
                         <?php echo do_shortcode('[hubspot type=form portal=5748888 id=f8052d4d-af90-45d5-bf00-c1f134635f57]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
@@ -43,7 +43,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-23/24 mj-form">
-                    <h2>Articole Recente</h2>
+                    <h2>Our Latest Articles.</h2>
                     <div class="mj-articles">
                     <?php
                     $recent_posts = wp_get_recent_posts(array(
@@ -63,10 +63,10 @@ get_header();
                                 ?>
                             </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
-                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
+                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">READ ON</a>
                             <div class="mj-article__author">
                                 <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
-                                <span>SCRIS DE </span>
+                                <span>WRITEN BY </span>
                                 <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
                                 <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
                             </div>
@@ -75,7 +75,7 @@ get_header();
                     <?php endforeach; wp_reset_query(); ?>
                     </div>
                     <a href="<?php echo get_home_url(); ?>/blog/recent" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        Vedeti toate articolele
+                        VIEW ALL ARTICLES
                     </a>
                 </div>
             </div>
@@ -90,14 +90,14 @@ get_header();
                         <div class="company_box mj-form">
                             <div class="mj-grid">
                                 <div class="grid__item width-12/24">
-                                    <h3>Ești companie sau candidat?</h3>
+                                    <h3>ARE YOU A COMPANY OR A CANDIDATE?</h3>
                                     <p>Companiile medicale din toata Romania au apelat la MEDIjobs pentru a angaja cu succes specialisti medicali.</p>
                                 </div>
                                 <div class="grid__item width-2/24 hide-on-mobile">
                                 </div>
                                 <div class="grid__item width-10/24">
-                                    <a href="https://app.medijobs.ro/register/" target="_blank" class="mj-btn mj-btn--primary">
-                                        Creează-ți un cont gratuit
+                                    <a href="https://app.medijobs.co/register/" target="_blank" class="mj-btn mj-btn--primary">
+                                        GET YOUR FREE ACCOUNT
                                     </a>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@ get_header();
                             <h3 class="mj-article__title">Healthcare subspecialties where you can work as a registered nurse – Part 4</h3>
                             <a href="#" class="mj-article__link mj-article__link--download">Download Ebook</a>
                             <div class="mj-article__author">
-                                <span>SCRIS DE</span>
+                                <span>WRITTEN BY</span>
                                 <h5 class="mj-article__author__name">Otilia Dobos</h5>
                                 <img src="http://cst-soft.com/medijobs/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
                             </div>
@@ -135,7 +135,7 @@ get_header();
                             <h3 class="mj-article__title">Actele necesare pentru eliberarea Certificatului de Membru de OAMGMAMR […]</h3>
                             <a href="#" class="mj-article__link mj-article__link--download">Download Ebook</a>
                             <div class="mj-article__author">
-                                <span>SCRIS DE</span>
+                                <span>WRITTEN BY</span>
                                 <h5 class="mj-article__author__name">Alexandra Grigorescu</h5>
                                 <img src="http://cst-soft.com/medijobs/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
                             </div>
@@ -147,7 +147,7 @@ get_header();
                             <h3 class="mj-article__title">Responsabilitatea unui specialist în resurse umane, ȋn procesul de recrutare a personalului medical</h3>
                             <a href="#" class="mj-article__link mj-article__link--download">Download Ebook</a>
                             <div class="mj-article__author">
-                                <span>SCRIS DE</span>
+                                <span>WRITTEN BY</span>
                                 <h5 class="mj-article__author__name">Roxana Ruscior</h5>
                                 <img src="http://cst-soft.com/medijobs/images/blog_1_author.png" class="mj-article__author__image" alt="Otilia Dobos Image">
                             </div>
@@ -167,7 +167,7 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Cele mai citite articole.</h1>
+                    <h1 class="headline light">All Time Favorites.</h1>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
                         
@@ -183,7 +183,7 @@ get_header();
                         }
                     ?>
                     <a href="<?php echo get_home_url(); ?>/blog/popular" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        Vedeti toate articolele
+                        VIEW ALL ARTICLES
                     </a>
                 </div>
             </div>
@@ -195,7 +195,7 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light"> Cele mai populare articole ale lunii</h1>
+                    <h1 class="headline light"> Trending Articles.</h1>
                     <?php
                         if (function_exists('wpp_get_mostpopular')) {
                             $args = array(
@@ -210,7 +210,7 @@ get_header();
                         }
                     ?>
                     <a href="<?php echo get_home_url(); ?>/blog/trending" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        Vedeti toate articolele
+                        VIEW ALL ARTICLES
                     </a>
                 </div>
             </div>

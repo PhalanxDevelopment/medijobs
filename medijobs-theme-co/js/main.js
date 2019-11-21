@@ -99,200 +99,178 @@ document.getElementById('body').onclick = function() {
         el.className = 'mj-lang-switcher btn-group';
     }
 }
-document.getElementById('close-form').onclick = function() {
-    var el = document.getElementById('form');
-    if (el.className.indexOf('open')) {
-        el.className = el.className.replace('open','');
-    } 
+if (document.getElementById('close-form')) {
+    document.getElementById('close-form').onclick = function() {
+        var el = document.getElementById('form');
+        if (el.className.indexOf('open')) {
+            el.className = el.className.replace('open','');
+        } 
+    }
 }
-document.getElementById('open-form').onclick = function() {
-    var el = document.getElementById('form');
-    el.className = el.className + ' open'
+if (document.getElementById('open-form')) {
+    document.getElementById('open-form').onclick = function() {
+        var el = document.getElementById('form');
+        el.className = el.className + ' open'
+    }
+}
+if (document.getElementById('quick-links')) {
+    document.getElementById('ql_section_1').onclick = function() {
+        document.getElementById("section_1").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_2').onclick = function() {
+        document.getElementById("section_2").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_3').onclick = function() {
+        document.getElementById("section_3").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_4').onclick = function() {
+        document.getElementById("section_4").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_5').onclick = function() {
+        document.getElementById("section_5").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_6').onclick = function() {
+        document.getElementById("section_6").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_7').onclick = function() {
+        document.getElementById("section_7").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    document.getElementById('ql_section_8').onclick = function() {
+        document.getElementById("section_8").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+}
+if (document.getElementById('ql_section_10')) {
+    document.getElementById('ql_section_10').onclick = function() {
+        document.getElementById("section_10").scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
 }
 
-document.getElementById('ql_section_1').onclick = function() {
-    document.getElementById("section_1").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_2').onclick = function() {
-    document.getElementById("section_2").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_3').onclick = function() {
-    document.getElementById("section_3").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_4').onclick = function() {
-    document.getElementById("section_4").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
+var isCompany = document.getElementById("isCompany");
 
-document.getElementById('ql_section_6').onclick = function() {
-    document.getElementById("section_6").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-document.getElementById('ql_section_7').onclick = function() {
-    document.getElementById("section_7").scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-}
-
-
-
-if(getWidth() > 1000) {
-    var lastScrollTop = 0;
-    window.addEventListener("scroll", function(e) {
-        var header = document.getElementById("header");
-        var form = document.getElementById("form");
-        if( window.scrollY > 130) {
-            header.className = 'mj-header shadow';
+var header = document.getElementById("header");
+var headerClass = header.className;
+var lastScrollTop = 0;
+window.addEventListener("scroll", function(e) {
+    var form = document.getElementById("form");
+    if( window.scrollY > 130) {
+        header.className = headerClass + ' shadow';
+    } else {
+        header.className = headerClass;
+    }
+    if (isCompany) {
+        if( window.scrollY > 7000 && getWidth() > 1400) {
+            form.className = 'mj-register_form mj-form absolute_company';
         } else {
-            header.className = 'mj-header';
+            form.className = 'mj-register_form mj-form ';
         }
-        if( window.scrollY > 6400) {
+    } else {
+        if( window.scrollY > 7890 && getWidth() > 1400) {
             form.className = 'mj-register_form mj-form absolute';
         } else {
             form.className = 'mj-register_form mj-form ';
         }
-        var section_1 = document.getElementById("section_1");
-        var el_section_1 = document.getElementById('ql_section_1');
-        var section_2 = document.getElementById("section_2");
-        var el_section_2 = document.getElementById('ql_section_2');
+    }
+    
+    var section_1 = document.getElementById("section_1");
+    var el_section_1 = document.getElementById('ql_section_1');
+    var section_2 = document.getElementById("section_2");
+    var el_section_2 = document.getElementById('ql_section_2');
+    
+    var section_3 = document.getElementById("section_3");
+    var el_section_3 = document.getElementById('ql_section_3');
+    
+    var section_4 = document.getElementById("section_4");
+    var el_section_4 = document.getElementById('ql_section_4');
+    
+    var section_5 = document.getElementById("section_5");
+    var el_section_5 = document.getElementById('ql_section_5');
+    
+    var section_6 = document.getElementById("section_6");
+    var el_section_6 = document.getElementById('ql_section_6');
+    
+    var section_7 = document.getElementById("section_7");
+    var el_section_7 = document.getElementById('ql_section_7');
+    
+    var section_8 = document.getElementById("section_8");
+    var el_section_8 = document.getElementById('ql_section_8');
+    
+    var section_10 = document.getElementById("section_10");
+    var el_section_10 = document.getElementById('ql_section_10');
+    
+    if (window.scrollY > (section_1.offsetTop - 250) && window.scrollY + 96  <= (section_2.offsetTop )) {
+        el_section_1.className = el_section_1.className + ' active';
+    } else {
+        el_section_1.className = 'quick_link';
+    }
+    
+    
+    if (window.scrollY + 96 > (section_2.offsetTop - 30) && window.scrollY + 96  <= (section_3.offsetTop )) {
+        el_section_2.className = el_section_2.className + ' active';
+    } else {
+        el_section_2.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_3.offsetTop - 30) && window.scrollY + 96  <= (section_4.offsetTop )) {
+        el_section_3.className = el_section_3.className + ' active';
+    } else {
+        el_section_3.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_5.offsetTop )) {
+        el_section_4.className = el_section_4.className + ' active';
+    } else {
+        el_section_4.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_5.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
+        el_section_5.className = el_section_5.className + ' active';
+    } else {
+        el_section_5.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
+        el_section_6.className = el_section_6.className + ' active';
+    } else {
+        el_section_6.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
+        el_section_7.className = el_section_7.className + ' active';
         
-        var section_3 = document.getElementById("section_3");
-        var el_section_3 = document.getElementById('ql_section_3');
-        
-        var section_4 = document.getElementById("section_4");
-        var el_section_4 = document.getElementById('ql_section_4');
-        
-        var section_5 = document.getElementById("section_5");
-        var el_section_5 = document.getElementById('ql_section_5');
-        
-        var section_6 = document.getElementById("section_6");
-        var el_section_6 = document.getElementById('ql_section_6');
-        
-        var section_7 = document.getElementById("section_7");
-        var el_section_7 = document.getElementById('ql_section_7');
-        
-        var section_9 = document.getElementById("section_9");
-        var el_section_9 = document.getElementById('ql_section_9');
-        
-        var section_10 = document.getElementById("section_10");
-        var el_section_10 = document.getElementById('ql_section_10');
-        
-        if (window.scrollY > (section_1.offsetTop - 250) && window.scrollY + 96  <= (section_2.offsetTop )) {
-            el_section_1.className = el_section_1.className + ' active';
-        } else {
-            el_section_1.className = 'quick_link';
-        }
-        
-        
-        if (window.scrollY + 96 > (section_2.offsetTop - 30) && window.scrollY + 96  <= (section_3.offsetTop )) {
-            el_section_2.className = el_section_2.className + ' active';
-        } else {
-            el_section_2.className = 'quick_link';
-        }
-        
-        if (window.scrollY + 96 > (section_3.offsetTop - 30) && window.scrollY + 96  <= (section_4.offsetTop )) {
-            el_section_3.className = el_section_3.className + ' active';
-        } else {
-            el_section_3.className = 'quick_link';
-        }
-        
-        if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
-            el_section_4.className = el_section_4.className + ' active';
-        } else {
-            el_section_4.className = 'quick_link';
-        }
-        
-        if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
-            el_section_6.className = el_section_6.className + ' active';
-        } else {
-            el_section_6.className = 'quick_link';
-        }
-        
-        if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_9.offsetTop )) {
-            el_section_7.className = el_section_7.className + ' active';
-            if( window.scrollY + 96 > (section_7.offsetTop  + 200 )) {
-                var st = window.pageYOffset || document.documentElement.scrollTop; 
-                var step = 1;
-                var icon = document.getElementById('section_icon');
-                var step1 = document.getElementById('step_1');
-                var step2 = document.getElementById('step_2');
-                var step3 = document.getElementById('step_3');
-                var step4 = document.getElementById('step_4');
-                if (st > lastScrollTop){
-                    var el = document.getElementById('body');
-                    el.className = el.className + ' noScroll';
-                    var isMoving=false;
-                    function handleWheelEvent() {
-                        if (isMoving) return;
-                        moveSteps();
-                    }
-                    document.addEventListener("wheel", handleWheelEvent, true);
-                    function moveSteps() {
-                        isMoving = true;
-                        if (step === 1) {
-                            step1.className = 'mj-step';
-                            step2.className = 'mj-step active';  
-                            icon.className = 'section_icon step_2 hide-on-mobile';
-                        }
-                        if (step === 2) {
-                            step2.className = 'mj-step';
-                            step3.className = 'mj-step active';   
-                            icon.className = 'section_icon step_3 hide-on-mobile'; 
-                        }
-                        
-                        if (step === 3) {
-                            step3.className = 'mj-step';
-                            step4.className = 'mj-step active';    
-                            icon.className = 'section_icon step_4 hide-on-mobile';
-                        }
-                        if (step === 4) {
-                            step4.className = 'mj-step';
-                            step1.className = 'mj-step active';  
-                            icon.className = 'section_icon step_1 hide-on-mobile';
-                            document.getElementById("section_9").scrollIntoView({ 
-                                behavior: 'smooth' 
-                            });
-                            document.removeEventListener("wheel", handleWheelEvent, true);
-                        }
-                        setTimeout(function() {
-                            isMoving=false;
-                            step++;
-                            if (step > 4) {
-                                el.className = ' '; 
-                                step = 1;
-                                document.removeEventListener("wheel", handleWheelEvent, true);
-                            }
-                        }, 1000);
-                    }
-                } else {
-                    step = 1;
-                    step4.className = 'mj-step';
-                    step1.className = 'mj-step active';  
-                    icon.className = 'section_icon step_1 hide-on-mobile';
-                    document.removeEventListener("wheel", handleWheelEvent, true);
-                }
-            }
-        } else {
-            el_section_7.className = 'quick_link';
-        }
-        
-        
-        if (window.scrollY + 96 > (section_9.offsetTop - 30) && window.scrollY + 96 < (section_9.offsetTop + section_9.offsetHeight )) {
-            el_section_9.className = el_section_9.className + ' active';
-        } else {
-            el_section_9.className = 'quick_link';
-        }
-        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    });
-}
+    } else {
+        el_section_7.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_8.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
+        el_section_8.className = el_section_8.className + ' active';
+    } else {
+        el_section_8.className = 'quick_link';
+    }
+    
+    if (window.scrollY + 96 > (section_10.offsetTop - 30) && window.scrollY + 96 < (section_10.offsetTop + section_10.offsetHeight )) {
+        el_section_10.className = el_section_10.className + ' active';
+    } else {
+        el_section_10.className = 'quick_link';
+    }
+});
 function getWidth() {
     return Math.max(
         document.body.scrollWidth,
@@ -302,27 +280,3 @@ function getWidth() {
         document.documentElement.clientWidth
         );
 }
-    
-// const Http = new XMLHttpRequest();
-// const url='https://app.medijobs.co/api/stats';
-// Http.open("GET", url);
-// Http.send();
-
-// Http.onreadystatechange = (e) => {
-//     var response = JSON.parse(Http.responseText);
-//     var candidates = response.candidates;
-//     var companies = response.companies;
-
-//     var el_candidate = document.getElementById('candidati');
-//     var el_candidate2 = document.getElementById('candidati2');
-//     var el_companii = document.getElementById('companii');
-//     if(el_candidate) {
-//         el_candidate.innerHTML = candidates;
-//     }
-//     if(el_candidate2) {
-//         el_candidate2.innerHTML = candidates;
-//     }
-//     if(el_companii) {
-//         el_companii.innerHTML = companies;
-//     }
-// }

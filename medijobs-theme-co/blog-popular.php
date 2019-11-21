@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog Trending Articles Page
+ * Template Name: Blog Popular Articles Page
  * Description: First page of the site
  *
  * @package WordPress
@@ -23,12 +23,11 @@ get_header();
                 <div class="grid__item width-8/24">
                     <div id="blog-form" class="mj-register_form mj-form blog-form">
                         <div id="close-form" class="close hide-on-desktop"></div>
-                        <h3>Newsletter săptămânal</h3>
-                        <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
+                        <h3>GET WEEKLY UPDATES.</h3>
+                        <p>Never miss an update, we send a weekly recap of all our articles published.</p>
                         <?php echo do_shortcode('[hubspot type=form portal=5748888 id=f8052d4d-af90-45d5-bf00-c1f134635f57]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
-                            
                             </div>
                             <div class="grid__item width-12/24 hide-on-mobile">
                                 <div class="newsletter_logo"></div>
@@ -45,15 +44,14 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Cele mai citite articole.</h1>
+                    <h1 class="headline light">All Time Favorites.</h1>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
                         
                             $args = array(
-                                'range' => 'weekly',
+                                'range' => 'all',
                                 'order_by'=> 'views',
                                 'limit' => 60,
-                                'freshness' => 1,
                                 'stats_author' => 1,
                                 'post_type' => 'post',
                             );

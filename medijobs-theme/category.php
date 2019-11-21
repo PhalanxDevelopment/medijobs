@@ -17,12 +17,10 @@
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3>Newsletter săptămânal</h3>
                         <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
-                        <input class="mj-input" type="text" placeholder="Enter email" >
+                        <?php echo do_shortcode('[hubspot type=form portal=5748888 id=f8052d4d-af90-45d5-bf00-c1f134635f57]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
-                                <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                                    Abonează-te
-                                </button>
+                            
                             </div>
                             <div class="grid__item width-12/24 hide-on-mobile">
                                 <div class="newsletter_logo"></div>

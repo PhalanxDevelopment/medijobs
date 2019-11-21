@@ -114,12 +114,12 @@ Version: 2
       color: #000;
       margin-top: 20px;
       border-radius: 6px; }
-    .article_quiz .step_4_box input[type=radio]:checked + label {
+    .article_quiz .step_4_box input[type=checkbox]:checked + label {
       background: #00C1DE;
       color: #fff; }
-      .article_quiz .step_4_box input[type=radio]:checked + label .input {
+      .article_quiz .step_4_box input[type=checkbox]:checked + label .input {
         background: #00C1DE; }
-        .article_quiz .step_4_box input[type=radio]:checked + label .input .inner_input {
+        .article_quiz .step_4_box input[type=checkbox]:checked + label .input .inner_input {
           background: #00C1DE;
           border: 4px solid #fff; }
   .article_quiz.dismissed {
@@ -1210,9 +1210,9 @@ body.noScroll {
     margin-top: 39px;
     position: relative;
     display: block;
-    background: url(images/Logo-nou.png);
+    background: url(images/Logo-svg.svg);
     background-repeat: no-repeat;
-    width: 191px;
+    width: 172px;
     height: 30px; }
   .mj-header .pull-right {
     margin-top: 37px;
@@ -2227,7 +2227,32 @@ a.mj-btn {
 .saboxplugin-wrap {
   display: none !important; }
 
-@media only screen and (max-width: 1400px) {
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 721px) and (max-width: 1400px) {
+  .mj-container {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 48px;
+    padding-right: 48px; }
+  .section.section_1:after {
+    display: none; }
+  .mj-register_form {
+    margin-left: 90px; }
+  .quote:nth-child(3) {
+    margin-right: 56px; }
+  .mj-footer .social__links .social__link {
+    margin-right: 20px; }
+  .mj-articles .mj-article {
+    width: 32%; }
+  .mj-articles .mj-article .mj-article__link {
+    left: 10px;
+    font-size: 14px; } }
+
+@media only screen and (max-width: 720px) {
   html {
     font-size: 55.5%; }
   .section.section_1.section_1--blog-article .article_metas {
@@ -2532,9 +2557,7 @@ a.mj-btn {
       opacity: 1;
       margin-top: 31px; }
   .section.section_2 {
-    background: url(images/section_2_bg.png);
-    background-repeat: no-repeat;
-    background-position: left -20px bottom -100px; }
+    background: none; }
   .section.section_4 {
     margin-top: 60px; }
   .section.section_7 {
@@ -2720,9 +2743,9 @@ a.mj-btn {
     .mj-header.blog {
       height: 72px; }
     .mj-header .mj-logo {
-      width: 191px;
+      width: 172px;
       height: 30px;
-      background: url(images/Logo-nou.png);
+      background: url(images/Logo-svg.svg);
       margin-top: 24px;
       background-repeat: no-repeat; }
   #menuToggle {
