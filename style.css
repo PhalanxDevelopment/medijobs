@@ -64,6 +64,9 @@ Version: 2
   z-index: 3;
   background: #fff; }
 
+.mj-lang-switcher .dropdown-toggle .glyphicon {
+  display: none !important; }
+
 .article_quiz {
   position: relative;
   display: block;
@@ -1644,7 +1647,7 @@ a.mj-btn {
     top: 7900px; }
   .mj-register_form.absolute_company {
     position: absolute;
-    top: 7010px; }
+    top: 6400px; }
   .mj-register_form.blog-form {
     width: 448px;
     height: 456px;

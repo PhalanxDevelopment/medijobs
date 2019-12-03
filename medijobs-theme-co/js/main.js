@@ -71,17 +71,7 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-document.getElementById('langSwitcher').onclick = function(ev) {
-    
-    var className = ' ' + langSwitcher.className + ' ';
-    
-    if ( ~className.indexOf(' open ') ) {
-        this.className = className.replace(' open ', ' ');
-    } else {
-        this.className += ' open';
-    }
-    ev.stopPropagation();         
-}
+
 
 if(localStorage.getItem('cookie_notifier')) {
     var el = document.getElementById('cookie_notifier');
@@ -134,11 +124,7 @@ if (document.getElementById('quick-links')) {
             behavior: 'smooth' 
         });
     }
-    document.getElementById('ql_section_5').onclick = function() {
-        document.getElementById("section_5").scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    }
+    
     document.getElementById('ql_section_6').onclick = function() {
         document.getElementById("section_6").scrollIntoView({ 
             behavior: 'smooth' 
@@ -146,11 +132,6 @@ if (document.getElementById('quick-links')) {
     }
     document.getElementById('ql_section_7').onclick = function() {
         document.getElementById("section_7").scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    }
-    document.getElementById('ql_section_8').onclick = function() {
-        document.getElementById("section_8").scrollIntoView({ 
             behavior: 'smooth' 
         });
     }
@@ -176,7 +157,7 @@ window.addEventListener("scroll", function(e) {
         header.className = headerClass;
     }
     if (isCompany) {
-        if( window.scrollY > 7000 && getWidth() > 1400) {
+        if( window.scrollY > 6400 && getWidth() > 1400) {
             form.className = 'mj-register_form mj-form absolute_company';
         } else {
             form.className = 'mj-register_form mj-form ';
@@ -200,17 +181,16 @@ window.addEventListener("scroll", function(e) {
     var section_4 = document.getElementById("section_4");
     var el_section_4 = document.getElementById('ql_section_4');
     
-    var section_5 = document.getElementById("section_5");
-    var el_section_5 = document.getElementById('ql_section_5');
+
     
     var section_6 = document.getElementById("section_6");
     var el_section_6 = document.getElementById('ql_section_6');
     
     var section_7 = document.getElementById("section_7");
     var el_section_7 = document.getElementById('ql_section_7');
-    
-    var section_8 = document.getElementById("section_8");
-    var el_section_8 = document.getElementById('ql_section_8');
+
+    var section_9 = document.getElementById("section_9");
+    var el_section_9 = document.getElementById('ql_section_9');
     
     var section_10 = document.getElementById("section_10");
     var el_section_10 = document.getElementById('ql_section_10');
@@ -234,16 +214,10 @@ window.addEventListener("scroll", function(e) {
         el_section_3.className = 'quick_link';
     }
     
-    if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_5.offsetTop )) {
+    if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
         el_section_4.className = el_section_4.className + ' active';
     } else {
         el_section_4.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_5.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
-        el_section_5.className = el_section_5.className + ' active';
-    } else {
-        el_section_5.className = 'quick_link';
     }
     
     if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
@@ -252,17 +226,17 @@ window.addEventListener("scroll", function(e) {
         el_section_6.className = 'quick_link';
     }
     
-    if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
+    if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_9.offsetTop )) {
         el_section_7.className = el_section_7.className + ' active';
         
     } else {
         el_section_7.className = 'quick_link';
     }
     
-    if (window.scrollY + 96 > (section_8.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
-        el_section_8.className = el_section_8.className + ' active';
+    if (window.scrollY + 96 > (section_9.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
+        el_section_9.className = el_section_9.className + ' active';
     } else {
-        el_section_8.className = 'quick_link';
+        el_section_9.className = 'quick_link';
     }
     
     if (window.scrollY + 96 > (section_10.offsetTop - 30) && window.scrollY + 96 < (section_10.offsetTop + section_10.offsetHeight )) {

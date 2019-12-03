@@ -36,7 +36,7 @@ get_header();
             <a href="https://app.medijobs.co/login" class="login">REGISTERED ALREADY? LOGIN</a>
             <h3>HIRE NURSES WITHIN 30 DAYS.</h3>
             <p>Get matched with pre-qualified nurses who are interested in working with you.</p>
-            <input class="mj-input" name="nume"  type="text" placeholder="Nume" >
+            <input class="mj-input" name="name"  type="text" placeholder="Full name" >
             <input class="mj-input" name="email"  type="email" placeholder="Email" >
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 create an account
@@ -77,9 +77,9 @@ get_header();
                 <div class="grid__item width-10/24">
                     <div class="hide-on-mobile">
                         <div class="mj-images" style="margin-top: 180px;">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
-                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
+                        <img style="height: 40px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/cnbc.png" alt="">
+                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/wallstreet.png" alt="">
+                            <img style="height: 50px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -158,8 +158,8 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-16/24">
-                    <div class="above_headline">WE WORK</div>
-                    <h1 class="headline light"> with companies From Lower Manhattan to Upper Manhattan</h1>
+                    <div class="above_headline">We work with companies</div>
+                    <h1 class="headline light">  In the New York metropolitan area</h1>
                     <div class="mj-image romania-map hide-on-mobile">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/map_ny.png" alt="">
                     </div>
@@ -249,14 +249,14 @@ get_header();
                         <li id="step_4" class="mj-step active">
                             <div class="step_nr">.04</div>
                             <div class="step_title">Hire!</div>
-                            <div class="step_content"></div>
+                            <div class="step_content">Pay only when you hire a candidate.</div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_9" class="section section_9">
+    <div id="section_9" class="section section_9 company">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
@@ -272,6 +272,52 @@ get_header();
                             Interview pre-qualified candidate and hire them under 30 days.
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section_10" class="section section_10">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-7/24">
+                    <div class="above_headline"> In the press</div>
+                    <h1 class="headline light">What the press is saying about us</h1>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-14/24">
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/cnbc.png" alt="">
+                        <p>
+                            A growing need for health care services
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/wallstreet.png" alt="">
+                        <p>
+                            Dedicated exclusively to medical recruitment
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
+                        <p>
+                            Innovation in recruitment
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/newmoney.png" style="height:50px;" alt="">
+                        <p>
+                            The company far exceeded the financial forecasts set.
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/br.png" style="height:50px;" alt="">
+                        <p>
+                            Shortening the time needed for finding a job and avoiding unsuitable applications.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

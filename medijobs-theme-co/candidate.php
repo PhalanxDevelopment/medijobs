@@ -28,22 +28,26 @@ get_header();
             <li id="ql_section_7" class="quick_link" data-section="7">
                 Our Process
             </li>
-            <li id="ql_section_9" class="quick_link" data-section="7" style="display:none">
+            <li id="ql_section_9" class="quick_link" data-section="9">
+                The decision
+            </li> 
+            <li id="ql_section_10" class="quick_link" data-section="9">
+                In the press
             </li>       
         </ul>
     </div>
-    <div class="mj-container">
+    <div id="isCompany" class="mj-container">
         <form id="form" action="https://app.medijobs.co/register/candidate" method="post" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
             <a href="https://app.medijobs.co/login" class="login">REGISTERED ALREADY? LOGIN</a>
             <h3>We Bring Job Offers to You</h3>
             <p>Join thousands of people who’ve found their dream job using Medijobs.</p>
-            <input class="mj-input" name="nume" type="text" placeholder="Nume" >
+            <input class="mj-input" name="name" type="text" placeholder="Full name" >
             <input class="mj-input" name="email" type="email" placeholder="Email" >
             <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
                 create an account
             </button>
-            <p class="mj-align--center mj-font--small">Are you a company? <a href="#">Create a profile here.</a></p>
+            <p class="mj-align--center mj-font--small">Are you a company? <a href="https://app.medijobs.co/register/company">Create a profile here.</a></p>
         </div>
     </div>
     <div id="section_1" class="section section_1">
@@ -52,7 +56,7 @@ get_header();
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-9/24">
                     <div class="above_headline">Welcome to Medijobs</div>
-                    <h1 class="headline uppercase">Medical jobs <span>In New York City.</span></h1>
+                    <h1 class="headline uppercase">Medical Jobs in the <span>New York </span>metropolitan area</h1>
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
                     <div class="secton_bg_image">
@@ -63,6 +67,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-7/24">
+                    <p>Join the thousands of people who have found a job through MEDIjobs.</p>
                 </div>
             </div>
             <div class="mj-grid">
@@ -78,9 +83,9 @@ get_header();
                 <div class="grid__item width-10/24">
                     <div class="hide-on-mobile">
                         <div class="mj-images" style="margin-top:300px">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
-                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
+                            <img style="height: 40px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/cnbc.png" alt="">
+                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/wallstreet.png" alt="">
+                            <img style="height: 50px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -164,7 +169,7 @@ get_header();
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-16/24">
                     <div class="above_headline">WHERE WE'RE ACTIVE</div>
-                    <h1 class="headline light">Get job offers with salary information upfront All Over NYC</h1>
+                    <h1 class="headline light"> Get job offers with salary information in</h1>
                     <div class="mj-image romania-map hide-on-mobile">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/map_ny.png" alt="">
                     </div>
@@ -255,5 +260,50 @@ get_header();
             </div>
         </div>
     </div>
-
+    <div id="section_10" class="section section_10">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-7/24">
+                    <div class="above_headline"> In the press</div>
+                    <h1 class="headline light">What the press is saying about us</h1>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-14/24">
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/cnbc.png" alt="">
+                        <p>
+                            A growing need for health care services
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/wallstreet.png" alt="">
+                        <p>
+                            Dedicated exclusively to medical recruitment
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
+                        <p>
+                            Innovation in recruitment
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/newmoney.png" style="height:50px;" alt="">
+                        <p>
+                            The company far exceeded the financial forecasts set.
+                        </p>
+                    </div>
+                    <div class="quote">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/press/br.png" style="height:50px;" alt="">
+                        <p>
+                            Shortening the time needed for finding a job and avoiding unsuitable applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php get_footer(); ?>

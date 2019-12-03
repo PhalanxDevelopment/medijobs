@@ -55,13 +55,13 @@
             </div>
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-3/24 hide-on-mobile">
-                <a href="tel:+40749099291" class="mj-call_to_action">
+                <a href="tel:+6468468332" class="mj-call_to_action">
                     <p class="call_to_action__text">Get in touch with us</p>
-                    <p class="call_to_action__link">+4 0749 099291</p>
+                    <p class="call_to_action__link">+64 6-846 8332</p>
                 </a>
             </div>
             <div class="grid__item width-4/24 hide-on-mobile">
-                <button class="mj-btn mj-btn--secondary mj-btn--alt--2">Sign up</button>
+                <a href="https://app.medijobs.co/register" class="mj-btn mj-btn--secondary mj-btn--alt--2" style="font-weight: bold;padding-top: 13px;">Sign up</a>
             </div>
             <div class="grid__item width-1/24 hide-on-mobile">
                 <a href="https://app.medijobs.co/login" class="pull-right">
