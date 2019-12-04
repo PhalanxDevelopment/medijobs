@@ -168,109 +168,111 @@ var isCompany = document.getElementById("isCompany");
 var header = document.getElementById("header");
 var headerClass = header.className;
 var lastScrollTop = 0;
-window.addEventListener("scroll", function(e) {
-    var form = document.getElementById("form");
-    if( window.scrollY > 130) {
-        header.className = headerClass + ' shadow';
-    } else {
-        header.className = headerClass;
-    }
-    if (isCompany) {
-        if( window.scrollY > 7000 && getWidth() > 1400) {
-            form.className = 'mj-register_form mj-form absolute_company';
+if(getWidth() > 1400) {
+    window.addEventListener("scroll", function(e) {
+        var form = document.getElementById("form");
+        if( window.scrollY > 130) {
+            header.className = headerClass + ' shadow';
         } else {
-            form.className = 'mj-register_form mj-form ';
+            header.className = headerClass;
         }
-    } else {
-        if( window.scrollY > 7890 && getWidth() > 1400) {
-            form.className = 'mj-register_form mj-form absolute';
+        if (isCompany) {
+            if( window.scrollY > 7000) {
+                form.className = 'mj-register_form mj-form absolute_company';
+            } else {
+                form.className = 'mj-register_form mj-form ';
+            }
         } else {
-            form.className = 'mj-register_form mj-form ';
+            if( window.scrollY > 7890) {
+                form.className = 'mj-register_form mj-form absolute';
+            } else {
+                form.className = 'mj-register_form mj-form ';
+            }
         }
-    }
-    
-    var section_1 = document.getElementById("section_1");
-    var el_section_1 = document.getElementById('ql_section_1');
-    var section_2 = document.getElementById("section_2");
-    var el_section_2 = document.getElementById('ql_section_2');
-    
-    var section_3 = document.getElementById("section_3");
-    var el_section_3 = document.getElementById('ql_section_3');
-    
-    var section_4 = document.getElementById("section_4");
-    var el_section_4 = document.getElementById('ql_section_4');
-    
-    var section_5 = document.getElementById("section_5");
-    var el_section_5 = document.getElementById('ql_section_5');
-    
-    var section_6 = document.getElementById("section_6");
-    var el_section_6 = document.getElementById('ql_section_6');
-    
-    var section_7 = document.getElementById("section_7");
-    var el_section_7 = document.getElementById('ql_section_7');
-    
-    var section_8 = document.getElementById("section_8");
-    var el_section_8 = document.getElementById('ql_section_8');
-    
-    var section_10 = document.getElementById("section_10");
-    var el_section_10 = document.getElementById('ql_section_10');
-    
-    if (window.scrollY > (section_1.offsetTop - 250) && window.scrollY + 96  <= (section_2.offsetTop )) {
-        el_section_1.className = el_section_1.className + ' active';
-    } else {
-        el_section_1.className = 'quick_link';
-    }
-    
-    
-    if (window.scrollY + 96 > (section_2.offsetTop - 30) && window.scrollY + 96  <= (section_3.offsetTop )) {
-        el_section_2.className = el_section_2.className + ' active';
-    } else {
-        el_section_2.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_3.offsetTop - 30) && window.scrollY + 96  <= (section_4.offsetTop )) {
-        el_section_3.className = el_section_3.className + ' active';
-    } else {
-        el_section_3.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_5.offsetTop )) {
-        el_section_4.className = el_section_4.className + ' active';
-    } else {
-        el_section_4.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_5.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
-        el_section_5.className = el_section_5.className + ' active';
-    } else {
-        el_section_5.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
-        el_section_6.className = el_section_6.className + ' active';
-    } else {
-        el_section_6.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
-        el_section_7.className = el_section_7.className + ' active';
         
-    } else {
-        el_section_7.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_8.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
-        el_section_8.className = el_section_8.className + ' active';
-    } else {
-        el_section_8.className = 'quick_link';
-    }
-    
-    if (window.scrollY + 96 > (section_10.offsetTop - 30) && window.scrollY + 96 < (section_10.offsetTop + section_10.offsetHeight )) {
-        el_section_10.className = el_section_10.className + ' active';
-    } else {
-        el_section_10.className = 'quick_link';
-    }
-});
+        var section_1 = document.getElementById("section_1");
+        var el_section_1 = document.getElementById('ql_section_1');
+        var section_2 = document.getElementById("section_2");
+        var el_section_2 = document.getElementById('ql_section_2');
+        
+        var section_3 = document.getElementById("section_3");
+        var el_section_3 = document.getElementById('ql_section_3');
+        
+        var section_4 = document.getElementById("section_4");
+        var el_section_4 = document.getElementById('ql_section_4');
+        
+        var section_5 = document.getElementById("section_5");
+        var el_section_5 = document.getElementById('ql_section_5');
+        
+        var section_6 = document.getElementById("section_6");
+        var el_section_6 = document.getElementById('ql_section_6');
+        
+        var section_7 = document.getElementById("section_7");
+        var el_section_7 = document.getElementById('ql_section_7');
+        
+        var section_8 = document.getElementById("section_8");
+        var el_section_8 = document.getElementById('ql_section_8');
+        
+        var section_10 = document.getElementById("section_10");
+        var el_section_10 = document.getElementById('ql_section_10');
+        
+        if (window.scrollY > (section_1.offsetTop - 250) && window.scrollY + 96  <= (section_2.offsetTop )) {
+            el_section_1.className = el_section_1.className + ' active';
+        } else {
+            el_section_1.className = 'quick_link';
+        }
+        
+        
+        if (window.scrollY + 96 > (section_2.offsetTop - 30) && window.scrollY + 96  <= (section_3.offsetTop )) {
+            el_section_2.className = el_section_2.className + ' active';
+        } else {
+            el_section_2.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_3.offsetTop - 30) && window.scrollY + 96  <= (section_4.offsetTop )) {
+            el_section_3.className = el_section_3.className + ' active';
+        } else {
+            el_section_3.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_4.offsetTop - 30) && window.scrollY + 96  <= (section_5.offsetTop )) {
+            el_section_4.className = el_section_4.className + ' active';
+        } else {
+            el_section_4.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_5.offsetTop - 30) && window.scrollY + 96  <= (section_6.offsetTop )) {
+            el_section_5.className = el_section_5.className + ' active';
+        } else {
+            el_section_5.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_6.offsetTop - 30) && window.scrollY + 96  <= (section_7.offsetTop )) {
+            el_section_6.className = el_section_6.className + ' active';
+        } else {
+            el_section_6.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_7.offsetTop - 30) && window.scrollY + 96  <= (section_8.offsetTop )) {
+            el_section_7.className = el_section_7.className + ' active';
+            
+        } else {
+            el_section_7.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_8.offsetTop - 30) && window.scrollY + 96  <= (section_10.offsetTop )) {
+            el_section_8.className = el_section_8.className + ' active';
+        } else {
+            el_section_8.className = 'quick_link';
+        }
+        
+        if (window.scrollY + 96 > (section_10.offsetTop - 30) && window.scrollY + 96 < (section_10.offsetTop + section_10.offsetHeight )) {
+            el_section_10.className = el_section_10.className + ' active';
+        } else {
+            el_section_10.className = 'quick_link';
+        }
+    });
+}
 function getWidth() {
     return Math.max(
         document.body.scrollWidth,

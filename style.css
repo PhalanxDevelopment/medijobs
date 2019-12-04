@@ -1217,6 +1217,10 @@ body.noScroll {
     background-repeat: no-repeat;
     width: 172px;
     height: 30px; }
+    .mj-header .mj-logo.co {
+      background: url(images/Logo-co.svg);
+      width: 190px;
+      height: 29px; }
   .mj-header .pull-right {
     margin-top: 37px;
     font-size: 14px;
@@ -1645,9 +1649,13 @@ a.mj-btn {
   .mj-register_form.absolute {
     position: absolute;
     top: 7900px; }
+    .mj-register_form.absolute.absolute_us {
+      top: 6000px; }
   .mj-register_form.absolute_company {
     position: absolute;
     top: 6400px; }
+    .mj-register_form.absolute_company.absolute_us {
+      top: 6000px; }
   .mj-register_form.blog-form {
     width: 448px;
     height: 456px;
@@ -2143,6 +2151,12 @@ a.mj-btn {
   background-repeat: no-repeat;
   background-position: left top;
   padding-bottom: 23px; }
+  .quote.us {
+    height: 120px; }
+    .quote.us:nth-child(3) {
+      margin-right: 56px; }
+    .quote.us:nth-child(6) {
+      margin-right: 56px; }
   .quote:nth-child(3) {
     margin-right: 0px; }
   .quote:nth-child(6) {
@@ -2258,6 +2272,13 @@ a.mj-btn {
 @media only screen and (max-width: 720px) {
   html {
     font-size: 55.5%; }
+  #open-form {
+    position: fixed;
+    line-height: 26px;
+    bottom: 50px;
+    max-width: calc(100% - 48px);
+    left: 24px;
+    z-index: 99; }
   .section.section_1.section_1--blog-article .article_metas {
     margin-top: 10px;
     margin-bottom: 10px; }
@@ -2751,6 +2772,10 @@ a.mj-btn {
       background: url(images/Logo-svg.svg);
       margin-top: 24px;
       background-repeat: no-repeat; }
+      .mj-header .mj-logo.co {
+        background: url(images/Logo-co.svg);
+        width: 190px;
+        height: 29px; }
   #menuToggle {
     position: absolute;
     top: 25px;

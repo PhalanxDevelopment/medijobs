@@ -6,7 +6,7 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/Logo-nou.png" alt="Medijobs Logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/Logo-co.svg" alt="Medijobs Logo">
                         </a>
                     </div>
                 </div>
@@ -47,11 +47,11 @@
                 </div>
                 <div class="grid__item width-2/24"></div>
                 <div class="grid__item width-4/24">
-                    <a href="<?php echo esc_url( get_page_link( 9104 ) ); ?>">Terms and Conditions</a>
+                    <a href="<?php echo esc_url( get_page_link( 1062 ) ); ?>">Terms and Conditions</a>
                 </div>
                 <div class="grid__item width-2/24"></div>
                 <div class="grid__item width-4/24">
-                    <a href="<?php echo esc_url( get_page_link( 9106 ) ); ?>">Privacy Policy</a>
+                    <a href="<?php echo esc_url( get_page_link( 3 ) ); ?>">Privacy Policy</a>
                 </div>
                 <div class="grid__item width-2/24"></div>
                 <div class="grid__item width-4/24">

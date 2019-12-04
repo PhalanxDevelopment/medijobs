@@ -4,7 +4,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-12/24">
-                    <div class="above_headline">Bine ai venit in categoria</div>
+                    <div class="above_headline">Welcome to</div>
                     <h1 class="headline uppercase"><?php single_term_title(); ?></h1>
                     <p>
                         <?php if ( '' != the_archive_description() ) { echo esc_html( the_archive_description() ); } ?>
@@ -104,7 +104,7 @@
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Cele mai citite articole.</h1>
+                    <h1 class="headline light">All Time Favorites.</h1>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
                             $args = array(
@@ -120,7 +120,7 @@
                         }
                     ?>
                     <a href="<?php echo get_home_url(); ?>/blog/popular" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        Vedeti toate articolele
+                        VIEW ALL ARTICLES
                     </a>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light"> Cele mai populare articole ale lunii</h1>
+                    <h1 class="headline light"> Trending Articles</h1>
                     <?php
                         if (function_exists('wpp_get_mostpopular')) {
                             $args = array(
@@ -148,7 +148,7 @@
                         }
                     ?>
                     <a href="<?php echo get_home_url(); ?>/blog/trending" class="mj-btn mj-btn--secondary mj-btn--alt">
-                        Vedeti toate articolele
+                        VIEW ALL ARTICLES
                     </a>
                 </div>
             </div>

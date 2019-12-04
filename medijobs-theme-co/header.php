@@ -28,7 +28,7 @@
 <body  id="body" <?php body_class(); ?>>
     
 <div id="wrapper" class="hfeed">
-<header id="header" class="mj-header">
+<header id="header" class="mj-header <?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) echo 'blog'; ?>">
     <div class="mj-container">
         <ul id="menu" class="mj-meniu blog_menu hide-on-mobile">
             <?php 
@@ -42,7 +42,7 @@
         </ul>
         <div class="mj-grid">
             <div class="grid__item width-4/24">
-                <a href="/" class="mj-logo"></a>
+                <a href="/" class="mj-logo co"></a>
             </div>
             <div class="grid__item width-11/24">
                 <div id="menuToggle">
@@ -75,7 +75,7 @@
     <div id="cookie_notifier" class="cookie_notifier">
         <span id="dismiss" class="cookie_notifier__dismiss"></span>
         <span class="cookie_notifier__content">
-            We use cookies to improve your browsing experience as they enable us to remember log-in details, improve security, collect statistics, optimize site functionality and deliver content tailored to your interests. By continuing your navigation on this website, you are consenting to our use of such cookies or other plotters per our <a href="#">Privacy Policy.</a>
+            We use cookies to improve your browsing experience as they enable us to remember log-in details, improve security, collect statistics, optimize site functionality and deliver content tailored to your interests. By continuing your navigation on this website, you are consenting to our use of such cookies or other plotters per our <a href="<?php echo esc_url( get_page_link( 3 ) ); ?>">Privacy Policy.</a>
         </span>
     </div>
 </div>

@@ -1466,6 +1466,11 @@ body.noScroll { /* ...or body.dialogShowing */
         background-repeat: no-repeat;
         width: 172px;
         height: 30px;
+        &.co {
+            background: url(images/Logo-co.svg);
+            width: 190px;
+            height: 29px;
+        }
     }
     .pull-right {
         margin-top: 37px;
@@ -1954,11 +1959,18 @@ a.mj-btn {
     &.absolute {
         position: absolute;
         top: 7900px;
+        &.absolute_us {
+            top: 6000px;
+        }
     }
     &.absolute_company {
         position: absolute;
         top: 6400px;
+        &.absolute_us {
+            top: 6000px;
+        }
     }
+
     &.blog-form {
         width: 448px;
         height: 456px;
@@ -2573,7 +2585,15 @@ a.mj-btn {
     background-repeat: no-repeat;
     background-position: left top;
     padding-bottom: 23px;
-
+    &.us {
+        height: 120px;
+        &:nth-child(3) {
+            margin-right: 56px;
+        }
+        &:nth-child(6) {
+            margin-right: 56px;
+        }
+    }
     &:nth-child(3) {
         margin-right: 0px;
     }
@@ -2717,6 +2737,14 @@ a.mj-btn {
 @media only screen and (max-width: 720px) {
     html {
         font-size: 55.5%;
+    }
+    #open-form {
+        position: fixed;
+        line-height: 26px;
+        bottom: 50px;
+        max-width: calc(100% - 48px);
+        left: 24px;
+        z-index: 99;
     }
     .section.section_1.section_1--blog-article .article_metas {
         margin-top: 10px;
@@ -2935,6 +2963,7 @@ a.mj-btn {
         background-repeat: no-repeat;
         background-position: left top;
         padding-bottom: 23px;
+       
         &:after {
             display: block;
         }
@@ -3376,6 +3405,11 @@ a.mj-btn {
             background: url(images/Logo-svg.svg);
             margin-top: 24px;
             background-repeat: no-repeat;
+            &.co {
+                background: url(images/Logo-co.svg);
+                width: 190px;
+                height: 29px;
+            }
         }
     }
     #menuToggle {
