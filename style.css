@@ -346,6 +346,22 @@ body.noScroll {
     left: 30px;
     top: 82px;
     margin-left: -11px; }
+  .mj-boxes.mj-boxes--us:after {
+    display: none; }
+  .mj-boxes.mj-boxes--us .mj-arrow-box {
+    padding-left: 168px; }
+    .mj-boxes.mj-boxes--us .mj-arrow-box p {
+      font-family: 'ClearSans-Light';
+      font-size: 42px;
+      line-height: 48px; }
+      .mj-boxes.mj-boxes--us .mj-arrow-box p::before {
+        position: absolute;
+        left: 65px;
+        content: "+";
+        font-family: 'ClearSans-Bold';
+        font-size: 80px;
+        color: #CFF9FF;
+        margin-right: 5px; }
   .mj-boxes .mj-arrow-box {
     position: relative;
     padding: 40px;
@@ -1655,7 +1671,7 @@ a.mj-btn {
     position: absolute;
     top: 6400px; }
     .mj-register_form.absolute_company.absolute_us {
-      top: 6000px; }
+      top: 5500px; }
   .mj-register_form.blog-form {
     width: 448px;
     height: 456px;
@@ -1960,7 +1976,7 @@ a.mj-btn {
     .section.section_1 .article_image {
       z-index: 11;
       position: relative;
-      height: 415px;
+      height: auto;
       overflow: hidden; }
       .section.section_1 .article_image img {
         width: 100%;
@@ -2437,7 +2453,7 @@ a.mj-btn {
     position: relative;
     display: block;
     width: 100%;
-    height: auto;
+    height: auto !important;
     float: none;
     margin-right: 0px;
     margin-top: 30px;

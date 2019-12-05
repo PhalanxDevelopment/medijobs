@@ -166,54 +166,30 @@ get_header();
                             <p>Jersey City</p>
                         </div>
                     </div>
-                    <div class="mj-image romania-map hide-on-mobile">
+                    <div class="mj-image romania-map hide-on-mobile" style="margin-bottom: -250px">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/map_ny_2.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_6" class="section section_6 section_6_company hide-on-desktop hide-on-mobile">
+    <div id="section_6" class="section section_6 section_6_company">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
-                    <div class="above_headline">Companiile</div>
-                    <h1 class="headline light">Clientii nostri angajeaza de 5 ori mai rapid cu Medijobs.</h1>
+                    <div class="above_headline">Companies</div>
+                    <h1 class="headline light">Save time.</h1>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-15/24">
-                    <div class="mj-boxes">
-                        <div class="mj-arrow-box">
-                            <h1>01</h1>
-                            <h3>Salvează Timp:</h3>
-                            <p>Scurtam timpul de recrutare de la luni la saptamani.</p>
-                            <p>Nu mai parcurgi mii de CV-uri nepotrivite</p>
+                    <div class="mj-boxes mj-boxes--us">
+                        <div class="mj-arrow-box mj-arrow-box--bigText">
+                            <p>Fill your vacant positions up to five times faster.</p>
                         </div>
-                        <div class="mj-arrow-box right">
-                            <h1>02</h1>
-                            <h3>Fii Productiv:</h3>
-                            <p>Scurtam timpul de recrutare de la luni la saptamani.</p>
-                            <p>Pacientii tai se bucura de o echipa completa si performanta.</p>
-                        </div>
-                        <div class="mj-arrow-box">
-                            <h1>03</h1>
-                            <h3>Creste Retentia:</h3>
-                            <p>Am dezvoltat un algoritm de profilare a specialistilor medicali.</p>
-                            <p>Ca tu sa poti selecta candidatul potrivit pe termen lung.</p>
-                        </div>
-                        <div class="mj-arrow-box right bottom">
-                            <h1>04</h1>
-                            <h3>Elimina Riscuri:</h3>
-                            <p>Te conectam cu candidati pre-validati.</p>
-                            <p>Ai siguranta ca angajezi nu doar un candidat, ci cel mai bun candidat.</p>
-                        </div>
-                        <div class="mj-arrow-box">
-                            <h1>05</h1>
-                            <h3>Scade Costurile:</h3>
-                            <p>Am automatizat preselectia si validarea candidatilor.</p>
-                            <p>Elimini nevoia de a angaja o echipa proprie de recrutare.</p>
+                        <div class="mj-arrow-box mj-arrow-box--bigText">
+                            <p>No more rescheduling your clients appointments because you are understaffed.</p>
                         </div>
                     </div>
                 </div>

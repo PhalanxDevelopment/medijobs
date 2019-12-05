@@ -159,7 +159,7 @@ if(getWidth() > 1400) {
             header.className = headerClass;
         }
         if (isCompany) {
-            if( window.scrollY > 6000) {
+            if( window.scrollY > 5500) {
                 form.className = 'mj-register_form mj-form absolute_company absolute_us';
             } else {
                 form.className = 'mj-register_form mj-form ';

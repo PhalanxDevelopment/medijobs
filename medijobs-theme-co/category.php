@@ -81,7 +81,7 @@
                         <div class="company_box mj-form">
                             <div class="mj-grid">
                                 <div class="grid__item width-12/24">
-                                    <h3>RE YOU A COMPANY OR A CANDIDATE?</h3>
+                                    <h3>ARE YOU A COMPANY OR A CANDIDATE?</h3>
                                     <p>Companiile medicale din toata Romania au apelat la MEDIjobs pentru a angaja cu succes specialisti medicali.</p>
                                 </div>
                                 <div class="grid__item width-2/24 hide-on-mobile">

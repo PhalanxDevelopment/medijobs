@@ -412,6 +412,28 @@ body.noScroll { /* ...or body.dialogShowing */
         top: 82px;
         margin-left: -11px;
     }
+    &.mj-boxes--us {
+        &:after {
+            display: none;
+        }
+        .mj-arrow-box { 
+            padding-left: 168px;
+            p {
+                font-family: 'ClearSans-Light';
+                font-size: 42px;
+                line-height: 48px;
+                &::before {
+                    position: absolute;
+                    left: 65px;
+                    content: "+";
+                    font-family: 'ClearSans-Bold';
+                    font-size: 80px;
+                    color:#CFF9FF;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
     .mj-arrow-box {
         position: relative;
         padding: 40px;
@@ -1967,7 +1989,7 @@ a.mj-btn {
         position: absolute;
         top: 6400px;
         &.absolute_us {
-            top: 6000px;
+            top: 5500px;
         }
     }
 
@@ -2345,7 +2367,7 @@ a.mj-btn {
         .article_image {
             z-index:11;
             position: relative;
-            height: 415px;
+            height: auto;
             overflow: hidden;
             img {
                 width: 100%;
@@ -2954,7 +2976,7 @@ a.mj-btn {
         position: relative;
         display: block;
         width: 100%;
-        height: auto;
+        height: auto !important;
         float: none;;
         margin-right: 0px;
         margin-top: 30px;

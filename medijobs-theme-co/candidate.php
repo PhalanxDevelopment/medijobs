@@ -60,7 +60,8 @@ get_header();
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
                     <div class="secton_bg_image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/subject_image_1.png" alt="">
+                        <?php $randomNumber = rand(1,7);  ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/subject_image_<?php echo $randomNumber; ?>.png" alt="">
                     </div>
                 </div>
             </div>
@@ -176,7 +177,7 @@ get_header();
                             <p>Jersey City</p>
                         </div>
                     </div>
-                    <div class="mj-image romania-map hide-on-mobile">
+                    <div class="mj-image romania-map hide-on-mobile" style="margin-bottom: -210px">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/map_ny_2.png" alt="">
                     </div>
                 </div>
