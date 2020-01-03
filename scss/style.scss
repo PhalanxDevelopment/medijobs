@@ -1980,19 +1980,7 @@ a.mj-btn {
     top: 168px;
     &.absolute {
         position: absolute;
-        top: 7900px;
-        &.absolute_us {
-            top: 6000px;
-        }
     }
-    &.absolute_company {
-        position: absolute;
-        top: 6400px;
-        &.absolute_us {
-            top: 5500px;
-        }
-    }
-
     &.blog-form {
         width: 448px;
         height: 456px;
@@ -2109,6 +2097,7 @@ a.mj-btn {
         background: url(images/section_2_bg.png);
         background-repeat: no-repeat;
         background-position: left -80px bottom -120px;
+       
         p {
             text-transform: uppercase;
             font-family: 'ClearSans-Bold';
@@ -2123,6 +2112,11 @@ a.mj-btn {
                 margin-top: -30px;
                 line-height: 35px;
             }
+        }
+        &.section_2--us {
+            background: url(images/section_2_us_bg.png);
+            background-repeat: no-repeat;
+            background-position: left 50% center;
         }
         .mj-list {
             margin-bottom: 80px;
@@ -2394,7 +2388,7 @@ a.mj-btn {
                 margin-top: 50px;
                 margin-bottom: 50px;
                 .article_author {
-                    position: absolute;
+                    position: relative;
                     display: block;
                     left: 0;
                     top: 0;
@@ -3070,9 +3064,9 @@ a.mj-btn {
         &.section_5 {
             img {
                 height: auto !important;
-                width: 50%;
+                width: calc(33% - 20px);
                 float: left;
-                margin-right: 0px;
+                margin-right: 20px;
                 margin-bottom: 20px;
             }
         }

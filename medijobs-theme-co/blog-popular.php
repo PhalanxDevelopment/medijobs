@@ -25,6 +25,7 @@ get_header();
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3>GET WEEKLY UPDATES.</h3>
                         <p>Never miss an update, we send a weekly recap of all our articles published.</p>
+                        <?php echo do_shortcode('[hubspot type=form portal=5748888 id=edd3916d-4059-4981-986e-36889b6b1681]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
                             </div>

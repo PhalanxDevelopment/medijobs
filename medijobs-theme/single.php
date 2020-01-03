@@ -8,10 +8,6 @@
                 <div class="breadcrumb hide-on-mobile"><?php get_breadcrumb(); ?></div>
                 <h1 class="headline article "><?php the_title(); ?></h1>
                 <div class="article_metas">
-                    <div class="article_date">
-                        <span>Publicat pe</span>
-                        <?php $post_date = get_the_date( 'l F j, Y' ); echo $post_date; ?>
-                    </div>
                     <div class="article_author">
                         <span>SCRIS DE</span>
                         <?php $author_id= get_post_field( 'post_author', get_the_id()); ?>
@@ -43,7 +39,7 @@
                             <div class="mj-grid">
                                 <div class="grid__item width-1/24">
                                     <div class="category_label">
-                                        Filled under
+                                        Categorii
                                     </div>
                                 </div>
                                 <div class="grid__item width-23/24">

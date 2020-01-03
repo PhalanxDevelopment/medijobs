@@ -79,7 +79,7 @@ get_header();
                         <div class="mj-images" style="margin-top: 180px;">
                         <img style="height: 40px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/cnbc.png" alt="">
                             <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/wallstreet.png" alt="">
-                            <img style="height: 50px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
+                            <img style="height: 40px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/biz-transparent.png" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -87,19 +87,14 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_2" class="section section_2">
+    <div id="section_2" class="section section_2 section_2--us">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-6/24">
+                <div class="grid__item width-8/24">
                     <div class="above_headline">Benefits</div>
-                    <h1 class="headline light">3 reasons why you will love MEDIjobs </h1>
-                </div>
-                <div class="grid__item width-7/24">
+                    <h1 class="headline light"> Save Time </h1>
                     <ul class="mj-list">
-                        <li class="mj-list__item">
-                            Save Time
-                        </li>
                         <li class="mj-list__item">
                             Stop going through hundreds of un-qualified resumes
                         </li>
@@ -283,7 +278,7 @@ get_header();
                         </p>
                     </div>
                     <div class="quote us">
-                        <img style="height: 60px;margin-top: 20px;margin-bottom: 36px;" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
+                        <img style="height: 60px;margin-top: 20px;margin-bottom: 36px;" src="<?php echo get_template_directory_uri(); ?>/images/press/biz-transparent.png" alt="">
                         <p>
                             Innovation in recruitment
                         </p>

@@ -25,7 +25,7 @@ get_header();
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3>GET WEEKLY UPDATES.</h3>
                         <p>Never miss an update, we send a weekly recap of all our articles published.</p>
-                        
+                        <?php echo do_shortcode('[hubspot type=form portal=5748888 id=edd3916d-4059-4981-986e-36889b6b1681]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
                             </div>
@@ -91,7 +91,7 @@ get_header();
                             <div class="mj-grid">
                                 <div class="grid__item width-12/24">
                                     <h3>ARE YOU A COMPANY OR A CANDIDATE?</h3>
-                                    <p>Companiile medicale din toata Romania au apelat la MEDIjobs pentru a angaja cu succes specialisti medicali.</p>
+                                    <p>Medical companies have turned to MEDIjobs to successfully hire medical specialists.</p>
                                 </div>
                                 <div class="grid__item width-2/24 hide-on-mobile">
                                 </div>

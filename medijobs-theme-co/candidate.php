@@ -86,7 +86,7 @@ get_header();
                         <div class="mj-images" style="margin-top:300px">
                             <img style="height: 40px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/cnbc.png" alt="">
                             <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/wallstreet.png" alt="">
-                            <img style="height: 50px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
+                            <img style="height: 40px;margin-top: -5px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/press/biz-transparent.png" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -292,7 +292,7 @@ get_header();
                         </p>
                     </div>
                     <div class="quote us">
-                        <img style="height: 60px;margin-top: 20px;margin-bottom: 36px;" src="<?php echo get_template_directory_uri(); ?>/images/press/Biz.png" alt="">
+                        <img style="height: 60px;margin-top: 20px;margin-bottom: 36px;" src="<?php echo get_template_directory_uri(); ?>/images/press/biz-transparent.png" alt="">
                         <p>
                             Innovation in recruitment
                         </p>

@@ -171,23 +171,18 @@ var lastScrollTop = 0;
 if(getWidth() > 1400) {
     window.addEventListener("scroll", function(e) {
         var form = document.getElementById("form");
+        var limit = document.body.offsetHeight - window.innerHeight;
         if( window.scrollY > 130) {
             header.className = headerClass + ' shadow';
         } else {
             header.className = headerClass;
         }
-        if (isCompany) {
-            if( window.scrollY > 7000) {
-                form.className = 'mj-register_form mj-form absolute_company';
-            } else {
-                form.className = 'mj-register_form mj-form ';
-            }
+        if( window.scrollY > (limit - 401)) {
+            form.className = 'mj-register_form mj-form absolute';
+            form.style = 'top: ' + (limit - 401) + 'px';
         } else {
-            if( window.scrollY > 7890) {
-                form.className = 'mj-register_form mj-form absolute';
-            } else {
-                form.className = 'mj-register_form mj-form ';
-            }
+            form.className = 'mj-register_form mj-form';
+            form.style = '';
         }
         
         var section_1 = document.getElementById("section_1");

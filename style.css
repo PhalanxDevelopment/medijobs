@@ -1663,15 +1663,7 @@ a.mj-btn {
   margin-left: 224px;
   top: 168px; }
   .mj-register_form.absolute {
-    position: absolute;
-    top: 7900px; }
-    .mj-register_form.absolute.absolute_us {
-      top: 6000px; }
-  .mj-register_form.absolute_company {
-    position: absolute;
-    top: 6400px; }
-    .mj-register_form.absolute_company.absolute_us {
-      top: 5500px; }
+    position: absolute; }
   .mj-register_form.blog-form {
     width: 448px;
     height: 456px;
@@ -1782,6 +1774,10 @@ a.mj-btn {
         text-transform: none;
         margin-top: -30px;
         line-height: 35px; }
+    .section.section_2.section_2--us {
+      background: url(images/section_2_us_bg.png);
+      background-repeat: no-repeat;
+      background-position: left 50% center; }
     .section.section_2 .mj-list {
       margin-bottom: 80px; }
   .section.section_blog_company {
@@ -1999,7 +1995,7 @@ a.mj-btn {
         margin-top: 50px;
         margin-bottom: 50px; }
         .section.section_1.section_1--blog-article .article_metas .article_author {
-          position: absolute;
+          position: relative;
           display: block;
           left: 0;
           top: 0;
@@ -2524,9 +2520,9 @@ a.mj-btn {
     line-height: 24px; }
   .section.section_5 img {
     height: auto !important;
-    width: 50%;
+    width: calc(33% - 20px);
     float: left;
-    margin-right: 0px;
+    margin-right: 20px;
     margin-bottom: 20px; }
   .section.section_6 .mj-box a {
     padding-top: 10px !important; }

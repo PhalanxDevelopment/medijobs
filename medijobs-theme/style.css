@@ -346,6 +346,22 @@ body.noScroll {
     left: 30px;
     top: 82px;
     margin-left: -11px; }
+  .mj-boxes.mj-boxes--us:after {
+    display: none; }
+  .mj-boxes.mj-boxes--us .mj-arrow-box {
+    padding-left: 168px; }
+    .mj-boxes.mj-boxes--us .mj-arrow-box p {
+      font-family: 'ClearSans-Light';
+      font-size: 42px;
+      line-height: 48px; }
+      .mj-boxes.mj-boxes--us .mj-arrow-box p::before {
+        position: absolute;
+        left: 65px;
+        content: "+";
+        font-family: 'ClearSans-Bold';
+        font-size: 80px;
+        color: #CFF9FF;
+        margin-right: 5px; }
   .mj-boxes .mj-arrow-box {
     position: relative;
     padding: 40px;
@@ -1217,6 +1233,10 @@ body.noScroll {
     background-repeat: no-repeat;
     width: 172px;
     height: 30px; }
+    .mj-header .mj-logo.co {
+      background: url(images/Logo-co.svg);
+      width: 190px;
+      height: 29px; }
   .mj-header .pull-right {
     margin-top: 37px;
     font-size: 14px;
@@ -1643,11 +1663,7 @@ a.mj-btn {
   margin-left: 224px;
   top: 168px; }
   .mj-register_form.absolute {
-    position: absolute;
-    top: 7900px; }
-  .mj-register_form.absolute_company {
-    position: absolute;
-    top: 7010px; }
+    position: absolute; }
   .mj-register_form.blog-form {
     width: 448px;
     height: 456px;
@@ -1758,6 +1774,10 @@ a.mj-btn {
         text-transform: none;
         margin-top: -30px;
         line-height: 35px; }
+    .section.section_2.section_2--us {
+      background: url(images/section_2_us_bg.png);
+      background-repeat: no-repeat;
+      background-position: left 50% center; }
     .section.section_2 .mj-list {
       margin-bottom: 80px; }
   .section.section_blog_company {
@@ -1952,7 +1972,7 @@ a.mj-btn {
     .section.section_1 .article_image {
       z-index: 11;
       position: relative;
-      height: 415px;
+      height: auto;
       overflow: hidden; }
       .section.section_1 .article_image img {
         width: 100%;
@@ -1975,7 +1995,7 @@ a.mj-btn {
         margin-top: 50px;
         margin-bottom: 50px; }
         .section.section_1.section_1--blog-article .article_metas .article_author {
-          position: absolute;
+          position: relative;
           display: block;
           left: 0;
           top: 0;
@@ -2143,6 +2163,12 @@ a.mj-btn {
   background-repeat: no-repeat;
   background-position: left top;
   padding-bottom: 23px; }
+  .quote.us {
+    height: 120px; }
+    .quote.us:nth-child(3) {
+      margin-right: 56px; }
+    .quote.us:nth-child(6) {
+      margin-right: 56px; }
   .quote:nth-child(3) {
     margin-right: 0px; }
   .quote:nth-child(6) {
@@ -2258,6 +2284,13 @@ a.mj-btn {
 @media only screen and (max-width: 720px) {
   html {
     font-size: 55.5%; }
+  #open-form {
+    position: fixed;
+    line-height: 26px;
+    bottom: 50px;
+    max-width: calc(100% - 48px);
+    left: 24px;
+    z-index: 99; }
   .section.section_1.section_1--blog-article .article_metas {
     margin-top: 10px;
     margin-bottom: 10px; }
@@ -2416,7 +2449,7 @@ a.mj-btn {
     position: relative;
     display: block;
     width: 100%;
-    height: auto;
+    height: auto !important;
     float: none;
     margin-right: 0px;
     margin-top: 30px;
@@ -2487,9 +2520,9 @@ a.mj-btn {
     line-height: 24px; }
   .section.section_5 img {
     height: auto !important;
-    width: 50%;
+    width: calc(33% - 20px);
     float: left;
-    margin-right: 0px;
+    margin-right: 20px;
     margin-bottom: 20px; }
   .section.section_6 .mj-box a {
     padding-top: 10px !important; }
@@ -2751,6 +2784,10 @@ a.mj-btn {
       background: url(images/Logo-svg.svg);
       margin-top: 24px;
       background-repeat: no-repeat; }
+      .mj-header .mj-logo.co {
+        background: url(images/Logo-co.svg);
+        width: 190px;
+        height: 29px; }
   #menuToggle {
     position: absolute;
     top: 25px;

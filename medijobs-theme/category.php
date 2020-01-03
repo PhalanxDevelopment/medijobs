@@ -69,6 +69,9 @@
                         
                     <?php endforeach; wp_reset_query(); ?>
                     </div>
+                    <a href="<?php echo get_home_url(); ?>/blog/recent?cat=<?php echo $category[0]->slug; ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
+                        Vedeti toate articolele
+                    </a>
                 </div>
             </div>
         </div>
