@@ -7,7 +7,7 @@
                     <div class="above_headline">Bine ai venit in pagina autorului</div>
                     <h1 class="headline uppercase"><?php the_author_link(); ?></h1>
                     <p>
-                        <?php if ( '' != get_the_author_meta( 'user_description' ) ) { echo esc_html( get_the_author_meta( 'user_description' ) ); } ?>
+                        <?php if ( '' != get_the_author_meta( 'user_description' ) ) { echo  get_the_author_meta( 'user_description' ); } ?>
                     </p>
 
                 </div>
@@ -17,12 +17,9 @@
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3>Newsletter săptămânal</h3>
                         <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
-                        <input class="mj-input" type="text" placeholder="Enter email" >
+                        <?php echo do_shortcode('[hubspot type=form portal=5748888 id=f8052d4d-af90-45d5-bf00-c1f134635f57]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
-                                <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                                    Abonează-te
-                                </button>
                             </div>
                             <div class="grid__item width-12/24 hide-on-mobile">
                                 <div class="newsletter_logo"></div>
@@ -40,7 +37,11 @@
                 <div class="grid__item width-23/24 mj-form">
                 <h2>Articole Recente</h2>
                     <div class="mj-articles">
-                    <?php while ( have_posts() ) : the_post(); ?>
+                    <?php 
+                        global $query_string;
+                        query_posts ('posts_per_page=20');
+                        while (have_posts()) : the_post();
+                        ?>
                         <div class="mj-article">
                             <div class="mj-article__image">
                                 <a href="<?php echo get_permalink(get_the_id()); ?>">

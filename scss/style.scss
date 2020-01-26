@@ -636,7 +636,7 @@ body.noScroll { /* ...or body.dialogShowing */
                 margin-top:0px;
                 margin-bottom: 0px;
             }
-            .mj-article__author__image {
+            .mj-article__author__image, img {
                 position: absolute;
                 display: block;
                 right: 0px;
@@ -2464,7 +2464,6 @@ a.mj-btn {
         //background-image: url(images/section_3_bg.png);
         //background-repeat: no-repeat;
         //background-position: calc(50% - 200px) bottom;
-       
         .mj-icon-link {
             width: 60%;
             margin-top: 60px;
@@ -2481,6 +2480,7 @@ a.mj-btn {
             line-height: 150px; 
             letter-spacing: -10px;
             color: #F9FAFA;
+            z-index: -1;
 
         }
     }
@@ -2784,7 +2784,19 @@ a.mj-btn {
         margin-bottom: 30px;
     }
     .article_quiz {
-        display: none;
+        display: block;
+        .step__radios_boxes {
+            justify-content: center;
+            .radio_box {
+                margin-bottom: 30px;
+                height: auto;
+            }
+        }
+        .article_quiz__footer {
+            .article_quiz__footer__link {
+                display: none;
+            }
+        } 
     }
     .mj-boxes {
         margin-top: 10px;

@@ -18,7 +18,7 @@
                 <div class="article_image">
                     <?php
                         if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                            the_post_thumbnail( 'full' );
+                            the_post_thumbnail( 'full', [ 'alt' => esc_html ( get_the_title() ) ] ); 
                         }
                     ?>
                 </div>
@@ -44,9 +44,11 @@
                                 </div>
                                 <div class="grid__item width-23/24">
                                     <div class="categories_under">
-                                    <?php $categories = get_the_category(); 
-                                        foreach( $categories as $category ) { ?>
-                                            <a href="<?php esc_url( get_category_link( $category->term_id ) ) ?>"><?php echo $category->cat_name; ?></a>
+                                    <?php $category = get_the_category();
+                                        $hierarchy = array_reverse( get_ancestors( $category[0]->term_id, 'category' ) );
+                                        $hierarchy[] = $category[0]->term_id;
+                                        foreach( $hierarchy as $category ) { ?>
+                                            <a href="<?php esc_url( get_category_link( $category  ) ) ?>"><?php echo get_cat_name($category); ?></a>
                                     <?php } ?>
                                     </div>
                                 </div>

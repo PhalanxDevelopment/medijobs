@@ -110,7 +110,7 @@
                         <a href="https://www.youtube.com/channel/UCjVIzvRIjpAKDytRioKRb-w" target="_blank" class="social__link youtube__link"></a>
                     </div>
                     <div class="footer__call-to-action no_footer_links">
-                        <a href="mailto:office@medijobs.co">Get in touch with us</a>
+                        <a href="mailto:office@medijobs.co">Ia legãtura cu noi</a>
                     </div>
                 </div>
             </div>

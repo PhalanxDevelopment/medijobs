@@ -528,7 +528,7 @@ body.noScroll {
         line-height: 24px;
         margin-top: 0px;
         margin-bottom: 0px; }
-      .mj-articles .mj-article .mj-article__author .mj-article__author__image {
+      .mj-articles .mj-article .mj-article__author .mj-article__author__image, .mj-articles .mj-article .mj-article__author img {
         position: absolute;
         display: block;
         right: 0px;
@@ -2065,7 +2065,8 @@ a.mj-btn {
       font-size: 180px;
       line-height: 150px;
       letter-spacing: -10px;
-      color: #F9FAFA; }
+      color: #F9FAFA;
+      z-index: -1; }
   .section.section_6 .mj-box {
     background: #FFFFFFFC 0% 0% no-repeat padding-box;
     border: 1px solid #F1F2F2;
@@ -2308,7 +2309,14 @@ a.mj-btn {
     margin-top: 30px;
     margin-bottom: 30px; }
   .article_quiz {
-    display: none; }
+    display: block; }
+    .article_quiz .step__radios_boxes {
+      justify-content: center; }
+      .article_quiz .step__radios_boxes .radio_box {
+        margin-bottom: 30px;
+        height: auto; }
+    .article_quiz .article_quiz__footer .article_quiz__footer__link {
+      display: none; }
   .mj-boxes {
     margin-top: 10px; }
     .mj-boxes:before {
