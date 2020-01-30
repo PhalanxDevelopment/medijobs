@@ -70,6 +70,98 @@ Version: 2
     font-weight: normal;
     font-style: normal;
 }
+.sitemap_links {
+    .page-list {
+        padding-inline-start: 0px;
+        strong {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                flex: 1 0 21%; 
+                margin: 5px;
+                margin-bottom: 50px;
+            }
+            .page_item {
+                list-style: none;
+                a{
+                    font-size: 22px;
+                    color:#000000;
+                    font-family: 'ClearSans-Light';
+                    text-transform: uppercase;
+                }
+                &.page_item_has_children {
+                    .page_item {
+                        margin-bottom: 10px;
+                        position: relative;
+                        margin-left: -10px;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            left: -30px;
+                            top: -5px;
+                            width: 24px;
+                            height: 20px;
+                            background-image:  url(images/sitemap_arrow.png);
+                        }
+                        a {
+                            font-size: 16px;
+                            text-transform: none;
+                            font-family: 'ClearSans-Regular';
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+a.mj-btn.mj-btn--secondary {
+    padding-top: 18px;
+}
+.mj-container p.section_footer {
+    color:#808285;
+    font-size: 16px;
+    font-family: 'ClearSans-Regular';
+    margin-top: 56px;
+    margin-bottom: 95px;
+}
+.links-inline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    a:first-child {
+        margin-right:40px;
+    }
+}
+.page_content {
+    position: relative;
+    display: block;
+    .page_title {
+        font-size: 58px;
+        line-height: 67px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size: 42px;
+        line-height: 48px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+    }
+    ol {
+        li {
+             font-size: 32px;
+            line-height: 42px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+    }
+    p {
+        padding-left: 40px;
+    }
+}
 #wpdevar_comment_1 {
     width: 100%;
     text-align: left;
@@ -2084,6 +2176,9 @@ a.mj-btn {
     position: relative;
     display: block;
     margin: 15vh 0;
+    &.section_page {
+        margin-top: 0px;
+    }
     &.section_article {
         margin-top: -60px;
     }
@@ -2459,6 +2554,14 @@ a.mj-btn {
                     z-index: 3;
                     margin-bottom: -50px;
                     margin-top: 50px;
+                }
+            }
+            &.not_found {
+                img {
+                    top: -20px;
+                    left: auto;
+                    right: 0px;
+                    z-index: 2;
                 }
             }
         }
