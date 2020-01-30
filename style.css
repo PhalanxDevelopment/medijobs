@@ -928,6 +928,8 @@ body.noScroll {
     grid-column: span 16; }
   .mj-grid .width-18\/24 {
     grid-column: span 18; }
+  .mj-grid .width-19\/24 {
+    grid-column: span 19; }
   .mj-grid .width-22\/24 {
     grid-column: span 22; }
   .mj-grid .width-23\/24 {
@@ -1984,6 +1986,7 @@ a.mj-btn {
       width: 335px;
       background: #fff;
       top: 0;
+      z-index: 2;
       right: 0; }
     .section.section_1.section_1--blog {
       padding-bottom: 150px; }
@@ -2042,6 +2045,12 @@ a.mj-btn {
     .section.section_1 .secton_bg_image.company img {
       top: -162px;
       left: 500px; }
+    .section.section_1 .secton_bg_image.about_us img {
+      position: relative;
+      display: block;
+      z-index: 3;
+      margin-bottom: -50px;
+      margin-top: 50px; }
     .section.section_1 .sub_section {
       font-size: 18px;
       line-height: 22px;
@@ -2949,6 +2958,8 @@ a.mj-btn {
     .mj-grid .width-16\/24 {
       grid-column: span 24; }
     .mj-grid .width-18\/24 {
+      grid-column: span 24; }
+    .mj-grid .width-19\/24 {
       grid-column: span 24; }
     .mj-grid .width-22\/24 {
       grid-column: span 24; }
