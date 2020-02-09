@@ -525,7 +525,7 @@ get_header();
                     <ul class="mj-steps">
                         <li id="step_1" class="mj-step active">
                             <div class="step_nr">.01</div>
-                            <div class="step_title"> Crează un cont:</div>
+                            <div class="step_title"> Creează un cont:</div>
                             <div class="step_content">Durează mai puțin de 2 minute să îți creezi un cont și să fii la curent cu cei mai relevanți candidați pentru nevoile tale. </div>
                         </li>
                         <li id="step_2" class="mj-step active">

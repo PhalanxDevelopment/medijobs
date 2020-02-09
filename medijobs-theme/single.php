@@ -156,8 +156,8 @@
                     <div id="quiz_step_3" class="step">
                         <h1 class="step__question">Ce iti doresti de la urmatorul job?</h1>
                         <span class="step_info">mai este o singura intrebare</span>
-                        <p class="inline_form">Am  <input style="width: 100px;" type="number"/> ani de experienta <br>
-                        si as vrea sa ma dezvolt profesional ca <input placeholder="Scrie titulatura" type="text"/> .
+                        <p class="inline_form">Am  <input style="width: 100px;" name="ani" type="number"/> ani de experienta <br>
+                        si as vrea sa ma dezvolt profesional ca <input placeholder="Scrie titulatura" name="profesia" type="text"/> .
                         </p>
                     </div> 
                     <div id="quiz_step_4" class="step">
@@ -166,7 +166,7 @@
                         <div class="mj-grid">
                             <div class="grid__item width-5/24">
                                 <div class="step_4_box">
-                                    <input type="checkbox" id="step-4-1" name="step-4" value="Abilitati de comunicare & Patient Care">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-1" name="step-4[]" class="aspecte" value="Abilitati de comunicare & Patient Care">
                                     <label for="step-4-1">
                                         <div class="input">
                                             <div class="inner_input"></div>
@@ -176,7 +176,7 @@
                                 </div>
                                 <div class="step_4_box">
 
-                                    <input type="checkbox" id="step-4-2" name="step-4" value="Cum sa fiu mai efficient(a) la job">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-2" name="step-4[]" class="aspecte" value="Cum sa fiu mai efficient(a) la job">
                                     <label for="step-4-2">
                                     <div class="input">
                                             <div class="inner_input"></div>
@@ -187,14 +187,14 @@
                             <div class="grid__item width-2/24"></div>
                             <div class="grid__item width-7/24">
                                 <div class="step_4_box">
-                                    <input type="checkbox" id="step-4-3" name="step-4" value="Mai multe activitati de voluntariat">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-3" name="step-4[]" class="aspecte" value="Mai multe activitati de voluntariat">
                                     <label for="step-4-3"><div class="input">
                                             <div class="inner_input"></div>
                                         </div>
                                         Mai multe activitati de voluntariat</label>
                                 </div>
                                 <div class="step_4_box">
-                                    <input type="checkbox" id="step-4-4" name="step-4" value="Sa imbunatatesc relatia cu colegii">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-4" name="step-4[]" class="aspecte" value="Sa imbunatatesc relatia cu colegii">
                                     <label for="step-4-4">
                                         <div class="input">
                                             <div class="inner_input"></div>
@@ -202,7 +202,7 @@
                                         Sa imbunatatesc relatia cu colegii </label>
                                 </div>
                                 <div class="step_4_box">
-                                    <input type="checkbox" id="step-4-5" name="step-4" value="Echilibru viata profesioana/personala">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-5" name="step-4[]" class="aspecte" value="Echilibru viata profesioana/personala">
                                     <label for="step-4-5">
                                         <div class="input">
                                             <div class="inner_input"></div>
@@ -213,7 +213,7 @@
                             <div class="grid__item width-2/24"></div>
                             <div class="grid__item width-5/24">
                                 <div class="step_4_box">
-                                    <input type="checkbox" id="step-4-6" name="step-4" value="Crestere salariala">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-6" name="step-4[]" class="aspecte" value="Crestere salariala">
                                     <label for="step-4-6">
                                     <div class="input">
                                             <div class="inner_input"></div>
@@ -221,7 +221,7 @@
                                         Crestere salariala</label>
                                 </div>
                                 <div class="step_4_box">
-                                    <input type="checkbox" id="step-4-7" name="step-4" value="Sa investesc in brandul meu personal">
+                                    <input type="checkbox"  onclick = "checking(this)"  id="step-4-7" name="step-4[]" class="aspecte" value="Sa investesc in brandul meu personal">
                                     <label for="step-4-7">
                                     <div class="input">
                                             <div class="inner_input"></div>
@@ -254,7 +254,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-5/24 hide-on-mobile"></div>
                 <div class="grid__item width-14/24">
-                    <?php echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?> 
+                    <?php // echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?> 
                 </div>
             </div>
         </div>

@@ -54,6 +54,41 @@ Version: 2
   font-weight: normal;
   font-style: normal; }
 
+.mj-feeds {
+  position: relative;
+  display: flex;
+  justify-content: space-between; }
+  .mj-feeds .mj-feed {
+    flex: 1 0 30%;
+    position: relative;
+    margin: 2%;
+    height: 704px; }
+    .mj-feeds .mj-feed:after {
+      content: "";
+      position: absolute;
+      width: 336px;
+      text-transform: uppercase;
+      height: 51px;
+      color: #fff;
+      font-family: 'ClearSans-Bold';
+      font-size: 22px;
+      text-align: center;
+      padding-top: 21px;
+      display: block;
+      border-radius: 5px;
+      left: 50%;
+      margin-left: -168px;
+      bottom: -36px; }
+    .mj-feeds .mj-feed.facebook:after {
+      content: "Medijobs on Facebook";
+      background-color: #4267B2; }
+    .mj-feeds .mj-feed.instagram:after {
+      content: "Medijobs on Instagram";
+      background-color: #E94F64; }
+    .mj-feeds .mj-feed.linkedin:after {
+      content: "Medijobs on Linkedin";
+      background-color: #0077B5; }
+
 .sitemap_links .page-list {
   padding-inline-start: 0px; }
   .sitemap_links .page-list strong {
@@ -89,7 +124,7 @@ Version: 2
           font-family: 'ClearSans-Regular'; }
 
 a.mj-btn.mj-btn--secondary {
-  padding-top: 18px; }
+  padding-top: 15px; }
 
 .mj-container p.section_footer {
   color: #808285;
@@ -836,6 +871,248 @@ body.noScroll {
     margin-top: 10px;
     margin-bottom: 5px; }
 
+.about-us_boxes {
+  position: relative;
+  display: block;
+  border: 2px solid #00C1DE;
+  padding-bottom: 56px; }
+  .about-us_boxes .about-us_box {
+    position: relative;
+    display: flex;
+    width: calc(100% + 112px);
+    flex-direction: row-reverse;
+    margin-left: -56px;
+    margin-top: 56px; }
+    .about-us_boxes .about-us_box p {
+      font-size: 18px;
+      color: #000000;
+      font-family: 'ClearSans-Regular';
+      line-height: 28px;
+      background-color: #ECFEFF;
+      padding: 56px;
+      margin-left: -56px;
+      padding-left: 224px;
+      margin-top: 0px;
+      height: fit-content; }
+    .about-us_boxes .about-us_box img {
+      margin-top: -215px;
+      height: fit-content; }
+    .about-us_boxes .about-us_box.about-us_box--left {
+      flex-direction: row; }
+      .about-us_boxes .about-us_box.about-us_box--left p {
+        padding-left: 56px;
+        padding-right: 224px;
+        margin-left: 0px; }
+      .about-us_boxes .about-us_box.about-us_box--left img {
+        position: relative;
+        display: block;
+        margin-left: -168px;
+        margin-top: 56px; }
+    .about-us_boxes .about-us_box.about-us_box--last p {
+      margin-top: 56px; }
+
+.mj-jobs {
+  position: relative;
+  width: 100%;
+  border: 1px solid #D1D3D4;
+  margin-top: 55px; }
+  .mj-jobs .mj-jobs__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 32px;
+    border-bottom: 1px solid #D1D3D4; }
+    .mj-jobs .mj-jobs__item:after {
+      content: "";
+      position: absolute;
+      display: block;
+      background: url(images/arrow-right.png);
+      width: 25px;
+      height: 25px;
+      top: 50%;
+      margin-top: -12px;
+      right: 25px; }
+    .mj-jobs .mj-jobs__item:hover {
+      background-color: #F9FAFA;
+      border: 2px solid #00C1DE;
+      cursor: pointer; }
+      .mj-jobs .mj-jobs__item:hover:after {
+        background: url(images/about-us/arrow_right_long.png);
+        width: 93px;
+        right: -48px; }
+    .mj-jobs .mj-jobs__item:last-child {
+      border-bottom: none; }
+      .mj-jobs .mj-jobs__item:last-child:hover {
+        border-bottom: 2px solid #00C1DE; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-position {
+      font-size: 22px;
+      color: #000000;
+      text-transform: uppercase;
+      font-family: 'ClearSans-Medium';
+      line-height: 30px; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-department {
+      color: #A7A9AC;
+      font-family: 'ClearSans-Medium';
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 16px; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-location {
+      font-size: 22px;
+      text-transform: uppercase;
+      color: #000000;
+      font-family: 'ClearSans-Medium';
+      line-height: 30px; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-type {
+      color: #A7A9AC;
+      font-family: 'ClearSans-Medium';
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 16px; }
+  .mj-jobs .mj-jobs__item > div {
+    flex: 0 50%;
+    /*demo*/
+    box-sizing: border-box; }
+
+.team_glossary {
+  position: relative;
+  display: block; }
+  .team_glossary .team_glossary__person {
+    position: relative;
+    flex: 1 0 21%;
+    max-width: 224px;
+    margin: 2%;
+    background: #fff;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0px 8px 32px #00202514;
+    border-radius: 6px;
+    margin-bottom: 72px;
+    overflow: hidden; }
+    .team_glossary .team_glossary__person.team_glossary__person--manager {
+      flex: 1 0 26%; }
+      .team_glossary .team_glossary__person.team_glossary__person--manager .team_glossary__person-image {
+        height: 370px;
+        width: auto; }
+      .team_glossary .team_glossary__person.team_glossary__person--manager .team_glossary__person-name {
+        padding: 56px;
+        padding-top: 33px;
+        padding-bottom: 10px; }
+      .team_glossary .team_glossary__person.team_glossary__person--manager .team_glossary__person-position {
+        padding: 56px;
+        padding-top: 0px;
+        padding-bottom: 10px; }
+      .team_glossary .team_glossary__person.team_glossary__person--manager .team_glossary__person-link {
+        padding: 56px;
+        padding-top: 0px;
+        padding-bottom: 40px; }
+    .team_glossary .team_glossary__person .team_glossary__person-image {
+      height: 224px;
+      width: auto; }
+    .team_glossary .team_glossary__person .team_glossary__person-name {
+      color: #000;
+      font-size: 22px;
+      line-height: 30px;
+      padding: 24px;
+      padding-top: 33px;
+      padding-bottom: 10px;
+      font-family: 'ClearSans-Medium'; }
+    .team_glossary .team_glossary__person .team_glossary__person-position {
+      color: #A7A9AC;
+      font-size: 18px;
+      line-height: 28px;
+      font-family: 'ClearSans-Regular';
+      padding: 24px;
+      padding-top: 0px;
+      padding-bottom: 10px; }
+    .team_glossary .team_glossary__person .team_glossary__person-link {
+      padding-left: 24px;
+      padding-bottom: 22px; }
+      .team_glossary .team_glossary__person .team_glossary__person-link a {
+        color: #00C1DE; }
+  .team_glossary .team_glossary__footer h3 {
+    width: fit-content;
+    padding-left: 30px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    color: #A7A9AC;
+    font-size: 30px;
+    line-height: 35px;
+    font-family: 'ClearSans-Regular';
+    text-transform: uppercase;
+    background: url(images/about-us/arrow_down.png);
+    background-repeat: no-repeat;
+    background-position: center left; }
+  .team_glossary .team_glossary__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 72px; }
+    .team_glossary .team_glossary__header:before {
+      content: "";
+      width: 784px;
+      z-index: 1;
+      height: 952px;
+      position: absolute;
+      left: 50%;
+      margin-left: -392px;
+      top: -112px;
+      background-color: #CFF9FF; }
+    .team_glossary .team_glossary__header h2 {
+      font-size: 80px;
+      line-height: 84px;
+      z-index: 2;
+      width: 448px;
+      text-align: center;
+      max-width: 50%;
+      font-family: 'ClearSans-Bold'; }
+    .team_glossary .team_glossary__header .team_glossary__person {
+      align-self: flex-start;
+      max-width: 100%; }
+  .team_glossary .team_glossary__body {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+.about_us_map {
+  position: relative;
+  display: flex;
+  height: 750px; }
+  .about_us_map .about_us_map__label {
+    flex: 30.5%; }
+    .about_us_map .about_us_map__label h3 {
+      font-size: 4.2rem;
+      font-family: 'ClearSans-Light'; }
+  .about_us_map .about_us_map__adress {
+    flex: 69.5%;
+    height: 700px;
+    width: 100%;
+    background: #F9FAFA;
+    display: flex;
+    justify-content: space-between; }
+    .about_us_map .about_us_map__adress .about_us_map_adress-field {
+      padding: 54px;
+      padding-right: 0px; }
+      .about_us_map .about_us_map__adress .about_us_map_adress-field .about_us_map_adress-field__label {
+        color: #A7A9AC;
+        font-size: 18px;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-family: 'ClearSans-Bold'; }
+      .about_us_map .about_us_map__adress .about_us_map_adress-field .about_us_map_adress-field__value {
+        font-size: 22px;
+        line-height: 30px;
+        font-family: 'ClearSans-Regular'; }
+      .about_us_map .about_us_map__adress .about_us_map_adress-field.about_us_map_adress-field--last {
+        padding-right: 54px; }
+  .about_us_map .about_us_map__google_map {
+    position: absolute;
+    top: 150px;
+    width: 100%; }
+
 .mj-container {
   position: relative;
   display: block;
@@ -845,6 +1122,19 @@ body.noScroll {
   margin-right: auto;
   padding-left: 48px;
   padding-right: 48px; }
+  .mj-container p.about_us_text--bigger {
+    font-size: 22px;
+    line-height: 30px; }
+  .mj-container p.about_us_text--normal {
+    font-size: 18px;
+    line-height: 28px; }
+  .mj-container p.about_us_text--blue {
+    font-size: 18px;
+    line-height: 28px;
+    background: #CFF9FF;
+    padding: 56px;
+    width: calc(100% + 112px);
+    margin-left: -56px; }
   .mj-container .breadcrumb {
     position: relative;
     display: block;
@@ -1003,6 +1293,8 @@ body.noScroll {
     grid-column: span 18; }
   .mj-grid .width-19\/24 {
     grid-column: span 19; }
+  .mj-grid .width-20\/24 {
+    grid-column: span 20; }
   .mj-grid .width-22\/24 {
     grid-column: span 22; }
   .mj-grid .width-23\/24 {
@@ -1810,6 +2102,18 @@ a.mj-btn {
     box-shadow: 0px 8px 32px #00202514;
     max-width: 100%;
     padding: 56px; }
+    .company_bg .company_box.our_investors {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .company_bg .company_box.our_investors h3 {
+        font-family: 'ClearSans-Light';
+        color: #A7A9AC;
+        font-size: 42px;
+        line-height: 48px; }
+      .company_bg .company_box.our_investors img {
+        width: fit-content;
+        height: fit-content; }
     .company_bg .company_box h3 {
       font-family: 'ClearSans-Bold';
       font-size: 30px;
@@ -1824,6 +2128,7 @@ a.mj-btn {
 .section {
   position: relative;
   display: block;
+  z-index: 2;
   margin: 15vh 0; }
   .section.section_page {
     margin-top: 0px; }
@@ -1912,7 +2217,7 @@ a.mj-btn {
     text-align: left;
     font-family: 'ClearSans-Bold';
     font-size: 14px;
-    line-height: 14px;
+    line-height: 25px;
     color: #002025;
     letter-spacing: 0;
     opacity: 1;
@@ -2061,7 +2366,7 @@ a.mj-btn {
       width: 335px;
       background: #fff;
       top: 0;
-      z-index: 2;
+      z-index: 1;
       right: 0; }
     .section.section_1.section_1--blog {
       padding-bottom: 150px; }
@@ -2125,7 +2430,8 @@ a.mj-btn {
       display: block;
       z-index: 3;
       margin-bottom: -50px;
-      margin-top: 50px; }
+      margin-top: 50px;
+      max-width: 100%; }
     .section.section_1 .secton_bg_image.not_found img {
       top: -20px;
       left: auto;
@@ -2360,7 +2666,7 @@ a.mj-btn {
   .section.section_1:after {
     display: none; }
   .mj-register_form {
-    margin-left: 90px; }
+    margin-left: 190px; }
   .quote:nth-child(3) {
     margin-right: 56px; }
   .mj-footer .social__links .social__link {
@@ -2374,6 +2680,106 @@ a.mj-btn {
 @media only screen and (max-width: 720px) {
   html {
     font-size: 55.5%; }
+  .mj-container p.about_us_text--blue {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    padding: 24px; }
+  .team_glossary .team_glossary__header:before {
+    top: 240px;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    left: 0; }
+  .about-us_boxes {
+    border: none; }
+  .about-us_boxes .about-us_box {
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: -24px; }
+    .about-us_boxes .about-us_box p {
+      padding-left: 24px;
+      order: 2;
+      margin-left: 0px; }
+    .about-us_boxes .about-us_box img {
+      order: 1;
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 56px; }
+  .about-us_boxes .about-us_box.about-us_box--last p {
+    margin-top: 0px; }
+  .mj-feeds {
+    flex-direction: column; }
+  .mj-feeds .mj-feed {
+    margin-top: 40px; }
+  .about-us_boxes .about-us_box.about-us_box--left {
+    flex-direction: column; }
+  .about-us_boxes .about-us_box.about-us_box--left p {
+    padding-right: 24px;
+    padding-left: 24px;
+    order: 2; }
+  .about-us_boxes .about-us_box.about-us_box--left img {
+    order: 1;
+    width: 100%;
+    margin-left: 0px; }
+  .team_glossary .team_glossary__footer h3 {
+    padding-left: 70px;
+    text-align: left; }
+  .mj-jobs .mj-jobs__item {
+    flex-direction: column; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-position {
+      order: 1; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-department {
+      order: 2; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-location {
+      order: 3; }
+    .mj-jobs .mj-jobs__item .mj-jobs__item-type {
+      order: 4; }
+  .team_glossary .team_glossary__person {
+    flex: 1 0 46%; }
+  .team_glossary .team_glossary__person .team_glossary__person-image {
+    height: 160px; }
+    .team_glossary .team_glossary__person .team_glossary__person-image img {
+      width: 100%; }
+  .team_glossary .team_glossary__header {
+    flex-direction: column; }
+    .team_glossary .team_glossary__header h2 {
+      order: 1;
+      font-size: 30px;
+      width: 100%;
+      max-width: 100%;
+      text-transform: uppercase; }
+      .team_glossary .team_glossary__header h2 br {
+        display: none; }
+    .team_glossary .team_glossary__header .team_glossary__person {
+      order: 2; }
+  .about_us_map {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 30px; }
+    .about_us_map .about_us_map__label {
+      order: 1; }
+    .about_us_map .about_us_map__adress {
+      order: 3;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: calc(100% + 48px);
+      margin-left: -24px; }
+      .about_us_map .about_us_map__adress .about_us_map_adress-field {
+        padding: 21px;
+        padding-bottom: 5px; }
+    .about_us_map .about_us_map__google_map {
+      position: relative;
+      top: 0px;
+      order: 2;
+      width: calc(100% + 48px);
+      margin-left: -24px; }
+  .about_us_image {
+    margin-top: 40px;
+    width: calc(100% + 48px);
+    margin-left: -24px; }
+  .reverse_order {
+    display: flex !important;
+    flex-direction: column-reverse; }
   #open-form {
     position: fixed;
     line-height: 26px;
@@ -2384,6 +2790,11 @@ a.mj-btn {
   .section.section_1.section_1--blog-article .article_metas {
     margin-top: 10px;
     margin-bottom: 10px; }
+  .section.section_1 .secton_bg_image.about_us img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 100vw;
+    margin-left: -24px; }
   .section.section_1.section_1--blog-article .article_metas .article_date {
     padding-left: 0px;
     padding-top: 55px; }
@@ -2673,7 +3084,8 @@ a.mj-btn {
     line-height: 24px; }
   .section.section_1 {
     background-image: none;
-    margin-top: 0px; }
+    margin-top: 0px;
+    padding-bottom: 20px; }
     .section.section_1.section_1--blog-article {
       height: auto; }
     .section.section_1 .article_image img {
@@ -2684,7 +3096,7 @@ a.mj-btn {
       display: none; }
     .section.section_1 .sub_section {
       font-size: 14px;
-      line-height: 14px;
+      line-height: 25px;
       color: #002025;
       letter-spacing: 0;
       opacity: 1;
@@ -3040,6 +3452,8 @@ a.mj-btn {
     .mj-grid .width-18\/24 {
       grid-column: span 24; }
     .mj-grid .width-19\/24 {
+      grid-column: span 24; }
+    .mj-grid .width-20\/24 {
       grid-column: span 24; }
     .mj-grid .width-22\/24 {
       grid-column: span 24; }

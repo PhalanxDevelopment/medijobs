@@ -74,5 +74,41 @@ document.getElementById('next_step').onclick = function() {
     } else {
         var article_quiz =  document.getElementById("article_quiz");
         article_quiz.className = 'article_quiz dismissed';
+
+        var cariera = document.querySelector('[name="step-1"]').value;
+        var oras = document.querySelector('[name="oras"]').value;
+        var aniExperienta = document.querySelector('[name="ani"]').value;
+        var profesia = document.querySelector('[name="profesia"]').value;
+        var checkboxes = document.getElementsByName('step-4[]');
+        var aspecte = "";
+        for (var i=0, n=checkboxes.length;i<n;i++) 
+        {
+            if (checkboxes[i].checked) 
+            {
+                aspecte += ","+checkboxes[i].value;
+            }
+        }
+        if (aspecte) aspecte = aspecte.substring(1);
+        var email =  document.querySelector('[name="email"]').value;
+
+        var payload = {
+            cariera: cariera,
+            oras: oras,
+            ani_experienta: aniExperienta,
+            profesia: profesia,
+            aspecte: aspecte,
+            email:email
+        }
+        console.log(payload);
+
     }
+}
+
+var queue = [];
+function checking(id){
+   queue.push(id)
+   if (queue.length === 4){
+    queue[0].checked = false
+    queue.shift()
+   }
 }

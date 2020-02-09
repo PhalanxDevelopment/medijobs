@@ -35,35 +35,38 @@
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-23/24 mj-form">
-                <h2>Articole Recente</h2>
+                <h2>Articole Recente </h2>
                     <div class="mj-articles">
-                    <?php 
-                        global $query_string;
-                        query_posts ('posts_per_page=20');
-                        while (have_posts()) : the_post();
-                        ?>
+                    <?php
+                    $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+                    $recent_posts = wp_get_recent_posts(array(
+                        'numberposts' => 100, // Number of recent posts thumbnails to display
+                        'post_status' => 'publish', // Show only the published posts
+                        'author' => $author->ID,
+                    ));
+                    foreach($recent_posts as $post) : ?>
                         <div class="mj-article">
                             <div class="mj-article__image">
-                                <a href="<?php echo get_permalink(get_the_id()); ?>">
-                                    <?php echo get_the_post_thumbnail(get_the_id(), 'full'); ?>
+                                <a href="<?php echo get_permalink($post['ID']); ?>">
+                                    <?php echo get_the_post_thumbnail($post['ID'], 'full'); ?>
                                 </a>
                             </div>
                             <div class="mj-article__category">
-                                <?php  $categories = get_the_category(get_the_id());
+                                <?php  $categories = get_the_category($post['ID']);
                                     echo $categories[0]->cat_name;
                                 ?>
                             </div>
-                            <h3 class="mj-article__title"><a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title(); ?></a></h3>
-                            <a href="<?php echo get_permalink(get_the_id()); ?>" class="mj-article__link">Citeste Articolul</a>
+                            <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
+                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
                             <div class="mj-article__author">
-                                <?php $author_id= get_post_field( 'post_author', get_the_id() ); ?>
+                                <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
                                 <span>SCRIS DE </span>
                                 <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
                                 <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
                             </div>
                         </div>
                         
-                        <?php endwhile; ?>
+                    <?php endforeach; wp_reset_query(); ?>
                     </div>
                 </div>
             </div>
