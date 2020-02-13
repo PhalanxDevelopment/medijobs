@@ -6,17 +6,18 @@
 			<div class="grid__item width-1/24 hide-on-mobile"></div>
 			<div class="grid__item width-9/24">
 			    <div class="above_headline"> OOOPS!</div>
-			    <h1 class="headline uppercase">WRONG <br> DIAGNOSIS. </h1>
+			    <h1 class="headline uppercase">Diagnostic <br> greșit. </h1>
 			    <p>
-			    	Something went kinda wrong and we couldn’t find the page that were looking for.
+					Ceva nu a funcționat corect și nu am putut găsi pagina pe care o căutați.
+
 			    	<br><br>
-					There are two options here:
+					Aveti doua optiuni:
 			    </p>
 			    <div class="links-inline">
-			    	<a href="/" class="mj-btn mj-btn--secondary">Inapoi</a>
-			    	<a href="/site-map" class="mj-btn mj-btn--secondary mj-btn--alt--2">CHECKOUT OUR SITEMAP</a>
+			    	<a href="/" class="mj-btn mj-btn--secondary">Înapoi</a>
+			    	<a href="/site-map" class="mj-btn mj-btn--secondary mj-btn--alt--2">Vezi sitemap-ul nostru</a>
 			    </div>
-			    <p class="section_footer">Medijobs Team thanks you for understanding.</p>
+			    <p class="section_footer">Echipa MEDIjobs vă mulțumește pentru înțelegere</p>
 			</div>
 			<div class="grid__item width-6/24 hide-on-mobile">
 			    <div class="secton_bg_image not_found">

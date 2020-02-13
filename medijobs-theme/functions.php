@@ -12,7 +12,7 @@ function blankslate_setup() {
 }
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 function blankslate_load_scripts() {
-    wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'blankslate-style', get_stylesheet_uri(), array(), '6.9.9', 'all' );
     wp_enqueue_script( 'jquery' );
 }
 add_filter( 'document_title_separator', 'blankslate_document_title_separator' );

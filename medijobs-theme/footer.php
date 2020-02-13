@@ -150,7 +150,7 @@
         ?>
         <script src="<?php echo get_template_directory_uri(); ?>/js/main.js?ver=1"></script>
         <?php } else { ?>
-            <script src="<?php echo get_template_directory_uri(); ?>/js/main-blog.js"></script>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/main-blog.js?ver=2"></script>
         <?php }
         wp_footer();
     ?>
