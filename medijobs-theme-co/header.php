@@ -81,9 +81,9 @@
             </div>
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-3/24 hide-on-mobile">
-                <a href="tel:+6468468332" class="mj-call_to_action">
+                <a href="tel:+9177174356" class="mj-call_to_action">
                     <p class="call_to_action__text">Get in touch with us</p>
-                    <p class="call_to_action__link">+646-846-8332</p>
+                    <p class="call_to_action__link">+917-717-4356</p>
                 </a>
             </div>
             <div class="grid__item width-4/24 hide-on-mobile">

@@ -83,12 +83,12 @@ document.getElementById('dismiss').onclick = function() {
     el.className = 'cookie_notifier dismissed';
     localStorage.setItem('cookie_notifier','dismissed');
 }
-document.getElementById('body').onclick = function() {
-    var el = document.getElementById('langSwitcher');
-    if (el.className.indexOf(' open ')) {
-        el.className = 'mj-lang-switcher btn-group';
-    }
-}
+// document.getElementById('body').onclick = function() {
+//     var el = document.getElementById('langSwitcher');
+//     if (el.className.indexOf(' open ')) {
+//         el.className = 'mj-lang-switcher btn-group';
+//     }
+// }
 if (document.getElementById('close-form')) {
     document.getElementById('close-form').onclick = function() {
         var el = document.getElementById('form');

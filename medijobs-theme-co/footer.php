@@ -13,13 +13,12 @@
                 <div class="grid__item width-2/24"> </div>
                 <div class="grid__item width-4/24">
                     <p class="no_links">
-                        At MEDIjobs we believe that few things are more interesting than building your own career.
                     </p>
                 </div>
                 <div class="grid__item width-2/24"> </div>
                 <div class="grid__item width-4/24">
                     <p class="no_links">
-                        It's not about applying for a job, but about the people you meet and the new things you learn.
+                        A premiere platform enabling highly skilled healthcare professionals to connect with an exclusive network of top-tier practices hiring in their area.
                     </p>
                 </div>
                 <div class="grid__item width-2/24"> </div>
@@ -30,7 +29,7 @@
                         <a href="http://www.linkedin.com/company/medijobs-us" target="_blank" class="social__link linkedin__link"></a>
                     </div>
                     <div class="footer__call-to-action no_footer_links">
-                        <a href="mailto:office@medijobs.co">Get in touch with us</a>
+                        <a href="mailto:office@medijobs.co"> Get In Touch</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +54,6 @@
                 </div>
                 <div class="grid__item width-2/24"></div>
                 <div class="grid__item width-4/24">
-                   
                 </div>
             </div>
         </div>

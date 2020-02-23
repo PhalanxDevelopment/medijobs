@@ -207,6 +207,33 @@ function filter_the_content_in_the_main_loop( $content ) {
         return $content;
     }
 }
+// ADD CUSTOM POST TYPE
+add_action( 'init', 'create_faq' );
+function create_faq() {
+ register_post_type( 'faq',
+ array(
+ 'labels' => array(
+ 'name' => __( 'FAQ' ),
+ 'singular_name' => __( 'FAQ' )
+ ),
+ 'public' => true
+ )
+ );
+}
+
+add_action( 'init', 'create_jobs' );
+function create_jobs() {
+ register_post_type( 'jobs',
+ array(
+ 'labels' => array(
+ 'name' => __( 'Jobs' ),
+ 'singular_name' => __( 'Jobs' )
+ ),
+ 'public' => true
+ )
+ );
+}
+
 
 function the_latest_author_posts($post) {
 
