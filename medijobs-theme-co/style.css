@@ -2983,7 +2983,7 @@ a.mj-btn {
     width: calc(100% + 48px);
     margin-left: -24px; }
   .section {
-    z-index: -1; }
+    z-index: 0; }
     .section.section_1 {
       z-index: 2; }
   .mj-group .mj-group__logos .mj-group-logo {
