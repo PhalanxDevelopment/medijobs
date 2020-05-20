@@ -40,43 +40,53 @@ get_header();
         </ul>
     </div>
     <div class="mj-container">
-        <form id="form" action="https://app.medijobs.ro/register/candidate" method="post" class="mj-register_form mj-form">
+    <?php 
+    $form = get_field('form'); 
+    if($form) { ?>
+        <form id="form" action="<?php echo $form['form_link']?>" method="post" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
-            <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
-            <h3>Noi îți aducem ofertele de angajare</h3>
-            <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs.</p>
+            <a href="<?php echo $form['top_link']?>" class="login"><?php echo $form['top_link_text']?></a>
+            <h3><?php echo $form['title']?></h3>
+            <p><?php echo $form['text']?></p>
             <input class="mj-input" name="name" type="text" placeholder="Nume Prenume" >
             <input class="mj-input" name="email" type="email" placeholder="Email" >
             <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                Creează un cont
+                <?php echo $form['button_text'];?>
             </button>
-            <p class="mj-align--center mj-font--small"> Ești companie? <a href="https://app.medijobs.ro/register/company">Creează-ți profilul aici </a></p>
+            <p class="mj-align--center mj-font--small"><?php echo $form['bottom_text']?> <a href="<?php echo $form['bottom_link']?>"><?php echo $form['bottom_link_text']?>  </a></p>
         </form>
     </div>
+    <?php } ?>
+    <?php 
+    $heroSection = get_field('hero_section'); 
+    if($heroSection) { ?>
     <div id="section_1" class="section section_1">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-9/24">
-                    <div class="above_headline">BINE AI VENIT PE MEDIJOBS!</div>
-                    <h1 class="headline uppercase">Noi îți aducem <span>ofertele de muncă</span></h1>
+                    <div class="above_headline"><?php echo $heroSection['above_heading']?></div>
+                    <h1 class="headline uppercase"><?php echo $heroSection['title']?></h1>
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
                     <div class="secton_bg_image">
-                        <?php $randomNumber = rand(1,6);  ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/subject_image_<?php echo $randomNumber; ?>.png" alt="">
+                        <?php $randomNumber = rand(1,6);
+                            $imageNr = 'image_'.$randomNumber; 
+                            $image = get_field($imageNr);
+                        ?>
+                        <img src="<?php echo $image ;?>" alt="">
                     </div>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-7/24">
-                    <p>Alătură-te miilor de oameni care și-au găsit un loc de muncă prin MEDIjobs</p>
+                    <p><?php echo $heroSection['text']?></p>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
-                    <div class="sub_section">DE CE SA TE ALATURI CELOR <span id="candidati">26448+</span> CANDIDATI</div>
+                    <div class="sub_section"><?php echo $heroSection['sub_section_text']?></div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
                         creeaza cont
                     </button>
@@ -88,9 +98,12 @@ get_header();
                 <div class="grid__item width-10/24">
                     <div class="hide-on-mobile">
                         <div class="mj-images">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
-                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
+                            <img class="greyscale"  src="<?php echo $heroSection['logos']['logo_1']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_2']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_3']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_4']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_5']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_6']; ?>" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -98,67 +111,59 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_2" class="section section_2">
+    <?php } ?>
+    <?php $benefitsSection = get_field('benefits_section'); 
+    if($benefitsSection) { ?>
+    <div id="section_2" class="section section_2" style="background-image: url(<?php echo $benefitsSection['image']; ?>)">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
-                    <div class="above_headline">Beneficii</div>
-                    <h1 class="headline light">3 motive pentru care o să iubești MEDIjobs </h1>
+                    <div class="above_headline"><?php echo $benefitsSection['above_heading']?></div>
+                    <h1 class="headline light"><?php echo $benefitsSection['title']?> </h1>
+                    <p><?php echo $benefitsSection['text']?> </p>
                 </div>
                 <div class="grid__item width-7/24">
+                <?php if ($benefitsSection['benefit_1']) { ?>
                     <ul class="mj-list">
-                        <li class="mj-list__item">
-                            Companiile aplică pentru tine, nu invers 
-                        </li>
-                        <li class="mj-list__item">
-                            Contul este gratuit, iar informațiile tale sunt confidențiale
-                        </li>
-                        <li class="mj-list__item">
-                            Primești oferte personalizate în funcție de nevoile tale 
-                        </li>
+                        <?php if ($benefitsSection['benefit_1']) { ?>
+                            <li class="mj-list__item">
+                                <?php echo $benefitsSection['benefit_1']?>
+                            </li>
+                        <?php } ?>
+                        <?php if ($benefitsSection['benefit_2']) { ?>
+                            <li class="mj-list__item">
+                                <?php echo $benefitsSection['benefit_2']?>
+                            </li>
+                        <?php } ?>
+                        <?php if ($benefitsSection['benefit_3']) { ?>
+                            <li class="mj-list__item">
+                                <?php echo $benefitsSection['benefit_3']?>
+                            </li>
+                        <?php } ?>
                     </ul>
-                    <p><a class="mj-icon-link" href="https://app.medijobs.ro/register/candidate">
-                        Creează-ți contul</a> pe MEDIjobs și fii pregătit să <br> primești oferte de muncă!</p>
+                    <?php } ?>
+                    <p><a class="mj-icon-link" href="<?php echo $benefitsSection['link']?>">
+                    <?php echo $benefitsSection['link_actual']?></a>  <?php echo $benefitsSection['link_text']?></p>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $keyPositions = get_field('key_positions_section'); 
+    if($keyPositions) { ?>
     <div id="section_3" class="section section_3">
         <div class="mj-container">
             <div class="background_title hide-on-mobile">
-                poziții cheie
+                <?php echo $keyPositions['background_text']?>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
-                    <div class="above_headline">VEDETI</div>
-                    <h1 class="headline light">Cele mai populare oferte de muncă pentru:</h1>
+                    <div class="above_headline"><?php echo $keyPositions['above_header_text']?></div>
+                    <h1 class="headline light"><?php echo $keyPositions['title']?></h1>
                     <ul class="mj-simple-list">
-                        <li class="mj-simple-list">
-                            Medici
-                        </li>
-                        <li class="mj-simple-list">
-                            Asistenți dentari
-                        </li>
-                        <li class="mj-simple-list">
-                            Asistenți medicali generaliști
-                        </li>
-                        <li class="mj-simple-list">
-                            Farmaciști
-                        </li>
-                        <li class="mj-simple-list">
-                            Asistenți de farmacie
-                        </li>
-                        <li class="mj-simple-list">
-                            Front Desk Officer
-                        </li>
-                        <li class="mj-simple-list">
-                            Reprezentanți medicali
-                        </li>
-                        <li class="mj-simple-list">
-                            Infirmieri
-                        </li>
+                        <?php echo $keyPositions['list_of_positions']?>
                     <!--  <a class="mj-icon-link" href="#">
                             SEE MORE ACTIVE JOBS <br> THAT WE ARE LOOKING FOR.
                         </a>
@@ -167,13 +172,16 @@ get_header();
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $mapSection = get_field('map_section'); 
+    if($mapSection) { ?>
     <div id="section_4" class="section section_4">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-10/24">
-                    <div class="above_headline">UNDE SUNTEM ACTIVI</div>
-                    <h1 class="headline light">Angajăm specialiști medicali în 10 orașe din România.</h1>
+                    <div class="above_headline"><?php echo $mapSection['above_heading']?></div>
+                    <h1 class="headline light"><?php echo $mapSection['title']?></h1>
                     <div class="mj-cols hide-on-desktop">
                         <div class="mj-col">
                             <p>București</p>
@@ -456,43 +464,52 @@ get_header();
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $companiesSection = get_field('companies_section'); 
+    if($companiesSection) { ?>
     <div id="section_5" class="section section_5">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
-                    <div class="above_headline">Peste</div>
-                    <h1 class="headline biggest uppercase"><span><span id="companii">1200</span> de companii</span></h1>
-                    <h1 class="headline light">Au apelat la MEDIjobs pentru a angaja cu succes specialiști medicali.</h1>
+                    <div class="above_headline"><?php echo $companiesSection['above_headline']?></div>
+                    <h1 class="headline biggest uppercase"><?php echo $companiesSection['title']?></h1>
+                    <h1 class="headline light"><?php echo $companiesSection['text']?></h1>
                     <div class="mj-image">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/gral-logo.png" alt="">
-                        <img style="margin-top: -35px; height: 100px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/leventer logo.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/logo_sanamed_300_162_r@2x.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/YTS-Detnal View.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/catena.gif" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/NephroCare_Logo_CMYK.jpg" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_1']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_2']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_3']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_4']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_5']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_6']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_7']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_8']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_9']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_10']?>" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $employeeBox = get_field('for_employers_box'); 
+    if($employeeBox) { ?>
     <div id="section_6" class="section section_6">
         <div class="mj-container">
             <div class="mj-box">
                 <div class="mj-grid">
                     <div class="grid__item width-2/24"></div>
                     <div class="grid__item width-22/24">
-                        <div class="above_headline">Pentru angajatori</div>
-                        <h1 class="headline light uppercase">Conecteaza-te cu specialisti medicali mai buni, mai repede.</h1>
-                        <a href="https://app.medijobs.ro/register/company">Inregistreaza-te Gratuit si convinge-te!</a>
+                        <div class="above_headline"><?php echo $employeeBox['above_heading']?></div>
+                        <h1 class="headline light uppercase"><?php echo $employeeBox['title']?></h1>
+                        <a href=" <?php echo $employeeBox['button_text']?>"><?php echo $employeeBox['text']?></a>
                     </div>
                 </div>
                 <div class="mj-grid">
                     <div class="grid__item width-2/24"></div>
                     <div class="grid__item width-10/24">
-                        <a href="https://app.medijobs.ro/register/company" class="mj-btn mj-btn--primary mj-btn--alt">
-                            Creeaza cont 
+                        <a href=" <?php echo $employeeBox['link']?>" class="mj-btn mj-btn--primary mj-btn--alt">
+                            <?php echo $employeeBox['button_text']?>
                         </a>
                     </div>
                     <div class="grid__item width-2/24"></div>
@@ -503,201 +520,306 @@ get_header();
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $ourProcess = get_field('our_process_section'); 
+    if($ourProcess) { ?>
     <div id="section_7" class="section section_7">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
-                    <div class="above_headline">PROCESUL NOSTRU &</div>
-                    <h1 class="headline light">Cum functioneaza platforma</h1>
-                    <div id="section_icon" class="section_icon step_1 hide-on-mobile"></div>
+                    <div class="above_headline"><?php echo $ourProcess['above_headline']?></div>
+                    <h1 class="headline light"><?php echo $ourProcess['title']?></h1>
+                    <div id="section_icon" style="background-image: url(<?php echo $ourProcess['icon']?>)" class="section_icon step_1 hide-on-mobile"></div>
                 </div>
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
                     <ul class="mj-steps">
+                    <?php if($ourProcess['step_1']) {  ?>
                         <li id="step_1" class="mj-step active">
                             <div class="step_nr">.01</div>
-                            <div class="step_title">Creează un cont gratuit:</div>
-                            <div class="step_content">Este șansa ta sa ne spui ce îți dorești în continuare. Creează-ți un cont în mai puțin de 2 minute!</div>
+                            <div class="step_title"><?php echo $ourProcess['step_1']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_1_text']?></div>
                         </li>
+                    <?php } ?>
+                    <?php if($ourProcess['step_2']) {  ?>
                         <li id="step_2" class="mj-step active">
                             <div class="step_nr">.02</div>
-                            <div class="step_title">Primește oferte de muncă</div>
-                            <div class="step_content">Îți conectăm profilul cu oferte bazate pe experiența ta de muncă, salariul dorit și locația de interes.</div>
+                            <div class="step_title"><?php echo $ourProcess['step_2']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_2_text']?></div>
                         </li>
+                    <?php } ?>
+                    <?php if($ourProcess['step_3']) {  ?>
                         <li id="step_3" class="mj-step active">
                             <div class="step_nr">.03</div>
-                            <div class="step_title">Alege oferta care ți se potrivește</div>
-                            <div class="step_content">Și programează interviuri cu angajatorii preferați.</div>
+                            <div class="step_title"><?php echo $ourProcess['step_3']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_3_text']?></div>
                         </li>
+                    <?php } ?>
+                    <?php if($ourProcess['step_4']) {  ?>
                         <li id="step_4" class="mj-step active">
                             <div class="step_nr">.04</div>
-                            <div class="step_title">Angajează-te!</div>
-                            <div class="step_content">Bucură-te de un nou loc de muncă, recomandă colegilor MEDIjobs și primește un bonus!</div>
+                            <div class="step_title"><?php echo $ourProcess['step_4']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_4_text']?></div>
                         </li>
+                    <?php } ?>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $testimonials = get_field('testimonials_section'); 
+    if($testimonials['title']) { ?>
     <div id="section_8" class="section section_8">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
-                    <div class="above_headline">TESTIMONIALE</div>
-                    <h1 class="headline light">Ce spun candidatii despre noi.</h1>
+                    <div class="above_headline"><?php echo $testimonials['above_headline']?></div>
+                    <h1 class="headline light"><?php echo $testimonials['title']?></h1>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
                     <div class="mj-testimonials">
-                        <div class="mj-testimonial">
+                        <?php if($testimonials['testimonial_1']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_1']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_1']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_1']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_1']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_2']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_2']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_2']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_2']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_2']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_4']['text']) { ?>
+                            <div class="mj-testimonial">
                             <div class="mj-testimonial__rating">
                                 <span></span><span></span><span></span><span></span><span></span>
                             </div>
                             <div class="mj-testimonial__content">
                                 <p>
-                                Bună, sunt Laura, și m-am angajat prin intermediul MediJobs la o clinică de cardiologie în cadrul căreia mă simt foarte bine! Medijobs și-a făcut datoria într-un mod foarte frumos, ba chiar după angajare o consultantă m-a sunat să se intereseze cum mă simt la noul loc de muncă, dacă sunt mulțumită și dacă am semnat contractul. Într-adevăr sunt mulțumită și de locul de muncă și de Medijobs.
+                                    <?php echo $testimonials['testimonial_4']['text'];?>
                                 </p>
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/laura.jpg" alt="">
+                                    <img src="<?php echo $testimonials['testimonial_4']['image'];?>" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
-                                    Laura Kovacs
+                                    <?php echo $testimonials['testimonial_4']['name'];?>
                                 </div>
                                 <div class="mj-testimonial__author__position">
-                                    Asistent medical generalist
+                                    <?php echo $testimonials['testimonial_4']['position'];?>
                                 </div>
                             </div>
                         </div>
-                        <div class="mj-testimonial">
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_5']['text']) { ?>
+                            <div class="mj-testimonial">
                             <div class="mj-testimonial__rating">
                                 <span></span><span></span><span></span><span></span><span></span>
                             </div>
                             <div class="mj-testimonial__content">
                                 <p>
-                                    Mulțumesc echipei Medijobs pentru promptitudine :)
-                                </p>
-                                <p> 
-                                    Cu ajutorul lor am găsit foarte repede un job part time ce mă avantajează la momentul de față și pe această cale vreau să le mulțumesc încă o dată pentru profesionalismul de care au dat dovadă! Mult succes în continuare și cu siguranță ținem legătura.
+                                    <?php echo $testimonials['testimonial_5']['text'];?>
                                 </p>
                             </div>
                             <div class="mj-testimonial__author">
                                 <div class="mj-testimonial__author__image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/alina.jpg" alt="">
+                                    <img src="<?php echo $testimonials['testimonial_5']['image'];?>" alt="">
                                 </div>
                                 <div class="mj-testimonial__author__name">
-                                    Alina
+                                    <?php echo $testimonials['testimonial_5']['name'];?>
                                 </div>
                                 <div class="mj-testimonial__author__position">
-                                    ASISTENT MEDICAL GENERALIST
+                                    <?php echo $testimonials['testimonial_5']['position'];?>
                                 </div>
                             </div>
                         </div>
-                        
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
                     <div class="mj-testimonials">
-                        <div class="mj-testimonial">
-                            <div class="mj-testimonial__rating">
-                                <span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                            <div class="mj-testimonial__content">
-                                <p>
-                                Cu ajutorul site-ului Medijobs m-am angajat la actualul loc de muncă. Nu mă așteptam să se întâmple așa repede, dar a ajutat foarte mult că m-am înscris pe acest site, nu cred că aș fi găsit de muncă așa repede dacă nu foloseam Medijobs.
-                                </p>
-                                <p> 
-                                Sunt foarte mulțumită de acest site și aș vrea să le mulțumesc pentru ajutorul depus. Ceea ce mă încântă la acest site este faptul că, așa cum probabil s-a mai spus, față de alte site-uri persoanele din spatele Medijobs chiar se implică în a te ajuta să-ți găsești un loc de muncă sau cu orice alte probleme sau nelămuriri ai avea. Aș recomanda acest site oricui își caută de muncă în sistemul de sănătate.
-                                </p>
-                            </div>
-                            <div class="mj-testimonial__author">
-                                <div class="mj-testimonial__author__image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/testimoniale/gabriela.jpg" alt="">
+                        <?php if($testimonials['testimonial_3']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
                                 </div>
-                                <div class="mj-testimonial__author__name">
-                                    Gabriela Podolan
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_3']['text'];?>
+                                    </p>
                                 </div>
-                                <div class="mj-testimonial__author__position">
-                                    ASISTENT MEDICAL GENERALIST
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_3']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_3']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_3']['position'];?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_6']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_6']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_6']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_6']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_6']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_9" class="section section_9">
+    <?php } ?>
+    <?php $moreBenefits = get_field('more_benefits_section'); 
+    if($moreBenefits) { ?>
+    <div id="section_9" class="section section_9" style="background-image: <?php echo  $moreBenefits['image'];?>">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
                     <ul class="mj-list">
                         <li class="mj-list__item">
-                            Alegerea unei cariere in domeniul medical tocmai a devenit mai usoara.
+                            <?php echo $moreBenefits['benefit_1'];?>
                         </li>
                         <li class="mj-list__item">
-                            Descopera noi oportunitati chiar langa tine.
+                            <?php echo $moreBenefits['benefit_2'];?>
                         </li>
                         <li class="mj-list__item">
-                            Decizia este a ta!
+                            <?php echo $moreBenefits['benefit_3'];?>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $pressSection = get_field('press_section'); 
+    if($pressSection) { ?>
     <div id="section_10" class="section section_10">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
-                    <div class="above_headline"> În presă</div>
-                    <h1 class="headline light">Ce spune presa despre noi.</h1>
+                    <div class="above_headline"> <?php echo $pressSection['above_title'];?></div>
+                    <h1 class="headline light"><?php echo $pressSection['title'];?></h1>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
+                    <?php if($pressSection['press_item_1']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
+                        <img src="<?php echo $pressSection['press_item_1']['logo'] ?>" alt="">
                         <p>
-                            Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
+                            <?php echo $pressSection['press_item_1']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_2']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
+                        <img src="<?php echo $pressSection['press_item_2']['logo'] ?>" alt="">
                         <p>
-                            Companiile reușesc să ocupe posturile vacante de cinci ori mai rapid decât dacă ar utiliza alte platforme de recrutare”, a declarat George Hagivreta, co-fondator si COO al MEDIjobs.
+                            <?php echo $pressSection['press_item_2']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_3']) { ?>
                     <div class="quote">
-                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
+                        <img src="<?php echo $pressSection['press_item_3']['logo'] ?>" alt="">
                         <p>
-                            MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
+                            <?php echo $pressSection['press_item_3']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_4']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Start-up.ro logo.png" style="height:50px;" alt="">
+                        <img src="<?php echo $pressSection['press_item_4']['logo'] ?>" alt="">
                         <p>
-                            Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
+                            <?php echo $pressSection['press_item_4']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_5']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/AngajatorulMeu.logo-1-logo.png" style="height:50px;" alt="">
+                        <img src="<?php echo $pressSection['press_item_5']['logo'] ?>" alt="">
                         <p>
-                            Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
+                            <?php echo $pressSection['press_item_5']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_6']) { ?>
+                    <div class="quote">
+                        <img src="<?php echo $pressSection['press_item_6']['logo'] ?>" alt="">
+                        <p>
+                            <?php echo $pressSection['press_item_6']['text'] ?>
+                        </p>
+                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
-
+    <?php } ?>
 <?php get_footer(); ?>

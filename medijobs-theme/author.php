@@ -52,8 +52,8 @@
                                 </a>
                             </div>
                             <div class="mj-article__category">
-                                <?php  $categories = get_the_category($post['ID']);
-                                    echo $categories[0]->cat_name;
+                                <?php $post_categories = get_post_primary_category($post['ID'], 'category'); 
+                                        echo $post_categories['primary_category']->name;
                                 ?>
                             </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>

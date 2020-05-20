@@ -177,9 +177,9 @@ if(getWidth() > 1400) {
         } else {
             header.className = headerClass;
         }
-        if( window.scrollY > (limit - 401)) {
+        if( window.scrollY > (limit - 650)) {
             form.className = 'mj-register_form mj-form absolute';
-            form.style = 'top: ' + (limit - 401) + 'px';
+            form.style = 'top: ' + (limit - 650) + 'px';
         } else {
             form.className = 'mj-register_form mj-form';
             form.style = '';

@@ -54,11 +54,11 @@
 </head>
 <body  id="body" <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
-<header id="header" class="mj-header <?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) echo 'blog'; ?>">
+<header id="header" class="mj-header <?php if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) echo 'blog'; ?> <?php if ( is_page( array( 'Conference') )) echo 'conference'; ?>">
     <div class="mj-container">
         <ul id="menu" class="mj-meniu blog_menu hide-on-mobile">
             <?php 
-                if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_single() ) {
+                if ( is_page( array( 'Blog', 'Recent', 'Trending', 'Popular' ) ) || is_category() || is_singular('post') ) {
                     wp_list_categories(array(
                         'hierarchical'        => true,
                         'title_li' => ''

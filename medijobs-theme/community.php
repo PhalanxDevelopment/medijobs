@@ -13,18 +13,19 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-8/24">
-                <div class="above_headline">Join Romania largest</div>
-                <h1 class="headline uppercase">Medical Community.</span></h1>
-                <div class="sub_section hide-on-mobile" style="margin-top:300px">COME JOIN US AT <br> MEDIJOBS</div>
+                <div class="above_headline"><?php the_field('hero_above_headline'); ?></div>
+                <h1 class="headline uppercase"><?php the_field('hero_title'); ?></span></h1>
+                <p><?php the_field('hero_text'); ?></p>
+                <div class="sub_section hide-on-mobile" style="margin-top:100px; margin-bottom:100px;"><?php the_field('hero_link_text'); ?></div>
             </div>
-            <div class="grid__item width-15/24 hide-on-mobile">
+            <div class="grid__item width-15/24">
                 <div class="secton_bg_image community">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/community/hero_image_desktop.png" alt="">
-                </div>
-            </div>
-            <div class="grid__item width-15/24 hide-on-desktop">
-                <div class="secton_bg_image community">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/community/hero_image_mobile.png" alt="">
+                    <?php $heroCollage = get_field('hero_collage');  ?>
+                    <div class="mj-collage mj-collage-three">
+                        <img class="mj-collage__img mj-collage__img--portrait" src="<?php echo $heroCollage['portrait_image']?>" alt="">
+                        <img class="mj-collage__img mj-collage__img--landscape-small" src="<?php echo $heroCollage['lanscape_image_small']?>" alt="">
+                        <img class="mj-collage__img mj-collage__img--lanscape-big" src="<?php echo $heroCollage['landscape_image_big']?>" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,37 +36,37 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24"></div>
             <div class="grid__item width-23/24">
-                <h1 class="headline light">When you join MEDIjobs, you also join:</h1>
+                <h1 class="headline light"><?php the_field('when_you_join_title'); ?></h1>
             </div>
         </div>
         <div class="mj-grid">
             <div class="grid__item width-24/24">
                 <div class="mj-group">
                     <div class="mj-group__box">
-                        <img class="mj-group-image" src="<?php echo get_template_directory_uri(); ?>/images/community/enayati_group.png" alt="">
+                        <img class="mj-group-image" src="<?php the_field('group_image'); ?>" alt="">
                         <div class="mj-group-title">
-                            <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/enviaty_group_header.png" alt="">
-                            <h3>Inovație în sănătate pentru o cauză înaltă.</h3>
+                            <img class="mj-group-logo" src="<?php the_field('group_logo'); ?>" alt="">
+                            <h3><?php the_field('group_title'); ?>.</h3>
                         </div>
                         <div class="mj-group-content">
                             <div class="mj-group-content__column mj-group-content__column--big">
-                                <p>The Enayati group was created by Dr. Wargha Enayati, the founder of the Regina Maria network in Romania. Its purpose is to innovate and improve the healthcare sector in Romania. </p>
+                                <p><?php the_field('when_you_join_text_left'); ?> </p>
                             </div>
                             <div class="mj-group-content__column">
-                                <p>When you join MEDIjobs, you also benefit from our relationship with our business partners.</p>
+                                <p><?php the_field('when_you_join_text_right'); ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="mj-group__logos">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/enviaty_logo.png" alt="">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/fundatia_rm_logo.png" alt="">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/intermedicas-logo-fb.png" alt="">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/ami_logo.png" alt="">
-
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/medihub_logo.png" alt="">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/docbook_logo.png" alt="">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/viata-medicala logo.png" alt="">
-                        <img class="mj-group-logo" src="<?php echo get_template_directory_uri(); ?>/images/community/mediamed_logo.png" alt="">
+                    <?php $logos = get_field('logos'); ?>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_1']?>"><img  src="<?php echo $logos['logo_1']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_2']?>"><img  src="<?php echo $logos['logo_2']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_3']?>"><img  src="<?php echo $logos['logo_3']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_4']?>"><img  src="<?php echo $logos['logo_4']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_5']?>"><img  src="<?php echo $logos['logo_5']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_6']?>"><img  src="<?php echo $logos['logo_6']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_7']?>"><img  src="<?php echo $logos['logo_7']?>" alt=""></a>
+                        <a  class="mj-group-logo" href="<?php echo $logos['logo_link_8']?>"><img  src="<?php echo $logos['logo_8']?>" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -77,38 +78,44 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-8/24">
-                <h1 class="headline light">Our Facebook <br/> Groups.</h1>
-                <p class="hide-on-mobile">Meet and greet fellow professionals in your field.</p>
-                <div class="sub_section hide-on-mobile" style="margin-top:300px">CHECKOUT OUR <br> CONFERENCE</div>
+                <h1 class="headline light"><?php the_field('facebook_groups_title'); ?></h1>
+                <p class="hide-on-mobile"><?php the_field('facebook_groups_text'); ?>.</p>
+                <div class="sub_section hide-on-mobile" style="margin-top:300px"><?php the_field('facebook_groups_link_text'); ?></div>
             </div>
             <div class="grid__item width-15/24">
                 <div class="facebook_groups">
+                    <?php $facebookBox1 = get_field('facebook_box_1'); 
+                    if($facebookBox1['text']) { ?>
                     <div class="facebook_groups__box">
                         <div class="facebook_groups__box-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/community/facebook_group_icon.png" alt="">
+                            <img src="<?php echo $facebookBox1['image']; ?>" alt="">
                         </div>
                         <div class="facebook_groups__box-text">
-                            <h3>Asistenti Medicali - MEDIjobs Romania</h3>
+                            <h3><?php echo $facebookBox1['text']; ?></h3>
                         </div>
                         <div class="facebook_groups__box-link">
-                            <a class="mj-btn mj-btn--secondary mj-btn--alt--2">
-                                JOIN THE GROUP
+                            <a href="<?php echo $facebookBox1['button_link'];?>" class="mj-btn mj-btn--secondary mj-btn--alt--2">
+                                <?php echo $facebookBox1['button_text']; ?>
                             </a>
                         </div>
                     </div>
+                    <?php } ?>
+                    <?php $facebookBox2 = get_field('facebook_box_2'); 
+                    if($facebookBox2['text']) { ?>
                     <div class="facebook_groups__box">
                         <div class="facebook_groups__box-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/community/facebook_group_icon.png" alt="">
+                            <img src="<?php echo $facebookBox2['image']; ?>" alt="">
                         </div>
                         <div class="facebook_groups__box-text">
-                            <h3>Asistenti Medicali - MEDIjobs Romania</h3>
+                            <h3><?php echo $facebookBox2['text']; ?></h3>
                         </div>
                         <div class="facebook_groups__box-link">
-                            <a class="mj-btn mj-btn--secondary mj-btn--alt--2">
-                                JOIN THE GROUP
+                            <a href="<?php echo $facebookBox2['button_link'];?>" class="mj-btn mj-btn--secondary mj-btn--alt--2">
+                                <?php echo $facebookBox2['button_text']; ?>
                             </a>
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -119,33 +126,77 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-4/24">
-                <img class="leaders_image" src="<?php echo get_template_directory_uri(); ?>/images/community/leaders_image.png" alt="">
-                <h1 class="headline light">Leaders in Healthcare Romania.</h1>
-                <p>A conference for medical professionals.</p>
+                <img class="leaders_image" src="<?php the_field('confrence_logo'); ?>" alt="">
+                <h1 class="headline light"><?php the_field('confrence_title'); ?></h1>
+                <p><?php the_field('confrence_text'); ?></p>
                 <div class="community_social_links">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/community/web.png" alt=""></a>
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/community/facebook.png" alt=""></a>
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/community/instagram.png" alt=""></a>
+                    <?php $social1 = get_field('social_link_1'); 
+                    if($social1['link']) { ?>
+                        <a href="<?php echo $social1['link']; ?>"><img src="<?php echo $social1['logo']; ?>" alt=""></a>
+                    <?php } ?>
+                    <?php $social2 = get_field('social_link_2'); 
+                    if($social2['link']) { ?>
+                        <a href="<?php echo $social2['link']; ?>"><img src="<?php echo $social2['logo']; ?>" alt=""></a>
+                    <?php } ?>
+                    <?php $social3 = get_field('social_link_3'); 
+                    if($social3['link']) { ?>
+                        <a href="<?php echo $social3['link']; ?>"><img src="<?php echo $social3['logo']; ?>" alt=""></a>
+                    <?php } ?>
                 </div>
             </div>
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-18/24">
-                <img class="hide-on-mobile" src="<?php echo get_template_directory_uri(); ?>/images/community/leaders_colaj_desktop.png" alt="">
-                <img class="hide-on-desktop leaders_image_2" src="<?php echo get_template_directory_uri(); ?>/images/community/leaders_colaj_mobile.png" alt="">
+                    <div class="mj-collage mj-collage-four">
+                        <img style="border-color:#950079" class="mj-collage__img mj-collage__img--portrait-big" src="<?php the_field('image_4'); ?>" alt="">
+                        <img style="border-color:#950079" class="mj-collage__img mj-collage__img--portrait-small" src="<?php the_field('image_3'); ?>" alt="">
+                        <img style="border-color:#950079" class="mj-collage__img mj-collage__img--landscape-small" src="<?php the_field('image_1'); ?>" alt="">
+                        <img style="border-color:#950079" class="mj-collage__img mj-collage__img--lanscape-big" src="<?php the_field('image_2'); ?>" alt="">
+                    </div>
             </div>
         </div>
     </div>
 </div>
-<div id="section_5" class="section  section_5--community">
+<?php $companies = get_field('companies'); ?> 
+<?php if($companies['title']) { ?>
+<div id="section_6" class="section section_blog_company section section_about-us_6">
+    <div class="mj-container">
+        <div class="mj-grid">
+            <div class="grid__item width-1/24"> </div>
+            <div class="grid__item width-23/24">
+                <div class="company_bg our_investors" style="height: auto;">
+                    <div class="company_box mj-form our_investors our_partners">
+                        <h3><?php echo $companies['title']; ?></h3>
+                        <img src="<?php echo $companies['company_logo_1']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_2']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_3']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_4']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_5']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_6']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_7']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_8']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_9']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_10']; ?>" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>
+<?php if(get_field('last_section_title')) { ?>
+<div id="section_5" class="section section_5--community" >
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-24/24">
-                <h1 class="headline biggest center">Meet your future <br> employers.</h1>
-                <p class="center">Discover what it’s like to work at your favorite <br> brands before you even start.</p>
+                <h1 class="headline biggest center"><?php the_field('last_section_title'); ?></h1>
+                <p class="center"><?php the_field('last_section_text'); ?>.</p>
+                <a style="max-width:200px; margin: 0 auto;" href="<?php the_field('last_section_link'); ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
+                    <?php the_field('last_section_button_text'); ?>
+                </a>
             </div>
         </div>  
     </div>  
-    <img class="hide-on-mobile" src="<?php echo get_template_directory_uri(); ?>/images/community/section_6_bg.png" alt="">
-    <img class="hide-on-desktop" src="<?php echo get_template_directory_uri(); ?>/images/community/section_5_mobile.png" alt="">
+    <img src="<?php the_field('last_section_image'); ?>" alt="">
 </div>
+<?php } ?>
 <?php get_footer(); ?>

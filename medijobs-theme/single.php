@@ -7,14 +7,6 @@
             <div class="grid__item width-16/24">
                 <div class="breadcrumb hide-on-mobile"><?php get_breadcrumb(); ?></div>
                 <h1 class="headline article "><?php the_title(); ?></h1>
-                <div class="article_metas">
-                    <div class="article_author">
-                        <span>SCRIS DE</span>
-                        <?php $author_id= get_post_field( 'post_author', get_the_id()); ?>
-                        <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
-                        <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
-                    </div>
-                </div>
                 <div class="article_image">
                     <?php
                         if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -67,6 +59,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php $author_id= get_post_field( 'post_author', get_the_id()); ?>
                     <div class="author_box">
                         <div class="author_image">
                             <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
@@ -254,7 +247,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-5/24 hide-on-mobile"></div>
                 <div class="grid__item width-14/24">
-                    <?php // echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?> 
+                    <?php  echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?> 
                 </div>
             </div>
         </div>

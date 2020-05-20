@@ -23,9 +23,13 @@ get_header();
                 <div class="grid__item width-8/24">
                     <div id="blog-form" class="mj-register_form mj-form blog-form">
                         <div id="close-form" class="close hide-on-desktop"></div>
-                        <h3>Newsletter săptămânal</h3>
-                        <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
-                        <?php echo do_shortcode('[hubspot type=form portal=5748888 id=f8052d4d-af90-45d5-bf00-c1f134635f57]'); ?>
+                        <h3><?php the_field('form_title'); ?></h3>
+                        <p><?php the_field('form_text'); ?></p>
+                        <?php
+                            $formId = get_field('hubspot_form_id');
+                            $portalId = get_field('hubspot_portal_id');
+                        ?>
+                        <?php echo do_shortcode('[hubspot type=form portal='.$portalId.' id='.$formId.']'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
                             </div>
@@ -53,7 +57,6 @@ get_header();
                                 'order_by'=> 'views',
                                 'limit' => 60,
                                 'stats_author' => 1,
-                                'post_type' => 'post',
                             );
                             wpp_get_mostpopular( $args );
                         

@@ -8,45 +8,42 @@
  */
 get_header();
 ?>
+
 <div id="section_1" class="section section_1 section_1--faq">
     <div class="mj-container">
-        <form id="form" method="post" class="mj-search-faq mj-form">
-            <p>Start finding your answers faster by using the SEARCH bar below to get to your answer.</p>
-            <input class="mj-input" name="name" type="text" placeholder="Search for your question" >
-        </form>
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-7/24">
-                <h1 class="headline light">FAQ</h1>
-                <p class="hide-on-mobile">If you’re new on MediJobs or looking for more answers, this guide will help you learn more about the platform and its features.</p>
-                <div class="sub_section hide-on-mobile" style="margin-top:300px">BROWSE ALL THE ANSWERS</div>
+                <h1 class="headline light"><?php the_field('hero_title'); ?></h1>
+                <?php the_field('normal_text'); ?>
+                <div class="sub_section hide-on-mobile" style="margin-top:300px; margin-bottom: 40px;"><?php the_field('bottom_link_text'); ?></div>
             </div>
             <div class="grid__item width-2/24 hide-on-mobile"></div>
             <div class="grid__item width-14/24">
                 <div class="facebook_groups">
                     <div class="facebook_groups__box">
                         <div class="facebook_groups__box-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/faq/candidate_icon.png" alt="">
+                            <img src="<?php the_field('candidate_icon'); ?>" alt="">
                         </div>
                         <div class="facebook_groups__box-text">
-                            <h3>Browse as a <br> CANDIDATE</h3>
+                            <h3><?php the_field('first_box_title'); ?></h3>
                         </div>
                         <div class="facebook_groups__box-link">
-                            <a href="<?php echo get_home_url(); ?>/faq/faq-candidate" class="mj-btn mj-btn--secondary mj-btn--alt--2">
-                                Browse
+                            <a href="<?php the_field('first_box_button_link'); ?>" class="mj-btn mj-btn--secondary mj-btn--alt--2">
+                            <?php the_field('first_box_button_text'); ?>
                             </a>
                         </div>
                     </div>
                     <div class="facebook_groups__box">
                         <div class="facebook_groups__box-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/faq/company_icon.png" alt="">
+                            <img src="<?php the_field('company_icon'); ?>" alt="">
                         </div>
                         <div class="facebook_groups__box-text">
-                            <h3>Browse as a <br> COMPANY</h3>
+                            <h3><?php the_field('second_box_title'); ?></h3>
                         </div>
                         <div class="facebook_groups__box-link">
-                            <a href="<?php echo get_home_url(); ?>/faq/faq-company" class="mj-btn mj-btn--secondary mj-btn--alt--2">
-                                Browse
+                            <a href="<?php the_field('second_box_button_link'); ?>" class="mj-btn mj-btn--secondary mj-btn--alt--2">
+                                <?php the_field('second_box_button_text'); ?>
                             </a>
                         </div>
                     </div>
@@ -55,171 +52,63 @@ get_header();
         </div>
     </div>
 </div>
+<form id="form" role="search" action="<?php echo site_url(''); ?>" method="get"  class="mj-search-faq mj-form">
+    <p><?php the_field('sticky_text'); ?></p>
+    <input class="mj-input" name="s" type="text" placeholder="Search for your question" >
+    <input type="hidden" name="post_type" value="faq" />
+    <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+        <?php the_field('search_box_button'); ?>
+    </button>
+</form>
 <div id="section_2" class="section section_2--faq">
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-10/24"></div>
             <div class="grid__item width-14/24">
+            <?php 
+                $tax_terms = get_terms('faq_type', array('hide_empty' => false));
+                $typeOfPage = get_field('type_of_faq_page'); 
+                // echo $typeOfPage . 'sss';
+                foreach($tax_terms as $term_single) {      
+                    $term_single->slug;  
+                    $term_single->name;        
+                    $args = array(
+                        'post_type' => 'faq',
+                        'numberposts' => -1,
+                        'tax_query' => array(
+                            'relation' => 'AND',
+                            array(
+                                'taxonomy' => 'faq_type',
+                                'field' => 'slug',
+                                'terms' => $term_single->slug,
+                            ),
+                            array(
+                                'taxonomy' => 'post_tag',
+                                'field'=>'name',
+                                'terms'    => array($typeOfPage),
+                                'operator'=> 'IN'
+                            ),
+                        ),
+                    );
+                    
+                    
+                    $your_query = get_posts( $args );
+            ?>
                 <div class="faq_group">
-                    <h3 class="faq_group__title">General(8).</h3>
+                    <h3 class="faq_group__title"><?php echo $term_single->name;  ?>(<?php echo count($your_query) ?>).</h3>
                     <div class="faq_group__list">
+                    <?php foreach($your_query as $post) : ?>
                         <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
+                            <h3 class="faq_group__item-title"><?php echo $post->post_title; ?></h3>
                             <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
+                                <?php echo $post->post_content; ?>
                             </div>
                         </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item active">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
+                        <?php endforeach; wp_reset_query(); ?>
                     </div>
                 </div>
-                <div class="faq_group">
-                    <h3 class="faq_group__title">Hiring(8).</h3>
-                    <div class="faq_group__list">
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item active">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq_group">
-                    <h3 class="faq_group__title">General(8).</h3>
-                    <div class="faq_group__list">
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item active">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq_group">
-                    <h3 class="faq_group__title">Hiring(8).</h3>
-                    <div class="faq_group__list">
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item active">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq_group__item">
-                            <h3 class="faq_group__item-title">Which positions do you send offer for?</h3>
-                            <div class="faq_group__item-content">
-                                <p>We send job offers for many different medical positions such as but not limited to, medical assistant doctor, farmacist, dentist, etc.</p>
-                                <p>We advise you to complete your profile with your specialty to receive offers matching your needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+            <?php } ?>
             </div>
         </div>
     </div>
@@ -231,5 +120,16 @@ get_header();
         el.classList.toggle('active');
     }
     })
+
+    window.addEventListener("scroll", function(e) {
+        var form = document.getElementById("form");
+        var limit = document.body.offsetHeight - window.innerHeight;
+       
+        if( window.scrollY > (limit - 600)) {
+            form.style = 'position:absolute; top: ' + (limit - 200) + 'px';
+        } else {
+            form.style = '';
+        }
+    });
 </script>
 <?php get_footer(); ?>

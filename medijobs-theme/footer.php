@@ -1,5 +1,5 @@
 </div>
-<!-- 
+<?php $frontpage_id = (int)get_option( 'page_on_front' ); ?>
 <div class="mj-footer">
         <div class="mj-container">
             <div class="mj-grid">
@@ -7,110 +7,41 @@
                 <div class="grid__item width-4/24">
                     <div class="mj-logo">
                         <a href="/">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-footer.png" alt="Medijobs Logo">
+                            <img src="<?php the_field('logo', $frontpage_id); ?>" alt="Medijobs Logo">
                         </a>
                     </div>
-                    <p>
-                        La MEDIjobs credem că puține lucruri sunt mai interesante decât construirea propriei cariere.
-                    </p>
-                    <div class="social__links hide-on-desktop">
-                        <a href="https://www.facebook.com/medijobsromania" target="_blank" class="social__link facebook__link"></a>
-                        <a href="https://instagram.com/medijobsromania" target="_blank" class="social__link instagram__link"></a>
-                        <a href="https://www.linkedin.com/company/medijobs" target="_blank" class="social__link linkedin__link"></a>
-                        <a href="https://www.youtube.com/channel/UCjVIzvRIjpAKDytRioKRb-w" target="_blank" class="social__link youtube__link"></a>
-                    </div>
-                    <div class="footer__call-to-action hide-on-desktop">
-                        <a href="mailto:office@medijobs.co">Get in touch with us</a>
-                    </div>
-                    <p class="hide-on-mobile">Pentru că nu e vorba despre a aplica la un job, ci despre oamenii pe care îi întâlnești și lucrurile noi pe care la afli.</p>
+                    <?php the_field('footer_text', $frontpage_id); ?>
                 </div>
                 <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-3/24 width-mobile-12/24">
+                <div class="grid__item width-3/24">
                     <div class="footer__links">
-                        <h5 class="footer__links_header">About Us</h5>
-                        <ul class="footer__menu">
-                        <li><a href="/">Press</a></li>
-                            <li class="submenu__item"><a href="#">— In the press</a></li>
-                            <li class="submenu__item"><a href="#">— For the press</a></li>
-                            <li><a href="/">Work for us</a></li>
-                            <li><a href="/">For Investors</a></li>
-                            <li><a href="/">For Coaching</a></li>
-                            <li><a href="/">Write for us</a></li>
-                            <li><a href="/">Affiliates FAQs</a></li>
-                            <li class="submenu__item"><a href="#">— For candidates</a></li>
-                            <li class="submenu__item"><a href="#">— For companies</a></li> 
-                        </ul>
+                        <h5 class="footer__links_header"><?php the_field('first_column_heading', $frontpage_id); ?></h5>
+                        <?php wp_nav_menu( array(  'container' => 'ul', 'menu_class' => 'footer__menu',  'theme_location' => 'about-menu' ) ); ?>
                     </div>
                 </div>
                 <div class="grid__item width-2/24 hide-on-mobile"></div>
-                <div class="grid__item width-4/24 width-mobile-12/24">
+                <div class="grid__item width-4/24">
                     <div class="footer__links">
-                        <h5 class="footer__links_header">Community</h5>
+                        <h5 class="footer__links_header"><?php the_field('second_column_heading', $frontpage_id); ?></h5>
                         <ul class="footer__menu">
-                            <li><a href="/blog">Blog</a></li>
-                            <li class="mobile_smaller_distance"><a href="/" >Leaders in Healthcare Romania Conference</a></li>
-                            <li class="mobile_smaller_distance"><a href="/">Explore Jobs</a></li>
-                            <li class="mobile_smaller_distance"><a href="/">Explore Companies</a></li> 
+                            <?php wp_nav_menu( array(  'container' => 'ul', 'menu_class' => 'footer__menu',  'theme_location' => 'community-menu' ) ); ?>
                         </ul>
                     </div>
-                    <div class="social__links hide-on-mobile">
-                        <a href="https://www.facebook.com/medijobsromania" target="_blank" class="social__link facebook__link"></a>
-                        <a href="https://instagram.com/medijobsromania" target="_blank" class="social__link instagram__link"></a>
-                        <a href="https://www.linkedin.com/company/medijobs" target="_blank" class="social__link linkedin__link"></a>
-                        <a href="https://www.youtube.com/channel/UCjVIzvRIjpAKDytRioKRb-w" target="_blank" class="social__link youtube__link"></a>
+                    <div class="social__links">
+                        <a href=" <?php the_field('facebook_link', $frontpage_id); ?>" target="_blank" class="social__link facebook__link"></a>
+                        <a href=" <?php the_field('instagram_link', $frontpage_id); ?>" target="_blank" class="social__link instagram__link"></a>
+                        <a href=" <?php the_field('linkedin_link', $frontpage_id); ?>" target="_blank" class="social__link linkedin__link"></a>
+                        <a href=" <?php the_field('youtube_link', $frontpage_id); ?>" target="_blank" class="social__link youtube__link"></a>
                     </div>
                 </div>
                 <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-4/24 absolute_footer">
+                <div class="grid__item width-4/24">
                     <div class="footer__links">
-                        <h5 class="footer__links_header">Our Product</h5>
-                        <ul class="footer__menu">
-                        <li><a href="/">For candidate (tutorials)</a></li>
-                            <li><a href="/">For company (tutorials)</a></li>
-                            <li><a href="/">Pricing</a></li> 
-                        </ul>
+                        <h5 class="footer__links_header"><?php the_field('third_column_heading', $frontpage_id); ?></h5>
+                        <?php wp_nav_menu( array(  'container' => 'ul', 'menu_class' => 'footer__menu',  'theme_location' => 'product-menu' ) ); ?>
                     </div>
-                    <div class="footer__call-to-action hide-on-mobile">
-                        <a href="mailto:office@medijobs.co">Get in touch with us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <div class="mj-footer">
-    <div class="mj-container">
-            <div class="mj-grid">
-                <div class="grid__item width-1/24"> </div>
-                <div class="grid__item width-4/24">
-                    <div class="mj-logo">
-                        <a href="/">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/Logo-svg.svg" alt="Medijobs Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="grid__item width-2/24"> </div>
-                <div class="grid__item width-4/24">
-                    <p class="no_links">
-                        La MEDIjobs credem că puține lucruri sunt mai interesante decât construirea propriei cariere.
-                    </p>
-                </div>
-                <div class="grid__item width-2/24"> </div>
-                <div class="grid__item width-4/24">
-                    <p class="no_links">
-                        Pentru că nu e vorba despre a aplica la un job, ci despre oamenii pe care îi întâlnești și lucrurile noi pe care la afli.
-                    </p>
-                </div>
-                <div class="grid__item width-2/24"> </div>
-                <div class="grid__item width-4/24">
-                    <div class="social__links no_footer_links">
-                        <a href="https://www.facebook.com/medijobsromania" target="_blank" class="social__link facebook__link"></a>
-                        <a href="https://instagram.com/medijobsromania" target="_blank" class="social__link instagram__link"></a>
-                        <a href="https://www.linkedin.com/company/medijobs" target="_blank" class="social__link linkedin__link"></a>
-                        <a href="https://www.youtube.com/channel/UCjVIzvRIjpAKDytRioKRb-w" target="_blank" class="social__link youtube__link"></a>
-                    </div>
-                    <div class="footer__call-to-action no_footer_links">
-                        <a href="mailto:office@medijobs.co">Ia legãtura cu noi</a>
+                    <div class="footer__call-to-action">
+                    <a href="<?php the_field('get_in_touch_link', $frontpage_id); ?>"><?php the_field('get_in_touch_text', $frontpage_id); ?></a>
                     </div>
                 </div>
             </div>
@@ -122,7 +53,7 @@
             <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-4/24">
                     <p>
-                        © 2019 Medijobs Inc.
+                        © <?php echo date("Y"); ?> <?php the_field('copyright', $frontpage_id); ?>
                     </p>
                     <div class="mj-lang-switcher hide-on-mobile btn-group" id="langSwitcher" style="float: right;margin-top: -33px;">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,15 +63,8 @@
                     </div>
                 </div>
                 <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-4/24">
-                    <a href="<?php echo esc_url( get_page_link( 9104 ) ); ?>">Termeni şi condiţii</a>
-                </div>
-                <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-4/24">
-                    <a href="<?php echo esc_url( get_page_link( 9106 ) ); ?>">Politica de confidentialitate</a>
-                </div>
-                <div class="grid__item width-2/24"></div>
-                <div class="grid__item width-4/24">
+                <div class="grid__item width-16/24">
+                    <?php wp_nav_menu( array(  'container' => 'ul', 'menu_class' => 'sub_menu_footer',  'theme_location' => 'footer-sub-menu' ) ); ?>
                 </div>
             </div>
         </div>

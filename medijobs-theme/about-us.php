@@ -8,23 +8,20 @@
  */
 get_header();
 ?>
-<div id="quick_links" class="mj-quick_links hide-on-mobile">
-    <ul>
-        <li id="about_us_section_1" class="quick_link" data-section="1">
-            HELLO THERE.
-        </li>
-    </ul>
-</div>
 <div id="section_1" class="section section_1">
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-4/24">
-                <h1 class="headline uppercase">HELLO THERE<span class="headline__blue">.</span> </h1>
+                <h1 class="headline uppercase"><?php the_field('hero_title'); ?></h1>
             </div>
             <div class="grid__item width-19/24">
                 <div class="secton_bg_image about_us">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/about-us_headline.png" alt="">
+                    <?php
+                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                            the_post_thumbnail( 'full', [ 'alt' => esc_html ( get_the_title() ) ] ); 
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -42,18 +39,28 @@ get_header();
         <div class="mj-grid reverse_order">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-6/24">
-                <p class="about_us_text--bigger">MEDIjobs este cea mai mare platformă de recrutare medicală pentru personal medical din România, care conectează specialiști medicali cu oportunitățile de carieră din țară.</p>
-                <p class="about_us_text--normal">Este locul unde profesioniștii medicali își dezvoltă cariera atât prin identificarea viitoarelor oportunități, cât și prin accesarea resurselor gratuite precum sfaturi de carieră, evenimente medicale sau interviuri cu personalități.</p>
-                <p class="about_us_text--blue">MEDIjobs ajută clinicile și spitalele din România să își construiască echipe puternice, formate din personal medical calificat. Folosim tehnologia pentru a optimiza procesele de recrutare din industrie și conectăm companiile cu specialiștii medicali din țară.</p>
+                <div class="about_us_text--bigger">
+                    <?php the_field('about_us_text'); ?>
+                </div>
+                <div class="about_us_text--blue">
+                    <?php the_field('about_us_blue_texy'); ?>
+                </div>
             </div>
             <div class="grid__item width-2/24 hide-on-mobile"></div>
             <div class="grid__item width-15/24">
-                <img class="hide-on-mobile" src="<?php echo get_template_directory_uri(); ?>/images/about-us/about_us_images_desktop.png" alt="">
-                <img class="hide-on-desktop about_us_image" src="<?php echo get_template_directory_uri(); ?>/images/about-us/about_us_images_mobile.png" alt="">
+                <div class="mj-collage mj-collage-four">
+                    <img class="mj-collage__img mj-collage__img--portrait-big" src="<?php the_field('image_4'); ?>" alt="">
+                    <img class="mj-collage__img mj-collage__img--portrait-small" src="<?php the_field('image_3'); ?>" alt="">
+                    <img class="mj-collage__img mj-collage__img--landscape-small" src="<?php the_field('image_1'); ?>" alt="">
+                    <img class="mj-collage__img mj-collage__img--lanscape-big" src="<?php the_field('image_2'); ?>" alt="">
+                </div>
             </div>
         </div>
     </div>
 </div>
+<?php 
+$adress = get_field('adress'); 
+if($adress) { ?>
 <div id="section_3" class="section section_about-us_3">
     <div class="mj-container">
         <div class="mj-grid">
@@ -61,20 +68,20 @@ get_header();
             <div class="grid__item width-23/24">
                 <div class="about_us_map">
                     <div class="about_us_map__label">
-                        <h3>Get in touch.</h3>
+                        <h3><?php echo $adress['title']?></h3>
                     </div>
                     <div class="about_us_map__adress">
                         <div class="about_us_map_adress-field">
-                            <div class="about_us_map_adress-field__label">Adress</div>
-                            <div class="about_us_map_adress-field__value">Bulevardul Carol I 26, Etaj 2</div>
+                            <div class="about_us_map_adress-field__label"><?php echo $adress['adress_title']?></div>
+                            <div class="about_us_map_adress-field__value"><?php echo $adress['adress']?></div>
                         </div>
                         <div class="about_us_map_adress-field">
-                            <div class="about_us_map_adress-field__label">Phone</div>
-                            <div class="about_us_map_adress-field__value">+4 0749 099 291</div>
+                            <div class="about_us_map_adress-field__label"><?php echo $adress['phone_title']?></div>
+                            <div class="about_us_map_adress-field__value"><a href="tel:<?php echo $adress['phone'] ?>"><?php echo $adress['phone']?></a></div>
                         </div>
                         <div class="about_us_map_adress-field about_us_map_adress-field--last">
-                            <div class="about_us_map_adress-field__label">Email</div>
-                            <div class="about_us_map_adress-field__value"><a href="mailto:office@medijobs.ro">office@medijobs.ro</a></div>
+                            <div class="about_us_map_adress-field__label"><?php echo $adress['email_title']?></div>
+                            <div class="about_us_map_adress-field__value"><a href="mailto:<?php echo $adress['email']?>"><?php echo $adress['email']?></a></div>
                         </div>
                     </div>
                     <div class="about_us_map__google_map">
@@ -85,103 +92,59 @@ get_header();
         </div>
     </div>
 </div>
+<?php } ?>
 <div id="section_3" class="section section_about-us_3">
     <div class="mj-container">
         <div class="mj-grid">
         <div class="grid__item width-2/24 hide-on-mobile"></div>
         <div class="grid__item width-20/24">
+            <?php $meetTheTeam = get_field('meet_the_team_box');?>
             <div class="team_glossary">
                 <div class="team_glossary__header">
                     <div class="team_glossary__person team_glossary__person--manager">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/catrinel.png" alt=""></div>
-                        <div class="team_glossary__person-name">Catrinel Hagivreta</div>
-                        <div class="team_glossary__person-position">CEO & Co-Founder Medijobs Romania</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
+                        <div class="team_glossary__person-image"><img src="<?php echo $meetTheTeam['first_person_image'] ?>" alt="<?php echo $meetTheTeam['first_person_name'] ?>"></div>
+                        <div class="team_glossary__person-name"><?php echo $meetTheTeam['first_person_name'] ?></div>
+                        <div class="team_glossary__person-position"><?php echo $meetTheTeam['first_person_position'] ?></div>
+                        <div class="team_glossary__person-link"><a href="<?php echo $meetTheTeam['first_person_linkedin'] ?>">Linkedin</a></div>
                     </div>
-                    <h2>Meet <br> the <br> Team.</h2>
+                    <h2>  
+                        <?php echo $meetTheTeam['title'] ?>
+                    </h2>
                     <div class="team_glossary__person team_glossary__person--manager">
-                    <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/george.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">CEO & Co-Founder Medijobs Romania</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
+                        <div class="team_glossary__person-image"><img src="<?php echo $meetTheTeam['second_person_image'] ?>" alt="<?php echo $meetTheTeam['second_person_name'] ?>"></div>
+                        <div class="team_glossary__person-name"><?php echo $meetTheTeam['second_person_name'] ?></div>
+                        <div class="team_glossary__person-position"><?php echo $meetTheTeam['second_person_position'] ?></div>
+                        <div class="team_glossary__person-link"><a href="<?php echo $meetTheTeam['second_person_linkedin'] ?>">Linkedin</a></div>
+                </div>
                 </div>
                 <div class="team_glossary__body">
+                <?php 
+                    $args = array(  
+                        'post_type' => 'team-member',
+                        'post_status' => 'publish',
+                        'posts_per_page' => -1, 
+                    );
+
+                    $loop = new WP_Query( $args ); 
+                        
+                    while ( $loop->have_posts() ) : $loop->the_post();  ?>
                     <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
+                        <div class="team_glossary__person-image team_glossary__person-image--has_hover">
+                            <img class="default_image" src="<?php the_field('profile_image') ?>">
+                            <img class="hover_image" src="<?php the_field('hover_image') ?>">
+                        </div>
+                        <div class="team_glossary__person-name"><?php the_title() ?></div>
+                        <div class="team_glossary__person-position"><?php the_content(); ?></div>
+                        <div class="team_glossary__person-link"><a href="<?php the_field('linkedin_url') ?>">Linkedin</a></div>
                     </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image2.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image3.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image4.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image2.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image3.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image4.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image2.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image3.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
-                    <div class="team_glossary__person">
-                        <div class="team_glossary__person-image"><img src="<?php echo get_template_directory_uri(); ?>/images/about-us/generic_image4.png" alt=""></div>
-                        <div class="team_glossary__person-name">GEORGE Hagivreta</div>
-                        <div class="team_glossary__person-position">Lawyer</div>
-                        <div class="team_glossary__person-link"><a href="#">Linkedin</a></div>
-                    </div>
+                    <?php endwhile;
+
+                    wp_reset_postdata(); 
+                    ?>
                 </div>
                 <div class="team_glossary__footer">
-                    <h3>ALATURA-TE ECHIPEI NOASTRE</h3>
+                    <div class="clearfix"></div>
+                    <h3><?php the_field('join_our_team_text'); ?></h3>
                 </div>
             </div>
         </div>
@@ -189,104 +152,128 @@ get_header();
         </div>
     </div>
 </div>
+<?php if(get_field('work_with_us_title')) { ?>
 <div id="section_4" class="section section_about-us_4">
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-6/24">
-                <h3>Work with us.</h3>
-                <p>Suntem un start-up care crește rapid și punem pasiune în ceea ce facem.</p>
-                <p>Ne dorim ca membri echipei noastre să fie deschiși la schimbări și să își dorească să învețe în fiecare zi, să aibă o motivație puternică și să manifeste responsabilitate.</p>
-                <p>Facem angajări pentru echipa noastră cu aceeași grijă cu care o facem pentru clienții noștri.</p>
-                <button class="mj-btn mj-btn--secondary mj-btn--alt--2">VEZI TOATE POSTURILE DESCHISE</button>
+                <h3><?php the_field('work_with_us_title'); ?></h3>
+                    <?php the_field('work_with_us_text'); ?>
+                <a href="<?php the_field('work_with_us_button_link'); ?>" class="mj-btn mj-btn--secondary mj-btn--alt--2"><?php the_field('work_with_us_button_text'); ?></a>
             </div>
             <div class="grid__item width-2/24 hide-on-mobile"></div>
             <div class="grid__item width-14/24">
                 <div class="mj-jobs">
-                    <div class="mj-jobs__item">
+                <?php 
+                    $args = array(  
+                        'post_type' => 'cariere',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 4, 
+                    );
+
+                    $loop = new WP_Query( $args ); 
+                        
+                    while ( $loop->have_posts() ) : $loop->the_post();  ?>
+                    <a href="<?php the_permalink(); ?>" class="mj-jobs__item">
                         <div class="mj-jobs__item-position">
-                            Marketing Specialist
+                            <?php the_title(); ?>
                         </div>
                         <div class="mj-jobs__item-location">
-                            BUCURESTI, RO
+                            <?php the_field('location'); ?>
                         </div>
                         <div class="mj-jobs__item-department">
-                            Department Name
+                            <?php the_field('department'); ?>
                         </div>
                         <div class="mj-jobs__item-type">
-                            FULL-TIME
+                            <?php the_field('type'); ?>
                         </div>
-                    </div>
-                    <div class="mj-jobs__item">
-                        <div class="mj-jobs__item-position">
-                            Marketing Specialist
-                        </div>
-                        <div class="mj-jobs__item-location">
-                            BUCURESTI, RO
-                        </div>
-                        <div class="mj-jobs__item-department">
-                            Department Name
-                        </div>
-                        <div class="mj-jobs__item-type">
-                            FULL-TIME
-                        </div>
-                    </div>
-                    <div class="mj-jobs__item">
-                        <div class="mj-jobs__item-position">
-                            Marketing Specialist
-                        </div>
-                        <div class="mj-jobs__item-location">
-                            BUCURESTI, RO
-                        </div>
-                        <div class="mj-jobs__item-department">
-                            Department Name
-                        </div>
-                        <div class="mj-jobs__item-type">
-                            FULL-TIME
-                        </div>
-                    </div>
-                    <div class="mj-jobs__item">
-                        <div class="mj-jobs__item-position">
-                            Marketing Specialist
-                        </div>
-                        <div class="mj-jobs__item-location">
-                            BUCURESTI, RO
-                        </div>
-                        <div class="mj-jobs__item-department">
-                            Department Name
-                        </div>
-                        <div class="mj-jobs__item-type">
-                            FULL-TIME
-                        </div>
-                    </div>
+                    </a>
+                    <?php endwhile;
+                        wp_reset_postdata(); 
+                    ?>
                 </div>
             </div>
             <div class="grid__item width-1/24 hide-on-mobile"></div>
         </div>
     </div>
 </div>
+<?php } ?>
 <div id="section_5" class="section section_about-us_5">
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-23/24">
+                <h3><?php the_field('company_values_title'); ?></h3>
                 <div class="about-us_boxes">
                     <div class="about-us_box about-us_box--left">
-                        <p>MEDIjobs este cea mai mare platformă de recrutare medicală pentru personal medical din România. Credem că responsabilitatea noastră față de îmbunătățirea serviciilor medicale din țară este ceea ce ne motivează în fiecare zi să aducem cei mai pregătiți și talentați specialiști medicali alături de centrele medicale. Prin intermediul tehnologiei și inovației găsim mereu soluții pentru a rezolva problemele companiilor. </p>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/about_us_square_1.png" alt="">
+                        <?php $box1 = get_field('blue_box_1'); ?> 
+                        <p><?php echo $box1['text']; ?> </p>
+                        <img src="<?php echo $box1['image']; ?> " alt="">
                     </div>
                     <div class="about-us_box">
-                        <p>Participăm activ la îmbunătățirea serviciilor medicale din România. Prin intermediul platformei sute de medici, asistenți medicali și alte tipuri de specialiști și-au găsit oportunitatea de carieră ideală. Satisfacția este cu atât mai mare știind că acești oameni ajută și salvează pacienții români. </p>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/about_us_square_2.png" alt="">
+                        <?php $box2 = get_field('blue_box_2'); ?> 
+                        <p><?php echo $box2['text']; ?> </p>
+                        <img src="<?php echo $box2['image']; ?> " alt="">
                     </div>
                     <div class="about-us_box about-us_box--left">
-                        <p>Într-un start-up care se află într-o creștere continuă, oamenii sunt cei mai importanți. Învățăm în fiecare zi, de aceea susținem dezvoltarea oamenilor din echipa noastră prin planuri de carieră, precum și prin programe de training care ajută la îmbunătățirea abilităților și cunoștințelor. Suntem pasionați de ceea ce facem și muncim să o facem din ce în ce mai bine, zi dupa zi, pas cu pas</p>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/about_us_square_3.png" alt="">
+                        <?php $box3 = get_field('blue_box_3'); ?> 
+                        <p><?php echo $box3['text']; ?> </p>
+                        <img src="<?php echo $box3['image']; ?> " alt="">
                     </div>
-                    <div class="about-us_box about-us_box--last">
-                        <p>Susținem dezvoltarea profesioniștilor medicali prin implicarea activă în comunitate. Anual organizăm conferința Leaders in Heatlhcare unde ne propunem să continuăm educarea specialiștilor medicali.</p>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/about_us_square_4.png" alt="">
+                    <div class="about-us_box">
+                        <?php $box4 = get_field('blue_box_4'); ?> 
+                        <p><?php echo $box4['text']; ?> </p>
+                        <img src="<?php echo $box4['image']; ?> " alt="">
                     </div>
+                    <?php 
+                        $box5 = get_field('blue_box_5');
+                        if($box5['text']) { ?>
+                        <div class="about-us_box about-us_box--left">
+                            <p><?php echo $box5['text']; ?> </p>
+                            <img src="<?php echo $box5['image']; ?> " alt="">
+                        </div>
+                    <?php } ?>
+                    <?php 
+                        $box6 = get_field('blue_box_6');
+                        if($box6['text']) { ?>
+                        <div class="about-us_box">
+                            <p><?php echo $box6['text']; ?> </p>
+                            <img src="<?php echo $box6['image']; ?> " alt="">
+                        </div>
+                    <?php } ?>
+                    <?php 
+                        $box7 = get_field('blue_box_7');
+                        if($box7['text']) { ?>
+                        <div class="about-us_box about-us_box--left">
+                            <p><?php echo $box7['text']; ?> </p>
+                            <img src="<?php echo $box7['image']; ?> " alt="">
+                        </div>
+                    <?php } ?>
+                    <?php 
+                        $box8 = get_field('blue_box_8');
+                        if($box8['text']) { ?>
+                        <div class="about-us_box">
+                            <p><?php echo $box8['text']; ?> </p>
+                            <img src="<?php echo $box8['image']; ?> " alt="">
+                        </div>
+                    <?php } ?>
+                    <?php 
+                        $box9 = get_field('blue_box_9');
+                        if($box9['text']) { ?>
+                        <div class="about-us_box about-us_box--left">
+                            <p><?php echo $box9['text']; ?> </p>
+                            <img src="<?php echo $box9['image']; ?> " alt="">
+                        </div>
+                    <?php } ?>
+                    <?php 
+                        $box10 = get_field('blue_box_10');
+                        if($box10['text']) { ?>
+                        <div class="about-us_box">
+                            <p><?php echo $box10['text']; ?> </p>
+                            <img src="<?php echo $box10['image']; ?> " alt="">
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -297,12 +284,16 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24"> </div>
             <div class="grid__item width-23/24">
-                <div class="company_bg our_investors hide-on-mobile">
+                <div class="company_bg our_investors">
                     <div class="company_box mj-form our_investors">
-                        <h3>Our <br/>Investors.</h3>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/Enayati-Group-Transparent_BG_logo.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/techstars-logo.png" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/about-us/logo-gapminder.png" alt="">
+                        <?php $companies = get_field('companies'); ?> 
+                        <h3><?php echo $companies['title']; ?></h3>
+                        <img src="<?php echo $companies['company_logo_1']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_2']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_3']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_4']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_5']; ?>" alt="">
+                        <img src="<?php echo $companies['company_logo_6']; ?>" alt="">
                     </div>
                 </div>
             </div>
@@ -314,16 +305,31 @@ get_header();
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-24/24">
-                <div class="mj-feeds">
-                    <div class="mj-feed facebook">
-                        <div class="fb-page" data-href="https://www.facebook.com/medijobsromania/" data-tabs="timeline" data-width="448" data-height="704" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/medijobsromania/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/medijobsromania/">MEDIjobs Romania</a></blockquote></div>
+            <div class="mj-feeds">
+                    <?php if(get_field('facebook_url')) { ?>
+                    <div class="mj-feed companies">
+                        <div class="after_content facebook"> <?php the_field('facebook_text'); ?></div>
+                        <div class="twitter_inner">
+                            <div class="fb-page" data-href=" <?php the_field('facebook_url'); ?>" data-tabs="timeline" data-width="448" data-height="704" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/medijobsromania/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/medijobsromania/">MEDIjobs Romania</a></blockquote></div>
+                        </div>
                     </div>
-                    <div class="mj-feed instagram">
-                            <?php echo do_shortcode('[instagram-feed heightunit=px height=704 widthunit=px width=448 cols=1]');?>
+                    <?php } ?>
+                    <?php if(get_field('instagram_username')) { ?>
+                    <div class="mj-feed companies">
+                        <div class="after_content instagram"> <?php the_field('instagram_text'); ?></div>
+                        <div class="twitter_inner">
+                            <?php echo do_shortcode('[instagram-feed user="'. get_field('instagram_username') .'" heightunit=px height=704 widthunit=px width=448 cols=1]');?>
+                        </div>
                     </div>
-                    <div class="mj-feed linkedin">
-
+                    <?php } ?>
+                    <?php if(get_field('twitter_url')) { ?>
+                    <div class="mj-feed companies" >
+                        <div class="after_content twitter"> <?php the_field('twitter_text'); ?></div>
+                        <div class="twitter_inner">
+                            <a class="twitter-timeline" href=" <?php the_field('twitter_url'); ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

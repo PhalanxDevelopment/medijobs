@@ -39,44 +39,57 @@ get_header();
         </ul>
     </div>
     <div id="isCompany" class="mj-container">
-        <form id="form" action="https://app.medijobs.ro/register/company" method="post" class="mj-register_form mj-form">
+        <?php 
+        $form = get_field('form'); 
+        if($form) { ?>
+        <form id="form" action="<?php echo $form['form_link']?>" method="post" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
-            <a href="https://app.medijobs.ro/login" class="login">AI DEJA UN CONT? LOGIN</a>
-            <h3>Noi iti aducem specialistii medicali!</h3>
-            <p>Conecteaza-te cu profesionisti pre-calificati care sunt interesati sa lucreze alaturi de tine.</p>
-            <input class="mj-input" name="name"  type="text" placeholder="Nume si Prenume" >
-            <input class="mj-input" name="email"  type="email" placeholder="Email" >
-            <button class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
-                creeaza cont
+            <a href="<?php echo $form['top_link']?>" class="login"><?php echo $form['top_link_text']?></a>
+            <h3><?php echo $form['title']?></h3>
+            <p><?php echo $form['text']?></p>
+            <input class="mj-input" name="name" type="text" placeholder="Nume Prenume" >
+            <input class="mj-input" name="email" type="email" placeholder="Email" >
+            <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+                <?php echo $form['button_text'];?>
             </button>
-            <p class="mj-align--center mj-font--small">Ești candidat? <a href="https://app.medijobs.ro/register/candidate">Creează-ți profilul aici.</a></p>
+            <p class="mj-align--center mj-font--small"><?php echo $form['bottom_text']?> <a href="<?php echo $form['bottom_link']?>"><?php echo $form['bottom_link_text']?>  </a></p>
         </form>
+        </div>
+        <?php } ?>
     </div>
+    <?php 
+    $heroSection = get_field('hero_section'); 
+    if($heroSection) { ?>
     <div id="section_1" class="section section_1">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-9/24">
-                    <div class="above_headline"> BINE AI VENIT PE MEDIJOBS!</div>
-                    <h1 class="headline uppercase">Angajezi specialiști medicali? </h1>
+                    <div class="above_headline"><?php echo $heroSection['above_heading']?></div>
+                    <h1 class="headline uppercase"><?php echo $heroSection['title']?></h1>
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
                     <div class="secton_bg_image company">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/company_section_1.png" alt="">
+                        <?php $randomNumber = rand(1,6);
+                            $imageNr = 'image_'.$randomNumber; 
+                            $image = get_field($imageNr);
+                        ?>
+                        <img src="<?php echo $image ;?>" alt="">
+
                     </div>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-7/24">
-                    <p>Completează-ți nevoia de recrutare, iar noi te conectăm cu candidați calificați.</p>
+                    <p><?php echo $heroSection['text']?></p>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-10/24">
-                    <div class="sub_section">Peste <span id="candidati">33 000</span> de specialiști medicali așteaptă ofertele tale! </div>
+                    <div class="sub_section"><?php echo $heroSection['sub_section_text']?></div>
                     <button id="open-form" class="mj-btn mj-btn--primary hide-on-desktop">
-                        Creează un cont
+                        creeaza cont
                     </button>
                     <p class="mj-align--center mj-font--small hide-on-desktop">Ești candidat? <a href="https://app.medijobs.ro/register/candidate">Creează-ți profilul aici.</a></p>
                 </div>
@@ -86,9 +99,12 @@ get_header();
                 <div class="grid__item width-10/24">
                     <div class="hide-on-mobile">
                         <div class="mj-images">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
-                            <img style="height: 35px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
-                            <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
+                            <img class="greyscale"  src="<?php echo $heroSection['logos']['logo_1']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_2']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_3']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_4']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_5']; ?>" alt="">
+                            <img class="greyscale" src="<?php echo $heroSection['logos']['logo_6']; ?>" alt="">
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -96,71 +112,75 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_2" class="section section_2 company">
+    <?php } ?>
+<?php $benefitsSection = get_field('benefits_section'); 
+    $image = get_field('background_image');
+    if($benefitsSection) { ?>
+    <div id="section_2" class="section section_2 company" style="background-image: url(<?php echo $image; ?>)">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-8/24">
-                    <div class="above_headline">Beneficii</div>
-                    <h1 class="headline light">Prima platformă de recrutare medicală</h1>
-                    <p>Care ajută companiile să se conecteze cu specialiști medicali relevanti din România.</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/section_2_img.png" alt="">
+                <div class="grid__item width-6/24">
+                    <div class="above_headline"><?php echo $benefitsSection['above_heading']?></div>
+                    <h1 class="headline light"><?php echo $benefitsSection['title']?> </h1>
+                    <p><?php echo $benefitsSection['text']?> </p>
+                    <img src="<?php echo $benefitsSection['image'] ?>" alt="">
                 </div>
+                <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
+                    <?php if ($benefitsSection['benefit_1']) { ?>
                     <ul class="mj-list">
+                        <?php if ($benefitsSection['benefit_1']) { ?>
+                            <li class="mj-list__item">
+                                <?php echo $benefitsSection['benefit_1']?>
+                            </li>
+                        <?php } ?>
+                        <?php if ($benefitsSection['benefit_2']) { ?>
+                            <li class="mj-list__item">
+                                <?php echo $benefitsSection['benefit_2']?>
+                            </li>
+                        <?php } ?>
+                        <?php if ($benefitsSection['benefit_3']) { ?>
+                            <li class="mj-list__item">
+                                <?php echo $benefitsSection['benefit_3']?>
+                            </li>
+                        <?php } ?>
                     </ul>
+                    <?php } ?>
+                    <p style="margin-top:40px;"><a class="mj-icon-link" href="<?php echo $benefitsSection['link']?>">
+                    <?php echo $benefitsSection['link_actual']?></a>  <?php echo $benefitsSection['link_text']?></p>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $keyPositions = get_field('key_positions_section'); 
+    if($keyPositions) { ?>
     <div id="section_3" class="section section_3">
         <div class="mj-container">
             <div class="background_title hide-on-mobile">
-                poziții cheie
+                <?php echo $keyPositions['background_text']?>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
-                    <div class="above_headline">Te conectam:</div>
-                    <h1 class="headline light">Cu personal medical cu diverse specialități: </h1>
-                    <ul class="mj-simple-list">
-                        <li class="mj-simple-list">
-                            Medici
-                        </li>
-                        <li class="mj-simple-list">
-                            Farmaciști
-                        </li>
-                        <li class="mj-simple-list">
-                            Asistenți Medicali Generaliști
-                        </li>
-                        <li class="mj-simple-list">
-                            Asistenți de Farmacie
-                        </li>
-                        <li class="mj-simple-list">
-                            Asistenți dentari
-                        </li>
-                        <li class="mj-simple-list">
-                            Infirmieri
-                        </li>
-                        <li class="mj-simple-list">
-                            Reprezentanți Medicali
-                        </li>
-                        <li class="mj-simple-list">
-                            Coordonatori Medicali
-                        </li>
-                        <div class="clearfix"></div>
-                    </ul>
+                    <div class="above_headline"><?php echo $keyPositions['above_header_text']?></div>
+                    <h1 class="headline light"><?php echo $keyPositions['title']?></h1>
+                    <?php echo $keyPositions['list_of_positions']?>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $mapSection = get_field('map_section'); 
+    if($mapSection) { ?>
     <div id="section_4" class="section section_4">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
-                <div class="grid__item width-13/24">
-                    <div class="above_headline">UNDE SUNTEM ACTIVI</div>
-                    <h1 class="headline light">Peste <span id="candidati2">33 000</span> de specialiști medicali în 10 orașe din România. <br> </h1>
+                <div class="grid__item width-10/24">
+                    <div class="above_headline"><?php echo $mapSection['above_heading']?></div>
+                    <h1 class="headline light"><?php echo $mapSection['title']?></h1>
                     <div class="mj-cols hide-on-desktop">
                         <div class="mj-col">
                             <p>București</p>
@@ -443,182 +463,543 @@ get_header();
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $companiesSection = get_field('companies_section'); 
+    if($companiesSection) { ?>
     <div id="section_5" class="section section_5">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-13/24">
-                    <div class="above_headline"> Alătură-te </div>
-                    <h1 class="headline biggest uppercase"><span><span id="companii">1200</span>+  companii</span></h1>
-                    <h1 class="headline light">care au ales să lucreze cu MEDIjobs</h1>
+                    <div class="above_headline"><?php echo $companiesSection['above_headline']?></div>
+                    <h1 class="headline biggest uppercase"><?php echo $companiesSection['title']?></h1>
+                    <h1 class="headline light"><?php echo $companiesSection['text']?></h1>
                     <div class="mj-image">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/Enayati-Group-Transparent_BG_logo.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/gral-logo.png" alt="">
-                        <img style="margin-top: -35px; height: 100px;" class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/leventer logo.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/logo_sanamed_300_162_r@2x.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/YTS-Detnal View.png" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/catena.gif" alt="">
-                        <img class="greyscale" src="<?php echo get_template_directory_uri(); ?>/images/companii/NephroCare_Logo_CMYK.jpg" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_1']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_2']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_3']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_4']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_5']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_6']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_7']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_8']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_9']?>" alt="">
+                        <img class="greyscale" src="<?php echo $companiesSection['logo_10']?>" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $employeeBox = get_field('for_employers_box'); 
+    if($employeeBox['title']) { ?>
+    <div id="section_6" class="section section_6">
+        <div class="mj-container">
+            <div class="mj-box">
+                <div class="mj-grid">
+                    <div class="grid__item width-2/24"></div>
+                    <div class="grid__item width-22/24">
+                        <div class="above_headline"><?php echo $employeeBox['above_heading']?></div>
+                        <h1 class="headline light uppercase"><?php echo $employeeBox['title']?></h1>
+                        <a href=" <?php echo $employeeBox['button_text']?>"><?php echo $employeeBox['text']?></a>
+                    </div>
+                </div>
+                <div class="mj-grid">
+                    <div class="grid__item width-2/24"></div>
+                    <div class="grid__item width-10/24">
+                        <a href=" <?php echo $employeeBox['link']?>" class="mj-btn mj-btn--primary mj-btn--alt">
+                            <?php echo $employeeBox['button_text']?>
+                        </a>
+                    </div>
+                    <div class="grid__item width-2/24"></div>
+                    <div class="grid__item width-10/24">
+                        <!-- <p class="mj-align--center mj-font--small "><a href="#">Find out more <br> about our process.</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
+    <?php $blueBoxes = get_field('blue_boxes'); 
+    if($blueBoxes) { ?>
     <div id="section_6" class="section section_6 section_6_company">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
-                    <div class="above_headline">Companiile</div>
-                    <h1 class="headline light">Clientii nostri angajeaza de 5 ori mai rapid cu Medijobs.</h1>
+                    <div class="above_headline"><?php echo $blueBoxes['section_above_title']?></div>
+                    <h1 class="headline light"><?php echo $blueBoxes['section_title']?></h1>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-15/24">
                     <div class="mj-boxes">
-                        <div class="mj-arrow-box">
-                            <h1>01</h1>
-                            <h3>Salvează Timp:</h3>
-                            <p>Scurtam timpul de recrutare de la luni la saptamani.</p>
-                            <p>Nu mai parcurgi mii de CV-uri nepotrivite</p>
-                        </div>
-                        <div class="mj-arrow-box right">
-                            <h1>02</h1>
-                            <h3>Fii Productiv:</h3>
-                            <p>Scurtam timpul de recrutare de la luni la saptamani.</p>
-                            <p>Pacientii tai se bucura de o echipa completa si performanta.</p>
-                        </div>
-                        <div class="mj-arrow-box">
-                            <h1>03</h1>
-                            <h3>Creste Retentia:</h3>
-                            <p>Am dezvoltat un algoritm de profilare a specialistilor medicali.</p>
-                            <p>Ca tu sa poti selecta candidatul potrivit pe termen lung.</p>
-                        </div>
-                        <div class="mj-arrow-box right bottom">
-                            <h1>04</h1>
-                            <h3>Elimina Riscuri:</h3>
-                            <p>Te conectam cu candidati pre-validati.</p>
-                            <p>Ai siguranta ca angajezi nu doar un candidat, ci cel mai bun candidat.</p>
-                        </div>
-                        <div class="mj-arrow-box">
-                            <h1>05</h1>
-                            <h3>Scade Costurile:</h3>
-                            <p>Am automatizat preselectia si validarea candidatilor.</p>
-                            <p>Elimini nevoia de a angaja o echipa proprie de recrutare.</p>
-                        </div>
+                        <?php 
+                            if($blueBoxes['box_1']['title']) { ?>
+                                <div class="mj-arrow-box">
+                                    <h1>01</h1>
+                                    <h3><?php echo $blueBoxes['box_1']['title']?></h3>
+                                    <?php if($blueBoxes['box_1']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_1']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_1']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_1']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_1']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_1']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_2']['title']) { ?>
+                                <div class="mj-arrow-box right">
+                                    <h1>02</h1>
+                                    <h3><?php echo $blueBoxes['box_2']['title']?></h3>
+                                    <?php if($blueBoxes['box_2']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_2']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_2']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_2']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_2']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_2']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_3']['title']) { ?>
+                                <div class="mj-arrow-box">
+                                    <h1>03</h1>
+                                    <h3><?php echo $blueBoxes['box_3']['title']?></h3>
+                                    <?php if($blueBoxes['box_3']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_3']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_3']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_3']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_3']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_3']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_4']['title']) { ?>
+                                <div class="mj-arrow-box right">
+                                    <h1>04</h1>
+                                    <h3><?php echo $blueBoxes['box_4']['title']?></h3>
+                                    <?php if($blueBoxes['box_4']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_4']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_4']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_4']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_4']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_4']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_5']['title']) { ?>
+                                <div class="mj-arrow-box">
+                                    <h1>05</h1>
+                                    <h3><?php echo $blueBoxes['box_5']['title']?></h3>
+                                    <?php if($blueBoxes['box_5']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_5']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_5']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_5']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_5']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_5']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_6']['title']) { ?>
+                                <div class="mj-arrow-box right">
+                                    <h1>06</h1>
+                                    <h3><?php echo $blueBoxes['box_6']['title']?></h3>
+                                    <?php if($blueBoxes['box_6']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_6']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_6']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_6']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_6']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_6']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_7']['title']) { ?>
+                                <div class="mj-arrow-box">
+                                    <h1>07</h1>
+                                    <h3><?php echo $blueBoxes['box_7']['title']?></h3>
+                                    <?php if($blueBoxes['box_7']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_7']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_7']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_7']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_7']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_7']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_8']['title']) { ?>
+                                <div class="mj-arrow-box right">
+                                    <h1>08</h1>
+                                    <h3><?php echo $blueBoxes['box_8']['title']?></h3>
+                                    <?php if($blueBoxes['box_8']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_8']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_8']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_8']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_8']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_8']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_9']['title']) { ?>
+                                <div class="mj-arrow-box">
+                                    <h1>09</h1>
+                                    <h3><?php echo $blueBoxes['box_9']['title']?></h3>
+                                    <?php if($blueBoxes['box_9']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_9']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_9']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_9']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_9']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_9']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
+                        <?php 
+                            if($blueBoxes['box_10']['title']) { ?>
+                                <div class="mj-arrow-box right">
+                                    <h1>10</h1>
+                                    <h3><?php echo $blueBoxes['box_10']['title']?></h3>
+                                    <?php if($blueBoxes['box_10']['bullet_1']) { ?> 
+                                        <p><?php echo $blueBoxes['box_10']['bullet_1'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_10']['bullet_2']) { ?> 
+                                        <p><?php echo $blueBoxes['box_10']['bullet_2'];?></p>
+                                    <?php } ?>
+                                    <?php if($blueBoxes['box_10']['bullet_3']) { ?> 
+                                        <p><?php echo $blueBoxes['box_10']['bullet_3'];?></p>
+                                    <?php } ?>
+                                </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php $ourProcess = get_field('our_process_section'); 
+    if($ourProcess) { ?>
     <div id="section_7" class="section section_7">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
-                    <div class="above_headline">PROCESUL NOSTRU &</div>
-                    <h1 class="headline light">Cum functioneaza platforma</h1>
-                    <div id="section_icon" class="section_icon step_1 hide-on-mobile"></div>
+                    <div class="above_headline"><?php echo $ourProcess['above_headline']?></div>
+                    <h1 class="headline light"><?php echo $ourProcess['title']?></h1>
+                    <div id="section_icon" style="background-image: url(<?php echo $ourProcess['icon']?>)" class="section_icon step_1 hide-on-mobile"></div>
                 </div>
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
                     <ul class="mj-steps">
+                    <?php if($ourProcess['step_1']) {  ?>
                         <li id="step_1" class="mj-step active">
                             <div class="step_nr">.01</div>
-                            <div class="step_title"> Creează un cont:</div>
-                            <div class="step_content">Durează mai puțin de 2 minute să îți creezi un cont și să fii la curent cu cei mai relevanți candidați pentru nevoile tale. </div>
+                            <div class="step_title"><?php echo $ourProcess['step_1']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_1_text']?></div>
                         </li>
+                    <?php } ?>
+                    <?php if($ourProcess['step_2']) {  ?>
                         <li id="step_2" class="mj-step active">
                             <div class="step_nr">.02</div>
-                            <div class="step_title">Activeaza o campanie de recrutare</div>
-                            <div class="step_content"> Spune-ne ce cauți și inițiază un proces de recrutare medicală, iar noi te conectăm cu candidați calificați</div>
+                            <div class="step_title"><?php echo $ourProcess['step_2']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_2_text']?></div>
                         </li>
+                    <?php } ?>
+                    <?php if($ourProcess['step_3']) {  ?>
                         <li id="step_3" class="mj-step active">
                             <div class="step_nr">.03</div>
-                            <div class="step_title">Primești candidați relevanți</div>
-                            <div class="step_content">Care se potrivesc cerințelor tale/ ofertei tale.</div>
+                            <div class="step_title"><?php echo $ourProcess['step_3']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_3_text']?></div>
                         </li>
+                    <?php } ?>
+                    <?php if($ourProcess['step_4']) {  ?>
                         <li id="step_4" class="mj-step active">
                             <div class="step_nr">.04</div>
-                            <div class="step_title">Angajează!</div>
-                            <div class="step_content"></div>
+                            <div class="step_title"><?php echo $ourProcess['step_4']?></div>
+                            <div class="step_content"><?php echo $ourProcess['step_4_text']?></div>
                         </li>
+                    <?php } ?>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
     <div id="section_8" class="section section_8"></div>
+    <?php $pressSection = get_field('press_section'); 
+    if($pressSection) { ?>
     <div id="section_10" class="section section_10">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-7/24">
-                    <div class="above_headline">În presă</div>
-                    <h1 class="headline light">Ce spune presa despre noi</h1>
+                    <div class="above_headline"> <?php echo $pressSection['above_title'];?></div>
+                    <h1 class="headline light"><?php echo $pressSection['title'];?></h1>
                 </div>
             </div>
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-14/24">
+                    <?php if($pressSection['press_item_1']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Forbes-Romania-Logo-Negru.png" alt="">
+                        <img src="<?php echo $pressSection['press_item_1']['logo'] ?>" alt="">
                         <p>
-                            Dr. Wargha Enayati: „Cea mai mare platformă de recrutare medicală din România"
+                            <?php echo $pressSection['press_item_1']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_2']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/logo.png" alt="">
+                        <img src="<?php echo $pressSection['press_item_2']['logo'] ?>" alt="">
                         <p>
-                            Companiile reușesc să ocupe posturile vacante de cinci ori mai rapid decât dacă ar utiliza alte platforme de recrutare”, a declarat George Hagivreta, co-fondator si COO al MEDIjobs.
+                            <?php echo $pressSection['press_item_2']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_3']) { ?>
                     <div class="quote">
-                        <img style="height: 50px;margin-top: -10px;" src="<?php echo get_template_directory_uri(); ?>/images/presa/romedic-logo.png" alt="">
+                        <img src="<?php echo $pressSection['press_item_3']['logo'] ?>" alt="">
                         <p>
-                            MEDIjobs reușește să răspundă nevoilor unei piețe cu cel mai rapid nivel de creștere în ocuparea forței de muncă. 
+                            <?php echo $pressSection['press_item_3']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_4']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/Start-up.ro logo.png" style="height:50px" alt="">
+                        <img src="<?php echo $pressSection['press_item_4']['logo'] ?>" alt="">
                         <p>
-                            Platforma care scade timpul de recrutare a unui medic de la mai mult de 3 luni la doar 72 de ore
+                            <?php echo $pressSection['press_item_4']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_5']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/AngajatorulMeu.logo-1-logo.png" style="height:50px" alt="">
+                        <img src="<?php echo $pressSection['press_item_5']['logo'] ?>" alt="">
                         <p>
-                            Noua ta carieră poate începe aici – locuri de muncă în toate domeniile, în toate județele
+                            <?php echo $pressSection['press_item_5']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
+                    <?php if($pressSection['press_item_6']) { ?>
                     <div class="quote">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/presa/br-logo.png" style="height:50px" alt="">
+                        <img src="<?php echo $pressSection['press_item_6']['logo'] ?>" alt="">
                         <p>
-                            Shortening the time needed for finding a job and avoiding unsuitable applications.
+                            <?php echo $pressSection['press_item_6']['text'] ?>
                         </p>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_9" class="section section_9 company">
+    <?php } ?>
+    <?php $testimonials = get_field('testimonials_section'); 
+    if($testimonials['title']) { ?>
+    <div id="section_8" class="section section_8">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-6/24">
+                    <div class="above_headline"><?php echo $testimonials['above_headline']?></div>
+                    <h1 class="headline light"><?php echo $testimonials['title']?></h1>
+                </div>
+            </div>
+            <div class="mj-grid">
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-6/24">
+                    <div class="mj-testimonials">
+                        <?php if($testimonials['testimonial_1']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_1']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_1']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_1']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_1']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_2']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_2']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_2']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_2']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_2']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_4']['text']) { ?>
+                            <div class="mj-testimonial">
+                            <div class="mj-testimonial__rating">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="mj-testimonial__content">
+                                <p>
+                                    <?php echo $testimonials['testimonial_4']['text'];?>
+                                </p>
+                            </div>
+                            <div class="mj-testimonial__author">
+                                <div class="mj-testimonial__author__image">
+                                    <img src="<?php echo $testimonials['testimonial_4']['image'];?>" alt="">
+                                </div>
+                                <div class="mj-testimonial__author__name">
+                                    <?php echo $testimonials['testimonial_4']['name'];?>
+                                </div>
+                                <div class="mj-testimonial__author__position">
+                                    <?php echo $testimonials['testimonial_4']['position'];?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_5']['text']) { ?>
+                            <div class="mj-testimonial">
+                            <div class="mj-testimonial__rating">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="mj-testimonial__content">
+                                <p>
+                                    <?php echo $testimonials['testimonial_5']['text'];?>
+                                </p>
+                            </div>
+                            <div class="mj-testimonial__author">
+                                <div class="mj-testimonial__author__image">
+                                    <img src="<?php echo $testimonials['testimonial_5']['image'];?>" alt="">
+                                </div>
+                                <div class="mj-testimonial__author__name">
+                                    <?php echo $testimonials['testimonial_5']['name'];?>
+                                </div>
+                                <div class="mj-testimonial__author__position">
+                                    <?php echo $testimonials['testimonial_5']['position'];?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="grid__item width-1/24"></div>
+                <div class="grid__item width-6/24">
+                    <div class="mj-testimonials">
+                        <?php if($testimonials['testimonial_3']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_3']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_3']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_3']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_3']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if($testimonials['testimonial_6']['text']) { ?>
+                            <div class="mj-testimonial">
+                                <div class="mj-testimonial__rating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="mj-testimonial__content">
+                                    <p>
+                                        <?php echo $testimonials['testimonial_6']['text'];?>
+                                    </p>
+                                </div>
+                                <div class="mj-testimonial__author">
+                                    <div class="mj-testimonial__author__image">
+                                        <img src="<?php echo $testimonials['testimonial_6']['image'];?>" alt="">
+                                    </div>
+                                    <div class="mj-testimonial__author__name">
+                                        <?php echo $testimonials['testimonial_6']['name'];?>
+                                    </div>
+                                    <div class="mj-testimonial__author__position">
+                                        <?php echo $testimonials['testimonial_6']['position'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
+    <?php $moreBenefits = get_field('more_benefits_section'); 
+    if($moreBenefits) { ?>
+    <div id="section_9" class="section section_9 company" style="background-image: <?php echo  $moreBenefits['image'];?>">
         <div class="mj-container">
             <div class="mj-grid">
                 <div class="grid__item width-1/24"></div>
                 <div class="grid__item width-6/24">
                     <ul class="mj-list">
                         <li class="mj-list__item">
-                            Fără riscuri sau costuri suplimentare!
+                            <?php echo $moreBenefits['benefit_1'];?>
                         </li>
                         <li class="mj-list__item">
-                            Începe un proces de recrutare medicală prin platformă 
+                            <?php echo $moreBenefits['benefit_2'];?>
                         </li>
                         <li class="mj-list__item">
-                            Plătește doar când angajezi un candidat.
+                            <?php echo $moreBenefits['benefit_3'];?>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
 <?php get_footer(); ?>
