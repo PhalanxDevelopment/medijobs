@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php $id = get_the_ID(); ?>
 <div id="section_1_blog" class="section section_1 section_1--blog-article">
     <div class="mj-container">
         <div class="mj-grid">
@@ -59,6 +60,61 @@
                             </div>
                         </div>
                     </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section_blog">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-1/24 hide-on-mobile"></div>
+                <div class="grid__item width-23/24 mj-form">
+                    <h2> Articole similare </h2>
+                    <div class="mj-articles">
+                    <?php $post_categories = get_post_primary_category($id, 'category'); 
+                        $slug = $post_categories['primary_category']->slug;
+                    ?>
+                    <?php
+                    $recent_posts = wp_get_recent_posts(array(
+                        'numberposts' => 3, // Number of recent posts thumbnails to display
+                        'post_status' => 'publish',
+                        'category_name'    => $slug
+                    ));
+                    foreach($recent_posts as $post) : ?>
+                        <div class="mj-article">
+                            <div class="mj-article__image">
+                                <a href="<?php echo get_permalink($post['ID']); ?>">
+                                    <?php echo get_the_post_thumbnail($post['ID'], 'full'); ?>
+                                </a>
+                            </div>
+                            <div class="mj-article__category">
+                            <?php $post_categories = get_post_primary_category($post['ID'], 'category'); 
+                                    echo $post_categories['primary_category']->name;
+                            ?>
+                            </div>
+                            <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
+                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
+                            <div class="mj-article__author">
+                                <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
+                                <span>SCRIS DE </span>
+                                <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
+                                <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
+                            </div>
+                        </div>
+                        
+                    <?php endforeach; wp_reset_query(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section_article">
+        <div class="mj-container">
+            <div class="mj-grid">
+                <div class="grid__item width-5/24 hide-on-mobile"></div>
+                <div class="grid__item width-14/24">
                     <?php $author_id= get_post_field( 'post_author', get_the_id()); ?>
                     <div class="author_box">
                         <div class="author_image">
@@ -84,9 +140,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                </div>
+                </div>
+                </div>
     <div id="article_quiz" class="article_quiz">
         <div class="mj-container">
             <div class="mj-grid">

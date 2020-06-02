@@ -72,6 +72,9 @@ Version: 2
 }
 .modula {
     margin-top: 20px;
+    width: 365px;
+    height: 120px;
+    overflow: hidden;
 }
 .comany_info__header {
     font-size: 18px;
@@ -293,7 +296,8 @@ iframe {
                 .faq_group__item-content {
                     height: auto;
                     p {
-                        color:#A7A9AC;
+                        color:#000;
+                        font-family: 'Noticia Text', serif;
                         margin-top: 10px;
                         padding-right: 30px;
                     }
@@ -311,8 +315,8 @@ iframe {
                 overflow: hidden;
                 height: 24px;
                 font-size: 20px;
-                color: #A7A9AC;
-                font-family: 'ClearSans-Regular';
+                color:#000;
+                font-family: 'Noticia Text', serif;
                 margin: 0px;
                 line-height: 24px;
             }
@@ -879,7 +883,7 @@ a.mj-btn.mj-btn--secondary {
         }
     }
     #quiz_step_2 {
-        h1.step__question{
+        .step__question{
             margin-top: 180px;
         }
         input {
@@ -887,7 +891,7 @@ a.mj-btn.mj-btn--secondary {
         }
     }
     #quiz_step_3 {
-        h1.step__question{
+        .step__question{
             margin-top: 180px;
         }
         .inline_form {
@@ -914,7 +918,7 @@ a.mj-btn.mj-btn--secondary {
             }
         }
     }
-    h1.step__question {
+    .step__question {
         text-align: center;
         font-size: 30px;
         line-height: 35px;
@@ -1581,9 +1585,11 @@ body.noScroll { /* ...or body.dialogShowing */
     &.about-us_boxes--companies {
         border: none;
         .about-us_box {
+            margin-top: 150px;
             h1 {
                 position: absolute;
                 top: -120px;
+                font-size: 36px;
             }
             .information_content {
                 background-color: #ECFEFF;
@@ -1597,6 +1603,10 @@ body.noScroll { /* ...or body.dialogShowing */
                     margin-top: -120px;
                     height: fit-content;
                 }
+                h1 {
+                    left: 56px;
+                    right: auto;
+                }
                 .information_content { 
                     padding-right: 224px;
                 }
@@ -1605,6 +1615,10 @@ body.noScroll { /* ...or body.dialogShowing */
                 img {
                     margin-top: -100px;
                     height: fit-content;
+                }
+                h1 {
+                    right: 56px;
+                    left: auto;
                 }
                 .information_content { 
                     padding-left: 224px;
@@ -1764,8 +1778,12 @@ body.noScroll { /* ...or body.dialogShowing */
                 line-height: 28px;
                 font-family: 'ClearSans-Regular';
                 padding: 24px;
+                color: #a7a9ac;
                 padding-top: 0px;
                 padding-bottom: 10px;
+            }
+            .team_glossary__person-position {
+                color: #000;
             }
             .team_glossary__person-image {
                 height: auto;
@@ -3495,12 +3513,20 @@ a.mj-btn {
             display: flex;
             justify-content: space-between;
             margin-bottom: 50px;
+            .tags_title {
+                font-size: 18px;
+                padding-top: 5px;
+                line-height: 22px;
+                letter-spacing: 0;
+                color: #808285!important;
+            }
             .tag {
                 text-transform: uppercase;
                 font-family: 'ClearSans-Bold';
                 font-weight: 500;
                 font-size: 12px;
-                margin-right: 10px;
+                margin-right: 5px;
+                margin-left: 5px;
                 border-radius: 6px;
                 width: max-content;
                 line-height: 17px;
@@ -3666,6 +3692,7 @@ a.mj-btn {
         background-size: cover;   
         padding-top: 40px; 
         margin-top: 0px;
+        margin-bottom: -150px;
         .community_social_links {
             margin-top: 40px;
             width: 168px;
@@ -3789,6 +3816,9 @@ a.mj-btn {
             &.secton_bg_image--company {
                 img {
                     border:5px solid #00C1DE;
+                    &.pic {
+                        border: none;
+                    }
                 }
             }
             &.company {
@@ -5019,6 +5049,7 @@ a.mj-btn {
         }
         &.section_2 {
             background: none;
+            background-image: none !important;
         }
         &.section_4 {
             margin-top: 60px;
@@ -5159,7 +5190,7 @@ a.mj-btn {
                 font-size:16px;
             }
         }
-        h1.headline {
+        .headline {
             font-size: 30px;
             line-height: 41px;
             letter-spacing: -1px;

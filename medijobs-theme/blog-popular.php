@@ -14,9 +14,9 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-12/24">
-                    <div class="above_headline">WELCOME</div>
-                    <h1 class="headline uppercase">Bun venit pe Blogul MEDIjobs.</h1>
-                    <p>Vrem să te ajutăm să îți construiești cariera medicală la care ai visat! Află cum să realizezi un CV pentru a-ți găsi un loc de muncă, cum să îți negociezi salariul, sfaturi practice pentru îmbunătățirea comunicării cu pacienții și echipa medicală, dar și multe altele.</p>
+                    <div class="above_headline"><?php the_field('above_headline'); ?></div>
+                    <h1 class="headline uppercase"><?php the_field('title'); ?></h1>
+                    <p><?php the_field('text'); ?></p>
 
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
@@ -48,7 +48,7 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Cele mai citite articole.</h1>
+                    <h1 class="headline light"><?php the_field('recent_articles_title'); ?></h1>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
                         

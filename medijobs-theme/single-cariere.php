@@ -1,6 +1,11 @@
 <?php
 get_header();
 ?>
+<style>
+.mj-header .mj-meniu.blog_menu {
+    display: none !important;
+}
+</style>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div id="isCompany" class="mj-container">
         <form id="form" action="#" method="post" class="mj-register_form mj-form job-form">

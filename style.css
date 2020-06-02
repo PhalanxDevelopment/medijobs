@@ -55,7 +55,10 @@ Version: 2
   font-style: normal; }
 
 .modula {
-  margin-top: 20px; }
+  margin-top: 20px;
+  width: 365px;
+  height: 120px;
+  overflow: hidden; }
 
 .comany_info__header {
   font-size: 18px;
@@ -245,7 +248,8 @@ iframe {
       .faq_group .faq_group__list .faq_group__item.active .faq_group__item-content {
         height: auto; }
         .faq_group .faq_group__list .faq_group__item.active .faq_group__item-content p {
-          color: #A7A9AC;
+          color: #000;
+          font-family: 'Noticia Text', serif;
           margin-top: 10px;
           padding-right: 30px; }
     .faq_group .faq_group__list .faq_group__item .faq_group__item-title {
@@ -259,8 +263,8 @@ iframe {
       overflow: hidden;
       height: 24px;
       font-size: 20px;
-      color: #A7A9AC;
-      font-family: 'ClearSans-Regular';
+      color: #000;
+      font-family: 'Noticia Text', serif;
       margin: 0px;
       line-height: 24px; }
 
@@ -726,11 +730,11 @@ a.mj-btn.mj-btn--secondary {
       .article_quiz .article_quiz__footer .article_quiz__footer__link.skip {
         left: auto;
         right: 0px; }
-  .article_quiz #quiz_step_2 h1.step__question {
+  .article_quiz #quiz_step_2 .step__question {
     margin-top: 180px; }
   .article_quiz #quiz_step_2 input {
     margin-bottom: 120px; }
-  .article_quiz #quiz_step_3 h1.step__question {
+  .article_quiz #quiz_step_3 .step__question {
     margin-top: 180px; }
   .article_quiz #quiz_step_3 .inline_form {
     margin-top: 55px;
@@ -752,7 +756,7 @@ a.mj-btn.mj-btn--secondary {
     .article_quiz #quiz_step_3 .inline_form input:-ms-input-placeholder {
       /* Internet Explorer 10-11 */
       opacity: 0.3; }
-  .article_quiz h1.step__question {
+  .article_quiz .step__question {
     text-align: center;
     font-size: 30px;
     line-height: 35px; }
@@ -1339,25 +1343,34 @@ body.noScroll {
   padding-bottom: 56px; }
   .about-us_boxes.about-us_boxes--companies {
     border: none; }
-    .about-us_boxes.about-us_boxes--companies .about-us_box h1 {
-      position: absolute;
-      top: -120px; }
-    .about-us_boxes.about-us_boxes--companies .about-us_box .information_content {
-      background-color: #ECFEFF;
-      padding: 56px; }
-      .about-us_boxes.about-us_boxes--companies .about-us_box .information_content p {
-        padding: 0px; }
-    .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--left img {
-      margin-top: -120px;
-      height: fit-content; }
-    .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--left .information_content {
-      padding-right: 224px; }
-    .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--right img {
-      margin-top: -100px;
-      height: fit-content; }
-    .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--right .information_content {
-      padding-left: 224px;
-      margin-left: -128px; }
+    .about-us_boxes.about-us_boxes--companies .about-us_box {
+      margin-top: 150px; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box h1 {
+        position: absolute;
+        top: -120px;
+        font-size: 36px; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box .information_content {
+        background-color: #ECFEFF;
+        padding: 56px; }
+        .about-us_boxes.about-us_boxes--companies .about-us_box .information_content p {
+          padding: 0px; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--left img {
+        margin-top: -120px;
+        height: fit-content; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--left h1 {
+        left: 56px;
+        right: auto; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--left .information_content {
+        padding-right: 224px; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--right img {
+        margin-top: -100px;
+        height: fit-content; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--right h1 {
+        right: 56px;
+        left: auto; }
+      .about-us_boxes.about-us_boxes--companies .about-us_box.about-us_box--right .information_content {
+        padding-left: 224px;
+        margin-left: -128px; }
   .about-us_boxes .about-us_box {
     position: relative;
     display: flex;
@@ -1484,8 +1497,11 @@ body.noScroll {
         line-height: 28px;
         font-family: 'ClearSans-Regular';
         padding: 24px;
+        color: #a7a9ac;
         padding-top: 0px;
         padding-bottom: 10px; }
+      .team_glossary .team_glossary__person.team_glossary__person--singleCompanies .team_glossary__person-position {
+        color: #000; }
       .team_glossary .team_glossary__person.team_glossary__person--singleCompanies .team_glossary__person-image {
         height: auto;
         width: 100%; }
@@ -2891,12 +2907,19 @@ a.mj-btn {
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px; }
+      .section .sub_section.sub_section--tags .tags_title {
+        font-size: 18px;
+        padding-top: 5px;
+        line-height: 22px;
+        letter-spacing: 0;
+        color: #808285 !important; }
       .section .sub_section.sub_section--tags .tag {
         text-transform: uppercase;
         font-family: 'ClearSans-Bold';
         font-weight: 500;
         font-size: 12px;
-        margin-right: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
         border-radius: 6px;
         width: max-content;
         line-height: 17px;
@@ -3030,7 +3053,8 @@ a.mj-btn {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 40px;
-    margin-top: 0px; }
+    margin-top: 0px;
+    margin-bottom: -150px; }
     .section.section--conference .community_social_links {
       margin-top: 40px;
       width: 168px;
@@ -3130,6 +3154,8 @@ a.mj-btn {
       left: 0px; }
     .section.section_1 .secton_bg_image.secton_bg_image--company img {
       border: 5px solid #00C1DE; }
+      .section.section_1 .secton_bg_image.secton_bg_image--company img.pic {
+        border: none; }
     .section.section_1 .secton_bg_image.company img {
       top: -162px;
       left: 500px; }
@@ -4052,7 +4078,8 @@ a.mj-btn {
       opacity: 1;
       margin-top: 31px; }
   .section.section_2 {
-    background: none; }
+    background: none;
+    background-image: none !important; }
   .section.section_4 {
     margin-top: 60px; }
   .section.section_7 {
@@ -4162,18 +4189,18 @@ a.mj-btn {
       .mj-container p.grey {
         color: #808285;
         font-size: 16px; }
-    .mj-container h1.headline {
+    .mj-container .headline {
       font-size: 30px;
       line-height: 41px;
       letter-spacing: -1px;
       margin-top: 5px; }
-      .mj-container h1.headline.light {
+      .mj-container .headline.light {
         font-family: 'ClearSans-Medium';
         font-size: 30px;
         line-height: 41px;
         letter-spacing: -1px;
         margin-top: 5px; }
-      .mj-container h1.headline.biggest {
+      .mj-container .headline.biggest {
         font-size: 30px;
         line-height: 41px;
         letter-spacing: -1px; }

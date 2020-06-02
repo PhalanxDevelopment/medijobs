@@ -1,6 +1,11 @@
 <?php
 get_header();
 ?>
+<style>
+.mj-header .mj-meniu.blog_menu {
+    display: none !important;
+}
+</style>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div id="section_1" class="section section_1">
     <div class="mj-container">
@@ -16,10 +21,14 @@ get_header();
                 <div class="sub_section sub_section--info">
                     <?php 
                         $id = get_field('company_id');
-                        apply_filters('company_info', $id); 
+                        $foundedText = get_field('founded_text');
+                        $employeeText = get_field('employee_text');
+                        $websiteText = get_field('website_text');
+                        apply_filters('company_info', $id, $foundedText, $employeeText, $websiteText); 
                     ?>
                 </div>
                 <div class="sub_section sub_section--tags">
+                <span class="tags_title">Tags:</span>
                 <?php $tags = explode(",", get_field('company_tags')); ?>
                     <?php foreach($tags as $tag) { ?>
                         <div class="tag">
@@ -87,7 +96,7 @@ get_header();
             <div class="grid__item width-23/24">
                 <div class="about-us_boxes about-us_boxes--companies">
                     <div class="about-us_box about-us_box--left">
-                        <h1 class="headline light"> <?php the_field('information_title'); ?> </h1>
+                        <h1 class="headline"> <?php the_field('information_title'); ?> </h1>
                         <div class="information_content"> 
                             <?php the_field('information_content'); ?>
                         </div>
@@ -98,13 +107,13 @@ get_header();
                             <div class="information_content"> 
                                 <?php the_field('information_2_content'); ?>
                             </div>
-                            <h1 class="headline light"> <?php the_field('information_2_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_2_title'); ?> </h1>
                             <img src=" <?php the_field('information_2_image'); ?>" alt="<?php the_field('information_2_title');; ?>">
                         </div>
                     <?php } ?>
                     <?php if(get_field('information_3_title')) { ?>
                         <div class="about-us_box about-us_box--left">
-                            <h1 class="headline light"> <?php the_field('information_3_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_3_title'); ?> </h1>
                             <div class="information_content"> 
                                 <?php the_field('information_3_content'); ?>
                             </div>
@@ -116,13 +125,13 @@ get_header();
                             <div class="information_content"> 
                                 <?php the_field('information_4_content'); ?>
                             </div>
-                            <h1 class="headline light"> <?php the_field('information_4_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_4_title'); ?> </h1>
                             <img src=" <?php the_field('information_4_image'); ?>" alt="<?php the_field('information_4_title');; ?>">
                         </div>
                     <?php } ?>
                     <?php if(get_field('information_5_title')) { ?>
                         <div class="about-us_box about-us_box--left">
-                            <h1 class="headline light"> <?php the_field('information_5_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_5_title'); ?> </h1>
                             <div class="information_content"> 
                                 <?php the_field('information_5_content'); ?>
                             </div>
@@ -134,13 +143,13 @@ get_header();
                             <div class="information_content"> 
                                 <?php the_field('information_6_content'); ?>
                             </div>
-                            <h1 class="headline light"> <?php the_field('information_6_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_6_title'); ?> </h1>
                             <img src=" <?php the_field('information_6_image'); ?>" alt="<?php the_field('information_6_title');; ?>">
                         </div>
                     <?php } ?>
                     <?php if(get_field('information_7_title')) { ?>
                         <div class="about-us_box about-us_box--left">
-                            <h1 class="headline light"> <?php the_field('information_7_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_7_title'); ?> </h1>
                             <div class="information_content"> 
                                 <?php the_field('information_7_content'); ?>
                             </div>
@@ -152,13 +161,13 @@ get_header();
                             <div class="information_content"> 
                                 <?php the_field('information_8_content'); ?>
                             </div>
-                            <h1 class="headline light"> <?php the_field('information_8_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_8_title'); ?> </h1>
                             <img src=" <?php the_field('information_8_image'); ?>" alt="<?php the_field('information_8_title');; ?>">
                         </div>
                     <?php } ?>
                     <?php if(get_field('information_9_title')) { ?>
                         <div class="about-us_box about-us_box--left">
-                            <h1 class="headline light"> <?php the_field('information_9_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_9_title'); ?> </h1>
                             <div class="information_content"> 
                                 <?php the_field('information_9_content'); ?>
                             </div>
@@ -167,7 +176,7 @@ get_header();
                     <?php } ?>
                     <?php if(get_field('information_10_title')) { ?>
                         <div class="about-us_box about-us_box--right">
-                            <h1 class="headline light"> <?php the_field('information_10_title'); ?> </h1>
+                            <h1 class="headline"> <?php the_field('information_10_title'); ?> </h1>
                             <div class="information_content"> 
                                 <?php the_field('information_10_content'); ?>
                             </div>
@@ -247,7 +256,7 @@ get_header();
                     <div class="mj-feed companies">
                         <div class="after_content instagram"> <?php the_field('instagram_button'); ?></div>
                         <div class="twitter_inner">
-                            <?php echo do_shortcode('[instagram-feed user="'. get_field('instagram_username') .'" heightunit=px height=704 widthunit=px width=295 cols=1]');?>
+                            <?php echo do_shortcode('[instagram-feed user="'. get_field('instagram_username') .'" heightunit=px height=704 widthunit=px width=448 cols=1]');?>
                         </div>
                     </div>
                     <?php } ?>

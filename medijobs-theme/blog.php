@@ -17,7 +17,13 @@ get_header();
                     <div class="above_headline"><?php the_field('above_headline'); ?></div>
                     <h1 class="headline uppercase"><?php the_field('title'); ?></h1>
                     <p><?php the_field('text'); ?></p>
-
+                    <form id="form" role="search" action="<?php echo site_url(''); ?>" method="get"  class="mj-search-blog mj-form" style="margin-bottom:50px;">
+                        <input class="mj-input" name="s" type="text" placeholder="Cauta articole" >
+                        <input type="hidden" name="post_type" value="post" />
+                        <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
+                            Cauta articole
+                        </button>
+                    </form>
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-8/24">

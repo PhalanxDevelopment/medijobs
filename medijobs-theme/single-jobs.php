@@ -1,6 +1,11 @@
 <?php
 get_header();
 ?>
+<style>
+.mj-header .mj-meniu.blog_menu {
+    display: none !important;
+}
+</style>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div id="isCompany" class="mj-container">
         <form id="form" action="#" method="post" class="mj-register_form mj-form job-form">
@@ -77,7 +82,6 @@ get_header();
                 <div class="grid__item width-2/24"> </div>
                 <div class="grid__item width-2/24"> 
                     <?php 
-                       
                         apply_filters('job_information', $categoryId, $subcategoryId, 'ranges'); 
                     ?>
                 </div>
@@ -118,7 +122,7 @@ get_header();
                 <div id="job-details" class="faq_group">
                     <div class="faq_group__list">
                     <?php if(get_field('job_introducere')) { ?>
-                        <div class="faq_group__item">
+                        <div class="faq_group__item" id="box-1">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_introducere_title'); ?>
                             </h3>
@@ -128,7 +132,7 @@ get_header();
                         </div>
                         <?php } ?>
                         <?php if(get_field('job_educatie')) { ?>
-                        <div class="faq_group__item">
+                        <div class="faq_group__item" id="box-2">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_educatie_title'); ?>
                             </h3>
@@ -138,7 +142,7 @@ get_header();
                         </div>
                         <?php } ?>
                         <?php if(get_field('job_experienta_si_voluntariat')) { ?>
-                        <div class="faq_group__item">
+                        <div class="faq_group__item" id="box-3">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_experienta_title'); ?>
                             </h3>
@@ -148,7 +152,7 @@ get_header();
                         </div>
                         <?php } ?>
                         <?php if(get_field('job_avansare_in_cariera')) { ?>
-                        <div class="faq_group__item active">
+                        <div class="faq_group__item active" id="box-4">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_avansare_title'); ?>
                             </h3>
@@ -158,7 +162,7 @@ get_header();
                         </div>
                         <?php } ?>
                         <?php if(get_field('job_description')) { ?>
-                        <div class="faq_group__item">
+                        <div class="faq_group__item" id="box-5">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_description_title'); ?>
                             </h3>
@@ -168,7 +172,7 @@ get_header();
                         </div>
                         <?php } ?>
                         <?php if(get_field('job_responsabilities')) { ?>
-                        <div class="faq_group__item">
+                        <div class="faq_group__item" id="box-6">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_responsabilities_title'); ?>
                             </h3>
@@ -178,12 +182,42 @@ get_header();
                         </div>
                         <?php } ?>
                         <?php if(get_field('job_experience')) { ?>
-                        <div class="faq_group__item">
+                        <div class="faq_group__item" id="box-7">
                             <h3 class="faq_group__item-title uppercase">
                                 <?php the_field('job_experience_title'); ?>
                             </h3>
                             <div class="faq_group__item-content">
                                 <?php the_field('job_experience'); ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                        <?php if(get_field('job_experience_2')) { ?>
+                        <div class="faq_group__item" id="box-8">
+                            <h3 class="faq_group__item-title uppercase">
+                                <?php the_field('job_experience_title_2'); ?>
+                            </h3>
+                            <div class="faq_group__item-content">
+                                <?php the_field('job_experience_2'); ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                        <?php if(get_field('job_experience_3')) { ?>
+                        <div class="faq_group__item" id="box-9">
+                            <h3 class="faq_group__item-title uppercase">
+                                <?php the_field('job_experience_title_3'); ?>
+                            </h3>
+                            <div class="faq_group__item-content">
+                                <?php the_field('job_experience_3'); ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                        <?php if(get_field('job_experience_4')) { ?>
+                        <div class="faq_group__item" id="box-10">
+                            <h3 class="faq_group__item-title uppercase">
+                                <?php the_field('job_experience_title_4'); ?>
+                            </h3>
+                            <div class="faq_group__item-content">
+                                <?php the_field('job_experience_4'); ?>
                             </div>
                         </div>
                         <?php } ?>
@@ -279,7 +313,7 @@ get_header();
     const monthNames = ["January", "February", "March", "April", "May", "June",
                             "July", "August", "September", "October", "November", "December"
                         ];
-    const url = 'https://app.medijobs.ro/api/odata/jobs?category_id=9&subcategory_id=3'
+    const url = 'https://app.medijobs.ro/api/odata/jobs?category_id=<?php echo $categoryId; ?>&subcategory_id=<?php echo $subcategoryId; ?>'
     const options = {
         title: {
             text: 'Salary Evolution '

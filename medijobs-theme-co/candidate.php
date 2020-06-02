@@ -47,8 +47,8 @@ get_header();
         <form id="form" action="https://app.medijobs.co/register/candidate" method="post" class="mj-register_form mj-form">
             <div id="close-form" class="close hide-on-desktop"></div>
             <a href="https://app.medijobs.co/login" class="login">REGISTERED ALREADY? LOGIN</a>
-            <h3>SKIP THE APPLICATIONS — GET OFFERS NOW</h3>
-            <p>Create a profile to match with top-tier practices today.</p>
+            <h3 style="text-transform:uppercase;">Skip the applications and let employers find you directly</h3>
+            <p>Create a free, confidential profile to avoid wasting time on job boards.</p>
             <input class="mj-input" name="name" type="text" placeholder="Full name" >
             <input class="mj-input" name="email" type="email" placeholder="Email" >
             <button type="submit" class="mj-btn mj-btn--primary mj-btn--alt--2 uppercase">
@@ -62,7 +62,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-9/24">
-                    <h1 class="headline" style="font-size:40px;line-height:45px;">Reinventing healthcare recruitment, we bring jobs to you.</h1>
+                    <h1 class="headline" style="font-size:40px;line-height:45px;">The leading permanent job platform for outpatient healthcare and dental professionals.</h1>
                 </div>
                 <div class="grid__item width-6/24 hide-on-mobile">
                     <div class="secton_bg_image">
@@ -74,7 +74,7 @@ get_header();
             <div class="mj-grid">
                 <div class="grid__item width-1/24 hide-on-mobile"></div>
                 <div class="grid__item width-7/24">
-                    <p>Join the MEDIjobs community to find your next dream job today.</p>
+                    <p><a href="https://app.medijobs.co/register/candidate" >Create a free profile</a> to let actively hiring employers match with you.</p>
                 </div>
             </div>
             <div class="mj-grid">

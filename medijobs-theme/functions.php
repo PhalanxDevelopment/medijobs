@@ -16,7 +16,7 @@ function blankslate_setup() {
 }
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 function blankslate_load_scripts() {
-    wp_enqueue_style( 'blankslate-style', get_stylesheet_uri(), array(), '6.10.6', 'all' );
+    wp_enqueue_style( 'blankslate-style', get_stylesheet_uri(), array(), '6.10.11', 'all' );
     wp_enqueue_script( 'jquery' );
 }
 add_filter( 'document_title_separator', 'blankslate_document_title_separator' );
@@ -365,7 +365,7 @@ add_filter('company_jobs', 'get_company_jobs', 999, 7);
 
 add_filter('company_info', 'get_company_info', 999, 7);
 
-function get_company_info($companyID) {
+function get_company_info($companyID, $foundedText, $employee, $website) {
     $http = _wp_http_get_object();
     $url = 'https://app.medijobs.ro/api/odata/company?company_id='.$companyID;
     $result = $http->request($url, array());
@@ -373,9 +373,9 @@ function get_company_info($companyID) {
     $employee_count = $body['employee_count'];
     $founded_year = $body['founded_year'];
     $web = $body['web'];
-    $output = '<div class="company_info"><span class="comany_info__header">Founded: </span> <span id="company_founded">'.$founded_year.'</span></div>';
-    $output .= '<div class="company_info"><span class="comany_info__header">Employees: </span> <span id="company_employees">'.$employee_count.'</span></div>';
-    $output .= '<div class="company_info"><span class="comany_info__header">Website: </span> <a href="http://'.$web.'" target="_blank" id="company_website">'.$web.'</a></div>';
+    $output = '<div class="company_info"><span class="comany_info__header">'.$foundedText.': </span> <span id="company_founded">'.$founded_year.'</span></div>';
+    $output .= '<div class="company_info"><span class="comany_info__header">'.$employee.': </span> <span id="company_employees">'.$employee_count.'</span></div>';
+    $output .= '<div class="company_info"><span class="comany_info__header">'.$website.': </span> <a href="http://'.$web.'" target="_blank" id="company_website">'.$web.'</a></div>';
     echo $output;
 }
 
@@ -407,12 +407,10 @@ add_filter('job_information', 'get_job_information', 999, 7);
 
 $jobInfo = [];
 function get_job_information($categoryID, $subcategoryID, $returnType) {
-    if(!isset($jobInfo) ) {
-        $http = _wp_http_get_object();
-        $url = 'https://app.medijobs.ro/api/odata/jobs?category_id='.$categoryID.'&subcategory_id='.$subcategoryID;
-        $result = $http->request($url, array());
-        $jobInfo = json_decode($result['body'], true);
-    }
+    $http = _wp_http_get_object();
+    $url = 'https://app.medijobs.ro/api/odata/jobs?category_id='.$categoryID.'&subcategory_id='.$subcategoryID;
+    $result = $http->request($url, array());
+    $jobInfo = json_decode($result['body'], true);
 
     if($returnType === 'ranges') {
         $output = '';
