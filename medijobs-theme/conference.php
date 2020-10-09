@@ -62,15 +62,15 @@ get_header();
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-13/24">
                 <div class="community_social_links">
-                    <?php $social1 = get_field('social_link_1'); 
+                    <?php $social1 = get_field('social_link_1');
                     if($social1['link']) { ?>
                         <a href="<?php echo $social1['link']; ?>"><img src="<?php echo $social1['logo']; ?>" alt=""></a>
                     <?php } ?>
-                    <?php $social2 = get_field('social_link_2'); 
+                    <?php $social2 = get_field('social_link_2');
                     if($social2['link']) { ?>
                         <a href="<?php echo $social2['link']; ?>"><img src="<?php echo $social2['logo']; ?>" alt=""></a>
                     <?php } ?>
-                    <?php $social3 = get_field('social_link_3'); 
+                    <?php $social3 = get_field('social_link_3');
                     if($social3['link']) { ?>
                         <a href="<?php echo $social3['link']; ?>"><img src="<?php echo $social3['logo']; ?>" alt=""></a>
                     <?php } ?>
@@ -111,9 +111,9 @@ get_header();
             <div class="grid__item width-23/24">
                 <div class="statistics_box">
                     <h2><?php the_field('statistics_title'); ?></h2>
-                    
+
                     <div class="conference_boxes">
-                        <?php $box1 = get_field('statistic_box_1'); 
+                        <?php $box1 = get_field('statistic_box_1');
                             if($box1['number']) {
                         ?>
                             <div class="conference_box">
@@ -121,7 +121,7 @@ get_header();
                                 <div class="conference_box__label"><?php echo $box1['label']; ?></div>
                             </div>
                         <?php } ?>
-                        <?php $box2 = get_field('statistic_box_2'); 
+                        <?php $box2 = get_field('statistic_box_2');
                             if($box2['number']) {
                         ?>
                             <div class="conference_box">
@@ -129,7 +129,7 @@ get_header();
                                 <div class="conference_box__label"><?php echo $box2['label']; ?></div>
                             </div>
                         <?php } ?>
-                        <?php $box3 = get_field('statistic_box_3'); 
+                        <?php $box3 = get_field('statistic_box_3');
                             if($box3['number']) {
                         ?>
                             <div class="conference_box">
@@ -137,7 +137,7 @@ get_header();
                                 <div class="conference_box__label"><?php echo $box3['label']; ?></div>
                             </div>
                         <?php } ?>
-                        <?php $box4 = get_field('statistic_box_4'); 
+                        <?php $box4 = get_field('statistic_box_4');
                             if($box4['number']) {
                         ?>
                             <div class="conference_box">
@@ -145,7 +145,7 @@ get_header();
                                 <div class="conference_box__label"><?php echo $box4['label']; ?></div>
                             </div>
                         <?php } ?>
-                        <?php $box5 = get_field('statistic_box_5'); 
+                        <?php $box5 = get_field('statistic_box_5');
                             if($box5['number']) {
                         ?>
                             <div class="conference_box">
@@ -156,8 +156,8 @@ get_header();
                     </div>
                 </div>
             </div>
-        </div>  
-    </div>  
+        </div>
+    </div>
 </div>
 <div id="section_5" class="section section_5--community" >
     <div class="mj-container">
@@ -169,8 +169,8 @@ get_header();
                     <?php the_field('last_section_button_text'); ?>
                 </a>
             </div>
-        </div>  
-    </div>  
+        </div>
+    </div>
     <img src="<?php the_field('last_section_image'); ?>" alt="">
 </div>
 -->
@@ -204,13 +204,13 @@ get_header();
             minutesLeft = minutesLeft - 1;
             secondsLeft = 60 - Math.ceil((today.getSeconds()-conferenceDate.getSeconds()));;
         }
-        
+
         document.getElementById('days').innerHTML = daysLeft;
         document.getElementById('hours').innerHTML = hoursLeft;
         document.getElementById('minutes').innerHTML = minutesLeft;
         document.getElementById('seconds').innerHTML = secondsLeft;
     }
     setInterval(calculateTimeUntilConference, 1000);
-    
+
 </script>
 <?php get_footer(); ?>

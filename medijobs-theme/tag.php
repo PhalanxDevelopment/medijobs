@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php get_header();
+get_sidebar();
+?>
 <div id="section_1_blog" class="section section_1 section_1--blog">
         <div class="mj-container">
             <div class="mj-grid">
@@ -10,7 +12,7 @@
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-8/24">
-                <div id="blog-form" class="mj-register_form mj-form blog-form">
+                <div id="blog-form" class="mj-register_form mj-form blog-form open">
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3>Newsletter săptămânal</h3>
                         <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>

@@ -7,6 +7,7 @@
  * @subpackage Medijobs
  */
 get_header();
+get_sidebar();
 ?>
 
 <div id="section_1_blog" class="section section_1 section_1--blog">
@@ -21,7 +22,7 @@ get_header();
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-8/24">
-                    <div id="blog-form" class="mj-register_form mj-form blog-form">
+                    <div id="blog-form" class="mj-register_form mj-form blog-form open">
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3><?php the_field('form_title'); ?></h3>
                         <p><?php the_field('form_text'); ?></p>
@@ -48,10 +49,10 @@ get_header();
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light"><?php the_field('recent_articles_title'); ?></h1>
+                    <h2 class="headline light"><?php the_field('recent_articles_title'); ?></h2>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
-                        
+
                             $args = array(
                                 'range' => 'all',
                                 'order_by'=> 'views',
@@ -59,11 +60,11 @@ get_header();
                                 'stats_author' => 1,
                             );
                             wpp_get_mostpopular( $args );
-                        
+
                         }
                     ?>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 <?php get_footer(); ?>

@@ -1,6 +1,8 @@
 <?php
 /* Template Name:  Search */        
-get_header(); ?> 
+get_header(); 
+get_sidebar();
+?> 
 
 <div class="section section_blog">
     <div class="mj-container">

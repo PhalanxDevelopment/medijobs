@@ -36,7 +36,7 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24"></div>
             <div class="grid__item width-23/24">
-                <h1 class="headline light"><?php the_field('when_you_join_title'); ?></h1>
+                <h2 class="headline light"><?php the_field('when_you_join_title'); ?></h2>
             </div>
         </div>
         <div class="mj-grid">
@@ -78,13 +78,13 @@ get_header();
         <div class="mj-grid">
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-8/24">
-                <h1 class="headline light"><?php the_field('facebook_groups_title'); ?></h1>
+                <h2 class="headline light"><?php the_field('facebook_groups_title'); ?></h2>
                 <p class="hide-on-mobile"><?php the_field('facebook_groups_text'); ?>.</p>
                 <div class="sub_section hide-on-mobile" style="margin-top:300px"><?php the_field('facebook_groups_link_text'); ?></div>
             </div>
             <div class="grid__item width-15/24">
                 <div class="facebook_groups">
-                    <?php $facebookBox1 = get_field('facebook_box_1'); 
+                    <?php $facebookBox1 = get_field('facebook_box_1');
                     if($facebookBox1['text']) { ?>
                     <div class="facebook_groups__box">
                         <div class="facebook_groups__box-icon">
@@ -100,7 +100,7 @@ get_header();
                         </div>
                     </div>
                     <?php } ?>
-                    <?php $facebookBox2 = get_field('facebook_box_2'); 
+                    <?php $facebookBox2 = get_field('facebook_box_2');
                     if($facebookBox2['text']) { ?>
                     <div class="facebook_groups__box">
                         <div class="facebook_groups__box-icon">
@@ -127,18 +127,18 @@ get_header();
             <div class="grid__item width-1/24 hide-on-mobile"></div>
             <div class="grid__item width-4/24">
                 <img class="leaders_image" src="<?php the_field('confrence_logo'); ?>" alt="">
-                <h1 class="headline light"><?php the_field('confrence_title'); ?></h1>
+                <h2 class="headline light"><?php the_field('confrence_title'); ?></h2>
                 <p><?php the_field('confrence_text'); ?></p>
                 <div class="community_social_links">
-                    <?php $social1 = get_field('social_link_1'); 
+                    <?php $social1 = get_field('social_link_1');
                     if($social1['link']) { ?>
                         <a href="<?php echo $social1['link']; ?>"><img src="<?php echo $social1['logo']; ?>" alt=""></a>
                     <?php } ?>
-                    <?php $social2 = get_field('social_link_2'); 
+                    <?php $social2 = get_field('social_link_2');
                     if($social2['link']) { ?>
                         <a href="<?php echo $social2['link']; ?>"><img src="<?php echo $social2['logo']; ?>" alt=""></a>
                     <?php } ?>
-                    <?php $social3 = get_field('social_link_3'); 
+                    <?php $social3 = get_field('social_link_3');
                     if($social3['link']) { ?>
                         <a href="<?php echo $social3['link']; ?>"><img src="<?php echo $social3['logo']; ?>" alt=""></a>
                     <?php } ?>
@@ -156,7 +156,7 @@ get_header();
         </div>
     </div>
 </div>
-<?php $companies = get_field('companies'); ?> 
+<?php $companies = get_field('companies'); ?>
 <?php if($companies['title']) { ?>
 <div id="section_6" class="section section_blog_company section section_about-us_6">
     <div class="mj-container">
@@ -188,14 +188,14 @@ get_header();
     <div class="mj-container">
         <div class="mj-grid">
             <div class="grid__item width-24/24">
-                <h1 class="headline biggest center"><?php the_field('last_section_title'); ?></h1>
+                <h2 class="headline biggest center"><?php the_field('last_section_title'); ?></h2>
                 <p class="center"><?php the_field('last_section_text'); ?>.</p>
                 <a style="max-width:200px; margin: 0 auto;" href="<?php the_field('last_section_link'); ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
                     <?php the_field('last_section_button_text'); ?>
                 </a>
             </div>
-        </div>  
-    </div>  
+        </div>
+    </div>
     <img src="<?php the_field('last_section_image'); ?>" alt="">
 </div>
 <?php } ?>

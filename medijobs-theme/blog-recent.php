@@ -7,6 +7,7 @@
  * @subpackage Medijobs
  */
 get_header();
+get_sidebar();
 ?>
 
 <div id="section_1_blog" class="section section_1 section_1--blog">
@@ -21,7 +22,7 @@ get_header();
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-8/24">
-                    <div id="blog-form" class="mj-register_form mj-form blog-form">
+                    <div id="blog-form" class="mj-register_form mj-form blog-form open">
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3><?php the_field('form_title'); ?></h3>
                         <p><?php the_field('form_text'); ?></p>
@@ -70,12 +71,19 @@ get_header();
                             </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
                             <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
-                            <div class="mj-article__author">
-                                <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
-                                <span>SCRIS DE </span>
-                                <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
-                                <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
-                            </div>
+                            <?php if(get_field('sponsored', $post['ID'])) { ?>
+                                <div class="mj-article__author">
+                                    <span>SPONSORIZAT DE </span>
+                                    <img class="mj-article__author__image" src="<?php the_field('sponsor_logo',$post['ID']) ?>" alt="">
+                                </div>
+                            <?php } else { ?>
+                                <div class="mj-article__author">
+                                    <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
+                                    <span>SCRIS DE </span>
+                                    <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
+                                    <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         
                     <?php endforeach; wp_reset_query(); ?>

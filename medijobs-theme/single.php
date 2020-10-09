@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+get_sidebar();
+?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php $id = get_the_ID(); ?>
 <div id="section_1_blog" class="section section_1 section_1--blog-article">
@@ -11,7 +13,7 @@
                 <div class="article_image">
                     <?php
                         if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                            the_post_thumbnail( 'full', [ 'alt' => esc_html ( get_the_title() ) ] ); 
+                            the_post_thumbnail( 'full', [ 'alt' => esc_html ( get_the_title() ) ] );
                         }
                     ?>
                 </div>
@@ -61,11 +63,13 @@
                         </div>
                     </div>
 
-                   
+
                 </div>
             </div>
         </div>
     </div>
+    <?php $type = get_field('related_articles_single_article_type') ?>
+    <?php if($type !== 'none') { ?>
     <div class="section section_blog">
         <div class="mj-container">
             <div class="mj-grid">
@@ -73,43 +77,99 @@
                 <div class="grid__item width-23/24 mj-form">
                     <h2> Articole similare </h2>
                     <div class="mj-articles">
-                    <?php $post_categories = get_post_primary_category($id, 'category'); 
-                        $slug = $post_categories['primary_category']->slug;
-                    ?>
                     <?php
-                    $recent_posts = wp_get_recent_posts(array(
-                        'numberposts' => 3, // Number of recent posts thumbnails to display
-                        'post_status' => 'publish',
-                        'category_name'    => $slug
-                    ));
+                    if($type == 'category' ) {
+                        $recent_posts = wp_get_recent_posts(array(
+                            'numberposts' => 3, // Number of recent posts thumbnails to display
+                            'post_status' => 'publish',
+                            'category_name'    => get_field('related_articles_single_article_category_slug')
+                        ));
+                    }
+
+                    if($type == 'tag' ) {
+                        $recent_posts = wp_get_recent_posts(array(
+                            'numberposts' => 3, // Number of recent posts thumbnails to display
+                            'post_status' => 'publish',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'post_tag',
+                                    'field'=>'name',
+                                    'terms'    => array(get_field('related_articles_single_article_tag')),
+                                    'operator'=> 'IN'
+                                ),
+                            ), //
+                        ));
+                    }
+                    if($type ==='tag' || $type == 'category' ) {
                     foreach($recent_posts as $post) : ?>
-                        <div class="mj-article">
+
+                        <div class="mj-article tag-category">
                             <div class="mj-article__image">
                                 <a href="<?php echo get_permalink($post['ID']); ?>">
                                     <?php echo get_the_post_thumbnail($post['ID'], 'full'); ?>
                                 </a>
                             </div>
                             <div class="mj-article__category">
-                            <?php $post_categories = get_post_primary_category($post['ID'], 'category'); 
+                            <?php $post_categories = get_post_primary_category($post['ID'], 'category');
                                     echo $post_categories['primary_category']->name;
                             ?>
                             </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
                             <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
-                            <div class="mj-article__author">
-                                <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
-                                <span>SCRIS DE </span>
-                                <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
-                                <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
-                            </div>
+                            <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
+                            <?php if(get_field('sponsored', $post['ID'])) { ?>
+                                <div class="mj-article__author">
+                                    <span>SPONSORIZAT DE </span>
+                                    <img class="mj-article__author__image" src="<?php the_field('sponsor_logo',$post['ID']) ?>" alt="">
+                                </div>
+                            <?php } else { ?>
+                                <div class="mj-article__author">
+                                    <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
+                                    <span>SCRIS DE </span>
+                                    <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
+                                    <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
+                                </div>
+                            <?php } ?>
                         </div>
-                        
+
                     <?php endforeach; wp_reset_query(); ?>
+                    <?php } else {
+                    $articles = get_field('related_articles_single_article_ids');
+                    ?>
+                    <div class="mj-article single">
+                        <div class="mj-article__image">
+                            <a href="<?php echo get_permalink($articles['article_id_1']); ?>">
+                                <?php echo get_the_post_thumbnail($articles['article_id_1'], 'full'); ?>
+                            </a>
+                        </div>
+                        <h3 class="mj-article__title"><a href="<?php echo get_permalink($articles['article_id_1']); ?>"><?php echo get_the_title($articles['article_id_1']  ); ?></a></h3>
+                        <a href="<?php echo get_permalink($articles['article_id_1']); ?>" class="mj-article__link">Vezi mai mult</a>
+                    </div>
+                    <div class="mj-article single">
+                        <div class="mj-article__image">
+                            <a href="<?php echo get_permalink($articles['article_id_2']); ?>">
+                                <?php echo get_the_post_thumbnail($articles['article_id_2'], 'full'); ?>
+                            </a>
+                        </div>
+                        <h3 class="mj-article__title"><a href="<?php echo get_permalink($articles['article_id_2']); ?>"><?php echo get_the_title($articles['article_id_2']  ); ?></a></h3>
+                        <a href="<?php echo get_permalink($articles['article_id_2']); ?>" class="mj-article__link">Vezi mai mult </a>
+                    </div>
+                    <div class="mj-article single">
+                        <div class="mj-article__image">
+                            <a href="<?php echo get_permalink($articles['article_id_3']); ?>">
+                                <?php echo get_the_post_thumbnail($articles['article_id_3'], 'full'); ?>
+                            </a>
+                        </div>
+                        <h3 class="mj-article__title"><a href="<?php echo get_permalink($articles['article_id_3']); ?>"><?php echo get_the_title($articles['article_id_3']  ); ?></a></h3>
+                        <a href="<?php echo get_permalink($articles['article_id_3']); ?>" class="mj-article__link">Vezi mai mult</a>
+                    </div>
+                    <?php }?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
     <div class="section section_article">
         <div class="mj-container">
             <div class="mj-grid">
@@ -137,6 +197,20 @@
                             <div class="link">
                                 <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">Alte articole scrise de <?php echo the_author_meta( 'display_name' , $author_id ); ?></a>
                             </div>
+                            <?php if(get_field('sponsored', get_the_id())) { ?>
+                                <hr/>
+                                <div class="link">
+                                    <a href="<?php the_field('sponsor_link', get_the_id()) ?>">
+                                        <?php the_field('sponsored_text', 65) ?> <img class="sponsor_logo" src="<?php the_field('sponsor_logo', get_the_id()) ?>" alt="">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        <?php the_field('sponsor_description', get_the_id()); ?>
+                                    </p>
+                                </div>
+                            <?php } ?>
+
                         </div>
                     </div>
                 </div>
@@ -150,7 +224,7 @@
                 <div class="grid__item width-18/24">
                     <div id="close_quiz" class="article_close"></div>
                     <div id="quiz_step_1" class="step active">
-                        <h1 class="step__question">Unde te afli in cariera?</h1>
+                        <h2 class="step__question">Unde te afli in cariera?</h2>
                         <span class="step_info">mai sunt 3 intrebari</span>
                         <div class="step__radios_boxes">
                             <div>
@@ -164,7 +238,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input id="step-2" class="input__radio" name="step-1" type="radio" value="Sunt pregatit(a) sa incep interviurile"> 
+                                <input id="step-2" class="input__radio" name="step-1" type="radio" value="Sunt pregatit(a) sa incep interviurile">
                                 <label for="step-2" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-2.png" alt="">
                                     <h3 style="margin-top:70px;">Sunt pregatit(a) sa incep interviurile</h3>
@@ -174,7 +248,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input id="step-3" class="input__radio" name="step-1" type="radio" value="Particip la interviuri"> 
+                                <input id="step-3" class="input__radio" name="step-1" type="radio" value="Particip la interviuri">
                                 <label for="step-3" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-3.png" alt="">
                                     <h3 style="margin-top:95px;" >Particip la interviuri</h3>
@@ -184,7 +258,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input id="step-4" class="input__radio" name="step-1" type="radio" value="Caut resurse pentru a ma dezvolta profesional"> 
+                                <input id="step-4" class="input__radio" name="step-1" type="radio" value="Caut resurse pentru a ma dezvolta profesional">
                                 <label for="step-4" class="radio_box">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/quiz/step_1-4.png" alt="">
                                     <h3>Caut resurse pentru a ma dezvolta profesional</h3>
@@ -196,21 +270,21 @@
                         </div>
                     </div>
                     <div id="quiz_step_2" class="step">
-                        <h1 class="step__question">In ce orase ai vrea sa lucrezi?</h1>
+                        <h2 class="step__question">In ce orase ai vrea sa lucrezi?</h2>
                         <span class="step_info">mai sunt 2 intrebari</span>
                         <div class="mj-form">
                             <input class="mj-input" name="oras"  type="text" placeholder="Tasteaza orasul" >
                         </div>
                     </div>
                     <div id="quiz_step_3" class="step">
-                        <h1 class="step__question">Ce iti doresti de la urmatorul job?</h1>
+                        <h2 class="step__question">Ce iti doresti de la urmatorul job?</h2>
                         <span class="step_info">mai este o singura intrebare</span>
                         <p class="inline_form">Am  <input style="width: 100px;" name="ani" type="number"/> ani de experienta <br>
                         si as vrea sa ma dezvolt profesional ca <input placeholder="Scrie titulatura" name="profesia" type="text"/> .
                         </p>
-                    </div> 
+                    </div>
                     <div id="quiz_step_4" class="step">
-                        <h1 class="step__question">Ce alte aspecte ti-ai dori sa imbunatatesti profesional?</h1>
+                        <h2 class="step__question">Ce alte aspecte ti-ai dori sa imbunatatesti profesional?</h2>
                         <span class="step_info">este ultima intrebare</span>
                         <div class="mj-grid">
                             <div class="grid__item width-5/24">
@@ -278,10 +352,10 @@
                                         Sa investesc in brandul meu personal</label>
                                 </div>
                             </div>
-                        </div>           
+                        </div>
                     </div>
                     <div id="quiz_step_5" class="step">
-                        <h1 class="step__question">Multumim pentru raspunsuri!</h1>
+                        <h2 class="step__question">Multumim pentru raspunsuri!</h2>
                         <span class="step_info">Alatura-te celei mai mari comunitati digitale din Romania dedicata exclusiv specialistilor medicali si acceseaza Gratuit resurse pentru a te implini profesional. <br> Inscrie-te pentru a primi oferte relevante si sfaturi de cariera direct in casuta ta de email!</span>
                         <div class="mj-form">
                             <input class="mj-input" name="email"  type="text" placeholder="Emailul tau" >
@@ -303,7 +377,7 @@
             <div class="mj-grid">
                 <div class="grid__item width-5/24 hide-on-mobile"></div>
                 <div class="grid__item width-14/24">
-                    <?php  echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?> 
+                    <?php  echo do_shortcode('[wpdevart_facebook_comment curent_url="'.get_permalink().'" title_text="Facebook Comment" order_type="social" title_text_color="#000000" title_text_font_size="22" title_text_font_famely="monospace" title_text_position="left" width="100%" bg_color="#d4d4d4" animation_effect="random" count_of_comments="5" ]'); ?>
                 </div>
             </div>
         </div>

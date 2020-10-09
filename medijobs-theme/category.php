@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+get_sidebar();
+?>
 <div id="section_1_blog" class="section section_1 section_1--blog">
         <div class="mj-container">
             <div class="mj-grid">
@@ -13,14 +15,14 @@
                 </div>
                 <div class="grid__item width-3/24 hide-on-mobile"></div>
                 <div class="grid__item width-8/24">
-                    <div id="blog-form" class="mj-register_form mj-form blog-form">
+                    <div id="blog-form" class="mj-register_form mj-form blog-form open">
                         <div id="close-form" class="close hide-on-desktop"></div>
                         <h3>Newsletter săptămânal</h3>
                         <p>Nu pierde nici un articol, săptămânal îți trimitem o recapitulare cu cele mai noi publicări.</p>
                         <?php echo do_shortcode('[hubspot type=form portal=5748888 id=f8052d4d-af90-45d5-bf00-c1f134635f57]'); ?>
                         <div class="mj-grid">
                             <div class="grid__item width-12/24">
-                            
+
                             </div>
                             <div class="grid__item width-12/24 hide-on-mobile">
                                 <div class="newsletter_logo"></div>
@@ -39,7 +41,7 @@
                 <h2>Articole Recente</h2>
                     <div class="mj-articles">
                     <?php
-                    $category = get_the_category(); 
+                    $category = get_the_category();
                     $recent_posts = wp_get_recent_posts(array(
                         'numberposts' => 6, // Number of recent posts thumbnails to display
                         'post_status' => 'publish', // Show only the published posts
@@ -59,17 +61,24 @@
                             </div>
                             <h3 class="mj-article__title"><a href="<?php echo get_permalink($post['ID']); ?>"><?php echo $post['post_title']; ?></a></h3>
                             <a href="<?php echo get_permalink($post['ID']); ?>" class="mj-article__link">Citeste Articolul</a>
-                            <div class="mj-article__author">
-                                <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
-                                <span>SCRIS DE </span>
-                                <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
-                                <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
-                            </div>
+                            <?php if(get_field('sponsored', $post['ID'])) { ?>
+                                <div class="mj-article__author">
+                                    <span>SPONSORIZAT DE </span>
+                                    <img class="mj-article__author__image" src="<?php the_field('sponsor_logo',$post['ID']) ?>" alt="">
+                                </div>
+                            <?php } else { ?>
+                                <div class="mj-article__author">
+                                    <?php $author_id= get_post_field( 'post_author', $post['ID'] ); ?>
+                                    <span>SCRIS DE </span>
+                                    <h5 class="mj-article__author__name"><?php echo the_author_meta( 'display_name' , $author_id ); ?></h5>
+                                    <?php echo get_avatar( $author_id , 50, '', 'avatar', array('class' => 'mj-article__author__image')); ?>
+                                </div>
+                            <?php } ?>
                         </div>
-                        
+
                     <?php endforeach; wp_reset_query(); ?>
                     </div>
-                    <a href="<?php echo get_home_url(); ?>/blog/recent?cat=<?php echo $category[0]->slug; ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
+                    <a href="<?php the_field('recent_articles_link',65); ?>?cat=<?php echo $category[0]->slug; ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
                         Vedeti toate articolele
                     </a>
                 </div>
@@ -108,7 +117,7 @@
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light">Cele mai citite articole.</h1>
+                    <h2 class="headline light">Cele mai citite articole.</h2>
                     <?php
                         if ( function_exists('wpp_get_mostpopular') ) {
                             $args = array(
@@ -120,15 +129,15 @@
                                 'post_type' => 'post',
                             );
                             wpp_get_mostpopular( $args );
-                        
+
                         }
                     ?>
-                    <a href="<?php echo get_home_url(); ?>/blog/popular" class="mj-btn mj-btn--secondary mj-btn--alt">
+                    <a href="<?php the_field('most_popular_link', 65); ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
                         Vedeti toate articolele
                     </a>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
     <div class="section section_blog">
         <div class="mj-container">
@@ -136,7 +145,7 @@
                 <div class="grid__item width-1/24"> </div>
                 <div class="grid__item width-23/24">
                     <div class="above_headline">BLOG</div>
-                    <h1 class="headline light"> Cele mai populare articole ale lunii</h1>
+                    <h2 class="headline light"> Cele mai populare articole ale lunii</h2>
                     <?php
                         if (function_exists('wpp_get_mostpopular')) {
                             $args = array(
@@ -151,11 +160,11 @@
                             wpp_get_mostpopular($args);
                         }
                     ?>
-                    <a href="<?php echo get_home_url(); ?>/blog/trending" class="mj-btn mj-btn--secondary mj-btn--alt">
+                    <a href="<?php the_field('most_read_link', 65); ?>" class="mj-btn mj-btn--secondary mj-btn--alt">
                         Vedeti toate articolele
                     </a>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 <?php get_footer(); ?>

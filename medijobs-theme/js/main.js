@@ -169,6 +169,7 @@ var header = document.getElementById("header");
 var headerClass = header.className;
 var lastScrollTop = 0;
 if(getWidth() > 1400) {
+    if (document.getElementById('form')) {
     window.addEventListener("scroll", function(e) {
         var form = document.getElementById("form");
         var limit = document.body.offsetHeight - window.innerHeight;
@@ -267,6 +268,7 @@ if(getWidth() > 1400) {
             el_section_10.className = 'quick_link';
         }
     });
+    }
 }
 function getWidth() {
     return Math.max(
@@ -277,14 +279,9 @@ function getWidth() {
         document.documentElement.clientWidth
         );
 }
-    
-var Http = new XMLHttpRequest();
-var url='https://app.medijobs.ro/api/stats';
-Http.open("GET", url);
-Http.send();
 
-Http.onreadystatechange = (e) => {
-    var response = JSON.parse(Http.responseText);
+function reqListener () {
+    var response = JSON.parse(this.responseText);
     var candidates = response.candidates;
     var companies = response.companies;
 
@@ -301,3 +298,10 @@ Http.onreadystatechange = (e) => {
         el_companii.innerHTML = companies;
     }
 }
+
+var Http = new XMLHttpRequest();
+Http.addEventListener("load", reqListener);
+var url='https://app.medijobs.ro/api/stats';
+Http.open("GET", url);
+Http.send();
+

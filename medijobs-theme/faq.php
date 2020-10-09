@@ -94,6 +94,7 @@ get_header();
                     
                     $your_query = get_posts( $args );
             ?>
+            <?php if(count($your_query) > 0) { ?>
                 <div class="faq_group">
                     <h3 class="faq_group__title"><?php echo $term_single->name;  ?>(<?php echo count($your_query) ?>).</h3>
                     <div class="faq_group__list">
@@ -107,7 +108,7 @@ get_header();
                         <?php endforeach; wp_reset_query(); ?>
                     </div>
                 </div>
-                
+            <?php } ?>
             <?php } ?>
             </div>
         </div>
